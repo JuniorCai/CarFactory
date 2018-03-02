@@ -181,8 +181,12 @@
   <ItemGroup>
     <Compile Include="CustomDomain\Company\Company.cs" />
     <Compile Include="CustomDomain\Information\Information.cs" />
+    <Compile Include="CustomDomain\Products\Authorization\CategoryAppAuthorizationProvider.cs" />
+    <Compile Include="CustomDomain\Products\Authorization\CategoryAppPermissions.cs" />
     <Compile Include="CustomDomain\Products\Category.cs" />
+    <Compile Include="CustomDomain\Products\CategoryManage.cs" />
     <Compile Include="CustomDomain\Products\Product.cs" />
+    <Compile Include="CustomDomain\Products\____CategoryReadme.cs" />
     <Compile Include="Messages\Message.cs" />
     <Compile Include="NbscwMPAConsts.cs" />
     <Compile Include="NbscwMPACoreModule.cs" />
@@ -200,6 +204,7 @@
     <Compile Include="Features\FeatureValueStore.cs" />
     <Compile Include="MultiTenancy\Tenant.cs" />
     <Compile Include="MultiTenancy\TenantManager.cs" />
+    <Compile Include="PagedAndSortedInputDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Authorization\Roles\Role.cs" />
     <Compile Include="Authorization\Roles\RoleManager.cs" />
@@ -208,6 +213,7 @@
     <Compile Include="Authorization\Users\UserManager.cs" />
     <Compile Include="Authorization\Users\UserStore.cs" />
     <Compile Include="Validation\ValidationHelper.cs" />
+    <Compile Include="CarFactoryConsts.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">

@@ -13,43 +13,38 @@ using System;
 //博客地址：http://www.cnblogs.com/wer-ltm/
 //代码生成器帮助文档：http://www.cnblogs.com/wer-ltm/p/5777190.html
 // <Author-作者>梁桐铭 ,微软MVP</Author-作者>
-// Copyright © YoYoCms@China.2018-02-18T12:16:46. All Rights Reserved.
-//<生成时间>2018-02-18T12:16:46</生成时间>
+// Copyright © YoYoCms@China.2018-03-02T16:39:08. All Rights Reserved.
+//<生成时间>2018-03-02T16:39:08</生成时间>
 	#endregion
-namespace NbscwMPA.Messages
+namespace NbscwMPACarFactory.CustomDomain.Products
 {
     /// <summary>
-    /// 业务管理
+    /// 产品类别业务管理
     /// </summary>
-    public class MessageManage : IDomainService
+    public class CategoryManage : IDomainService
     {
-        private readonly IRepository<Message,int> _messageRepository;
+        private readonly IRepository<Category, int> _categoryRepository;
 
-         /// <summary>
+        /// <summary>
         /// 构造方法
         /// </summary>
-        public MessageManage(IRepository<Message,int> messageRepository  )
+        public CategoryManage(IRepository<Category, int> categoryRepository)
         {
-            _messageRepository = messageRepository;
+            _categoryRepository = categoryRepository;
         }
 
-		//TODO:编写领域业务代码
+        //TODO:编写领域业务代码
 
 
-		/// <summary>
+        /// <summary>
         ///     初始化
         /// </summary>
         private void Init()
         {
 
 
- 
+
 
         }
-
-
-		}
-
-    
-	
+    }
 }

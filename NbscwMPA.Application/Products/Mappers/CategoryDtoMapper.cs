@@ -1,7 +1,7 @@
 ﻿                            
 
 using AutoMapper;
-using NbscwMPA.Messages.Dtos;
+using NbscwMPACarFactory.CustomDomain.Products.Dtos;
     #region 代码生成器相关信息_ABP Code Generator Info
    //你好，我是ABP代码生成器的作者,欢迎您使用该工具，目前接受付费定制该工具，有需要的可以联系我
    //我的邮箱:werltm@hotmail.com
@@ -12,15 +12,15 @@ using NbscwMPA.Messages.Dtos;
 //博客地址：http://www.cnblogs.com/wer-ltm/
 //代码生成器帮助文档：http://www.cnblogs.com/wer-ltm/p/5777190.html
 // <Author-作者>梁桐铭 ,微软MVP</Author-作者>
-// Copyright © YoYoCms@China.2018-02-18T12:16:45. All Rights Reserved.
-//<生成时间>2018-02-18T12:16:45</生成时间>
+// Copyright © YoYoCms@China.2018-03-02T16:39:05. All Rights Reserved.
+//<生成时间>2018-03-02T16:39:05</生成时间>
 	#endregion
-namespace NbscwMPA.Messages.Mappers
+namespace NbscwMPACarFactory.CustomDomain.Products.Mappers
 {
 	/// <summary>
-    /// MessageDto映射配置
+    /// CategoryDto映射配置
     /// </summary>
-    public class MessageDtoMapper 
+    public class CategoryDtoMapper 
     {
 
     private static volatile bool _mappedBefore;
@@ -53,8 +53,8 @@ namespace NbscwMPA.Messages.Mappers
 
 
 	    /// <summary>
-       ///    Configuration.Modules.AbpAutoMapper().Configurators.Add(MessageDtoMapper.CreateMappings);
-      ///注入位置    < see cref = "NbscwMPAApplicationModule" /> 
+       ///    Configuration.Modules.AbpAutoMapper().Configurators.Add(CategoryDtoMapper.CreateMappings);
+      ///注入位置    < see cref = "CustomDomainApplicationModule" /> 
      /// <param name="configuration"></param>
     /// </summary>       
 	  private static void CreateMappingsInternal(IMapperConfigurationExpression configuration)
@@ -62,13 +62,13 @@ namespace NbscwMPA.Messages.Mappers
 	           
 			      //默认ABP功能已经实现了，如果你要单独对DTO进行拓展，可以在此处放开注释文件。
 
-	  // Configuration.Modules.AbpAutoMapper().Configurators.Add(MessageDtoMapper.CreateMappings);
+	  // Configuration.Modules.AbpAutoMapper().Configurators.Add(CategoryDtoMapper.CreateMappings);
 
-	    //    Mapper.CreateMap<Message,MessageEditDto>();
-       //     Mapper.CreateMap<Message, MessageListDto>();
+	    //    Mapper.CreateMap<Category,CategoryEditDto>();
+       //     Mapper.CreateMap<Category, CategoryListDto>();
 
-     //       Mapper.CreateMap<MessageEditDto, Message>();
-    //        Mapper.CreateMap<MessageListDto,Message>();
+     //       Mapper.CreateMap<CategoryEditDto, Category>();
+    //        Mapper.CreateMap<CategoryListDto,Category>();
   
 
 

@@ -1,12 +1,11 @@
-﻿                           
- 
+﻿                            
 using System;
+using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
-using Abp.Extensions;
+using Abp.AutoMapper;
 using Abp.Runtime.Validation;
-using NbscwMPA.Web.Dtos;
- 
-
+using Abp.Extensions;
+using NbscwMPACarFactory.CustomDomain.Products;
  #region 代码生成器相关信息_ABP Code Generator Info
    //你好，我是ABP代码生成器的作者,欢迎您使用该工具，目前接受付费定制该工具，有需要的可以联系我
    //我的邮箱:werltm@hotmail.com
@@ -17,34 +16,21 @@ using NbscwMPA.Web.Dtos;
 //博客地址：http://www.cnblogs.com/wer-ltm/
 //代码生成器帮助文档：http://www.cnblogs.com/wer-ltm/p/5777190.html
 // <Author-作者>梁桐铭 ,微软MVP</Author-作者>
-// Copyright © YoYoCms@China.2018-02-18T12:16:43. All Rights Reserved.
-//<生成时间>2018-02-18T12:16:43</生成时间>
+// Copyright © YoYoCms@China.2018-03-02T16:39:01. All Rights Reserved.
+//<生成时间>2018-03-02T16:39:01</生成时间>
 	#endregion
-namespace NbscwMPA.Messages.Dtos
+namespace NbscwMPACarFactory.CustomDomain.Products.Dtos
 {
-	/// <summary>
-    /// 查询Dto
+    /// <summary>
+    /// 产品类别新增和编辑时用Dto
     /// </summary>
-    public class GetMessageInput : PagedAndSortedInputDto, IShouldNormalize
+    
+    public class CreateOrUpdateCategoryInput  
     {
-        //DOTO:在这里增加查询参数
-
-		/// <summary>
-	    /// 模糊查询参数
-		/// </summary>
-		public string FilterText { get; set; }
-
-		/// <summary>
-	    /// 用于排序的默认值
-		/// </summary>
-        public void Normalize()
-        {
-            if (string.IsNullOrEmpty(Sorting))
-            {
-			
-		
-                Sorting = "Id";
-            }
-        }
+    /// <summary>
+    /// 产品类别编辑Dto
+    /// </summary>
+		public CategoryEditDto  CategoryEditDto {get;set;}
+ 
     }
 }

@@ -9,38 +9,38 @@
 //博客地址：http://www.cnblogs.com/wer-ltm/
 //代码生成器帮助文档：http://www.cnblogs.com/wer-ltm/p/5777190.html
 // <Author-作者>梁桐铭 ,微软MVP</Author-作者>
-// Copyright © YoYoCms@China.2018-02-18T12:16:48. All Rights Reserved.
-//<生成时间>2018-02-18T12:16:48</生成时间>
+// Copyright © YoYoCms@China.2018-03-02T16:39:12. All Rights Reserved.
+//<生成时间>2018-03-02T16:39:12</生成时间>
 	#endregion
-namespace NbscwMPA.Messages.Authorization
+namespace NbscwMPACarFactory.CustomDomain.Products.Authorization
 {
 	 /// <summary>
 	 /// 定义系统的权限名称的字符串常量。
-     /// <see cref="MessageAppAuthorizationProvider"/>中对权限的定义.
+     /// <see cref="CategoryAppAuthorizationProvider"/>中对权限的定义.
      /// </summary>
-  public static   class MessageAppPermissions
+  public static   class CategoryAppPermissions
     {
       
 
         /// <summary>
-        /// 管理权限
+        /// 产品类别管理权限
         /// </summary>
-        public const string Message = "Pages.Message";
+        public const string Category = "Pages.Category";
 
 	 
 
 		/// <summary>
-        /// 创建权限
+        /// 产品类别创建权限
         /// </summary>
-        public const string Message_CreateMessage = "Pages.Message.CreateMessage";
+        public const string Category_CreateCategory = "Pages.Category.CreateCategory";
 		/// <summary>
-        /// 修改权限
+        /// 产品类别修改权限
         /// </summary>
-        public const string Message_EditMessage = "Pages.Message.EditMessage";
+        public const string Category_EditCategory = "Pages.Category.EditCategory";
 		/// <summary>
-        /// 删除权限
+        /// 产品类别删除权限
         /// </summary>
-        public const string Message_DeleteMessage = "Pages.Message.DeleteMessage";
+        public const string Category_DeleteCategory = "Pages.Category.DeleteCategory";
     }
 	
 }

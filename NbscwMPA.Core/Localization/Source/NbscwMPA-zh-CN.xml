@@ -55,5 +55,23 @@
     <text name="Yes" value="是" />
     <text name="No" value="否" />
     <text name="Optional" value="可选的" />
+
+    <!-- 产品类别管理 -->
+    <text name="MustBe_Required" value="不能为空" />
+    <text name="Category" value="产品类别" />
+    <text name="CategoryHeaderInfo" value="产品类别管理列表" />
+    <text name="CreateCategory" value="新增产品类别" />
+    <text name="EditCategory" value="编辑产品类别" />
+    <text name="DeleteCategory" value="删除产品类别" />
+    <text name="CategoryDeleteWarningMessage" value="产品类别名称: {0} 将被删除,是否确定删除它。" />
+    <!--//用于表格展示的数据信息的标题-->
+    <text name="CategoryName" value="Name" />
+    <text name="ShortName" value="ShortName" />
+    <text name="IsActive" value="IsActive" />
+    <text name="Sort" value="Sort" />
+    <text name="Products" value="Products" />
+    <text name="LastModificationTime" value="最后编辑时间" />
+    <text name="CreationTime" value="创建时间" />
+    <!-- 产品类别管理 END-->
   </texts>
 </localizationDictionary>

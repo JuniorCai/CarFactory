@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using Abp.Application.Services.Dto;
 using Abp.Extensions;
-using NbscwMPA.Messages;
+using NbscwMPACarFactory.CustomDomain.Products;
  #region 代码生成器相关信息_ABP Code Generator Info
    //你好，我是ABP代码生成器的作者,欢迎您使用该工具，目前接受付费定制该工具，有需要的可以联系我
    //我的邮箱:werltm@hotmail.com
@@ -15,38 +15,33 @@ using NbscwMPA.Messages;
 //博客地址：http://www.cnblogs.com/wer-ltm/
 //代码生成器帮助文档：http://www.cnblogs.com/wer-ltm/p/5777190.html
 // <Author-作者>梁桐铭 ,微软MVP</Author-作者>
-// Copyright © YoYoCms@China.2018-02-18T12:16:47. All Rights Reserved.
-//<生成时间>2018-02-18T12:16:47</生成时间>
+// Copyright © YoYoCms@China.2018-03-02T16:39:09. All Rights Reserved.
+//<生成时间>2018-03-02T16:39:09</生成时间>
 	#endregion
-namespace NbscwMPA.Messages.EntityMapper.Messages
+namespace NbscwMPACarFactory.CustomDomain.Products.EntityMapper.Products
 {
 
 	/// <summary>
-    /// 的数据配置文件
+    /// 产品类别的数据配置文件
     /// </summary>
-    public class MessageCfg : EntityTypeConfiguration<Message>
+    public class CategoryCfg : EntityTypeConfiguration<Category>
     {
 		/// <summary>
-        ///  构造方法[默认链接字符串< see cref = "NbscwMPADbContext" /> ]
+        ///  构造方法[默认链接字符串< see cref = "CustomDomainDbContext" /> ]
         /// </summary>
-		public MessageCfg ()
+		public CategoryCfg ()
 		{
-		            ToTable("Message", NbscwMPAConsts.SchemaName.Basic);
- 
-      //todo: 需要将以下文件注入到NbscwMPADbContext中
-
-  //		public IDbSet<Message> Messages { get; set; }
-   //		 modelBuilder.Configurations.Add(new MessageCfg());
+		    ToTable("Category", CarFactoryConsts.SchemaName.Basic);
 
 
+		    // Name
+			Property(a => a.CategoryName).HasMaxLength(4000);
+		    // ShortName
+			Property(a => a.ShortName).HasMaxLength(4000);
+		    // Products - 关系映射
+			//HasOptional(a => a.Products).WithMany().HasForeignKey(c => c.ProductsId).WillCascadeOnDelete(true);
 
 
-		    // 消息标题
-			Property(a => a.Title).HasMaxLength(4000);
-		    // 内容
-			Property(a => a.Detail).HasMaxLength(255);
-		    // 发件人IP
-			Property(a => a.SendIp).HasMaxLength(4000);
 		}
     }
 }

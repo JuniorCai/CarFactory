@@ -3,6 +3,8 @@ using System.Data.Entity;
 using Abp.Zero.EntityFramework;
 using NbscwMPACarFactory.Authorization.Roles;
 using NbscwMPACarFactory.Authorization.Users;
+using NbscwMPACarFactory.CustomDomain.Products;
+using NbscwMPACarFactory.CustomDomain.Products.EntityMapper.Products;
 using NbscwMPACarFactory.MultiTenancy;
 
 namespace NbscwMPACarFactory.EntityFramework
@@ -11,6 +13,8 @@ namespace NbscwMPACarFactory.EntityFramework
     public class NbscwMPADbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for your Entities...
+        public IDbSet<Category> Categorys { get; set; }
+ 
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
@@ -44,6 +48,14 @@ namespace NbscwMPACarFactory.EntityFramework
          : base(existingConnection, contextOwnsConnection)
         {
 
+        }
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Configurations.Add(new CategoryCfg());
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
