@@ -9,36 +9,38 @@
 //博客地址：http://www.cnblogs.com/wer-ltm/
 //代码生成器帮助文档：http://www.cnblogs.com/wer-ltm/p/5777190.html
 // <Author-作者>梁桐铭 ,微软MVP</Author-作者>
-// Copyright © YoYoCms@China.2018-03-02T16:39:12. All Rights Reserved.
-//<生成时间>2018-03-02T16:39:12</生成时间>
+// Copyright © YoYoCms@China.2018-03-03T21:54:55. All Rights Reserved.
+//<生成时间>2018-03-03T21:54:55</生成时间>
 	#endregion
 namespace NbscwMPACarFactory.CustomDomain.Products.Authorization
 {
 	 /// <summary>
 	 /// 定义系统的权限名称的字符串常量。
-     /// <see cref="CategoryAppAuthorizationProvider"/>中对权限的定义.
+     /// <see cref="ProductAppAuthorizationProvider"/>中对权限的定义.
      /// </summary>
-  public static   class CategoryAppPermissions
+  public static   class ProductAppPermissions
     {
       
 
         /// <summary>
-        /// 产品类别管理权限
+        /// 产品信息管理权限
         /// </summary>
-        public const string Category = "Pages.Category";
+        public const string Product = "Pages.Product";
+
+	 
 
 		/// <summary>
-        /// 产品类别创建权限
+        /// 产品信息创建权限
         /// </summary>
-        public const string Category_CreateCategory = "Pages.Category.CreateCategory";
+        public const string Product_CreateProduct = "Pages.Product.CreateProduct";
 		/// <summary>
-        /// 产品类别修改权限
+        /// 产品信息修改权限
         /// </summary>
-        public const string Category_EditCategory = "Pages.Category.EditCategory";
+        public const string Product_EditProduct = "Pages.Product.EditProduct";
 		/// <summary>
-        /// 产品类别删除权限
+        /// 产品信息删除权限
         /// </summary>
-        public const string Category_DeleteCategory = "Pages.Category.DeleteCategory";
+        public const string Product_DeleteProduct = "Pages.Product.DeleteProduct";
     }
 	
 }

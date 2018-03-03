@@ -3,8 +3,10 @@ using System.Data.Entity;
 using Abp.Zero.EntityFramework;
 using NbscwMPACarFactory.Authorization.Roles;
 using NbscwMPACarFactory.Authorization.Users;
+using NbscwMPACarFactory.CustomDomain.Category;
 using NbscwMPACarFactory.CustomDomain.Products;
 using NbscwMPACarFactory.CustomDomain.Products.EntityMapper.Products;
+using NbscwMPACarFactory.EntityMapper.Products;
 using NbscwMPACarFactory.MultiTenancy;
 
 namespace NbscwMPACarFactory.EntityFramework
@@ -55,6 +57,7 @@ namespace NbscwMPACarFactory.EntityFramework
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new CategoryCfg());
+            modelBuilder.Configurations.Add(new ProductCfg());
 
             base.OnModelCreating(modelBuilder);
         }

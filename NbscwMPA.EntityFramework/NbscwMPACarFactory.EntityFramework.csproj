@@ -206,6 +206,11 @@
     <Compile Include="EntityFramework\NbscwMPADbContext.cs" />
     <Compile Include="EntityFramework\Repositories\NbscwMPARepositoryBase.cs" />
     <Compile Include="EntityMapper\Products\CategoryCfg.cs" />
+    <Compile Include="EntityMapper\Products\ProductCfg.cs" />
+    <Compile Include="Migrations\201803031328174_CreateTables.cs" />
+    <Compile Include="Migrations\201803031328174_CreateTables.Designer.cs">
+      <DependentUpon>201803031328174_CreateTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NbscwMPADataModule.cs" />
@@ -227,6 +232,11 @@
       <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
       <Name>NbscwMPACarFactory.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803031328174_CreateTables.resx">
+      <DependentUpon>201803031328174_CreateTables.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

@@ -1,9 +1,8 @@
 ﻿                            
 using System;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
-using Abp.Extensions;
 using NbscwMPACarFactory.CustomDomain.Products;
  #region 代码生成器相关信息_ABP Code Generator Info
    //你好，我是ABP代码生成器的作者,欢迎您使用该工具，目前接受付费定制该工具，有需要的可以联系我
@@ -15,24 +14,26 @@ using NbscwMPACarFactory.CustomDomain.Products;
 //博客地址：http://www.cnblogs.com/wer-ltm/
 //代码生成器帮助文档：http://www.cnblogs.com/wer-ltm/p/5777190.html
 // <Author-作者>梁桐铭 ,微软MVP</Author-作者>
-// Copyright © YoYoCms@China.2018-03-02T16:38:59. All Rights Reserved.
-//<生成时间>2018-03-02T16:38:59</生成时间>
+// Copyright © YoYoCms@China.2018-03-02T16:38:58. All Rights Reserved.
+//<生成时间>2018-03-02T16:38:58</生成时间>
 	#endregion
 namespace NbscwMPACarFactory.CustomDomain.Products.Dtos
 {
 	/// <summary>
-    /// 用于添加或编辑 产品类别时使用的DTO
+    /// 产品类别列表Dto
     /// </summary>
-  
-    public class GetCategoryForEditOutput 
+    [AutoMapFrom(typeof(Category.Category))]
+    public class CategoryListDto : EntityDto<int>
     {
- 
-
-	      /// <summary>
-         /// Category编辑状态的DTO
+        public      string Name { get; set; }
+        public      string ShortName { get; set; }
+        public      bool IsActive { get; set; }
+        public      int Sort { get; set; }
+        //public      Product> Products { get; set; }
+        /// <summary>
+        /// 创建时间
         /// </summary>
-    public CategoryEditDto Category{get;set;}
-
-
+        [DisplayName("创建时间")]
+        public      DateTime CreationTime { get; set; }
     }
 }

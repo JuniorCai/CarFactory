@@ -1,23 +1,18 @@
-﻿ using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Linq.Dynamic;
-using System.Text;
 using System.Threading.Tasks;
-using Abp;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.AutoMapper;
-using Abp.Configuration;
 using Abp.Domain.Repositories;
-using Abp.Extensions;
-using Abp.Linq.Extensions;
-using NbscwMPACarFactory.CustomDomain.Products.Authorization;  
-using NbscwMPACarFactory.CustomDomain.Products.Dtos; 
+using NbscwMPACarFactory.Category.Dtos;
+using NbscwMPACarFactory.CustomDomain.Category;
+using NbscwMPACarFactory.CustomDomain.Category.Authorization;
+using NbscwMPACarFactory.CustomDomain.Products;
+using NbscwMPACarFactory.CustomDomain.Products.Dtos;
 
-
-namespace NbscwMPACarFactory.CustomDomain.Products
+namespace NbscwMPACarFactory.Category
 {
     /// <summary>
     /// 产品类别服务实现
@@ -25,7 +20,7 @@ namespace NbscwMPACarFactory.CustomDomain.Products
     [AbpAuthorize(CategoryAppPermissions.Category)]
     public class CategoryAppService : NbscwMPAAppServiceBase, ICategoryAppService
     {
-        private readonly IRepository<Category, int> _categoryRepository;
+        private readonly IRepository<CustomDomain.Category.Category, int> _categoryRepository;
 
 
         private readonly CategoryManage _categoryManage;
@@ -33,7 +28,7 @@ namespace NbscwMPACarFactory.CustomDomain.Products
         /// <summary>
         /// 构造方法
         /// </summary>
-        public CategoryAppService(IRepository<Category, int> categoryRepository,
+        public CategoryAppService(IRepository<CustomDomain.Category.Category, int> categoryRepository,
             CategoryManage categoryManage
 
         )
@@ -46,7 +41,7 @@ namespace NbscwMPACarFactory.CustomDomain.Products
 
         #region 实体的自定义扩展方法
 
-        private IQueryable<Category> _categoryRepositoryAsNoTrack => _categoryRepository.GetAll().AsNoTracking();
+        private IQueryable<CustomDomain.Category.Category> _categoryRepositoryAsNoTrack => _categoryRepository.GetAll().AsNoTracking();
 
 
         #endregion
@@ -137,7 +132,7 @@ namespace NbscwMPACarFactory.CustomDomain.Products
         {
             //TODO:新增前的逻辑判断，是否允许新增
 
-            var entity = input.MapTo<Category>();
+            var entity = input.MapTo<CustomDomain.Category.Category>();
 
             entity = await _categoryRepository.InsertAsync(entity);
             return entity.MapTo<CategoryEditDto>();
