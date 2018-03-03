@@ -14,7 +14,8 @@ namespace NbscwMPACarFactory.EntityFramework
     {
         //TODO: Define an IDbSet for your Entities...
         public IDbSet<Category> Categorys { get; set; }
- 
+
+        public IDbSet<Product> Products { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.

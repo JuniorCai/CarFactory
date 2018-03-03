@@ -27,8 +27,6 @@ namespace NbscwMPACarFactory.CustomDomain.Products.Authorization
         /// </summary>
         public const string Category = "Pages.Category";
 
-	 
-
 		/// <summary>
         /// 产品类别创建权限
         /// </summary>
