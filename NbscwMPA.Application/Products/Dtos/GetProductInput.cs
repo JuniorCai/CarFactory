@@ -21,8 +21,6 @@ namespace NbscwMPACarFactory.Products.Dtos
         {
             if (string.IsNullOrEmpty(Sorting))
             {
-			
-		
                 Sorting = "Id";
             }
         }

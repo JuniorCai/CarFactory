@@ -18,8 +18,6 @@ namespace NbscwMPACarFactory.Products
     /// 产品信息服务实现
     /// </summary>
     [AbpAuthorize(ProductAppPermissions.Product)]
-
-
     public class ProductAppService : NbscwMPAAppServiceBase, IProductAppService
     {
         private readonly IRepository<Product, int> _productRepository;
@@ -107,11 +105,6 @@ namespace NbscwMPACarFactory.Products
 
             return entity.MapTo<ProductListDto>();
         }
-
-
-
-
-
 
 
         /// <summary>

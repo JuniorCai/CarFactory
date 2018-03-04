@@ -5,7 +5,6 @@ using NbscwMPACarFactory.Authorization.Roles;
 using NbscwMPACarFactory.Authorization.Users;
 using NbscwMPACarFactory.CustomDomain.Category;
 using NbscwMPACarFactory.CustomDomain.Products;
-using NbscwMPACarFactory.CustomDomain.Products.EntityMapper.Products;
 using NbscwMPACarFactory.EntityMapper.Products;
 using NbscwMPACarFactory.MultiTenancy;
 

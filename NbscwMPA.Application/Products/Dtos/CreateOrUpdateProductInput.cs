@@ -1,6 +1,4 @@
-﻿using NbscwMPACarFactory.CustomDomain.Products.Dtos;
-
-namespace NbscwMPACarFactory.Products.Dtos
+﻿namespace NbscwMPACarFactory.Products.Dtos
 {
     /// <summary>
     /// 产品信息新增和编辑时用Dto

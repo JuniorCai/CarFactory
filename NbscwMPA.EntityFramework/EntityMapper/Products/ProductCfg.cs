@@ -1,12 +1,7 @@
-﻿                          
-   using System;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration;
-using Abp.Application.Services.Dto;
-using Abp.Extensions;
+﻿using System.Data.Entity.ModelConfiguration;
 using NbscwMPACarFactory.CustomDomain.Products;
 
-namespace NbscwMPACarFactory.CustomDomain.Products.EntityMapper.Products
+namespace NbscwMPACarFactory.EntityMapper.Products
 {
 
     /// <summary>
@@ -20,9 +15,7 @@ namespace NbscwMPACarFactory.CustomDomain.Products.EntityMapper.Products
         public ProductCfg()
         {
             ToTable("Product", CarFactoryConsts.SchemaName.Basic);
-
-
-
+            
             // 产品名称
             Property(a => a.Title).HasMaxLength(4000);
             // 产品图片
@@ -31,8 +24,7 @@ namespace NbscwMPACarFactory.CustomDomain.Products.EntityMapper.Products
             Property(a => a.Url).HasMaxLength(4000);
             // 产品类别 - 关系映射
             HasRequired(a => a.ProductCategory).WithMany().HasForeignKey(c => c.CategoryId).WillCascadeOnDelete(true);
-
-
+            
         }
     }
 }

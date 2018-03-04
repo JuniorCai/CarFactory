@@ -10,7 +10,6 @@ using NbscwMPACarFactory.Category.Dtos;
 using NbscwMPACarFactory.CustomDomain.Category;
 using NbscwMPACarFactory.CustomDomain.Category.Authorization;
 using NbscwMPACarFactory.CustomDomain.Products;
-using NbscwMPACarFactory.CustomDomain.Products.Dtos;
 
 namespace NbscwMPACarFactory.Category
 {

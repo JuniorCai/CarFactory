@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using NbscwMPACarFactory.CustomDomain.Products.Dtos;
 using NbscwMPACarFactory.Products.Dtos;
 
 namespace NbscwMPACarFactory.Products
@@ -36,9 +35,7 @@ namespace NbscwMPACarFactory.Products
         /// </summary>
         Task CreateOrUpdateProductAsync(CreateOrUpdateProductInput input);
 
-
-
-
+        
 
         /// <summary>
         /// 新增产品信息
@@ -61,9 +58,6 @@ namespace NbscwMPACarFactory.Products
         Task BatchDeleteProductAsync(List<int> input);
 
         #endregion
-
-
-
-
+       
     }
 }
