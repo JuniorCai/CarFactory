@@ -434,10 +434,43 @@
     <Content Include="Abp\Framework\styles\abp.mixings.css" />
     <Content Include="Abp\Framework\styles\abp.mixings.min.css" />
     <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
+    <Content Include="Content\css\admin\commonStyle.css" />
+    <Content Include="Content\css\bannerSlider.css" />
+    <Content Include="Content\css\bootstrap-theme.css" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\commonStyle.css" />
+    <Content Include="Content\css\layout.css" />
+    <Content Include="Content\css\pagerStyles.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\material-icons\materialicons.css" />
     <Content Include="Content\fonts\roboto\roboto.css" />
+    <Content Include="Content\images\public\01.jpg" />
+    <Content Include="Content\images\public\02.jpg" />
+    <Content Include="Content\images\public\03.jpg" />
+    <Content Include="Content\images\public\banner_02.jpg" />
+    <Content Include="Content\images\public\bnav_12.jpg" />
+    <Content Include="Content\images\public\bottom_09.jpg" />
+    <Content Include="Content\images\public\cpfllibg.png" />
+    <Content Include="Content\images\public\cpfllihover.png" />
+    <Content Include="Content\images\public\index_02.jpg" />
+    <Content Include="Content\images\public\index_04.jpg" />
+    <Content Include="Content\images\public\index_08.jpg" />
+    <Content Include="Content\images\public\index_11.jpg" />
+    <Content Include="Content\images\public\index_18.jpg" />
+    <Content Include="Content\images\public\index_21.jpg" />
+    <Content Include="Content\images\public\index_24.jpg" />
+    <Content Include="Content\images\public\index_28.jpg" />
+    <Content Include="Content\images\public\index_30.jpg" />
+    <Content Include="Content\images\public\index_36.jpg" />
+    <Content Include="Content\images\public\new_07.jpg" />
+    <Content Include="Content\images\public\show_03.jpg" />
+    <Content Include="Content\images\public\show_05.jpg" />
+    <Content Include="Content\images\public\show_12.jpg" />
+    <Content Include="Content\images\public\show_15.jpg" />
+    <Content Include="Content\images\public\tel_05.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="lib\abp-web-resources\Abp\Framework\scripts\abp.js" />
@@ -2560,6 +2593,10 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\css\bootstrap-theme.css.map" />
+    <Content Include="Content\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -2590,6 +2627,7 @@
     <Content Include="Scripts\others\spinjs\spin.js" />
     <Content Include="Scripts\json2.js" />
     <Content Include="Scripts\json2.min.js" />
+    <Content Include="Scripts\pages\bannerSlider.js" />
     <Content Include="Scripts\sweetalert\ie9.css" />
     <Content Include="Scripts\sweetalert\sweet-alert.css" />
     <Content Include="Scripts\sweetalert\sweet-alert.html" />
@@ -2811,8 +2849,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\css\" />
-    <Folder Include="Content\images\" />
+    <Folder Include="Content\images\products\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
