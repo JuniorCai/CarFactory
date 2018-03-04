@@ -23,16 +23,29 @@
 
     <title>@ViewBag.Title</title>
 
-    @Styles.Render("~/Bundles/vendor/css")
+    @Styles.Render("~/Content/css/commom")
+    
+    @Scripts.Render("~/scripts/jquery");
 
     <!-- View specific styles -->
     @RenderSection("styles", required: false)
+    @RenderSection("scripts",false);
 
     
 </head>
 <body >
 <div class="head">
-    
+    <div class="top">
+        <div class="logo"></div>
+        
+        @{
+            Html.RenderPartial("~/Views/Shared/PartialPages/_PartialHeader.cshtml");
+        }
+    </div>
 </div>
+    @RenderBody()
+    
+    @{
+    Html.RenderPartial("~/Views/Shared/PartialPages/_PartialFooter.cshtml");}
 </body>
 </html>

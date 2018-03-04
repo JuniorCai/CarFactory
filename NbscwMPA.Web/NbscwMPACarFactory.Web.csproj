@@ -442,7 +442,7 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\commonStyle.css" />
     <Content Include="Content\css\layout.css" />
-    <Content Include="Content\css\pagerStyles.css" />
+    <Content Include="Content\css\pagerStyle.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\material-icons\materialicons.css" />
@@ -2654,8 +2654,6 @@
     <Content Include="Views\Home\Index.js" />
     <Content Include="Views\Roles\Index.js" />
     <Content Include="Views\Roles\_EditRoleModal.js" />
-    <Content Include="Views\Shared\_Layout.css" />
-    <Content Include="Views\Shared\_Layout.js" />
     <Content Include="Views\Tenants\Index.js" />
     <Content Include="Views\Tenants\_EditTenantModal.js" />
     <Content Include="Views\Users\Index.js" />
@@ -2822,6 +2820,15 @@
     <Content Include="Views\Tenants\_EditTenantModal.cshtml" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Views\Shared\PartialPages\_PartialHeader.cshtml" />
+    <Content Include="Views\Shared\PartialPages\_PartialFooter.cshtml" />
+    <Content Include="Views\Shared\PartialPages\Home\_PartialBanner.cshtml" />
+    <Content Include="Views\Shared\PartialPages\Home\_PartialProducts.cshtml" />
+    <Content Include="Views\Shared\PartialPages\Home\_PartialNews.cshtml" />
+    <Content Include="Views\Shared\PartialPages\Home\_PartialAbout.cshtml" />
+    <Content Include="Views\Shared\PartialPages\Home\_PartialLinks.cshtml" />
+    <Content Include="Views\Shared\PartialPages\_PartialCategoryList.cshtml" />
+    <Content Include="Views\Shared\PartialPages\_PartialDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

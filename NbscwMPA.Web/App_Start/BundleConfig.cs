@@ -8,22 +8,25 @@ namespace NbscwMPACarFactory.Web
         {
             bundles.IgnoreList.Clear();
 
-            bundles.Add(
-                new StyleBundle("~/Bundles/account-vendor/css")
-                    .Include("~/fonts/roboto/roboto.css", new CssRewriteUrlTransform())
-                    .Include("~/fonts/material-icons/materialicons.css", new CssRewriteUrlTransform())
-            );
+            bundles.Add(new ScriptBundle("~/scripts/jquery").Include(
+                "~/Scripts/jquery-{version}.js"));
 
-            bundles.Add(
-                new ScriptBundle("~/Bundles/account-vendor/js/bottom")
-                    .Include(
-                        "~/lib/json2/json2.js",
-                        "~/lib/jquery/dist/jquery.js",
-                        "~/lib/bootstrap/dist/js/bootstrap.js",
-                        "~/lib/moment/min/moment-with-locales.js",
-                        "~/lib/jquery-validation/dist/jquery.validate.js"
-                    )
-            );
+            bundles.Add(new ScriptBundle("~/scripts/jqueryval").Include(
+                "~/Scripts/jquery.validate*"));
+
+           
+
+            bundles.Add(new ScriptBundle("~/scripts/bootstrap").Include(
+                "~/Scripts/bootstrap.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css/commom").Include(
+                "~/Content/css/bannerSlider.css",
+                "~/Content/css/layout.css",
+                "~/Content/css/pagerStyle.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css/Admin").Include(
+                "~/Content/css/admin/commonStyle.css"));
+
         }
     }
 }
