@@ -1,16 +1,17 @@
 using System.Data.Entity;
 using System.Reflection;
 using Abp.Modules;
-using NbscwMPACarFactory.EntityFramework;
+using CarFactory;
+using CarFactory.EntityFramework;
 
 namespace NbscwMPACarFactory.Migrator
 {
-    [DependsOn(typeof(NbscwMPADataModule))]
+    [DependsOn(typeof(CarFactoryDataModule))]
     public class NbscwMPAMigratorModule : AbpModule
     {
         public override void PreInitialize()
         {
-            Database.SetInitializer<NbscwMPADbContext>(null);
+            Database.SetInitializer<CarFactoryDbContext>(null);
 
             Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
         }

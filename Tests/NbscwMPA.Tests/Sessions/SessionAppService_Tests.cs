@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
-using NbscwMPACarFactory.Sessions;
+using CarFactory.Sessions;
 using Shouldly;
 using Xunit;
 
-namespace NbscwMPACarFactory.Tests.Sessions
+namespace CarFactory.Tests.Sessions
 {
-    public class SessionAppService_Tests : NbscwMPATestBase
+    public class SessionAppService_Tests : CarFactoryTestBase
     {
         private readonly ISessionAppService _sessionAppService;
 

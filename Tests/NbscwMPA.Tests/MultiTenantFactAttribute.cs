@@ -1,12 +1,12 @@
 ﻿using Xunit;
 
-namespace NbscwMPACarFactory.Tests
+namespace CarFactory.Tests
 {
     public sealed class MultiTenantFactAttribute : FactAttribute
     {
         public MultiTenantFactAttribute()
         {
-            if (!NbscwMPAConsts.MultiTenancyEnabled)
+            if (!CarFactoryConsts.MultiTenancyEnabled)
             {
                 Skip = "MultiTenancy is disabled.";
             }

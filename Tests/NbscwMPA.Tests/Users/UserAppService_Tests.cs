@@ -1,14 +1,14 @@
 ﻿using System.Data.Entity;
 using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
-using NbscwMPACarFactory.Users;
-using NbscwMPACarFactory.Users.Dto;
+using CarFactory.Users;
+using CarFactory.Users.Dto;
 using Shouldly;
 using Xunit;
 
-namespace NbscwMPACarFactory.Tests.Users
+namespace CarFactory.Tests.Users
 {
-    public class UserAppService_Tests : NbscwMPATestBase
+    public class UserAppService_Tests : CarFactoryTestBase
     {
         private readonly IUserAppService _userAppService;
 
