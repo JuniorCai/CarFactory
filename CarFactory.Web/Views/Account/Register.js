@@ -15,7 +15,7 @@
 
             //Username can not be an email address (except the email address entered)
             return !$.validator.methods.email.apply(this, arguments);
-        }, abp.localization.localize("RegisterFormUserNameInvalidMessage", "CarFactory"));
+        }, abp.localization.localize("RegisterFormUserNameInvalidMessage", "NbscwMPA"));
 
         $registerForm.validate({
             rules: {

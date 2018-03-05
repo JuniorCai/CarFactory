@@ -1,8 +1,8 @@
 ﻿@using Abp.Authorization.Users
 @using Abp.MultiTenancy
 @using Abp.Web.Mvc.Extensions
-@using CarFactory.MultiTenancy
-@model Abp.Application.Services.Dto.PagedResultDto<CarFactory.MultiTenancy.Dto.TenantDto>
+@using NbscwMPA.MultiTenancy
+@model Abp.Application.Services.Dto.PagedResultDto<NbscwMPA.MultiTenancy.Dto.TenantDto>
 @{
     ViewBag.ActiveMenu = PageNames.Tenants; //The menu item will be active for this page.
 }
@@ -103,7 +103,7 @@
                         <input type="checkbox" name="IsActive" value="true" id="CreateTenantIsActive" class="filled-in" checked />
                         <label for="CreateTenantIsActive">@L("IsActive")</label>
                     </div>
-                    <p>@L("DefaultPasswordIs", CarFactory.Authorization.Users.User.DefaultPassword)</p>
+                    <p>@L("DefaultPasswordIs", NbscwMPA.Authorization.Users.User.DefaultPassword)</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">@L("Cancel")</button>

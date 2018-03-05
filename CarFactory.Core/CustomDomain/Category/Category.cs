@@ -14,7 +14,7 @@ namespace CarFactory.CustomDomain.Category
         public virtual string ShortName { get; set; }
 
         [Required]
-        public virtual bool IsShow { get; set; }
+        public virtual bool IsActive { get; set; }
 
         public virtual int Sort { get; set; }
 

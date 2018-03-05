@@ -6,7 +6,7 @@
     public static class CarFactoryConsts
     {
 
-        public const string LocalizationSourceName = "CarFactory";
+        public const string LocalizationSourceName = "NbscwMPA";
 
         public const bool MultiTenancyEnabled = true;
 

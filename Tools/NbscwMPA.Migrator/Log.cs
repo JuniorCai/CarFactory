@@ -3,7 +3,7 @@ using Abp.Dependency;
 using Abp.Timing;
 using Castle.Core.Logging;
 
-namespace CarFactory.Migrator
+namespace NbscwMPACarFactory.Migrator
 {
     public class Log : ITransientDependency
     {

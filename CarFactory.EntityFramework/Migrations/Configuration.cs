@@ -14,7 +14,7 @@ namespace CarFactory.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "CarFactory";
+            ContextKey = "NbscwMPA";
             SetSqlGenerator("MySql.Data.MySqlClient",new MySql.Data.Entity.MySqlMigrationSqlGenerator());
         }
 

@@ -24,12 +24,12 @@
                 return;
             case 2: //InActive
                 abp.message.warn(abp.utils.formatString(abp.localization
-                    .localize("TenantIsNotActive", "CarFactory"),
+                    .localize("TenantIsNotActive", "NbscwMPA"),
                     tenancyName));
                 break;
             case 3: //NotFound
                 abp.message.warn(abp.utils.formatString(abp.localization
-                    .localize("ThereIsNoTenantDefinedWithName{0}", "CarFactory"),
+                    .localize("ThereIsNoTenantDefinedWithName{0}", "NbscwMPA"),
                     tenancyName));
                 break;
             }

@@ -8,7 +8,7 @@ using Abp.MultiTenancy;
 using Abp.Runtime.Security;
 using CarFactory.MultiTenancy;
 
-namespace CarFactory.Migrator
+namespace NbscwMPACarFactory.Migrator
 {
     public class MultiTenantMigrateExecuter : ITransientDependency
     {

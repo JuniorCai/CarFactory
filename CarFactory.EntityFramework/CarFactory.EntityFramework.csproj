@@ -207,9 +207,9 @@
     <Compile Include="EntityFramework\Repositories\CarFactoryRepositoryBase.cs" />
     <Compile Include="EntityMapper\Products\CategoryCfg.cs" />
     <Compile Include="EntityMapper\Products\ProductCfg.cs" />
-    <Compile Include="Migrations\201803050350081_initialCreate.cs" />
-    <Compile Include="Migrations\201803050350081_initialCreate.Designer.cs">
-      <DependentUpon>201803050350081_initialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201803031328174_CreateTables.cs" />
+    <Compile Include="Migrations\201803031328174_CreateTables.Designer.cs">
+      <DependentUpon>201803031328174_CreateTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -234,8 +234,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803050350081_initialCreate.resx">
-      <DependentUpon>201803050350081_initialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803031328174_CreateTables.resx">
+      <DependentUpon>201803031328174_CreateTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
