@@ -2828,6 +2828,8 @@
     <Content Include="Views\Shared\PartialPages\Home\_PartialLinks.cshtml" />
     <Content Include="Views\Shared\PartialPages\_PartialCategoryList.cshtml" />
     <Content Include="Views\Shared\PartialPages\_PartialDetail.cshtml" />
+    <Content Include="Views\Shared\_LayoutList.cshtml" />
+    <Content Include="Views\About\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

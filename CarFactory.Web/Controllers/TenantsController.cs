@@ -5,8 +5,12 @@ using Abp.Web.Mvc.Authorization;
 using CarFactory.Authorization;
 using CarFactory.MultiTenancy;
 
+
 namespace CarFactory.Web.Controllers
 {
+    /// <summary>
+    /// 多租户控制器，目前不需要
+    /// </summary>
     [AbpMvcAuthorize(PermissionNames.Pages_Tenants)]
     public class TenantsController : CarFactoryControllerBase
     {

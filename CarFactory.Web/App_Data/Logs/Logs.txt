@@ -1,55 +1,40 @@
-DEBUG 2018-01-26 09:03:04,299 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2018-01-26 09:03:04,311 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
-DEBUG 2018-01-26 09:03:04,317 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Web.NbscwMPAWebModule, NbscwMPA.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPADataModule, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,319 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPACoreModule, NbscwMPA.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPAApplicationModule, NbscwMPA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Api.NbscwMPAWebApiModule, NbscwMPA.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,320 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,321 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,321 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:04,323 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
-DEBUG 2018-01-26 09:03:04,556 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-01-26 09:03:04,556 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-01-26 09:03:04,556 [1    ] o.Configuration.LanguageManagementConfig - Converted NbscwMPA (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-01-26 09:03:04,556 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-01-26 09:03:04,857 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: NbscwMPA.EntityFramework.NbscwMPADbContext, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 09:03:06,546 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2018-01-26 09:03:06,568 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2018-01-26 09:03:06,574 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2018-01-26 09:03:06,577 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: NbscwMPA
-DEBUG 2018-01-26 09:03:06,580 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2018-01-26 09:03:06,629 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-01-26 09:03:06,675 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
-DEBUG 2018-01-26 09:03:06,675 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.UserLoginInfoDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.CreateUserDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UpdateUserDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UserDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.CreateRoleDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.PermissionDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.RoleDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.CreateTenantDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.EditTenantDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.TenantDto
-DEBUG 2018-01-26 09:03:06,678 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantChangeViewModel
-DEBUG 2018-01-26 09:03:06,679 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2018-01-26 09:03:07,599 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2018-01-26 09:03:07,600 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2018-01-26 09:03:07,601 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2018-01-26 09:03:07,601 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2018-01-26 09:03:07,602 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Configuration.IConfigurationAppService' with service name 'app/configuration'.
-DEBUG 2018-01-26 09:03:07,603 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
-WARN  2018-01-26 09:03:11,071 [6    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+DEBUG 2018-03-05 20:35:38,836 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:35:38,869 [1    ] o.Configuration.LanguageManagementConfig - Converted CarFactory (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:35:38,869 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:35:39,655 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: CarFactory.EntityFramework.CarFactoryDbContext, CarFactory.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:35:44,708 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-05 20:35:44,751 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-05 20:35:44,764 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-05 20:35:44,771 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CarFactory
+DEBUG 2018-03-05 20:35:44,775 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-05 20:35:44,959 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-05 20:35:45,084 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-03-05 20:35:45,084 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-05 20:35:45,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-05 20:35:45,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.CreateUserDto
+DEBUG 2018-03-05 20:35:45,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UpdateUserDto
+DEBUG 2018-03-05 20:35:45,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UserDto
+DEBUG 2018-03-05 20:35:45,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-05 20:35:45,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.PermissionDto
+DEBUG 2018-03-05 20:35:45,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.RoleDto
+DEBUG 2018-03-05 20:35:45,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductEditDto
+DEBUG 2018-03-05 20:35:45,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductListDto
+DEBUG 2018-03-05 20:35:45,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryEditDto
+DEBUG 2018-03-05 20:35:45,091 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryListDto
+DEBUG 2018-03-05 20:35:45,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-05 20:35:45,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-05 20:35:45,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-05 20:35:45,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-05 20:35:45,092 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-05 20:35:48,504 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-05 20:35:48,507 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-05 20:35:48,517 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-05 20:35:48,520 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Products.IProductAppService' with service name 'app/product'.
+DEBUG 2018-03-05 20:35:48,523 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Category.ICategoryAppService' with service name 'app/category'.
+DEBUG 2018-03-05 20:35:48,525 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-05 20:35:48,527 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-05 20:35:48,529 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+WARN  2018-03-05 20:35:57,921 [6    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
    at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
 --- End of stack trace from previous location where exception was thrown ---
    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
@@ -97,553 +82,256 @@ Abp.Authorization.AbpAuthorizationException: Current user did not login to the a
    at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
    at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:line 28
    at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) in D:\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:line 48
-DEBUG 2018-01-26 10:16:50,928 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2018-01-26 10:16:50,941 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
-DEBUG 2018-01-26 10:16:50,946 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Web.NbscwMPAWebModule, NbscwMPA.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,947 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPADataModule, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPACoreModule, NbscwMPA.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPAApplicationModule, NbscwMPA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Api.NbscwMPAWebApiModule, NbscwMPA.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,949 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:50,952 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
-DEBUG 2018-01-26 10:16:51,180 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-01-26 10:16:51,181 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-01-26 10:16:51,181 [1    ] o.Configuration.LanguageManagementConfig - Converted NbscwMPA (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-01-26 10:16:51,181 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-01-26 10:16:51,485 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: NbscwMPA.EntityFramework.NbscwMPADbContext, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-01-26 10:16:53,218 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2018-01-26 10:16:53,240 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2018-01-26 10:16:53,248 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2018-01-26 10:16:53,250 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: NbscwMPA
-DEBUG 2018-01-26 10:16:53,263 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2018-01-26 10:16:53,309 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-01-26 10:16:53,367 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
-DEBUG 2018-01-26 10:16:53,367 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2018-01-26 10:16:53,370 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.UserLoginInfoDto
-DEBUG 2018-01-26 10:16:53,370 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.CreateUserDto
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UpdateUserDto
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UserDto
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.CreateRoleDto
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.PermissionDto
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.RoleDto
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.CreateTenantDto
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.EditTenantDto
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.TenantDto
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantChangeViewModel
-DEBUG 2018-01-26 10:16:53,371 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2018-01-26 10:16:54,316 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2018-01-26 10:16:54,317 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2018-01-26 10:16:54,317 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2018-01-26 10:16:54,318 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2018-01-26 10:16:54,319 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Configuration.IConfigurationAppService' with service name 'app/configuration'.
-DEBUG 2018-01-26 10:16:54,319 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
-WARN  2018-01-26 10:16:57,714 [5    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
-   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
-   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   at System.Threading.Tasks.Task.Execute()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:line 28
-   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) in D:\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:line 48
-Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
-   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 43
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 98
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:line 57
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
-   at System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   at System.Threading.Tasks.Task.Execute()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type) in D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:line 28
-   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) in D:\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:line 48
-DEBUG 2018-01-26 10:17:15,197 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"f7590aa7-88bd-4ec7-a05c-bffc59bd6ef6","IpAddress":"192.168.72.1","TenantId":null,"UserId":1,"ConnectTime":"2018-01-26T10:17:15.1928862+08:00","Properties":{}}
-DEBUG 2018-01-26 10:17:15,221 [15   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: f7590aa7-88bd-4ec7-a05c-bffc59bd6ef6
-DEBUG 2018-01-26 10:17:55,678 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: f7590aa7-88bd-4ec7-a05c-bffc59bd6ef6
-DEBUG 2018-01-26 10:17:55,905 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"d8b4d1f1-3d3d-437d-80c7-1a5cd1d895e8","IpAddress":"192.168.72.1","TenantId":null,"UserId":1,"ConnectTime":"2018-01-26T10:17:55.9051391+08:00","Properties":{}}
-DEBUG 2018-01-26 10:17:55,912 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: d8b4d1f1-3d3d-437d-80c7-1a5cd1d895e8
-WARN  2018-01-26 10:18:03,920 [7    ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'NbscwMPA'!
-DEBUG 2018-01-26 10:18:03,968 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: d8b4d1f1-3d3d-437d-80c7-1a5cd1d895e8
-DEBUG 2018-01-26 10:18:04,129 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"258a0712-bfa9-4152-b880-474cd2ef2da9","IpAddress":"192.168.72.1","TenantId":null,"UserId":1,"ConnectTime":"2018-01-26T10:18:04.1290079+08:00","Properties":{}}
-DEBUG 2018-01-26 10:18:04,131 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 258a0712-bfa9-4152-b880-474cd2ef2da9
-DEBUG 2018-01-26 10:18:07,761 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 258a0712-bfa9-4152-b880-474cd2ef2da9
-DEBUG 2018-01-26 10:18:07,907 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"846858a9-1483-4d03-9d54-c9593a238339","IpAddress":"192.168.72.1","TenantId":null,"UserId":1,"ConnectTime":"2018-01-26T10:18:07.9070524+08:00","Properties":{}}
-DEBUG 2018-01-26 10:18:07,910 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 846858a9-1483-4d03-9d54-c9593a238339
-WARN  2018-01-26 10:18:14,356 [12   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'NbscwMPA'!
-DEBUG 2018-01-26 10:18:14,406 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 846858a9-1483-4d03-9d54-c9593a238339
-DEBUG 2018-01-26 10:18:14,553 [15   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e97fd4dc-a08d-4d31-81a0-25d537e90611","IpAddress":"192.168.72.1","TenantId":null,"UserId":1,"ConnectTime":"2018-01-26T10:18:14.5537273+08:00","Properties":{}}
-DEBUG 2018-01-26 10:18:14,555 [16   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e97fd4dc-a08d-4d31-81a0-25d537e90611
-DEBUG 2018-01-26 10:45:09,238 [124  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e97fd4dc-a08d-4d31-81a0-25d537e90611
-DEBUG 2018-01-26 10:45:09,467 [124  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"cfe7cbfc-641d-42a1-a1c4-4be957274c68","IpAddress":"192.168.72.1","TenantId":null,"UserId":1,"ConnectTime":"2018-01-26T10:45:09.467754+08:00","Properties":{}}
-DEBUG 2018-01-26 10:45:09,472 [131  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: cfe7cbfc-641d-42a1-a1c4-4be957274c68
-DEBUG 2018-01-26 10:45:11,088 [116  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: cfe7cbfc-641d-42a1-a1c4-4be957274c68
-DEBUG 2018-01-26 10:45:11,215 [134  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6539abc4-475f-4496-a290-acc1a4723347","IpAddress":"192.168.72.1","TenantId":null,"UserId":1,"ConnectTime":"2018-01-26T10:45:11.2154001+08:00","Properties":{}}
-DEBUG 2018-01-26 10:45:11,218 [131  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6539abc4-475f-4496-a290-acc1a4723347
-DEBUG 2018-01-26 10:45:13,531 [131  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 6539abc4-475f-4496-a290-acc1a4723347
-DEBUG 2018-01-26 10:45:13,882 [129  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"aca176bb-7260-41fe-adaf-582566c6fb63","IpAddress":"192.168.72.1","TenantId":null,"UserId":1,"ConnectTime":"2018-01-26T10:45:13.882493+08:00","Properties":{}}
-DEBUG 2018-01-26 10:45:13,884 [136  ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: aca176bb-7260-41fe-adaf-582566c6fb63
-DEBUG 2018-02-14 13:48:23,402 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2018-02-14 13:48:23,417 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
-DEBUG 2018-02-14 13:48:23,421 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Web.NbscwMPAWebModule, NbscwMPA.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPADataModule, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,423 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,424 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,424 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,424 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPACoreModule, NbscwMPA.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,424 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPAApplicationModule, NbscwMPA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,424 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,424 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Api.NbscwMPAWebApiModule, NbscwMPA.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,424 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,425 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:23,428 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
-DEBUG 2018-02-14 13:48:23,669 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-14 13:48:23,669 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-14 13:48:23,669 [1    ] o.Configuration.LanguageManagementConfig - Converted NbscwMPA (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-14 13:48:23,669 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-14 13:48:23,963 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: NbscwMPA.EntityFramework.NbscwMPADbContext, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 13:48:25,915 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2018-02-14 13:48:25,939 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2018-02-14 13:48:25,945 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2018-02-14 13:48:25,948 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: NbscwMPA
-DEBUG 2018-02-14 13:48:25,950 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2018-02-14 13:48:26,036 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-02-14 13:48:26,085 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
-DEBUG 2018-02-14 13:48:26,085 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2018-02-14 13:48:26,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.UserLoginInfoDto
-DEBUG 2018-02-14 13:48:26,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.CreateUserDto
-DEBUG 2018-02-14 13:48:26,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UpdateUserDto
-DEBUG 2018-02-14 13:48:26,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UserDto
-DEBUG 2018-02-14 13:48:26,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.CreateRoleDto
-DEBUG 2018-02-14 13:48:26,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.PermissionDto
-DEBUG 2018-02-14 13:48:26,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.RoleDto
-DEBUG 2018-02-14 13:48:26,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.CreateTenantDto
-DEBUG 2018-02-14 13:48:26,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.EditTenantDto
-DEBUG 2018-02-14 13:48:26,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.TenantDto
-DEBUG 2018-02-14 13:48:26,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantChangeViewModel
-DEBUG 2018-02-14 13:48:26,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2018-02-14 13:48:27,488 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2018-02-14 13:48:27,489 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2018-02-14 13:48:27,489 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2018-02-14 13:48:27,490 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2018-02-14 13:48:27,491 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Configuration.IConfigurationAppService' with service name 'app/configuration'.
-DEBUG 2018-02-14 13:48:27,492 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
-WARN  2018-02-14 13:48:30,998 [5    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 43
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 98
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 57
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type) 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 28
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 43
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 98
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 57
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type) 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 28
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-DEBUG 2018-02-14 14:05:45,065 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2018-02-14 14:05:45,079 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
-DEBUG 2018-02-14 14:05:45,085 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Web.NbscwMPAWebModule, NbscwMPA.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,087 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPADataModule, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,087 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,087 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,087 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,087 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,088 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,088 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,088 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPACoreModule, NbscwMPA.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,088 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPAApplicationModule, NbscwMPA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,088 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,088 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Api.NbscwMPAWebApiModule, NbscwMPA.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,088 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,088 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,089 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,089 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,089 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:45,092 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
-DEBUG 2018-02-14 14:05:45,332 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-14 14:05:45,332 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-14 14:05:45,332 [1    ] o.Configuration.LanguageManagementConfig - Converted NbscwMPA (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-14 14:05:45,332 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-14 14:05:45,624 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: NbscwMPA.EntityFramework.NbscwMPADbContext, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-14 14:05:47,623 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2018-02-14 14:05:47,644 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2018-02-14 14:05:47,651 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2018-02-14 14:05:47,654 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: NbscwMPA
-DEBUG 2018-02-14 14:05:47,656 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2018-02-14 14:05:47,727 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-02-14 14:05:47,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
-DEBUG 2018-02-14 14:05:47,778 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.UserLoginInfoDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.CreateUserDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UpdateUserDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UserDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.CreateRoleDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.PermissionDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.RoleDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.CreateTenantDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.EditTenantDto
-DEBUG 2018-02-14 14:05:47,782 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.TenantDto
-DEBUG 2018-02-14 14:05:47,783 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantChangeViewModel
-DEBUG 2018-02-14 14:05:47,783 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2018-02-14 14:05:49,155 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2018-02-14 14:05:49,156 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2018-02-14 14:05:49,157 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2018-02-14 14:05:49,158 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2018-02-14 14:05:49,159 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Configuration.IConfigurationAppService' with service name 'app/configuration'.
-DEBUG 2018-02-14 14:05:49,159 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
-WARN  2018-02-14 14:05:52,619 [5    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 43
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 98
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 57
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type) 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 28
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 43
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 98
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 57
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type) 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 28
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-DEBUG 2018-02-14 14:07:08,639 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e8b7d473-58e0-4b48-b22c-0b7cae27d3a2","IpAddress":"192.168.72.1","TenantId":null,"UserId":1,"ConnectTime":"2018-02-14T14:07:08.6307165+08:00","Properties":{}}
-DEBUG 2018-02-14 14:07:08,683 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e8b7d473-58e0-4b48-b22c-0b7cae27d3a2
-DEBUG 2018-02-20 14:01:09,176 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2018-02-20 14:01:09,190 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
-DEBUG 2018-02-20 14:01:09,195 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Web.NbscwMPAWebModule, NbscwMPA.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,197 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPADataModule, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,197 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,197 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,197 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,197 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPACoreModule, NbscwMPA.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPAApplicationModule, NbscwMPA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,198 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Api.NbscwMPAWebApiModule, NbscwMPA.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,199 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:09,204 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
-DEBUG 2018-02-20 14:01:09,456 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-20 14:01:09,456 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-20 14:01:09,456 [1    ] o.Configuration.LanguageManagementConfig - Converted NbscwMPA (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-20 14:01:09,456 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-02-20 14:01:09,755 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: NbscwMPA.EntityFramework.NbscwMPADbContext, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-02-20 14:01:11,867 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2018-02-20 14:01:11,890 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2018-02-20 14:01:11,912 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2018-02-20 14:01:11,915 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: NbscwMPA
-DEBUG 2018-02-20 14:01:11,916 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2018-02-20 14:01:11,997 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-02-20 14:01:12,048 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
-DEBUG 2018-02-20 14:01:12,048 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2018-02-20 14:01:12,051 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.UserLoginInfoDto
-DEBUG 2018-02-20 14:01:12,051 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.CreateUserDto
-DEBUG 2018-02-20 14:01:12,051 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UpdateUserDto
-DEBUG 2018-02-20 14:01:12,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UserDto
-DEBUG 2018-02-20 14:01:12,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.CreateRoleDto
-DEBUG 2018-02-20 14:01:12,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.PermissionDto
-DEBUG 2018-02-20 14:01:12,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.RoleDto
-DEBUG 2018-02-20 14:01:12,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.CreateTenantDto
-DEBUG 2018-02-20 14:01:12,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.EditTenantDto
-DEBUG 2018-02-20 14:01:12,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.TenantDto
-DEBUG 2018-02-20 14:01:12,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantChangeViewModel
-DEBUG 2018-02-20 14:01:12,052 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2018-02-20 14:01:13,429 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2018-02-20 14:01:13,430 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2018-02-20 14:01:13,431 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2018-02-20 14:01:13,432 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2018-02-20 14:01:13,433 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Configuration.IConfigurationAppService' with service name 'app/configuration'.
-DEBUG 2018-02-20 14:01:13,435 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
-WARN  2018-02-20 14:01:17,289 [5    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 43
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 98
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 57
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type) 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 28
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-Abp.Authorization.AbpAuthorizationException: 当前用户没有登录到系统！
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 43
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 98
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext() 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelper.cs:行号 57
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.<>c__DisplayClass15_0.<Run>b__0(Task t)
-   在 System.Threading.Tasks.ContinuationTaskFromTask.InnerInvoke()
-   在 System.Threading.Tasks.Task.Execute()
---- 引发异常的上一位置中堆栈跟踪的末尾 ---
-   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
-   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
-   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type) 位置 D:\Github\aspnetboilerplate\src\Abp\Authorization\AuthorizationHelperExtensions.cs:行号 28
-   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext) 位置 D:\Github\aspnetboilerplate\src\Abp.Web.Mvc\Web\Mvc\Authorization\AbpMvcAuthorizeFilter.cs:行号 48
-DEBUG 2018-02-20 14:08:16,909 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6ec8a286-b1fc-42d6-96fb-82a00717e3fc","IpAddress":"192.168.72.1","TenantId":1,"UserId":2,"ConnectTime":"2018-02-20T14:08:16.9021694+08:00","Properties":{}}
-DEBUG 2018-02-20 14:08:16,965 [19   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6ec8a286-b1fc-42d6-96fb-82a00717e3fc
-WARN  2018-02-20 14:09:05,332 [13   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'NbscwMPA'!
-DEBUG 2018-02-20 14:09:05,398 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 6ec8a286-b1fc-42d6-96fb-82a00717e3fc
-DEBUG 2018-02-20 14:09:05,768 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"05f1c21e-30e9-429f-be95-ec0be4f6a7b0","IpAddress":"192.168.72.1","TenantId":1,"UserId":2,"ConnectTime":"2018-02-20T14:09:05.7688893+08:00","Properties":{}}
-DEBUG 2018-02-20 14:09:05,786 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 05f1c21e-30e9-429f-be95-ec0be4f6a7b0
-DEBUG 2018-02-20 14:09:20,262 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 05f1c21e-30e9-429f-be95-ec0be4f6a7b0
-DEBUG 2018-02-20 14:09:20,597 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"8a4ed0fa-41ca-40bc-9fe9-f3e0817f6170","IpAddress":"192.168.72.1","TenantId":1,"UserId":2,"ConnectTime":"2018-02-20T14:09:20.5974006+08:00","Properties":{}}
-DEBUG 2018-02-20 14:09:20,645 [11   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 8a4ed0fa-41ca-40bc-9fe9-f3e0817f6170
-WARN  2018-02-20 14:09:36,721 [11   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'NbscwMPA'!
-DEBUG 2018-02-20 14:09:36,780 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 8a4ed0fa-41ca-40bc-9fe9-f3e0817f6170
-DEBUG 2018-02-20 14:09:37,158 [21   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"c8293ca1-16f6-4a1a-8d63-3a5c2b8bbd03","IpAddress":"192.168.72.1","TenantId":1,"UserId":2,"ConnectTime":"2018-02-20T14:09:37.1586507+08:00","Properties":{}}
-DEBUG 2018-02-20 14:09:37,167 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: c8293ca1-16f6-4a1a-8d63-3a5c2b8bbd03
-WARN  2018-02-20 14:12:52,939 [30   ] naries.DictionaryBasedLocalizationSource - Can not find 'ConfirmPassword' in localization source 'NbscwMPA'!
-DEBUG 2018-02-20 14:12:53,002 [28   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: c8293ca1-16f6-4a1a-8d63-3a5c2b8bbd03
-DEBUG 2018-02-20 14:12:53,449 [34   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"13c5b3aa-6be3-441d-88d2-340d612c7f85","IpAddress":"192.168.72.1","TenantId":1,"UserId":2,"ConnectTime":"2018-02-20T14:12:53.4493578+08:00","Properties":{}}
-DEBUG 2018-02-20 14:12:53,456 [30   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 13c5b3aa-6be3-441d-88d2-340d612c7f85
-DEBUG 2018-03-05 10:45:25,804 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2018-03-05 10:45:25,816 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
-DEBUG 2018-03-05 10:45:25,820 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Web.NbscwMPAWebModule, NbscwMPA.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPADataModule, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,822 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,823 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,823 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,823 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,823 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPACoreModule, NbscwMPA.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,823 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPAApplicationModule, NbscwMPA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,823 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,824 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Api.NbscwMPAWebApiModule, NbscwMPA.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,824 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,824 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,824 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,824 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,824 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:25,827 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
-DEBUG 2018-03-05 10:45:26,034 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-03-05 10:45:26,034 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-03-05 10:45:26,034 [1    ] o.Configuration.LanguageManagementConfig - Converted NbscwMPA (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-03-05 10:45:26,034 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-03-05 10:45:26,305 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: NbscwMPA.EntityFramework.NbscwMPADbContext, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:45:27,991 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2018-03-05 10:45:28,011 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2018-03-05 10:45:28,025 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2018-03-05 10:45:28,029 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: NbscwMPA
-DEBUG 2018-03-05 10:45:28,030 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2018-03-05 10:45:28,074 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-03-05 10:45:28,117 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
-DEBUG 2018-03-05 10:45:28,117 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2018-03-05 10:45:28,120 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.UserLoginInfoDto
-DEBUG 2018-03-05 10:45:28,120 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.CreateUserDto
-DEBUG 2018-03-05 10:45:28,120 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UpdateUserDto
-DEBUG 2018-03-05 10:45:28,120 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UserDto
-DEBUG 2018-03-05 10:45:28,120 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.CreateRoleDto
-DEBUG 2018-03-05 10:45:28,120 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.PermissionDto
-DEBUG 2018-03-05 10:45:28,121 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.RoleDto
-DEBUG 2018-03-05 10:45:28,121 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.CreateTenantDto
-DEBUG 2018-03-05 10:45:28,121 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.EditTenantDto
-DEBUG 2018-03-05 10:45:28,121 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.TenantDto
-DEBUG 2018-03-05 10:45:28,121 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantChangeViewModel
-DEBUG 2018-03-05 10:45:28,121 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2018-03-05 10:45:28,962 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2018-03-05 10:45:28,963 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2018-03-05 10:45:28,964 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2018-03-05 10:45:28,964 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2018-03-05 10:45:28,965 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Configuration.IConfigurationAppService' with service name 'app/configuration'.
-DEBUG 2018-03-05 10:45:28,966 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
-DEBUG 2018-03-05 10:45:39,061 [7    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
-DEBUG 2018-03-05 10:45:39,062 [7    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-03-05 10:45:39,062 [7    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-03-05 10:45:39,062 [7    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
-DEBUG 2018-03-05 10:56:11,318 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
-DEBUG 2018-03-05 10:56:11,331 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
-DEBUG 2018-03-05 10:56:11,336 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Web.NbscwMPAWebModule, NbscwMPA.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPADataModule, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,338 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPACoreModule, NbscwMPA.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.NbscwMPAApplicationModule, NbscwMPA.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: NbscwMPA.Api.NbscwMPAWebApiModule, NbscwMPA.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,339 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:11,341 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
-DEBUG 2018-03-05 10:56:11,489 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-03-05 10:56:11,489 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-03-05 10:56:11,489 [1    ] o.Configuration.LanguageManagementConfig - Converted NbscwMPA (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-03-05 10:56:11,490 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
-DEBUG 2018-03-05 10:56:11,763 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: NbscwMPA.EntityFramework.NbscwMPADbContext, NbscwMPA.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-DEBUG 2018-03-05 10:56:12,896 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
-DEBUG 2018-03-05 10:56:12,909 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
-DEBUG 2018-03-05 10:56:12,914 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
-DEBUG 2018-03-05 10:56:12,916 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: NbscwMPA
-DEBUG 2018-03-05 10:56:12,917 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
-DEBUG 2018-03-05 10:56:12,959 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-03-05 10:56:12,993 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 13 classes define auto mapping attributes
-DEBUG 2018-03-05 10:56:12,993 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.TenantLoginInfoDto
-DEBUG 2018-03-05 10:56:12,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Sessions.Dto.UserLoginInfoDto
-DEBUG 2018-03-05 10:56:12,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.CreateUserDto
-DEBUG 2018-03-05 10:56:12,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UpdateUserDto
-DEBUG 2018-03-05 10:56:12,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Users.Dto.UserDto
-DEBUG 2018-03-05 10:56:12,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.CreateRoleDto
-DEBUG 2018-03-05 10:56:12,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.PermissionDto
-DEBUG 2018-03-05 10:56:12,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Roles.Dto.RoleDto
-DEBUG 2018-03-05 10:56:12,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.CreateTenantDto
-DEBUG 2018-03-05 10:56:12,996 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.EditTenantDto
-DEBUG 2018-03-05 10:56:12,997 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.MultiTenancy.Dto.TenantDto
-DEBUG 2018-03-05 10:56:12,997 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantChangeViewModel
-DEBUG 2018-03-05 10:56:12,997 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - NbscwMPA.Web.Models.Account.TenantSelectionViewModel+TenantInfo
-DEBUG 2018-03-05 10:56:13,819 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Sessions.ISessionAppService' with service name 'app/session'.
-DEBUG 2018-03-05 10:56:13,820 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Users.IUserAppService' with service name 'app/user'.
-DEBUG 2018-03-05 10:56:13,821 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Roles.IRoleAppService' with service name 'app/role'.
-DEBUG 2018-03-05 10:56:13,822 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
-DEBUG 2018-03-05 10:56:13,822 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Configuration.IConfigurationAppService' with service name 'app/configuration'.
-DEBUG 2018-03-05 10:56:13,823 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'NbscwMPA.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
-DEBUG 2018-03-05 10:56:23,896 [51   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
-DEBUG 2018-03-05 10:56:23,897 [51   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-03-05 10:56:23,898 [51   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
-DEBUG 2018-03-05 10:56:23,898 [51   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-03-05 20:38:58,595 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-05 20:38:58,628 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-03-05 20:38:58,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.Web.CarFactoryWebModule, CarFactory.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,641 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryDataModule, CarFactory.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,642 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,642 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,642 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,643 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,643 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,643 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,644 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryCoreModule, CarFactory.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,644 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryApplicationModule, CarFactory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,644 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.Api.CarFactoryWebApiModule, CarFactory.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,645 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,646 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,646 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,646 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,647 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:38:58,652 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-03-05 20:38:59,237 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:38:59,237 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:38:59,237 [1    ] o.Configuration.LanguageManagementConfig - Converted CarFactory (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:38:59,237 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:39:00,077 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: CarFactory.EntityFramework.CarFactoryDbContext, CarFactory.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:39:07,590 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-05 20:39:07,660 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-05 20:39:07,682 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-05 20:39:07,690 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CarFactory
+DEBUG 2018-03-05 20:39:07,696 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-05 20:39:07,936 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-05 20:39:08,081 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-03-05 20:39:08,081 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-05 20:39:08,087 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-05 20:39:08,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.CreateUserDto
+DEBUG 2018-03-05 20:39:08,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UpdateUserDto
+DEBUG 2018-03-05 20:39:08,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UserDto
+DEBUG 2018-03-05 20:39:08,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-05 20:39:08,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.PermissionDto
+DEBUG 2018-03-05 20:39:08,088 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.RoleDto
+DEBUG 2018-03-05 20:39:08,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductEditDto
+DEBUG 2018-03-05 20:39:08,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductListDto
+DEBUG 2018-03-05 20:39:08,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryEditDto
+DEBUG 2018-03-05 20:39:08,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryListDto
+DEBUG 2018-03-05 20:39:08,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-05 20:39:08,089 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-05 20:39:08,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-05 20:39:08,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-05 20:39:08,090 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-05 20:39:16,018 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-05 20:39:16,021 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-05 20:39:16,026 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-05 20:39:16,029 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Products.IProductAppService' with service name 'app/product'.
+DEBUG 2018-03-05 20:39:16,032 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Category.ICategoryAppService' with service name 'app/category'.
+DEBUG 2018-03-05 20:39:16,037 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-05 20:39:16,042 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-05 20:39:16,046 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-03-05 20:43:49,217 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-05 20:43:49,251 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-03-05 20:43:49,267 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.Web.CarFactoryWebModule, CarFactory.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,271 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryDataModule, CarFactory.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,272 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,272 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,273 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,274 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,274 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,274 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryCoreModule, CarFactory.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,275 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryApplicationModule, CarFactory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,275 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,275 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.Api.CarFactoryWebApiModule, CarFactory.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,275 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,276 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:49,282 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-03-05 20:43:49,846 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:43:49,846 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:43:49,846 [1    ] o.Configuration.LanguageManagementConfig - Converted CarFactory (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:43:49,846 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 20:43:50,672 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: CarFactory.EntityFramework.CarFactoryDbContext, CarFactory.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 20:43:54,159 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-05 20:43:54,196 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-05 20:43:54,215 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-05 20:43:54,221 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: CarFactory
+DEBUG 2018-03-05 20:43:54,224 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-05 20:43:54,316 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-05 20:43:54,413 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-03-05 20:43:54,413 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-05 20:43:54,418 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-05 20:43:54,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.CreateUserDto
+DEBUG 2018-03-05 20:43:54,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UpdateUserDto
+DEBUG 2018-03-05 20:43:54,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UserDto
+DEBUG 2018-03-05 20:43:54,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-05 20:43:54,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.PermissionDto
+DEBUG 2018-03-05 20:43:54,419 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.RoleDto
+DEBUG 2018-03-05 20:43:54,420 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductEditDto
+DEBUG 2018-03-05 20:43:54,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductListDto
+DEBUG 2018-03-05 20:43:54,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryEditDto
+DEBUG 2018-03-05 20:43:54,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryListDto
+DEBUG 2018-03-05 20:43:54,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-05 20:43:54,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-05 20:43:54,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-05 20:43:54,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-05 20:43:54,421 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-05 20:43:56,333 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-05 20:43:56,334 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-05 20:43:56,336 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-05 20:43:56,337 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Products.IProductAppService' with service name 'app/product'.
+DEBUG 2018-03-05 20:43:56,339 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Category.ICategoryAppService' with service name 'app/category'.
+DEBUG 2018-03-05 20:43:56,340 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-05 20:43:56,342 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-05 20:43:56,343 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-03-05 22:04:59,957 [32   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-03-05 22:04:59,959 [32   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-05 22:04:59,960 [32   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-05 22:04:59,960 [32   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-03-05 22:05:33,919 [30   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-05 22:05:33,942 [30   ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-03-05 22:05:33,954 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.Web.CarFactoryWebModule, CarFactory.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,956 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryDataModule, CarFactory.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,957 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,957 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,957 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,957 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,958 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,958 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,959 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryCoreModule, CarFactory.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,959 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryApplicationModule, CarFactory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,959 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,959 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.Api.CarFactoryWebApiModule, CarFactory.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,960 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,960 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,960 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,960 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,960 [30   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:33,965 [30   ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-03-05 22:05:34,287 [30   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 22:05:34,287 [30   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 22:05:34,287 [30   ] o.Configuration.LanguageManagementConfig - Converted CarFactory (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 22:05:34,287 [30   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 22:05:34,867 [30   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: CarFactory.EntityFramework.CarFactoryDbContext, CarFactory.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:05:37,341 [30   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-05 22:05:37,352 [30   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-05 22:05:37,363 [30   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-05 22:05:37,367 [30   ] Abp.Localization.LocalizationManager     - Initialized localization source: CarFactory
+DEBUG 2018-03-05 22:05:37,370 [30   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-05 22:05:37,463 [30   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-05 22:05:37,534 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-03-05 22:05:37,534 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-05 22:05:37,539 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-05 22:05:37,540 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.CreateUserDto
+DEBUG 2018-03-05 22:05:37,540 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UpdateUserDto
+DEBUG 2018-03-05 22:05:37,540 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UserDto
+DEBUG 2018-03-05 22:05:37,540 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-05 22:05:37,540 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.PermissionDto
+DEBUG 2018-03-05 22:05:37,540 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.RoleDto
+DEBUG 2018-03-05 22:05:37,541 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductEditDto
+DEBUG 2018-03-05 22:05:37,541 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductListDto
+DEBUG 2018-03-05 22:05:37,541 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryEditDto
+DEBUG 2018-03-05 22:05:37,541 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryListDto
+DEBUG 2018-03-05 22:05:37,541 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-05 22:05:37,542 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-05 22:05:37,542 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-05 22:05:37,542 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-05 22:05:37,542 [30   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-05 22:05:39,373 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-05 22:05:39,374 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-05 22:05:39,376 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-05 22:05:39,378 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Products.IProductAppService' with service name 'app/product'.
+DEBUG 2018-03-05 22:05:39,380 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Category.ICategoryAppService' with service name 'app/category'.
+DEBUG 2018-03-05 22:05:39,381 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-05 22:05:39,383 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-05 22:05:39,385 [30   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-03-05 22:25:58,484 [34   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-03-05 22:25:58,485 [34   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-05 22:25:58,486 [34   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-05 22:25:58,486 [34   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2018-03-05 22:26:11,739 [40   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-03-05 22:26:11,767 [40   ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-03-05 22:26:11,780 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.Web.CarFactoryWebModule, CarFactory.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,784 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryDataModule, CarFactory.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,785 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,785 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,786 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,786 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,787 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,787 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,788 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryCoreModule, CarFactory.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,788 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.CarFactoryApplicationModule, CarFactory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,788 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,788 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: CarFactory.Api.CarFactoryWebApiModule, CarFactory.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,789 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,789 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,789 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,789 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,790 [40   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:11,795 [40   ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-03-05 22:26:12,258 [40   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 22:26:12,259 [40   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 22:26:12,259 [40   ] o.Configuration.LanguageManagementConfig - Converted CarFactory (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 22:26:12,259 [40   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-03-05 22:26:13,168 [40   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: CarFactory.EntityFramework.CarFactoryDbContext, CarFactory.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-03-05 22:26:17,187 [40   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-03-05 22:26:17,205 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-03-05 22:26:17,220 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-03-05 22:26:17,224 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: CarFactory
+DEBUG 2018-03-05 22:26:17,227 [40   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-03-05 22:26:17,401 [40   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-05 22:26:17,504 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-03-05 22:26:17,504 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-03-05 22:26:17,515 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-03-05 22:26:17,515 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.CreateUserDto
+DEBUG 2018-03-05 22:26:17,515 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UpdateUserDto
+DEBUG 2018-03-05 22:26:17,516 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Users.Dto.UserDto
+DEBUG 2018-03-05 22:26:17,516 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.CreateRoleDto
+DEBUG 2018-03-05 22:26:17,516 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.PermissionDto
+DEBUG 2018-03-05 22:26:17,516 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Roles.Dto.RoleDto
+DEBUG 2018-03-05 22:26:17,516 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductEditDto
+DEBUG 2018-03-05 22:26:17,517 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Products.Dtos.ProductListDto
+DEBUG 2018-03-05 22:26:17,517 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryEditDto
+DEBUG 2018-03-05 22:26:17,517 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Category.Dtos.CategoryListDto
+DEBUG 2018-03-05 22:26:17,517 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-03-05 22:26:17,517 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-03-05 22:26:17,517 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.MultiTenancy.Dto.TenantDto
+DEBUG 2018-03-05 22:26:17,518 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-03-05 22:26:17,518 [40   ] Abp.AutoMapper.AbpAutoMapperModule       - CarFactory.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-03-05 22:26:19,938 [40   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-03-05 22:26:19,941 [40   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-03-05 22:26:19,943 [40   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-03-05 22:26:19,944 [40   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Products.IProductAppService' with service name 'app/product'.
+DEBUG 2018-03-05 22:26:19,946 [40   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Category.ICategoryAppService' with service name 'app/category'.
+DEBUG 2018-03-05 22:26:19,947 [40   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-03-05 22:26:19,949 [40   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-03-05 22:26:19,950 [40   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+ERROR 2018-03-05 22:26:31,806 [42   ] rFactory.Web.Controllers.AboutController - Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ASP._Page_Views_About_Contact_cshtml.Execute() in e:\VS2017Projects\CarFactory\CarFactory.Web\Views\About\Contact.cshtml:line 15
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)

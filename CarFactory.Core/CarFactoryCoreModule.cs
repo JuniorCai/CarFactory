@@ -25,7 +25,7 @@ namespace CarFactory
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
 
             //Remove the following line to disable multi-tenancy.
-            //Configuration.MultiTenancy.IsEnabled = NbscwMPAConsts.MultiTenancyEnabled;
+            //Configuration.MultiTenancy.IsEnabled = CarFactoryConsts.MultiTenancyEnabled;
 
             //Add/remove localization sources here
             Configuration.Localization.Sources.Add(
@@ -33,7 +33,7 @@ namespace CarFactory
                     CarFactoryConsts.LocalizationSourceName,
                     new XmlEmbeddedFileLocalizationDictionaryProvider(
                         Assembly.GetExecutingAssembly(),
-                        "NbscwMPA.Localization.Source"
+                        "CarFactory.Localization.Source"
                         )
                     )
                 );

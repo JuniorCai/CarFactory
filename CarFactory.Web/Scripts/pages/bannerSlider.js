@@ -1,6 +1,6 @@
 
 $(function(){
-    var numpic = $('#slides li').size()-1;
+    var numpic = $('#slides li').length-1;
     var nownow = 0;
     var inout = 0;
     var TT = 0;

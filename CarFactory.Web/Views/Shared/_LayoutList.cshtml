@@ -1,0 +1,66 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css/commom")
+    @Scripts.Render("~/scripts/jquery")
+
+
+</head>
+<body>
+    <div class="head">
+        <div class="top">
+            <div class="logo"></div>
+            @{
+                Html.RenderPartial("~/Views/Shared/PartialPages/_PartialHeader.cshtml");
+            }
+        </div>
+    </div>
+    <div class="banner2">
+        <img src="/Content/images/public/banner_02.jpg" height="201" width="100%">
+    </div>
+
+    <div class="main">
+        <div class="left">
+            <div class="productlist">
+                <div class="list_tt"></div>
+                <div class="list_ow">
+                    @{
+                        Html.RenderPartial("~/Views/Shared/PartialPages/_PartialCategoryList.cshtml");
+                    }
+                </div>
+            </div>
+            <div class="contact">
+                <div class="con_tt"></div>
+                <div class="tel2">
+                    <img src="/Content/images/public/show_15.jpg" onclick="javascript:popup_qs()" style="cursor: pointer;">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right_tt">
+                <div class="right_tt_l">@ViewBag.PageName</div>
+                <div class="right_tt_r">
+                    您当前所在位置:@Html.ActionLink("首页","Index","Home") &gt;
+                    @RenderSection("Navigation",true)
+                </div>
+            </div>
+            <div class="right_ow">
+               @RenderBody()
+            </div>
+        </div>
+    </div>
+    <div style="clear: both"></div>
+    @{
+        Html.RenderPartial("~/Views/Shared/PartialPages/_PartialFooter.cshtml");
+    }
+
+</body>
+
+</html>
+

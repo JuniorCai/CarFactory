@@ -1,87 +1,29 @@
 ﻿@{
     ViewBag.ActiveMenu = PageNames.About; //The menu item will be active for this page.
+    ViewBag.Title = "关于我们-宁波市澳史福环保科技有限公司";
+    ViewBag.PageName = "关于我们";
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
 }
-<div class="row clearfix">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="card">
-            <div class="header">
-                <h2>
-                    About This Template
-                </h2>
-            </div>
-            <div class="body">
-                <p>
-                    This is a simple startup template based on ASP.NET Boilerplate framework and Module Zero.
-                    If you need an enterprise startup project, check <a href="http://aspnetzero.com?ref=abptmpl" target="_blank">ASP.NET ZERO</a>.
-                </p>
 
-                <h3>What is ASP.NET Boilerplate?</h3>
+@section Navigation
+{
+    <a href="javascript:void(0);">@ViewBag.PageName</a>
+}
 
-                <p>
-                    ASP.NET Boilerplate is an application framework built on latest <strong>ASP.NET Core</strong> framework.
-                    It makes easy to use authorization, dependency injection, validation, exception handling, localization, logging, caching, background jobs and so on.
-                    It's built on already familiar tools like Entity Framework, AutoMapper, Castle Windsor...
-                </p>
 
-                <p>
-                    ASP.NET Boilerplate implements <strong>NLayer architecture</strong> (Domain, Application, Infrastructure and Presentation Layers)
-                    and <strong>Domain Driven Design</strong> (Entities, Repositories, Domain/Application Services, DTO's...).
-                    Also implements and provides a good infrastructure to implement common software development <strong>best practices</strong>.
-                </p>
 
-                <h3>What is Module Zero?</h3>
-
-                <p>
-                    ASP.NET Boilerplate framework is designed to be independent of any database
-                    schema and to be as generic as possible. Therefore, It leaves some concepts
-                    <strong>abstract</strong> and <strong>optional</strong> (like audit logging, permission and setting stores)
-                    which requires some <strong>data store</strong>.
-                </p>
-                <p>
-                    <strong>Module Zero </strong>implements all fundamental concepts of ASP.NET
-                    Boilerplate framework such as <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Tenant-Management">tenant management</a> (<strong>multi-tenancy</strong>),
-                    <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Role-Management">
-                        role management
-                    </a>, <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/User-Management">user management</a>,
-                    <a href="http://www.aspnetboilerplate.com/Pages/Documents/Authorization">authorization</a> (<a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Permission-Management">
-                        permission management
-                    </a>),
-                    <a href="http://www.aspnetboilerplate.com/Pages/Documents/Setting-Management">setting management</a>, <a href="http://www.aspnetboilerplate.com/Pages/Documents/Zero/Language-Management">
-                        language management
-                    </a>, <a href="http://www.aspnetboilerplate.com/Pages/Documents/Audit-Logging">audit logging</a>
-                    and so on.
-                </p>
-                <p>
-                    Module-Zero defines entities and implements <strong>domain logic</strong>
-                    (domain layer) and leaves application and presentation layers to you.
-                </p>
-
-                <h4>Based on Microsoft ASP.NET Core Identity</h4>
-
-                <p>
-                    Module Zero is based on Microsoft's
-                    <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity" target="_blank">ASP.NET Core Identity</a> library.
-                    It extends user and role managers and implements user and role stores using generic repositories.
-                </p>
-
-                <h3>Documentation</h3>
-
-                <ul>
-                    <li>
-                        <a href="https://www.aspnetboilerplate.com/Pages/Documents/Zero/Startup-Template-Core">Documentation for this template</a>
-                    </li>
-                    <li>
-                        <a href="http://www.aspnetboilerplate.com/Pages/Documents">ASP.NET Boilerplate documentation</a>
-                    </li>
-                </ul>
-
-                <h3>Source code</h3>
-
-                <p>
-                    This template is developed open source on Github. You can contribute to the template.
-                    <a href="https://github.com/aspnetboilerplate/module-zero-core-template" target="_blank">https://github.com/aspnetboilerplate/module-zero-core-template</a>
-                </p>
-            </div>
-        </div>
-    </div>
+<div class="right_ow">
+    <p>宁波澳昌环保科技有限公司是澳大利亚CPC公司、世贸（澳大利亚）集团公司及澳洲Tech-Dry公司在宁波的唯一总代理。所有进口产品有澳洲商贸委推荐。</p>
+    <p>世贸（澳大利亚）集团公司，是一家大型的销售集团公司，旗下有：CPC公司、TGA聚合物公司、Tech-Dry公司、水处理设备公司、爱心护理垫公司、乳品公司、皇家葡萄酒庄园、慈善与福利事业部、牛羊肉冻品皮革公司、防水防污工程公司及清洁用品公司。</p>
+    <p><strong>公司宗旨：</strong>尖端科技、低碳环保、成就卓越。</p>
+    <p>澳大利亚CPC公司，是国际知名的混凝土保护及防水涂料公司，公司位于悉尼市郊，拥有现代化的花园式厂房、国际先进的自动化设备和环保检测设备。目前是国际最大的硅烷纳米防水剂及添加剂生产企业。多年来一直致力于高科技环保型产品的研发和生产，系列产品有硅烷纳米防水涂料主原料，建筑防水剂，浴室防漏剂，地砖防滑剂，水泥永久抗渗外加剂等，为节能环保、低碳减排、美化城市而不懈努力。</p>
+    <p><strong>CPC公司的宗旨</strong>：“高效是最低的标准，我们永远追求卓越”。</p>
+    <p><strong>CPC公司的理念：</strong>环保、高效、便捷、经济。</p>
+    <p>CPC系列产品全部能过“全球通用环保权威结构SGS”的合格测试，进口后全部通过国家质量监督检验机构、进口商品检验局等多家权威机构认证；公司严格依照欧盟的</p>
+    <p>技术标准生产，从而获得欧盟“CSIRO”和“澳洲环保标准”的专业认证报告，这属于国际最高级别的“绿色通行证”。</p>
+    <p>宁波澳昌以“卓越品质，体验完美”的理念，是中国建筑涂料行业唯一设有产品体验馆的涂料公司，让用户真真切切体验，明明白白选择。</p>
+    <p><strong>宁波澳昌的系列涂料可以分为三大类型：</strong></p>
+    <p>一、渗透型（permeability）：防水、防污、防漏、防滑等涂料。</p>
+    <p>二、涂膜型（coating）：扛压防裂、防腐耐磨、耐酸碱、耐高低温等涂料。</p>
+    <p>三、节能型（energy-efficiency）：保温隔热、防水防污等涂料。</p>
 </div>

@@ -194,7 +194,7 @@
     <Compile Include="Messages\Message.cs" />
     <Compile Include="CarFactoryCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />
-    <Compile Include="Authorization\NbscwMPAAuthorizationProvider.cs" />
+    <Compile Include="Authorization\CarFactoryAuthorizationProvider.cs" />
     <Compile Include="Authorization\LoginManager.cs" />
     <Compile Include="Authorization\PermissionChecker.cs" />
     <Compile Include="Authorization\PermissionNames.cs" />

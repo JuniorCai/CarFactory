@@ -4,8 +4,8 @@
 @using Abp.Configuration
 @using Abp.Timing
 @using Abp.Web.Mvc.Extensions
-@using NbscwMPA
-@using NbscwMPA.Configuration
+@using CarFactory
+@using CarFactory.Configuration
 @{
     Layout = null;
     SetAntiForgeryCookie();
@@ -25,11 +25,11 @@
 
     @Styles.Render("~/Content/css/commom")
     
-    @Scripts.Render("~/scripts/jquery");
+    @Scripts.Render("~/scripts/jquery")
 
     <!-- View specific styles -->
     @RenderSection("styles", required: false)
-    @RenderSection("scripts",false);
+    @RenderSection("scripts",false)
 
     
 </head>
