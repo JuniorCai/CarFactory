@@ -5,7 +5,7 @@ using Abp.Collections.Extensions;
 using Abp.Dependency;
 using Castle.Facilities.Logging;
 
-namespace NbscwMPACarFactory.Migrator
+namespace CarFactory.Migrator
 {
     public class Program
     {
@@ -15,7 +15,7 @@ namespace NbscwMPACarFactory.Migrator
         {
             ParseArgs(args);
 
-            using (var bootstrapper = AbpBootstrapper.Create<NbscwMPAMigratorModule>())
+            using (var bootstrapper = AbpBootstrapper.Create<CarFactoryMigratorModule>())
             {
                 bootstrapper.IocManager.IocContainer
                     .AddFacility<LoggingFacility>(f => f.UseAbpLog4Net()

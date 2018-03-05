@@ -1,13 +1,12 @@
 using System.Data.Entity;
 using System.Reflection;
 using Abp.Modules;
-using CarFactory;
 using CarFactory.EntityFramework;
 
-namespace NbscwMPACarFactory.Migrator
+namespace CarFactory.Migrator
 {
     [DependsOn(typeof(CarFactoryDataModule))]
-    public class NbscwMPAMigratorModule : AbpModule
+    public class CarFactoryMigratorModule : AbpModule
     {
         public override void PreInitialize()
         {

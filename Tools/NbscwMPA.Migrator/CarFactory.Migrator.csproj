@@ -206,7 +206,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NbscwMPAMigratorModule.cs" />
+    <Compile Include="CarFactoryMigratorModule.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="MultiTenantMigrateExecuter.cs" />
     <Compile Include="Program.cs" />
