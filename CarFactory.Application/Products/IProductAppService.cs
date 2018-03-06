@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using CarFactory.Application.Products.Dtos;
+using CarFactory.Core.CustomDomain.Products;
 
 namespace CarFactory.Application.Products
 {
@@ -10,7 +13,10 @@ namespace CarFactory.Application.Products
     /// 产品信息服务接口
     /// </summary>
     public interface IProductAppService : IApplicationService
-    {
+	{
+	    Task<ProductListDto> GetFirstOrDefaultAsync(Expression<Func<Product, bool>> predicate);
+
+
         #region 产品信息管理
 
         /// <summary>

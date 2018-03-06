@@ -1,0 +1,53 @@
+﻿@model CarFactory.Web.Models.Common.PreAndNextNavModel<CarFactory.Application.Products.Dtos.ProductListDto>
+    @{
+        ViewBag.Title = Model.CurrentItem.Title;
+        ViewBag.PageName = Model.CurrentItem.Title;
+        Layout = "~/Views/Shared/_LayoutList.cshtml";
+    }
+
+    @section Navigation
+    {
+        @Html.ActionLink(Model.CurrentItem.Title, "Detail", "Product")
+    }
+
+
+
+    <div class="pbt">@Model.CurrentItem.Title</div>
+    <div class="sj">发布时间：@Model.CurrentItem.CreationTime.ToShortDateString()</div>
+
+
+<div class="js">@Model.CurrentItem.Detail</div>
+
+<div class="pager">
+    上一篇：
+    @*    <a title="{{$detailModel->preDetail->title}}" href="{{$detailModel->preDetail->id!=0?($detailModel->urlPath.'-'.$detailModel->preDetail->id):"javascript:void(0);"}}">*@
+    @*        {{strlen($detailModel->preDetail->title)>24?substr($detailModel->preDetail->title,0,24).'...':$detailModel->preDetail->title}}*@
+    @*    </a>*@
+    @Html.ActionLink(Model.PreviousItem.Title.Length>24? Model.PreviousItem.Title.Substring(0,24): Model.PreviousItem.Title, "Detail",new{id = Model.PreviousItem.Id})
+    &nbsp;&nbsp;
+    下一篇：
+    @*    <a title="{{$detailModel->nextDetail->title}}" href="{{$detailModel->nextDetail->id!=0?($detailModel->urlPath.'-'.$detailModel->nextDetail->id):"javascript:void(0);"}}">*@
+    @*        {{strlen($detailModel->nextDetail->title)>24?substr($detailModel->nextDetail->title,0,24).'...':$detailModel->nextDetail->title}}*@
+    @*        {{--                    {{$detailModel->nextDetail->title}}--}}*@
+    @*    </a>*@
+    @Html.ActionLink(Model.NextItem.Title.Length>24? Model.NextItem.Title.Substring(0,24): Model.NextItem.Title, "Detail",new{id = Model.NextItem.Id})
+
+</div>
+
+@*    <div class="related">*@
+@*        <div class="related_new">*@
+@*            <div class="related_title">相关文章</div>*@
+@*            <div class="related_new_title">*@
+@*                <div class="related_new_title_left">标题</div>*@
+@*                <div class="related_new_title_right">时间</div>*@
+@*            </div>*@
+@*            @foreach ($relativeModels as $model)*@
+@*<div class="related_new_body">*@
+@*    <div class="related_new_body_left"><a href="{{$detailModel->urlPath}}-{{$model->id}}" target="_blank">{{$model->name}}</a></div>*@
+@*    <div class="related_new_body_right">{{date('Y-m-d',strtotime($model->created_at))}}</div>*@
+@*</div>*@
+@*            @endforeach*@
+@*        </div>*@
+@*    </div>*@
+
+

@@ -52,5 +52,9 @@ namespace CarFactory.Application.Products.Dtos
         [Required]
         public bool IsShow { get; set; }
 
+        [DisplayName("产品详情")]
+        [Required]
+        public string Detail { get; set; }
+
     }
 }

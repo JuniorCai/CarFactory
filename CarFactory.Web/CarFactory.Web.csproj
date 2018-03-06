@@ -2685,6 +2685,7 @@
     <Compile Include="Models\Account\TenantChangeModalViewModel.cs" />
     <Compile Include="Models\Account\TenantChangeViewModel.cs" />
     <Compile Include="Models\Common\Modals\ModalHeaderViewModel.cs" />
+    <Compile Include="Models\Common\PreAndNextNavModel.cs" />
     <Compile Include="Models\Layout\RightSideBarViewModel.cs" />
     <Compile Include="Models\Account\LoginFormViewModel.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
@@ -2714,8 +2715,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\About\Index.cshtml" />
-    <Content Include="Views\Layout\_LanguageSelection.cshtml" />
-    <Content Include="Views\Layout\_SideBarNav.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Scripts\sweetalert\sweet-alert.scss" />
     <Content Include="Views\Account\Login.cshtml" />
@@ -2813,10 +2812,6 @@
     <Content Include="Views\Account\_AccountLanguages.cshtml" />
     <Content Include="Views\Account\_Layout.less" />
     <Content Include="Views\Account\_TenantChangeModal.cshtml" />
-    <Content Include="Views\Shared\Modals\_ModalFooterWithSaveAndCancel.cshtml" />
-    <Content Include="Views\Shared\Modals\_ModalHeader.cshtml" />
-    <Content Include="Views\Layout\_RightSideBar.cshtml" />
-    <Content Include="Views\Layout\_SideBarUserArea.cshtml" />
     <Content Include="Views\Users\_EditUserModal.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\_EditRoleModal.cshtml" />
@@ -2834,6 +2829,7 @@
     <Content Include="Views\Shared\PartialPages\_PartialDetail.cshtml" />
     <Content Include="Views\Shared\_LayoutList.cshtml" />
     <Content Include="Views\About\Contact.cshtml" />
+    <Content Include="Views\Product\Detail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2861,8 +2857,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\images\products\" />
-    <Folder Include="Views\Product\" />
-    <Folder Include="Views\WebLayout\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

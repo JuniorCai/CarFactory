@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Dynamic.Core;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
 using Abp.Authorization;
@@ -29,13 +31,19 @@ namespace CarFactory.Application.Products
         /// 构造方法
         /// </summary>
         public ProductAppService(IRepository<Product, int> productRepository,
-            ProductManage productManage
-
-        )
+            ProductManage productManage)
         {
             _productRepository = productRepository;
             _productManage = productManage;
 
+        }
+
+        public async Task<ProductListDto> GetFirstOrDefaultAsync(Expression<Func<Product, bool>> predicate)
+        {
+            Product entity = await _productRepository.FirstOrDefaultAsync(predicate);
+
+            ProductListDto infoDto = entity.MapTo<ProductListDto>();
+            return infoDto;
         }
 
 

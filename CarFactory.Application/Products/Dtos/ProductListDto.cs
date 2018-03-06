@@ -53,5 +53,8 @@ namespace CarFactory.Application.Products.Dtos
         /// </summary>
         [DisplayName("创建时间")]
         public DateTime CreationTime { get; set; }
+
+        [DisplayName("产品详情")]
+        public string Detail { get; set; }
     }
 }

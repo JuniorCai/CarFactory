@@ -25,5 +25,8 @@ namespace CarFactory.Core.CustomDomain.Products
 
         [Required]
         public virtual bool IsShow { get; set; }
+
+        [Required]
+        public virtual string Detail { get; set; }
     }
 }
