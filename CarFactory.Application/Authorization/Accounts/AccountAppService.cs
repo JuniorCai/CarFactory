@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Abp.Configuration;
 using Abp.Zero.Configuration;
-using CarFactory.Authorization.Accounts.Dto;
-using CarFactory.Authorization.Users;
+using CarFactory.Application.Authorization.Accounts.Dto;
+using CarFactory.Core.Authorization.Users;
 
-namespace CarFactory.Authorization.Accounts
+namespace CarFactory.Application.Authorization.Accounts
 {
     public class AccountAppService : CarFactoryAppServiceBase, IAccountAppService
     {

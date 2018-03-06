@@ -1,4 +1,4 @@
-namespace CarFactory.Configuration.Ui
+namespace CarFactory.Application.Configuration.Ui
 {
     public class UiThemeInfo
     {

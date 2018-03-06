@@ -1,9 +1,9 @@
 using Abp.Authorization.Users;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
-using CarFactory.Authorization.Roles;
+using CarFactory.Core.Authorization.Roles;
 
-namespace CarFactory.Authorization.Users
+namespace CarFactory.Core.Authorization.Users
 {
     public class UserStore : AbpUserStore<Role, User>
     {

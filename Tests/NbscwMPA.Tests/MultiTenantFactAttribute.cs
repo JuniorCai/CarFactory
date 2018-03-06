@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using CarFactory.Core;
+using Xunit;
 
 namespace CarFactory.Tests
 {

@@ -434,6 +434,7 @@
     <Content Include="Abp\Framework\styles\abp.mixings.css" />
     <Content Include="Abp\Framework\styles\abp.mixings.min.css" />
     <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
+    <Content Include="App_Data\sql\company.sql" />
     <Content Include="Content\css\admin\commonStyle.css" />
     <Content Include="Content\css\bannerSlider.css" />
     <Content Include="Content\css\bootstrap-theme.css" />
@@ -2856,7 +2857,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\images\products\" />
   </ItemGroup>
   <ItemGroup>

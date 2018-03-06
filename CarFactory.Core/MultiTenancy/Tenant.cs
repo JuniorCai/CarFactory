@@ -1,7 +1,7 @@
 ﻿using Abp.MultiTenancy;
-using CarFactory.Authorization.Users;
+using CarFactory.Core.Authorization.Users;
 
-namespace CarFactory.MultiTenancy
+namespace CarFactory.Core.MultiTenancy
 {
     public class Tenant : AbpTenant<User>
     {

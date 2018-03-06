@@ -2,7 +2,7 @@
 using Abp.Authorization;
 using Abp.AutoMapper;
 
-namespace CarFactory.Roles.Dto
+namespace CarFactory.Application.Roles.Dto
 {
     [AutoMapFrom(typeof(Permission))]
     public class PermissionDto : EntityDto<long>

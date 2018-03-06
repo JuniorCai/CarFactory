@@ -1,8 +1,8 @@
 ﻿using Abp.Authorization;
-using CarFactory.Authorization.Roles;
-using CarFactory.Authorization.Users;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.Authorization.Users;
 
-namespace CarFactory.Authorization
+namespace CarFactory.Core.Authorization
 {
     public class PermissionChecker : PermissionChecker<Role, User>
     {

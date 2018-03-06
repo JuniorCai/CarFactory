@@ -1,4 +1,4 @@
-﻿namespace CarFactory.Products.Dtos
+﻿namespace CarFactory.Application.Products.Dtos
 {
     /// <summary>
     /// 产品信息新增和编辑时用Dto

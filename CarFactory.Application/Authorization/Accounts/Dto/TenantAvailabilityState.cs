@@ -1,4 +1,4 @@
-﻿namespace CarFactory.Authorization.Accounts.Dto
+﻿namespace CarFactory.Application.Authorization.Accounts.Dto
 {
     public enum TenantAvailabilityState
     {

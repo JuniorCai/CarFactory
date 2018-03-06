@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
 
-namespace CarFactory
+namespace CarFactory.Core
 {
     public class PagedAndSortedInputDto : IPagedResultRequest, ISortedResultRequest
     {

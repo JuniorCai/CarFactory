@@ -3,7 +3,7 @@ using Abp.Authorization.Users;
 using Abp.Extensions;
 using Microsoft.AspNet.Identity;
 
-namespace CarFactory.Authorization.Users
+namespace CarFactory.Core.Authorization.Users
 {
     public class User : AbpUser<User>
     {

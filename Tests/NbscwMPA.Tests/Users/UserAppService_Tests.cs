@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
 using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
-using CarFactory.Users;
-using CarFactory.Users.Dto;
+using CarFactory.Application.Users;
+using CarFactory.Application.Users.Dto;
 using Shouldly;
 using Xunit;
 

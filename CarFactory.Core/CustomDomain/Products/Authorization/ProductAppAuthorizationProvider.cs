@@ -16,7 +16,7 @@ using Abp.Localization;
 	#endregion
 
 
-namespace CarFactory.CustomDomain.Products.Authorization
+namespace CarFactory.Core.CustomDomain.Products.Authorization
 {
 	/// <summary>
     /// 权限配置都在这里。

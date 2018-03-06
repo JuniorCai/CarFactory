@@ -2,6 +2,8 @@
 using Abp.MultiTenancy;
 using Abp.TestBase;
 using Abp.Zero.Configuration;
+using CarFactory.Application;
+using CarFactory.EntityFramework;
 using Castle.MicroKernel.Registration;
 using NSubstitute;
 

@@ -3,13 +3,13 @@ using Abp.Authorization;
 using Abp.Authorization.Roles;
 using Abp.Authorization.Users;
 using Abp.MultiTenancy;
-using CarFactory.Authorization;
-using CarFactory.Authorization.Roles;
-using CarFactory.Authorization.Users;
-using CarFactory.EntityFramework;
+using CarFactory.Core.Authorization;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.EntityFramework.EntityFramework;
 using Microsoft.AspNet.Identity;
 
-namespace CarFactory.Migrations.SeedData
+namespace CarFactory.EntityFramework.Migrations.SeedData
 {
     public class HostRoleAndUserCreator
     {

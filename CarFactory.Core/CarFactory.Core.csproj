@@ -7,7 +7,7 @@
     <ProjectGuid>{17298EA0-AF73-4F30-B6F1-2066100D7D74}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarFactory</RootNamespace>
+    <RootNamespace>CarFactory.Core</RootNamespace>
     <AssemblyName>CarFactory.Core</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -179,7 +179,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomDomain\Company\Authorization\CompanyAppAuthorizationProvider.cs" />
+    <Compile Include="CustomDomain\Company\Authorization\CompanyAppPermissions.cs" />
     <Compile Include="CustomDomain\Company\Company.cs" />
+    <Compile Include="CustomDomain\Company\CompanyManage.cs" />
+    <Compile Include="CustomDomain\Company\____CompanyReadme.cs" />
     <Compile Include="CustomDomain\Information\Information.cs" />
     <Compile Include="CustomDomain\Category\Authorization\CategoryAppAuthorizationProvider.cs" />
     <Compile Include="CustomDomain\Category\Authorization\CategoryAppPermissions.cs" />

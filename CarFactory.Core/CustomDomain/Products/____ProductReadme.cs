@@ -7,7 +7,7 @@
 // <Author-作者>角落的白板笔</Author-作者>
 // Copyright © YoYoCms@中国.2018-03-03T21:54:50. All Rights Reserved.
 //<生成时间>2018-03-03T21:54:50</生成时间>
-namespace CarFactory.CustomDomain.Products
+namespace CarFactory.Core.CustomDomain.Products
 {
 	
 	

@@ -1,10 +1,10 @@
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using CarFactory.Roles.Dto;
-using CarFactory.Users.Dto;
+using CarFactory.Application.Roles.Dto;
+using CarFactory.Application.Users.Dto;
 
-namespace CarFactory.Users
+namespace CarFactory.Application.Users
 {
     public interface IUserAppService : IAsyncCrudAppService<UserDto, long, PagedResultRequestDto, CreateUserDto, UpdateUserDto>
     {

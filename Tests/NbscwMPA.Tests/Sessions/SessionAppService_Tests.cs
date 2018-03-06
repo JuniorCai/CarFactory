@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using CarFactory.Sessions;
+using CarFactory.Application.Sessions;
 using Shouldly;
 using Xunit;
 

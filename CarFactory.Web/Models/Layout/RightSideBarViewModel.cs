@@ -1,4 +1,4 @@
-using CarFactory.Configuration.Ui;
+using CarFactory.Application.Configuration.Ui;
 
 namespace CarFactory.Web.Models.Layout
 {

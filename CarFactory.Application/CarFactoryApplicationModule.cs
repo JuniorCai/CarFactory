@@ -3,12 +3,13 @@ using Abp.Authorization;
 using Abp.Authorization.Roles;
 using Abp.AutoMapper;
 using Abp.Modules;
-using CarFactory.Authorization.Roles;
-using CarFactory.Authorization.Users;
-using CarFactory.Roles.Dto;
-using CarFactory.Users.Dto;
+using CarFactory.Application.Roles.Dto;
+using CarFactory.Application.Users.Dto;
+using CarFactory.Core;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.Authorization.Users;
 
-namespace CarFactory
+namespace CarFactory.Application
 {
     [DependsOn(typeof(CarFactoryCoreModule), typeof(AbpAutoMapperModule))]
     public class CarFactoryApplicationModule : AbpModule

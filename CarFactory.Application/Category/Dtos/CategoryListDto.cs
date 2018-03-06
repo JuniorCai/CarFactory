@@ -3,12 +3,12 @@ using System.ComponentModel;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 
-namespace CarFactory.Category.Dtos
+namespace CarFactory.Application.Category.Dtos
 {
 	/// <summary>
     /// 产品类别列表Dto
     /// </summary>
-    [AutoMapFrom(typeof(CarFactory.CustomDomain.Category.Category))]
+    [AutoMapFrom(typeof(Core.CustomDomain.Category.Category))]
     public class CategoryListDto : EntityDto<int>
     {
         public      string Name { get; set; }

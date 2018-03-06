@@ -2,9 +2,9 @@
 using Abp.Configuration;
 using Abp.Localization;
 using Abp.Net.Mail;
-using CarFactory.EntityFramework;
+using CarFactory.EntityFramework.EntityFramework;
 
-namespace CarFactory.Migrations.SeedData
+namespace CarFactory.EntityFramework.Migrations.SeedData
 {
     public class DefaultSettingsCreator
     {

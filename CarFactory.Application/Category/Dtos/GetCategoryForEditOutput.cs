@@ -1,4 +1,4 @@
-﻿namespace CarFactory.Category.Dtos
+﻿namespace CarFactory.Application.Category.Dtos
 {
     /// <summary>
     /// 用于添加或编辑 产品类别时使用的DTO

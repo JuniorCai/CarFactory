@@ -3,10 +3,10 @@ using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 using Abp.MultiTenancy;
 using Abp.Runtime.Caching;
-using CarFactory.Authorization.Users;
-using CarFactory.MultiTenancy;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.MultiTenancy;
 
-namespace CarFactory.Features
+namespace CarFactory.Core.Features
 {
     public class FeatureValueStore : AbpFeatureValueStore<Tenant, User>
     {

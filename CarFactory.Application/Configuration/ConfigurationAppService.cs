@@ -1,9 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Abp.Authorization;
 using Abp.Runtime.Session;
-using CarFactory.Configuration.Dto;
+using CarFactory.Application.Configuration.Dto;
+using CarFactory.Core.Configuration;
 
-namespace CarFactory.Configuration
+namespace CarFactory.Application.Configuration
 {
     [AbpAuthorize]
     public class ConfigurationAppService : CarFactoryAppServiceBase, IConfigurationAppService

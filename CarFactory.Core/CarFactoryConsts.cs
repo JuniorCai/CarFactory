@@ -1,4 +1,4 @@
-﻿namespace CarFactory
+﻿namespace CarFactory.Core
 {
     /// <summary>
     /// 一些程序中会使用到的通用常量

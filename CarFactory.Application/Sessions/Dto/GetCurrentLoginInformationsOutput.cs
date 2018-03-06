@@ -1,4 +1,4 @@
-﻿namespace CarFactory.Sessions.Dto
+﻿namespace CarFactory.Application.Sessions.Dto
 {
     public class GetCurrentLoginInformationsOutput
     {

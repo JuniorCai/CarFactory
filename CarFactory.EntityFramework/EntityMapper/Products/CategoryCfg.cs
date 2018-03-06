@@ -1,8 +1,9 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using CarFactory.CustomDomain.Category;
-using CarFactory.EntityFramework;
+using CarFactory.Core;
+using CarFactory.Core.CustomDomain.Category;
+using CarFactory.EntityFramework.EntityFramework;
 
-namespace CarFactory.EntityMapper.Products
+namespace CarFactory.EntityFramework.EntityMapper.Products
 {
 
     /// <summary>

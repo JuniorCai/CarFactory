@@ -2,9 +2,9 @@
 using System.ComponentModel;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
-using CarFactory.CustomDomain.Products;
+using CarFactory.Core.CustomDomain.Products;
 
-namespace CarFactory.Products.Dtos
+namespace CarFactory.Application.Products.Dtos
 {
     /// <summary>
     /// 产品信息列表Dto
@@ -40,7 +40,7 @@ namespace CarFactory.Products.Dtos
         /// 产品类别
         /// </summary>
         [DisplayName("产品类别")]
-        public CarFactory.CustomDomain.Category.Category ProductCategory { get; set; }
+        public Core.CustomDomain.Category.Category ProductCategory { get; set; }
 
         /// <summary>
         /// 是否可见

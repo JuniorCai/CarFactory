@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using CarFactory.Roles.Dto;
+using CarFactory.Application.Roles.Dto;
 
-namespace CarFactory.Roles
+namespace CarFactory.Application.Roles
 {
     public interface IRoleAppService : IAsyncCrudAppService<RoleDto, int, PagedResultRequestDto, CreateRoleDto, RoleDto>
     {

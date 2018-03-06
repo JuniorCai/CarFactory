@@ -3,11 +3,12 @@ using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.IdentityFramework;
 using Abp.Runtime.Session;
-using CarFactory.Authorization.Users;
-using CarFactory.MultiTenancy;
+using CarFactory.Core;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.MultiTenancy;
 using Microsoft.AspNet.Identity;
 
-namespace CarFactory
+namespace CarFactory.Application
 {
     /// <summary>
     /// Derive your application services from this class.

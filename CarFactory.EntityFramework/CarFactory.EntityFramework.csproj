@@ -7,7 +7,7 @@
     <ProjectGuid>{3979F157-DEB0-4878-AB1D-4CEF6B5A1300}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarFactory</RootNamespace>
+    <RootNamespace>CarFactory.EntityFramework</RootNamespace>
     <AssemblyName>CarFactory.EntityFramework</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -205,6 +205,7 @@
   <ItemGroup>
     <Compile Include="EntityFramework\CarFactoryDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\CarFactoryRepositoryBase.cs" />
+    <Compile Include="EntityMapper\Company\CompanyCfg.cs" />
     <Compile Include="EntityMapper\Products\CategoryCfg.cs" />
     <Compile Include="EntityMapper\Products\ProductCfg.cs" />
     <Compile Include="Migrations\201803050350081_initialCreate.cs" />

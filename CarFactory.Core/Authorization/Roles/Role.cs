@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Abp.Authorization.Roles;
-using CarFactory.Authorization.Users;
+using CarFactory.Core.Authorization.Users;
 
-namespace CarFactory.Authorization.Roles
+namespace CarFactory.Core.Authorization.Roles
 {
     public class Role : AbpRole<User>
     {

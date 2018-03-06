@@ -8,11 +8,11 @@ using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
-using CarFactory.CustomDomain.Products;
-using CarFactory.CustomDomain.Products.Authorization;
-using CarFactory.Products.Dtos;
+using CarFactory.Application.Products.Dtos;
+using CarFactory.Core.CustomDomain.Products;
+using CarFactory.Core.CustomDomain.Products.Authorization;
 
-namespace CarFactory.Products
+namespace CarFactory.Application.Products
 {
     /// <summary>
     /// 产品信息服务实现

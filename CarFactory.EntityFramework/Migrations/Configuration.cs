@@ -1,11 +1,11 @@
 using System.Data.Entity.Migrations;
 using Abp.MultiTenancy;
 using Abp.Zero.EntityFramework;
-using CarFactory.EntityFramework;
-using CarFactory.Migrations.SeedData;
+using CarFactory.EntityFramework.EntityFramework;
+using CarFactory.EntityFramework.Migrations.SeedData;
 using EntityFramework.DynamicFilters;
 
-namespace CarFactory.Migrations
+namespace CarFactory.EntityFramework.Migrations
 {
     public sealed class Configuration : DbMigrationsConfiguration<CarFactoryDbContext>, IMultiTenantSeed
     {

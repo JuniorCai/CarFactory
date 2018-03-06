@@ -1,4 +1,4 @@
-﻿@model CarFactory.CustomDomain.Company.Company
+﻿@model CarFactory.Application.Company.Dtos.CompanyListDto
 @{
     ViewBag.Title = "联系我们";
     ViewBag.PageName = "联系我们";
@@ -61,7 +61,7 @@
             //创建地图函数：
             function createMap() {
                 var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-                var point = new BMap.Point("{{$company->Longitude}}","{{$company->Latitude}}");//定义一个中心点坐标
+                var point = new BMap.Point("@Model.Longitude","@Model.Latitude");//定义一个中心点坐标
                 map.centerAndZoom(point, 17);//设定地图的中心点和坐标并将地图显示在地图容器中
                 window.map = map;//将map变量存储在全局
             }
@@ -88,7 +88,7 @@
             }
 
             //标注点数组
-            var markerArr = [{ title: "{{$company->Name}}", content: "电话：{{$company->Tel}}<br/>地址：{{$company->Address}}", point: "{{$company->Longitude}}|{{$company->Latitude}}", isOpen: 1, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
+            var markerArr = [{ title: "@Model.CompanyName", content: "电话：@Model.Tel<br/>地址：@Model.Address", point: "@Model.Longitude|@Model.Latitude", isOpen: 1, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
             ];
             //创建marker
             function addMarker() {

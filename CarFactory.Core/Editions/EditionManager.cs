@@ -2,7 +2,7 @@
 using Abp.Application.Features;
 using Abp.Domain.Repositories;
 
-namespace CarFactory.Editions
+namespace CarFactory.Core.Editions
 {
     public class EditionManager : AbpEditionManager
     {

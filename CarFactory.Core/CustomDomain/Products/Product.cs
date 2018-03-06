@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Abp.Domain.Entities.Auditing;
 
-namespace CarFactory.CustomDomain.Products
+namespace CarFactory.Core.CustomDomain.Products
 {
     [Table("Product")]
     public class Product : FullAuditedEntity

@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Abp.Application.Services;
-using CarFactory.Authorization.Accounts.Dto;
+using CarFactory.Application.Authorization.Accounts.Dto;
 
-namespace CarFactory.Authorization.Accounts
+namespace CarFactory.Application.Authorization.Accounts
 {
     public interface IAccountAppService : IApplicationService
     {

@@ -2,8 +2,9 @@
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 using Abp.MultiTenancy;
+using CarFactory.Core.MultiTenancy;
 
-namespace CarFactory.MultiTenancy.Dto
+namespace CarFactory.Application.MultiTenancy.Dto
 {
     [AutoMapTo(typeof(Tenant)), AutoMapFrom(typeof(Tenant))]
     public class TenantDto : EntityDto

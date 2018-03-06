@@ -1,4 +1,4 @@
-﻿namespace CarFactory.Configuration
+﻿namespace CarFactory.Core.Configuration
 {
     public static class AppSettingNames
     {

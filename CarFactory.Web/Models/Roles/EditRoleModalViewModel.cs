@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using CarFactory.Roles.Dto;
+using CarFactory.Application.Roles.Dto;
 
 namespace CarFactory.Web.Models.Roles
 {

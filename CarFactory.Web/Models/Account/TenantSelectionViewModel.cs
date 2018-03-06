@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Abp.AutoMapper;
-using CarFactory.MultiTenancy;
+using CarFactory.Core.MultiTenancy;
 
 namespace CarFactory.Web.Models.Account
 {

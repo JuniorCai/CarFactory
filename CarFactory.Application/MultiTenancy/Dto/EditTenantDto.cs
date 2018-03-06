@@ -1,8 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using Abp.AutoMapper;
 using Abp.MultiTenancy;
+using CarFactory.Core.MultiTenancy;
 
-namespace CarFactory.MultiTenancy.Dto
+namespace CarFactory.Application.MultiTenancy.Dto
 {
     [AutoMapTo(typeof(Tenant))]
     public class EditTenantDto

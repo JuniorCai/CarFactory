@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using Abp.Extensions;
 
-namespace CarFactory.Validation
+namespace CarFactory.Core.Validation
 {
     public static class ValidationHelper
     {

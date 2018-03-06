@@ -2,8 +2,9 @@
 using Abp.Authorization.Users;
 using Abp.AutoMapper;
 using Abp.MultiTenancy;
+using CarFactory.Core.MultiTenancy;
 
-namespace CarFactory.MultiTenancy.Dto
+namespace CarFactory.Application.MultiTenancy.Dto
 {
     [AutoMapTo(typeof(Tenant))]
     public class CreateTenantDto

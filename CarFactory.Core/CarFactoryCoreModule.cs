@@ -4,13 +4,13 @@ using Abp.Localization.Dictionaries.Xml;
 using Abp.Modules;
 using Abp.Zero;
 using Abp.Zero.Configuration;
-using CarFactory.Authorization;
-using CarFactory.Authorization.Roles;
-using CarFactory.Authorization.Users;
-using CarFactory.Configuration;
-using CarFactory.MultiTenancy;
+using CarFactory.Core.Authorization;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.Configuration;
+using CarFactory.Core.MultiTenancy;
 
-namespace CarFactory
+namespace CarFactory.Core
 {
     [DependsOn(typeof(AbpZeroCoreModule))]
     public class CarFactoryCoreModule : AbpModule

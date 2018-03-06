@@ -12,7 +12,7 @@
 // Copyright © YoYoCms@China.2018-03-03T21:54:55. All Rights Reserved.
 //<生成时间>2018-03-03T21:54:55</生成时间>
 	#endregion
-namespace CarFactory.CustomDomain.Products.Authorization
+namespace CarFactory.Core.CustomDomain.Products.Authorization
 {
 	 /// <summary>
 	 /// 定义系统的权限名称的字符串常量。

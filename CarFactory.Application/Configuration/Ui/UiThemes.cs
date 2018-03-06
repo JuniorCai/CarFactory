@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CarFactory.Configuration.Ui
+namespace CarFactory.Application.Configuration.Ui
 {
     public static class UiThemes
     {

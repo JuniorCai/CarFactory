@@ -8,6 +8,8 @@ using Abp.Web.Mvc;
 using Abp.Web.SignalR;
 using Abp.Zero.Configuration;
 using CarFactory.Api;
+using CarFactory.Application;
+using CarFactory.EntityFramework;
 using Castle.MicroKernel.Registration;
 using Microsoft.Owin.Security;
 

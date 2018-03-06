@@ -73,5 +73,24 @@
     <text name="LastModificationTime" value="最后编辑时间" />
     <text name="CreationTime" value="创建时间" />
     <!-- 产品类别管理 END-->
+
+    
+    <!-- 公司信息管理 -->
+    <text name="Company" value="公司信息" />
+    <text name="CompanyHeaderInfo" value="公司信息管理列表" />
+    <text name="CreateCompany" value="新增公司信息" />
+    <text name="EditCompany" value="编辑公司信息" />
+    <text name="DeleteCompany" value="删除公司信息" />
+    <text name="CompanyDeleteWarningMessage" value="公司信息名称: {0} 将被删除,是否确定删除它。" />
+    <!--//用于表格展示的数据信息的标题-->
+    <text name="CompanyName" value="CompanyName" />
+    <text name="Phone" value="Phone" />
+    <text name="Tel" value="Tel" />
+    <text name="Email" value="Email" />
+    <text name="Address" value="Address" />
+    <text name="Longitude" value="Longitude" />
+    <text name="Latitude" value="Latitude" />
+
+    <!-- 公司信息管理End -->
   </texts>
 </localizationDictionary>

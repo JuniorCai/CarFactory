@@ -6,7 +6,7 @@ using Abp.Domain.Uow;
 using Abp.Extensions;
 using Abp.MultiTenancy;
 using Abp.Runtime.Security;
-using CarFactory.MultiTenancy;
+using CarFactory.Core.MultiTenancy;
 
 namespace CarFactory.Migrator
 {

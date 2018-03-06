@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace CarFactory.Category.Mappers
+namespace CarFactory.Application.Category.Mappers
 {
     /// <summary>
     /// CategoryDto映射配置

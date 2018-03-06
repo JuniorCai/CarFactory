@@ -1,5 +1,5 @@
 ﻿                          
-namespace CarFactory.CustomDomain.Category.Authorization
+namespace CarFactory.Core.CustomDomain.Category.Authorization
 {
     /// <summary>
     /// 定义系统的权限名称的字符串常量。

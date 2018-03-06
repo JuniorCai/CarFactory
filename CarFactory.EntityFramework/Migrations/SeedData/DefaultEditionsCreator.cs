@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Abp.Application.Editions;
-using CarFactory.Editions;
-using CarFactory.EntityFramework;
+using CarFactory.Core.Editions;
+using CarFactory.EntityFramework.EntityFramework;
 
-namespace CarFactory.Migrations.SeedData
+namespace CarFactory.EntityFramework.Migrations.SeedData
 {
     public class DefaultEditionsCreator
     {

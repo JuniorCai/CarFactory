@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using CarFactory.Roles.Dto;
-using CarFactory.Users.Dto;
+using CarFactory.Application.Roles.Dto;
+using CarFactory.Application.Users.Dto;
 
 namespace CarFactory.Web.Models.Users
 {

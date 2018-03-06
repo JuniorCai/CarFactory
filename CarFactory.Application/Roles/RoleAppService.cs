@@ -8,13 +8,13 @@ using Abp.Authorization.Users;
 using Abp.Domain.Repositories;
 using Abp.IdentityFramework;
 using Abp.UI;
-using CarFactory.Authorization;
-using CarFactory.Authorization.Roles;
-using CarFactory.Authorization.Users;
-using CarFactory.Roles.Dto;
+using CarFactory.Application.Roles.Dto;
+using CarFactory.Core.Authorization;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.Authorization.Users;
 using Microsoft.AspNet.Identity;
 
-namespace CarFactory.Roles
+namespace CarFactory.Application.Roles
 {
     [AbpAuthorize(PermissionNames.Pages_Roles)]
     public class RoleAppService : AsyncCrudAppService<Role, RoleDto, int, PagedResultRequestDto, CreateRoleDto, RoleDto>, IRoleAppService

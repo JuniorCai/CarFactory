@@ -2,9 +2,9 @@
 using Abp.Auditing;
 using Abp.Authorization.Users;
 using Abp.AutoMapper;
-using CarFactory.Authorization.Users;
+using CarFactory.Core.Authorization.Users;
 
-namespace CarFactory.Users.Dto
+namespace CarFactory.Application.Users.Dto
 {
     [AutoMapTo(typeof(User))]
     public class CreateUserDto

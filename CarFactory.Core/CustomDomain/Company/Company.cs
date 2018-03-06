@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Abp.Domain.Entities.Auditing;
 
-namespace CarFactory.CustomDomain.Company
+namespace CarFactory.Core.CustomDomain.Company
 {
     public class Company : FullAuditedEntity
     {

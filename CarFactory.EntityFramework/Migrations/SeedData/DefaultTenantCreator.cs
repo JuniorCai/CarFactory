@@ -1,8 +1,8 @@
 using System.Linq;
-using CarFactory.EntityFramework;
-using CarFactory.MultiTenancy;
+using CarFactory.Core.MultiTenancy;
+using CarFactory.EntityFramework.EntityFramework;
 
-namespace CarFactory.Migrations.SeedData
+namespace CarFactory.EntityFramework.Migrations.SeedData
 {
     public class DefaultTenantCreator
     {

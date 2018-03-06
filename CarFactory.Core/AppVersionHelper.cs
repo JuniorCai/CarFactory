@@ -2,7 +2,7 @@
 using System.IO;
 using Abp.Reflection.Extensions;
 
-namespace CarFactory
+namespace CarFactory.Core
 {
     /// <summary>
     /// Central point for application version.

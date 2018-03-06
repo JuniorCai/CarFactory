@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Abp.Application.Services;
-using CarFactory.Sessions.Dto;
+using CarFactory.Application.Sessions.Dto;
 
-namespace CarFactory.Sessions
+namespace CarFactory.Application.Sessions
 {
     public interface ISessionAppService : IApplicationService
     {

@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
 using Abp.Authorization.Roles;
 using Abp.AutoMapper;
-using CarFactory.Authorization.Roles;
+using CarFactory.Core.Authorization.Roles;
 
-namespace CarFactory.Roles.Dto
+namespace CarFactory.Application.Roles.Dto
 {
     [AutoMapFrom(typeof(Role)), AutoMapTo(typeof(Role))]
     public class RoleDto : EntityDto<int>

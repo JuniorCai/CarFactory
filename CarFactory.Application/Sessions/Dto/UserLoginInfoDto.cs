@@ -1,8 +1,8 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
-using CarFactory.Authorization.Users;
+using CarFactory.Core.Authorization.Users;
 
-namespace CarFactory.Sessions.Dto
+namespace CarFactory.Application.Sessions.Dto
 {
     [AutoMapFrom(typeof(User))]
     public class UserLoginInfoDto : EntityDto<long>

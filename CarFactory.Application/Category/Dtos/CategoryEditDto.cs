@@ -2,12 +2,12 @@
 using System.ComponentModel.DataAnnotations;
 using Abp.AutoMapper;
 
-namespace CarFactory.Category.Dtos
+namespace CarFactory.Application.Category.Dtos
 {
     /// <summary>
     /// 产品类别编辑用Dto
     /// </summary>
-    [AutoMap(typeof(CarFactory.CustomDomain.Category.Category))]
+    [AutoMap(typeof(Core.CustomDomain.Category.Category))]
     public class CategoryEditDto
     {
 

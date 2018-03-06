@@ -3,10 +3,10 @@ using System.ComponentModel.DataAnnotations;
 using Abp.Auditing;
 using Abp.Authorization.Users;
 using Abp.Extensions;
-using CarFactory.Authorization.Users;
-using CarFactory.Validation;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.Validation;
 
-namespace CarFactory.Authorization.Accounts.Dto
+namespace CarFactory.Application.Authorization.Accounts.Dto
 {
     public class RegisterInput : IValidatableObject
     {

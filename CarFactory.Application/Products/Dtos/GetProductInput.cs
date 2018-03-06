@@ -1,6 +1,7 @@
 ﻿using Abp.Runtime.Validation;
+using CarFactory.Core;
 
-namespace CarFactory.Products.Dtos
+namespace CarFactory.Application.Products.Dtos
 {
 	/// <summary>
     /// 产品信息查询Dto

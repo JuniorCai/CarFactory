@@ -2,9 +2,10 @@
 using System.Reflection;
 using Abp.Modules;
 using Abp.Zero.EntityFramework;
-using CarFactory.EntityFramework;
+using CarFactory.Core;
+using CarFactory.EntityFramework.EntityFramework;
 
-namespace CarFactory
+namespace CarFactory.EntityFramework
 {
     [DependsOn(typeof(AbpZeroEntityFrameworkModule), typeof(CarFactoryCoreModule))]
     public class CarFactoryDataModule : AbpModule

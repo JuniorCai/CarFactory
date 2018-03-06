@@ -1,5 +1,6 @@
 ﻿using Abp.Web.Mvc.Views;
 using CarFactory;
+using CarFactory.Core;
 
 namespace CarFactory.Web.Views
 {

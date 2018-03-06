@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Abp.MultiTenancy;
 
-namespace CarFactory.Authorization.Accounts.Dto
+namespace CarFactory.Application.Authorization.Accounts.Dto
 {
     public class IsTenantAvailableInput
     {

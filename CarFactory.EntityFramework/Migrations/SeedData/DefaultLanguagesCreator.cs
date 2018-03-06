@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Abp.Localization;
-using CarFactory.EntityFramework;
+using CarFactory.EntityFramework.EntityFramework;
 
-namespace CarFactory.Migrations.SeedData
+namespace CarFactory.EntityFramework.Migrations.SeedData
 {
     public class DefaultLanguagesCreator
     {

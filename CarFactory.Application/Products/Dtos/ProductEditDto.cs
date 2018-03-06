@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Abp.AutoMapper;
-using CarFactory.CustomDomain.Products;
+using CarFactory.Core.CustomDomain.Products;
 
-namespace CarFactory.Products.Dtos
+namespace CarFactory.Application.Products.Dtos
 {
     /// <summary>
     /// 产品信息编辑用Dto

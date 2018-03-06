@@ -1,7 +1,7 @@
 ﻿using Abp.Domain.Repositories;
 using Abp.Domain.Services;
 
-namespace CarFactory.CustomDomain.Category
+namespace CarFactory.Core.CustomDomain.Category
 {
     /// <summary>
     /// 产品类别业务管理

@@ -19,11 +19,11 @@ using Abp.Threading;
 using Abp.UI;
 using Abp.Web.Models;
 using Abp.Web.Security.AntiForgery;
-using CarFactory.Authorization;
-using CarFactory.Authorization.Roles;
-using CarFactory.Authorization.Users;
-using CarFactory.MultiTenancy;
-using CarFactory.Sessions;
+using CarFactory.Application.Sessions;
+using CarFactory.Core.Authorization;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.MultiTenancy;
 using CarFactory.Web.Controllers.Results;
 using CarFactory.Web.Models;
 using CarFactory.Web.Models.Account;
@@ -239,7 +239,7 @@ namespace CarFactory.Web.Controllers
                         model.UserName = model.EmailAddress;
                     }
 
-                    model.Password = Authorization.Users.User.CreateRandomPassword();
+                    model.Password = Core.Authorization.Users.User.CreateRandomPassword();
 
                     if (string.Equals(externalLoginInfo.Email, model.EmailAddress, StringComparison.InvariantCultureIgnoreCase))
                     {

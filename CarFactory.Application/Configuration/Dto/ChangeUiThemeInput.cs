@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CarFactory.Configuration.Dto
+namespace CarFactory.Application.Configuration.Dto
 {
     public class ChangeUiThemeInput
     {

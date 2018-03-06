@@ -3,6 +3,7 @@ using Abp.UI;
 using Abp.Web.Mvc.Controllers;
 using Microsoft.AspNet.Identity;
 using CarFactory;
+using CarFactory.Core;
 
 namespace CarFactory.Web.Controllers
 {

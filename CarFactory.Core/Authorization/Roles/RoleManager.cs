@@ -3,9 +3,9 @@ using Abp.Authorization.Roles;
 using Abp.Domain.Uow;
 using Abp.Runtime.Caching;
 using Abp.Zero.Configuration;
-using CarFactory.Authorization.Users;
+using CarFactory.Core.Authorization.Users;
 
-namespace CarFactory.Authorization.Roles
+namespace CarFactory.Core.Authorization.Roles
 {
     public class RoleManager : AbpRoleManager<Role, User>
     {

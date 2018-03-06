@@ -8,14 +8,15 @@ using Abp.Extensions;
 using Abp.IdentityFramework;
 using Abp.MultiTenancy;
 using Abp.Runtime.Security;
-using CarFactory.Authorization;
-using CarFactory.Authorization.Roles;
-using CarFactory.Authorization.Users;
-using CarFactory.Editions;
-using CarFactory.MultiTenancy.Dto;
+using CarFactory.Application.MultiTenancy.Dto;
+using CarFactory.Core.Authorization;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.Editions;
+using CarFactory.Core.MultiTenancy;
 using Microsoft.AspNet.Identity;
 
-namespace CarFactory.MultiTenancy
+namespace CarFactory.Application.MultiTenancy
 {
     [AbpAuthorize(PermissionNames.Pages_Tenants)]
     public class TenantAppService : AsyncCrudAppService<Tenant, TenantDto, int, PagedResultRequestDto, CreateTenantDto, TenantDto>, ITenantAppService

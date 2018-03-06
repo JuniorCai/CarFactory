@@ -1,4 +1,4 @@
-﻿namespace CarFactory.Authorization
+﻿namespace CarFactory.Core.Authorization
 {
     public static class PermissionNames
     {

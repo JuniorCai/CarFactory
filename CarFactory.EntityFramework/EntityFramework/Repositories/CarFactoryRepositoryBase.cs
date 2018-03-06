@@ -2,7 +2,7 @@
 using Abp.EntityFramework;
 using Abp.EntityFramework.Repositories;
 
-namespace CarFactory.EntityFramework.Repositories
+namespace CarFactory.EntityFramework.EntityFramework.Repositories
 {
     public abstract class CarFactoryRepositoryBase<TEntity, TPrimaryKey> : EfRepositoryBase<CarFactoryDbContext, TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace CarFactory.Products.Mappers
+namespace CarFactory.Application.Products.Mappers
 {
     /// <summary>
     /// ProductDto映射配置

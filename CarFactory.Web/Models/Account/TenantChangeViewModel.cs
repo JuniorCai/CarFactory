@@ -1,5 +1,5 @@
 ﻿using Abp.AutoMapper;
-using CarFactory.Sessions.Dto;
+using CarFactory.Application.Sessions.Dto;
 
 namespace CarFactory.Web.Models.Account
 {

@@ -2,9 +2,9 @@
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
-using CarFactory.Products.Dtos;
+using CarFactory.Application.Products.Dtos;
 
-namespace CarFactory.Products
+namespace CarFactory.Application.Products
 {
 	/// <summary>
     /// 产品信息服务接口

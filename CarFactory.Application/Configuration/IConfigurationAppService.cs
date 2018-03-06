@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Abp.Application.Services;
-using CarFactory.Configuration.Dto;
+using CarFactory.Application.Configuration.Dto;
 
-namespace CarFactory.Configuration
+namespace CarFactory.Application.Configuration
 {
     public interface IConfigurationAppService: IApplicationService
     {

@@ -1,4 +1,4 @@
-namespace CarFactory.Authorization.Roles
+namespace CarFactory.Core.Authorization.Roles
 {
     public static class StaticRoleNames
     {

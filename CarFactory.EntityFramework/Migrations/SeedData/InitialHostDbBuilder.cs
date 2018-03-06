@@ -1,7 +1,7 @@
-﻿using CarFactory.EntityFramework;
+﻿using CarFactory.EntityFramework.EntityFramework;
 using EntityFramework.DynamicFilters;
 
-namespace CarFactory.Migrations.SeedData
+namespace CarFactory.EntityFramework.Migrations.SeedData
 {
     public class InitialHostDbBuilder
     {

@@ -7,9 +7,9 @@ using Abp.IdentityFramework;
 using Abp.Localization;
 using Abp.Organizations;
 using Abp.Runtime.Caching;
-using CarFactory.Authorization.Roles;
+using CarFactory.Core.Authorization.Roles;
 
-namespace CarFactory.Authorization.Users
+namespace CarFactory.Core.Authorization.Users
 {
     public class UserManager : AbpUserManager<Role, User>
     {

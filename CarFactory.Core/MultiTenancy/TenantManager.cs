@@ -1,10 +1,10 @@
 ﻿using Abp.Application.Features;
 using Abp.Domain.Repositories;
 using Abp.MultiTenancy;
-using CarFactory.Authorization.Users;
-using CarFactory.Editions;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.Editions;
 
-namespace CarFactory.MultiTenancy
+namespace CarFactory.Core.MultiTenancy
 {
     public class TenantManager : AbpTenantManager<Tenant, User>
     {

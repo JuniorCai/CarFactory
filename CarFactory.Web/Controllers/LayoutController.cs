@@ -6,9 +6,9 @@ using Abp.Configuration.Startup;
 using Abp.Localization;
 using Abp.Runtime.Session;
 using Abp.Threading;
-using CarFactory.Configuration;
-using CarFactory.Configuration.Ui;
-using CarFactory.Sessions;
+using CarFactory.Application.Configuration.Ui;
+using CarFactory.Application.Sessions;
+using CarFactory.Core.Configuration;
 using CarFactory.Web.Models;
 using CarFactory.Web.Models.Layout;
 

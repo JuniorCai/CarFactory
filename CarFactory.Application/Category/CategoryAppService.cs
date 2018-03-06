@@ -6,11 +6,11 @@ using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
-using CarFactory.Category.Dtos;
-using CarFactory.CustomDomain.Category;
-using CarFactory.CustomDomain.Category.Authorization;
+using CarFactory.Application.Category.Dtos;
+using CarFactory.Core.CustomDomain.Category;
+using CarFactory.Core.CustomDomain.Category.Authorization;
 
-namespace CarFactory.Category
+namespace CarFactory.Application.Category
 {
     /// <summary>
     /// 产品类别服务实现
@@ -18,7 +18,7 @@ namespace CarFactory.Category
     [AbpAuthorize(CategoryAppPermissions.Category)]
     public class CategoryAppService : CarFactoryAppServiceBase, ICategoryAppService
     {
-        private readonly IRepository<CarFactory.CustomDomain.Category.Category, int> _categoryRepository;
+        private readonly IRepository<Core.CustomDomain.Category.Category, int> _categoryRepository;
 
 
         private readonly CategoryManage _categoryManage;
@@ -26,7 +26,7 @@ namespace CarFactory.Category
         /// <summary>
         /// 构造方法
         /// </summary>
-        public CategoryAppService(IRepository<CarFactory.CustomDomain.Category.Category, int> categoryRepository,
+        public CategoryAppService(IRepository<Core.CustomDomain.Category.Category, int> categoryRepository,
             CategoryManage categoryManage
 
         )
@@ -39,7 +39,7 @@ namespace CarFactory.Category
 
         #region 实体的自定义扩展方法
 
-        private IQueryable<CarFactory.CustomDomain.Category.Category> _categoryRepositoryAsNoTrack => _categoryRepository.GetAll().AsNoTracking();
+        private IQueryable<Core.CustomDomain.Category.Category> _categoryRepositoryAsNoTrack => _categoryRepository.GetAll().AsNoTracking();
 
 
         #endregion
@@ -130,7 +130,7 @@ namespace CarFactory.Category
         {
             //TODO:新增前的逻辑判断，是否允许新增
 
-            var entity = input.MapTo<CarFactory.CustomDomain.Category.Category>();
+            var entity = input.MapTo<Core.CustomDomain.Category.Category>();
 
             entity = await _categoryRepository.InsertAsync(entity);
             return entity.MapTo<CategoryEditDto>();

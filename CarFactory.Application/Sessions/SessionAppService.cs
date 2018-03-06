@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Abp.Auditing;
 using Abp.AutoMapper;
-using CarFactory.Sessions.Dto;
+using CarFactory.Application.Sessions.Dto;
 
-namespace CarFactory.Sessions
+namespace CarFactory.Application.Sessions
 {
     public class SessionAppService : CarFactoryAppServiceBase, ISessionAppService
     {

@@ -4,6 +4,7 @@ using Abp.Application.Services;
 using Abp.Configuration.Startup;
 using Abp.Modules;
 using Abp.WebApi;
+using CarFactory.Application;
 
 namespace CarFactory.Api
 {

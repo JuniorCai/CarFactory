@@ -6,11 +6,11 @@ using Abp.Dependency;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 using Abp.Zero.Configuration;
-using CarFactory.Authorization.Roles;
-using CarFactory.Authorization.Users;
-using CarFactory.MultiTenancy;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.MultiTenancy;
 
-namespace CarFactory.Authorization
+namespace CarFactory.Core.Authorization
 {
     public class LogInManager : AbpLogInManager<Tenant, Role, User>
     {

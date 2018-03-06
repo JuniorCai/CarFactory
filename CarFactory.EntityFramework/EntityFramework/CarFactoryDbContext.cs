@@ -1,14 +1,16 @@
 ﻿using System.Data.Common;
 using System.Data.Entity;
 using Abp.Zero.EntityFramework;
-using CarFactory.Authorization.Roles;
-using CarFactory.Authorization.Users;
-using CarFactory.CustomDomain.Category;
-using CarFactory.CustomDomain.Products;
-using CarFactory.EntityMapper.Products;
-using CarFactory.MultiTenancy;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.CustomDomain.Category;
+using CarFactory.Core.CustomDomain.Company;
+using CarFactory.Core.CustomDomain.Products;
+using CarFactory.Core.MultiTenancy;
+using CarFactory.EntityFramework.EntityMapper.Company;
+using CarFactory.EntityFramework.EntityMapper.Products;
 
-namespace CarFactory.EntityFramework
+namespace CarFactory.EntityFramework.EntityFramework
 {
     [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class CarFactoryDbContext : AbpZeroDbContext<Tenant, Role, User>
@@ -17,6 +19,9 @@ namespace CarFactory.EntityFramework
         public IDbSet<Category> Categorys { get; set; }
 
         public IDbSet<Product> Products { get; set; }
+
+        public IDbSet<Company> Companys { get; set; }
+
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
@@ -57,7 +62,7 @@ namespace CarFactory.EntityFramework
         {
             modelBuilder.Configurations.Add(new CategoryCfg());
             modelBuilder.Configurations.Add(new ProductCfg());
-
+            modelBuilder.Configurations.Add(new CompanyCfg());
             base.OnModelCreating(modelBuilder);
         }
     }

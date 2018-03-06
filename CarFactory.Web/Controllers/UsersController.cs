@@ -2,9 +2,9 @@
 using System.Web.Mvc;
 using Abp.Application.Services.Dto;
 using Abp.Web.Mvc.Authorization;
-using CarFactory.Authorization;
-using CarFactory.Authorization.Roles;
-using CarFactory.Users;
+using CarFactory.Application.Users;
+using CarFactory.Core.Authorization;
+using CarFactory.Core.Authorization.Roles;
 using CarFactory.Web.Models.Users;
 
 namespace CarFactory.Web.Controllers

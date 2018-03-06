@@ -1,7 +1,7 @@
 ﻿using Abp.Authorization;
 using Abp.Localization;
 
-namespace CarFactory.CustomDomain.Category.Authorization
+namespace CarFactory.Core.CustomDomain.Category.Authorization
 {
 	/// <summary>
     /// 权限配置都在这里。

@@ -2,9 +2,9 @@
 using Abp.Domain.Uow;
 using Abp.MultiTenancy;
 using Abp.Zero.EntityFramework;
-using CarFactory.EntityFramework;
+using CarFactory.EntityFramework.EntityFramework;
 
-namespace CarFactory.Migrations
+namespace CarFactory.EntityFramework.Migrations
 {
     public class AbpZeroDbMigrator : AbpZeroDbMigrator<CarFactoryDbContext, Configuration>
     {

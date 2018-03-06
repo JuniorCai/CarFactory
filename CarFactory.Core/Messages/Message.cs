@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Abp.Domain.Entities.Auditing;
 
-namespace CarFactory.Messages
+namespace CarFactory.Core.Messages
 {
     public class Message : FullAuditedEntity
     {

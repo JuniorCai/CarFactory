@@ -7,11 +7,11 @@ using Abp.Domain.Services;
 using Abp.IdentityFramework;
 using Abp.Runtime.Session;
 using Abp.UI;
-using CarFactory.Authorization.Roles;
-using CarFactory.MultiTenancy;
+using CarFactory.Core.Authorization.Roles;
+using CarFactory.Core.MultiTenancy;
 using Microsoft.AspNet.Identity;
 
-namespace CarFactory.Authorization.Users
+namespace CarFactory.Core.Authorization.Users
 {
     public class UserRegistrationManager : DomainService
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Abp.Configuration;
 
-namespace CarFactory.Configuration
+namespace CarFactory.Core.Configuration
 {
     public class AppSettingProvider : SettingProvider
     {

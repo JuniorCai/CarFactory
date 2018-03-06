@@ -2,6 +2,7 @@ using System.Data.Entity;
 using System.Reflection;
 using Abp.Modules;
 using CarFactory.EntityFramework;
+using CarFactory.EntityFramework.EntityFramework;
 
 namespace CarFactory.Migrator
 {

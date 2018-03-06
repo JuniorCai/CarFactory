@@ -1,8 +1,8 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
-using CarFactory.Authorization;
 using CarFactory;
-using CarFactory.Authorization;
+using CarFactory.Core;
+using CarFactory.Core.Authorization;
 
 namespace CarFactory.Web
 {

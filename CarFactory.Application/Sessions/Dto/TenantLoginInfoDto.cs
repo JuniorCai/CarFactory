@@ -1,8 +1,8 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
-using CarFactory.MultiTenancy;
+using CarFactory.Core.MultiTenancy;
 
-namespace CarFactory.Sessions.Dto
+namespace CarFactory.Application.Sessions.Dto
 {
     [AutoMapFrom(typeof(Tenant))]
     public class TenantLoginInfoDto : EntityDto

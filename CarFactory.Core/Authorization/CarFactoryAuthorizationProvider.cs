@@ -2,7 +2,7 @@
 using Abp.Localization;
 using Abp.MultiTenancy;
 
-namespace CarFactory.Authorization
+namespace CarFactory.Core.Authorization
 {
     public class CarFactoryAuthorizationProvider : AuthorizationProvider
     {
