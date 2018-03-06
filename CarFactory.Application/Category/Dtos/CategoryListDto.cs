@@ -5,21 +5,23 @@ using Abp.AutoMapper;
 
 namespace CarFactory.Application.Category.Dtos
 {
-	/// <summary>
+    /// <summary>
     /// 产品类别列表Dto
     /// </summary>
     [AutoMapFrom(typeof(Core.CustomDomain.Category.Category))]
     public class CategoryListDto : EntityDto<int>
     {
-        public      string Name { get; set; }
-        public      string ShortName { get; set; }
-        public      bool IsActive { get; set; }
-        public      int Sort { get; set; }
+        public string CategoryName { get; set; }
+        public string ShortName { get; set; }
+        public bool IsActive { get; set; }
+
+        public int Sort { get; set; }
+
         //public      Product> Products { get; set; }
         /// <summary>
         /// 创建时间
         /// </summary>
         [DisplayName("创建时间")]
-        public      DateTime CreationTime { get; set; }
+        public DateTime CreationTime { get; set; }
     }
 }

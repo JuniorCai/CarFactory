@@ -31,7 +31,7 @@
                 <div class="list_tt"></div>
                 <div class="list_ow">
                     @{
-                        Html.RenderPartial("~/Views/Shared/PartialPages/_PartialCategoryList.cshtml");
+                        Html.RenderAction("CategoryNav", "WebLayout", new { activeCategory = ViewBag.ActiveCategory??"" });
                     }
                 </div>
             </div>

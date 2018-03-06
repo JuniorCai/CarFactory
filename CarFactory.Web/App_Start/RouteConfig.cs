@@ -10,6 +10,12 @@ namespace CarFactory.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute(
+                name: "GetProducts",
+                url: "product/{shortName}/{id}",
+                defaults: new { controller = "Product", action = "GetProducts", shortName = UrlParameter.Optional,id = UrlParameter.Optional }
+            );
+
             //ASP.NET Web API Route Config
             routes.MapHttpRoute(
                 name: "DefaultApi",

@@ -9,11 +9,10 @@ namespace CarFactory.Core
 
         public PagedAndSortedInputDto()
         {
-            MaxResultCount = 10; //PhoneBookConsts.DefaultPageSize;
+            MaxResultCount = CarFactoryConsts.DefaultPageSize; 
         }
 
-        //[Range(1, PhoneBookConsts.MaxPageSize)]
-        [Range(1, 10)]
+        [Range(1, CarFactoryConsts.MaxPageSize)]
         public int MaxResultCount { get; set; }
 
         [Range(0, int.MaxValue)]

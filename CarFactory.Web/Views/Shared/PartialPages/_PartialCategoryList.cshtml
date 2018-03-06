@@ -1,1 +1,10 @@
-﻿
+﻿@model CarFactory.Web.Models.Layout.RightSideCategoryNavViewModel
+
+<ul id="categoryList">
+    @foreach (var dto in Model.CategoryMenu)
+    {
+        <li>
+            @Html.ActionLink(dto.CategoryName,"GetProducts","Product",new {shortName = dto.ShortName},new{id = dto.ShortName})
+        </li>
+    }
+</ul>

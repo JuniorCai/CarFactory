@@ -21,6 +21,16 @@
         public const int MaxUserNameLength = 32;
 
         /// <summary>
+        /// 默认分页大小
+        /// </summary>
+        public const int DefaultPageSize = 20;
+
+        /// <summary>
+        /// 最大分页大小
+        /// </summary>
+        public const int MaxPageSize = 50;
+
+        /// <summary>
         /// 数据库架构名
         /// </summary>
         public static class SchemaName

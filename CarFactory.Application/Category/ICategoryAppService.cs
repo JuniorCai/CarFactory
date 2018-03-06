@@ -16,9 +16,15 @@ namespace CarFactory.Application.Category
         /// <summary>
         /// 根据查询条件获取产品类别分页列表
         /// </summary>
-        //Task<PagedResultDto<CategoryListDto>> GetPagedCategorysAsync(GetCategoryInput input);
+        Task<PagedResultDto<CategoryListDto>> GetPagedCategorysAsync(GetCategoryInput input);
 
         /// <summary>
+        /// 获取活动状态的分类列表
+        /// </summary>
+        /// <returns></returns>
+        Task<List<CategoryListDto>> GetCategorysOnShowAsync();
+
+            /// <summary>
         /// 通过Id获取产品类别信息进行编辑或修改 
         /// </summary>
         Task<GetCategoryForEditOutput> GetCategoryForEditAsync(NullableIdDto<int> input);

@@ -6,6 +6,7 @@ using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
+using Abp.Linq.Extensions;
 using CarFactory.Application.Category.Dtos;
 using CarFactory.Core.CustomDomain.Category;
 using CarFactory.Core.CustomDomain.Category.Authorization;
@@ -15,7 +16,7 @@ namespace CarFactory.Application.Category
     /// <summary>
     /// 产品类别服务实现
     /// </summary>
-    [AbpAuthorize(CategoryAppPermissions.Category)]
+    //[AbpAuthorize(CategoryAppPermissions.Category)]
     public class CategoryAppService : CarFactoryAppServiceBase, ICategoryAppService
     {
         private readonly IRepository<Core.CustomDomain.Category.Category, int> _categoryRepository;
@@ -50,22 +51,36 @@ namespace CarFactory.Application.Category
         /// <summary>
         /// 根据查询条件获取产品类别分页列表
         /// </summary>
-//        public async Task<PagedResultDto<CategoryListDto>> GetPagedCategorysAsync(GetCategoryInput input)
-//        {
-//
-////            var query = _categoryRepositoryAsNoTrack;
-////            //TODO:根据传入的参数添加过滤条件
-////
-////            var categoryCount = await query.CountAsync();
-////
-////            var categorys = await query.OrderBy(input.Sorting).PageBy(input).ToListAsync();
-////
-////            var categoryListDtos = categorys.MapTo<List<CategoryListDto>>();
-////            return new PagedResultDto<CategoryListDto>(
-////                categoryCount,
-////                categoryListDtos
-////            );
-//        }
+        public async Task<PagedResultDto<CategoryListDto>> GetPagedCategorysAsync(GetCategoryInput input)
+        {
+
+            var query = _categoryRepositoryAsNoTrack;
+            //TODO:根据传入的参数添加过滤条件
+
+            var categoryCount = await query.CountAsync();
+            var categorys = await query.OrderBy(ca => ca.Id).PageBy(input).ToListAsync();
+
+            if (!string.IsNullOrEmpty(input.FilterText))
+            {
+                categorys = categorys.Where(c => c.ShortName == input.FilterText).ToList();
+            }
+
+
+            var categoryListDtos = categorys.MapTo<List<CategoryListDto>>();
+            return new PagedResultDto<CategoryListDto>(
+                categoryCount,
+                categoryListDtos
+            );
+        }
+
+        public async Task<List<CategoryListDto>> GetCategorysOnShowAsync()
+        {
+            var list = await _categoryRepository.GetAllListAsync(c => c.IsShow == true);
+
+            List<CategoryListDto> listDtos = list.MapTo<List<CategoryListDto>>();
+
+            return listDtos;
+        }
 
         /// <summary>
         /// 通过Id获取产品类别信息进行编辑或修改 
