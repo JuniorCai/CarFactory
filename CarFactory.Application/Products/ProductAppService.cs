@@ -19,7 +19,7 @@ namespace CarFactory.Application.Products
     /// <summary>
     /// 产品信息服务实现
     /// </summary>
-    [AbpAuthorize(ProductAppPermissions.Product)]
+    //[AbpAuthorize(ProductAppPermissions.Product)]
     public class ProductAppService : CarFactoryAppServiceBase, IProductAppService
     {
         private readonly IRepository<Product, int> _productRepository;
@@ -65,7 +65,8 @@ namespace CarFactory.Application.Products
 
             var query = _productRepositoryAsNoTrack;
             //TODO:根据传入的参数添加过滤条件
-
+            query = query.WhereIf(input.CategoryId > 0, p => p.CategoryId == input.CategoryId);
+            query = query.WhereIf(!string.IsNullOrEmpty(input.FilterText), p => p.Title.Contains(input.FilterText));
             var productCount = await query.CountAsync();
 
             var products = await query

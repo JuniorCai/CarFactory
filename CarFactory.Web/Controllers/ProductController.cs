@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Abp.Application.Services.Dto;
+﻿using Abp.Application.Services.Dto;
+using CarFactory.Application.Category;
+using CarFactory.Application.Category.Dtos;
 using CarFactory.Application.Products;
 using CarFactory.Application.Products.Dtos;
 using CarFactory.Web.Models.Common;
+using System.Linq;
+using System.Web.Mvc;
+using X.PagedList;
 
 namespace CarFactory.Web.Controllers
 {
@@ -14,9 +14,48 @@ namespace CarFactory.Web.Controllers
     {
         private readonly IProductAppService _productAppService;
 
-        public ProductController(IProductAppService productAppService)
+        private readonly ICategoryAppService _categoryAppService;
+
+
+        public ProductController(IProductAppService productAppService,ICategoryAppService categoryAppService)
         {
             _productAppService = productAppService;
+            _categoryAppService = categoryAppService;
+        }
+
+
+        public ActionResult List(int? page, string activeName = "")
+        {
+            CategoryListDto activeCategory = null;
+            int pageIndex = ((page != null && page.Value >= 1) ? page.Value : 1) - 1;
+
+            var categoryList = _categoryAppService.GetCategorysOnShowAsync().Result;
+            activeCategory = categoryList.FirstOrDefault();
+            ViewBag.ActiveCategory = activeCategory;
+
+            if (!string.IsNullOrEmpty(activeName))
+            {
+                activeCategory = categoryList.FirstOrDefault(c => c.ShortName == activeName);
+                if (activeCategory != null)
+                {
+                    ViewBag.ActiveCategory = activeCategory;
+                }
+            }
+
+            GetProductInput pagedInput = new GetProductInput()
+            {
+                CategoryId = activeCategory.Id,
+                Sorting = "CreationTime"
+            };
+            pagedInput.SkipCount = pageIndex * pagedInput.MaxResultCount;
+
+            var products = _productAppService.GetPagedProductsAsync(pagedInput).Result;
+
+            var pagedProducts = new StaticPagedList<ProductListDto>(products.Items, pageIndex + 1, pagedInput.MaxResultCount,
+                products.TotalCount);
+
+
+            return View(pagedProducts);
         }
 
         // GET: Product

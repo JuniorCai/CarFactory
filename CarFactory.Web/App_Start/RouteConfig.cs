@@ -12,8 +12,8 @@ namespace CarFactory.Web
 
             routes.MapRoute(
                 name: "GetProducts",
-                url: "product/{shortName}/{id}",
-                defaults: new { controller = "Product", action = "GetProducts", shortName = UrlParameter.Optional,id = UrlParameter.Optional }
+                url: "product/{shortName}/{page}",
+                defaults: new { controller = "Product", action = "List", shortName = UrlParameter.Optional,page = UrlParameter.Optional }
             );
 
             //ASP.NET Web API Route Config

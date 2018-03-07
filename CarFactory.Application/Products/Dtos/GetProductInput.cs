@@ -15,6 +15,8 @@ namespace CarFactory.Application.Products.Dtos
 		/// </summary>
 		public string FilterText { get; set; }
 
+        public int CategoryId { get; set; }
+
 		/// <summary>
 	    /// 用于排序的默认值
 		/// </summary>

@@ -1,0 +1,58 @@
+﻿@using CarFactory.Application.Category.Dtos
+@using X.PagedList
+@using X.PagedList.Mvc
+@using CarFactory.Application.Products.Dtos
+@model X.PagedList.StaticPagedList<CarFactory.Application.Products.Dtos.ProductListDto>
+@{
+    ViewBag.Title = "List";
+
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+    CategoryListDto activeCategory = ViewBag.ActiveCategory as CategoryListDto;
+}
+
+@section Navigation
+{
+    <a href="/products">@ViewBag.PageName</a> &gt; <a href="/products/@activeCategory.ShortName">@activeCategory.CategoryName</a>
+}
+
+    <div class="qlswu_Reception"></div>
+    <div id="listContainer">
+        <div class="ri_2">
+
+            @foreach (ProductListDto dto in Model)
+            {
+                <div class="cp">
+                    <div class="chanpin1">
+                        <a href="/product-@dto.Id" title="@dto.Title" target="_blank">
+                            <img src="@dto.Img" alt="@dto.Title">
+                        </a>
+                    </div>
+                    <div class="chanpin2">
+                        @Html.ActionLink(dto.Title,"Detail",new {id=dto.Id},new {target= "_blank" ,title=dto.Title})
+                    </div>
+                </div>
+            }
+            </div>
+        <div style="clear:both"></div>
+
+        <!--Pager Content-->
+        <div style="text-align: center">
+            @*            {{$productList->links()}}*@
+            @Html.PagedListPager(Model,page=>Url.Action("List",new {page=page}))
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+    $(function () {
+        var categoryList = $("#categoryList  a");
+        if (categoryList != null) {
+            $(categoryList).each(function (index, item) {
+                var shortName = $(item).attr("id");
+                if (shortName == "{{$category}}") {
+                    $(item).css("color", "#65b542");
+                }
+            });
+        }
+    })
+    </script>
