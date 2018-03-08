@@ -16,21 +16,20 @@
     <div class="sj">发布时间：@Model.CurrentItem.CreationTime.ToShortDateString()</div>
 
 
-<div class="js">@Model.CurrentItem.Detail</div>
+<div class="js">@Html.Raw(Model.CurrentItem.Detail)</div>
 
 <div class="pager">
-    上一篇：
-    @*    <a title="{{$detailModel->preDetail->title}}" href="{{$detailModel->preDetail->id!=0?($detailModel->urlPath.'-'.$detailModel->preDetail->id):"javascript:void(0);"}}">*@
-    @*        {{strlen($detailModel->preDetail->title)>24?substr($detailModel->preDetail->title,0,24).'...':$detailModel->preDetail->title}}*@
-    @*    </a>*@
-    @Html.ActionLink(Model.PreviousItem.Title.Length>24? Model.PreviousItem.Title.Substring(0,24): Model.PreviousItem.Title, "Detail",new{id = Model.PreviousItem.Id})
+    @if (Model.PreviousItem != null)
+    {
+        @:上一篇：
+        @Html.ActionLink(Model.PreviousItem.Title.Length > 24 ? Model.PreviousItem.Title.Substring(0, 24) : Model.PreviousItem.Title, "Detail", new { id = Model.PreviousItem.Id })
+    }
     &nbsp;&nbsp;
-    下一篇：
-    @*    <a title="{{$detailModel->nextDetail->title}}" href="{{$detailModel->nextDetail->id!=0?($detailModel->urlPath.'-'.$detailModel->nextDetail->id):"javascript:void(0);"}}">*@
-    @*        {{strlen($detailModel->nextDetail->title)>24?substr($detailModel->nextDetail->title,0,24).'...':$detailModel->nextDetail->title}}*@
-    @*        {{--                    {{$detailModel->nextDetail->title}}--}}*@
-    @*    </a>*@
-    @Html.ActionLink(Model.NextItem.Title.Length>24? Model.NextItem.Title.Substring(0,24): Model.NextItem.Title, "Detail",new{id = Model.NextItem.Id})
+    @if (Model.NextItem != null)
+    {
+        @:下一篇：
+        @Html.ActionLink(Model.NextItem.Title.Length > 24 ? Model.NextItem.Title.Substring(0, 24) : Model.NextItem.Title, "Detail", new { id = Model.NextItem.Id })
+    }
 
 </div>
 
