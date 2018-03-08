@@ -212,6 +212,10 @@
     <Compile Include="Migrations\201803050350081_initialCreate.Designer.cs">
       <DependentUpon>201803050350081_initialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803071108467_initialCreate1.cs" />
+    <Compile Include="Migrations\201803071108467_initialCreate1.Designer.cs">
+      <DependentUpon>201803071108467_initialCreate1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="CarFactoryDataModule.cs" />
@@ -237,6 +241,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803050350081_initialCreate.resx">
       <DependentUpon>201803050350081_initialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803071108467_initialCreate1.resx">
+      <DependentUpon>201803071108467_initialCreate1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

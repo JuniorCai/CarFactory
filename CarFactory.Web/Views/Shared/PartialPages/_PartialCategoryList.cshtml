@@ -4,7 +4,7 @@
     @foreach (var dto in Model.CategoryMenu)
     {
         <li>
-            @Html.ActionLink(dto.CategoryName,"GetProducts","Product",new {shortName = dto.ShortName,id=1},new{id = dto.ShortName})
+            @Html.ActionLink(dto.CategoryName,"List","Product",new {shortName = dto.ShortName},new{id = dto.ShortName})
         </li>
     }
 </ul>

@@ -23,7 +23,7 @@
         /// <summary>
         /// 默认分页大小
         /// </summary>
-        public const int DefaultPageSize = 20;
+        public const int DefaultPageSize = 2;
 
         /// <summary>
         /// 最大分页大小

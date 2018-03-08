@@ -443,6 +443,7 @@
     <Content Include="Abp\Framework\styles\abp.mixings.css" />
     <Content Include="Abp\Framework\styles\abp.mixings.min.css" />
     <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
+    <Content Include="App_Data\sql\carFactory.sql" />
     <Content Include="App_Data\sql\company.sql" />
     <Content Include="Content\css\admin\commonStyle.css" />
     <Content Include="Content\css\bannerSlider.css" />
@@ -2840,6 +2841,7 @@
     <Content Include="Views\About\Contact.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Product\List.cshtml" />
+    <Content Include="Views\Shared\PartialPages\_PartialPagination.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

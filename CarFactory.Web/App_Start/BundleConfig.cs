@@ -13,11 +13,15 @@ namespace CarFactory.Web
 
             bundles.Add(new ScriptBundle("~/scripts/jqueryval").Include(
                 "~/Scripts/jquery.validate*"));
-
            
 
             bundles.Add(new ScriptBundle("~/scripts/bootstrap").Include(
                 "~/Scripts/bootstrap.js"));
+
+            //bundles.Add(new StyleBundle("~/Content/css/bootstrap").Include("~/Content/css/bootstrap.css"));
+
+            bundles.Add(new StyleBundle("~/Content/css/bootstrap").Include(
+                "~/Content/css/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Content/css/commom").Include(
                 "~/Content/css/bannerSlider.css",

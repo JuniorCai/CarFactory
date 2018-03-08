@@ -24,7 +24,7 @@ namespace CarFactory.Web.Controllers
         }
 
 
-        public ActionResult List(int? page, string activeName = "")
+        public ActionResult List(int? page, string shortName = "")
         {
             CategoryListDto activeCategory = null;
             int pageIndex = ((page != null && page.Value >= 1) ? page.Value : 1) - 1;
@@ -33,12 +33,13 @@ namespace CarFactory.Web.Controllers
             activeCategory = categoryList.FirstOrDefault();
             ViewBag.ActiveCategory = activeCategory;
 
-            if (!string.IsNullOrEmpty(activeName))
+            if (!string.IsNullOrEmpty(shortName))
             {
-                activeCategory = categoryList.FirstOrDefault(c => c.ShortName == activeName);
-                if (activeCategory != null)
+                var tempCategory = categoryList.FirstOrDefault(c => c.ShortName == shortName);
+                if (tempCategory != null)
                 {
-                    ViewBag.ActiveCategory = activeCategory;
+                    ViewBag.ActiveCategory = tempCategory;
+                    activeCategory = tempCategory;
                 }
             }
 

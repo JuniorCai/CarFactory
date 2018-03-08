@@ -1,13 +1,19 @@
-﻿@using CarFactory.Application.Category.Dtos
+﻿@using System.Web.Optimization
+@using CarFactory.Application.Category.Dtos
 @using X.PagedList
 @using X.PagedList.Mvc
 @using CarFactory.Application.Products.Dtos
+@using X.PagedList.Mvc.Common
 @model X.PagedList.StaticPagedList<CarFactory.Application.Products.Dtos.ProductListDto>
 @{
     ViewBag.Title = "List";
 
     Layout = "~/Views/Shared/_LayoutList.cshtml";
     CategoryListDto activeCategory = ViewBag.ActiveCategory as CategoryListDto;
+}
+@section styles
+{
+    @Styles.Render("~/Content/css/bootstrap")
 }
 
 @section Navigation
@@ -23,7 +29,7 @@
             {
                 <div class="cp">
                     <div class="chanpin1">
-                        <a href="/product-@dto.Id" title="@dto.Title" target="_blank">
+                        <a href="@Url.Action("Detail",new{id=@dto.Id})" title="@dto.Title" target="_blank">
                             <img src="@dto.Img" alt="@dto.Title">
                         </a>
                     </div>
@@ -37,8 +43,10 @@
 
         <!--Pager Content-->
         <div style="text-align: center">
-            @*            {{$productList->links()}}*@
-            @Html.PagedListPager(Model,page=>Url.Action("List",new {page=page}))
+            @if (Model.PageCount>1)
+            {
+                @Html.PagedListPager(Model, page => Url.Action("List", new {page = page}),PagedListRenderOptionsBase.Classic)
+            }
         </div>
     </div>
 
