@@ -26,7 +26,7 @@ namespace CarFactory.Web
             bundles.Add(new StyleBundle("~/Content/css/commom").Include(
                 "~/Content/css/bannerSlider.css",
                 "~/Content/css/layout.css",
-                "~/Content/css/pagerStyle.css"));
+                "~/Content/css/XPagedList.css"));
 
             bundles.Add(new StyleBundle("~/Content/css/Admin").Include(
                 "~/Content/css/admin/commonStyle.css"));

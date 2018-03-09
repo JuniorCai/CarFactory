@@ -6,9 +6,11 @@ using CarFactory.Core.Authorization.Users;
 using CarFactory.Core.CustomDomain.Category;
 using CarFactory.Core.CustomDomain.Company;
 using CarFactory.Core.CustomDomain.Products;
+using CarFactory.Core.CustomDomain.Report;
 using CarFactory.Core.MultiTenancy;
 using CarFactory.EntityFramework.EntityMapper.Company;
 using CarFactory.EntityFramework.EntityMapper.Products;
+using CarFactory.EntityFramework.EntityMapper.Report;
 
 namespace CarFactory.EntityFramework.EntityFramework
 {
@@ -21,6 +23,8 @@ namespace CarFactory.EntityFramework.EntityFramework
         public IDbSet<Product> Products { get; set; }
 
         public IDbSet<Company> Companys { get; set; }
+
+        public IDbSet<Report> Reports { get; set; }
 
 
         /* NOTE: 
@@ -63,6 +67,7 @@ namespace CarFactory.EntityFramework.EntityFramework
             modelBuilder.Configurations.Add(new CategoryCfg());
             modelBuilder.Configurations.Add(new ProductCfg());
             modelBuilder.Configurations.Add(new CompanyCfg());
+            modelBuilder.Configurations.Add(new ReportCfg());
             base.OnModelCreating(modelBuilder);
         }
     }

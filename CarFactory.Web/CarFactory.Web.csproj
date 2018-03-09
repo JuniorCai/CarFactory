@@ -454,6 +454,7 @@
     <Content Include="Content\css\commonStyle.css" />
     <Content Include="Content\css\layout.css" />
     <Content Include="Content\css\pagerStyle.css" />
+    <Content Include="Content\css\XPagedList.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\material-icons\materialicons.css" />
@@ -482,6 +483,39 @@
     <Content Include="Content\images\public\show_12.jpg" />
     <Content Include="Content\images\public\show_15.jpg" />
     <Content Include="Content\images\public\tel_05.jpg" />
+    <Content Include="Content\uploadImg\20151127\1-15112G411010-L.jpg" />
+    <Content Include="Content\uploadImg\20151127\1-15112G411390-L.jpg" />
+    <Content Include="Content\uploadImg\20151127\1-15112G42A90-L.jpg" />
+    <Content Include="Content\uploadImg\20151130\1-15112Q645050-L.jpg" />
+    <Content Include="Content\uploadImg\20151130\1-1512242232230-L.jpg" />
+    <Content Include="Content\uploadImg\20151130\1-160120104T0629.jpg" />
+    <Content Include="Content\uploadImg\20151130\1-160120110141B2.jpg" />
+    <Content Include="Content\uploadImg\20151221\1-15112Q643460-L.jpg" />
+    <Content Include="Content\uploadImg\20151221\1-15112Q645050-L.jpg" />
+    <Content Include="Content\uploadImg\20151221\1-15112QA0250-L.jpg" />
+    <Content Include="Content\uploadImg\20151221\1-1512150T4230-L.jpg" />
+    <Content Include="Content\uploadImg\20151221\1-151221142K70-L.jpg" />
+    <Content Include="Content\uploadImg\20151221\1-1512242232230-L.jpg" />
+    <Content Include="Content\uploadImg\20151221\1-160120104T0629.jpg" />
+    <Content Include="Content\uploadImg\20151221\1-160120110141B2.jpg" />
+    <Content Include="Content\uploadImg\201704\047addef6a2b714309cdbb7703e5101d.png" />
+    <Content Include="Content\uploadImg\201704\0c9b7dc953fa961f1e223efca66683aa.jpg" />
+    <Content Include="Content\uploadImg\201704\1944b32bf9814dafeaf32a7571076a9c.jpg" />
+    <Content Include="Content\uploadImg\201704\2ec546adc7928664a750e3cbbf4959c8.jpg" />
+    <Content Include="Content\uploadImg\201704\3f61672c072ba721fdcc4cfa44cadae6.jpg" />
+    <Content Include="Content\uploadImg\201704\4812ea2a13f37252bbf41c749c6b20cb.JPG" />
+    <Content Include="Content\uploadImg\201704\671315524757c2ffda5c14745f34679d.jpg" />
+    <Content Include="Content\uploadImg\201704\781a39a4168aa7f7d2f1f4888ed9e43d.jpg" />
+    <Content Include="Content\uploadImg\201704\7e6aaee28cacc1fe0f63c4dc80585b46.jpg" />
+    <Content Include="Content\uploadImg\201704\8ae24fb832dff8707f1ae63fa0baa709.jpg" />
+    <Content Include="Content\uploadImg\201704\909695dca1124853c24ad0068126c507.jpg" />
+    <Content Include="Content\uploadImg\201704\9215b59d7e1cbd47d92796d1dad964eb.jpg" />
+    <Content Include="Content\uploadImg\201704\a96162aedd3da7549d06f47ae8d95766.jpg" />
+    <Content Include="Content\uploadImg\201704\be5c84c9a1be237663561a700f28a5d7.jpg" />
+    <Content Include="Content\uploadImg\201704\c33b03f91963e7f13b0dfea553c033b2.jpg" />
+    <Content Include="Content\uploadImg\201704\cb5700aabb494db350c9f0221e97689f.jpg" />
+    <Content Include="Content\uploadImg\201708\2b192f5854019ca68d418668edf0f6a6.jpg" />
+    <Content Include="Content\uploadImg\201708\41b16269574a143ab5c69cc283645799.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="lib\abp-web-resources\Abp\Framework\scripts\abp.js" />
@@ -2686,6 +2720,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\TenantsController.cs" />
@@ -2842,6 +2877,8 @@
     <Content Include="Views\Product\Detail.cshtml" />
     <Content Include="Views\Product\List.cshtml" />
     <Content Include="Views\Shared\PartialPages\_PartialPagination.cshtml" />
+    <Content Include="Views\Report\List.cshtml" />
+    <Content Include="Views\Report\Detail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2869,6 +2906,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\images\products\" />
+    <Folder Include="Content\uploadImg\20180309\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -2885,7 +2923,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61814</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

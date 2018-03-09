@@ -92,5 +92,22 @@
     <text name="Latitude" value="Latitude" />
 
     <!-- 公司信息管理End -->
+
+
+    <!-- 检测报告管理 -->
+    <text name="Report" value="检测报告" />
+    <text name="ReportHeaderInfo" value="检测报告管理列表" />
+    <text name="CreateReport" value="新增检测报告" />
+    <text name="EditReport" value="编辑检测报告" />
+    <text name="DeleteReport" value="删除检测报告" />
+    <text name="ReportDeleteWarningMessage" value="检测报告名称: {0} 将被删除,是否确定删除它。" />
+    <!--//用于表格展示的数据信息的标题-->
+    <text name="ReportName" value="ReportName" />
+    <text name="Img" value="Img" />
+    <text name="RelativeId" value="RelativeId" />
+    <text name="LastModificationTime" value="最后编辑时间" />
+    <text name="CreationTime" value="创建时间" />
+
+    <!-- 检测报告管理 End -->
   </texts>
 </localizationDictionary>

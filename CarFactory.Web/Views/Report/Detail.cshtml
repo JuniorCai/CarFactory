@@ -1,0 +1,33 @@
+﻿@model CarFactory.Web.Models.Common.PreAndNextNavModel<CarFactory.Application.Report.Dtos.ReportListDto>
+@{
+    ViewBag.Title = Model.CurrentItem.ReportName;
+    ViewBag.PageName = Model.CurrentItem.ReportName;
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+}
+@section Navigation
+{
+    @Html.ActionLink(Model.CurrentItem.ReportName, "Detail", "Product")
+}
+
+
+
+<div class="pbt">@Model.CurrentItem.ReportName</div>
+<div class="sj">发布时间：@Model.CurrentItem.CreationTime.ToShortDateString()</div>
+
+
+<div class="js">@Html.Raw(Model.CurrentItem.Img)</div>
+
+<div class="pager">
+    @if (Model.PreviousItem != null)
+    {
+        @:上一篇：
+        @Html.ActionLink(Model.PreviousItem.ReportName.Length > 24 ? Model.PreviousItem.ReportName.Substring(0, 24) : Model.PreviousItem.ReportName, "Detail", new { id = Model.PreviousItem.Id })
+    }
+    &nbsp;&nbsp;
+    @if (Model.NextItem != null)
+    {
+        @:下一篇：
+        @Html.ActionLink(Model.NextItem.ReportName.Length > 24 ? Model.NextItem.ReportName.Substring(0, 24) : Model.NextItem.ReportName, "Detail", new { id = Model.NextItem.Id })
+    }
+
+</div>

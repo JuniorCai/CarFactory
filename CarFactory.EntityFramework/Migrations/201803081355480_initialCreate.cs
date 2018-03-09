@@ -13,9 +13,9 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpAuditLogs",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
-                        UserId = c.Long(),
+                        UserId = c.Int(),
                         ServiceName = c.String(maxLength: 256, storeType: "nvarchar"),
                         MethodName = c.String(maxLength: 256, storeType: "nvarchar"),
                         Parameters = c.String(maxLength: 1024, storeType: "nvarchar"),
@@ -25,7 +25,7 @@ namespace CarFactory.EntityFramework.Migrations
                         ClientName = c.String(maxLength: 128, storeType: "nvarchar"),
                         BrowserInfo = c.String(maxLength: 256, storeType: "nvarchar"),
                         Exception = c.String(maxLength: 2000, storeType: "nvarchar"),
-                        ImpersonatorUserId = c.Long(),
+                        ImpersonatorUserId = c.Int(),
                         ImpersonatorTenantId = c.Int(),
                         CustomData = c.String(maxLength: 2000, storeType: "nvarchar"),
                     },
@@ -39,7 +39,7 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpBackgroundJobs",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         JobType = c.String(nullable: false, maxLength: 512, storeType: "nvarchar"),
                         JobArgs = c.String(nullable: false, unicode: false),
                         TryCount = c.Short(nullable: false),
@@ -48,7 +48,7 @@ namespace CarFactory.EntityFramework.Migrations
                         IsAbandoned = c.Boolean(nullable: false),
                         Priority = c.Byte(nullable: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .Index(t => new { t.IsAbandoned, t.NextTryTime });
@@ -63,12 +63,12 @@ namespace CarFactory.EntityFramework.Migrations
                         IsShow = c.Boolean(nullable: false),
                         Sort = c.Int(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -81,21 +81,21 @@ namespace CarFactory.EntityFramework.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        CompanyName = c.String(nullable: false, maxLength: 2000, storeType: "nvarchar"),
-                        Phone = c.String(maxLength: 20, storeType: "nvarchar"),
-                        Tel = c.String(maxLength: 20, storeType: "nvarchar"),
-                        Email = c.String(maxLength: 100, storeType: "nvarchar"),
-                        Address = c.String(maxLength: 2000, storeType: "nvarchar"),
+                        CompanyName = c.String(nullable: false, maxLength: 50, storeType: "nvarchar"),
+                        Phone = c.String(maxLength: 50, storeType: "nvarchar"),
+                        Tel = c.String(maxLength: 50, storeType: "nvarchar"),
+                        Email = c.String(maxLength: 50, storeType: "nvarchar"),
+                        Address = c.String(maxLength: 50, storeType: "nvarchar"),
                         Longitude = c.String(maxLength: 50, storeType: "nvarchar"),
                         Latitude = c.String(maxLength: 50, storeType: "nvarchar"),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
-                    },
+                        CreatorUserId = c.Int(),
+                },
                 annotations: new Dictionary<string, object>
                 {
                     { "DynamicFilter_Company_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
@@ -106,12 +106,12 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpFeatures",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
                         Name = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
                         Value = c.String(nullable: false, maxLength: 2000, storeType: "nvarchar"),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                         EditionId = c.Int(),
                         Discriminator = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
                     },
@@ -133,12 +133,12 @@ namespace CarFactory.EntityFramework.Migrations
                         Name = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
                         DisplayName = c.String(nullable: false, maxLength: 64, storeType: "nvarchar"),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -157,12 +157,12 @@ namespace CarFactory.EntityFramework.Migrations
                         Icon = c.String(maxLength: 128, storeType: "nvarchar"),
                         IsDisabled = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -175,16 +175,16 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpLanguageTexts",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
                         LanguageName = c.String(nullable: false, maxLength: 10, storeType: "nvarchar"),
                         Source = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
                         Key = c.String(nullable: false, maxLength: 256, storeType: "nvarchar"),
                         Value = c.String(nullable: false, unicode: false),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -208,7 +208,7 @@ namespace CarFactory.EntityFramework.Migrations
                         ExcludedUserIds = c.String(unicode: false),
                         TenantIds = c.String(unicode: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -218,13 +218,13 @@ namespace CarFactory.EntityFramework.Migrations
                     {
                         Id = c.Guid(nullable: false),
                         TenantId = c.Int(),
-                        UserId = c.Long(nullable: false),
+                        UserId = c.Int(nullable: false),
                         NotificationName = c.String(maxLength: 96, storeType: "nvarchar"),
                         EntityTypeName = c.String(maxLength: 250, storeType: "nvarchar"),
                         EntityTypeAssemblyQualifiedName = c.String(maxLength: 512, storeType: "nvarchar"),
                         EntityId = c.String(maxLength: 96, storeType: "nvarchar"),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -237,18 +237,18 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpOrganizationUnits",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
-                        ParentId = c.Long(),
+                        ParentId = c.Int(),
                         Code = c.String(nullable: false, maxLength: 95, storeType: "nvarchar"),
                         DisplayName = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -263,14 +263,14 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpPermissions",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
                         Name = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
                         IsGranted = c.Boolean(nullable: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                         RoleId = c.Int(),
-                        UserId = c.Long(),
+                        UserId = c.Int(),
                         Discriminator = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
                     },
                 annotations: new Dictionary<string, object>
@@ -295,13 +295,14 @@ namespace CarFactory.EntityFramework.Migrations
                         Url = c.String(maxLength: 4000, storeType: "nvarchar"),
                         CategoryId = c.Int(nullable: false),
                         IsShow = c.Boolean(nullable: false),
+                        Detail = c.String(nullable: false, maxLength: 4000, storeType: "nvarchar"),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -323,12 +324,12 @@ namespace CarFactory.EntityFramework.Migrations
                         IsStatic = c.Boolean(nullable: false),
                         IsDefault = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -347,7 +348,7 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpUsers",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         AuthenticationSource = c.String(maxLength: 64, storeType: "nvarchar"),
                         UserName = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
                         TenantId = c.Int(),
@@ -368,12 +369,12 @@ namespace CarFactory.EntityFramework.Migrations
                         IsActive = c.Boolean(nullable: false),
                         LastLoginTime = c.DateTime(precision: 0),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -392,13 +393,13 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpUserClaims",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
-                        UserId = c.Long(nullable: false),
+                        UserId = c.Int(nullable: false),
                         ClaimType = c.String(unicode: false),
                         ClaimValue = c.String(unicode: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -412,9 +413,9 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpUserLogins",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
-                        UserId = c.Long(nullable: false),
+                        UserId = c.Int(nullable: false),
                         LoginProvider = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
                         ProviderKey = c.String(nullable: false, maxLength: 256, storeType: "nvarchar"),
                     },
@@ -430,12 +431,12 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpUserRoles",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
-                        UserId = c.Long(nullable: false),
+                        UserId = c.Int(nullable: false),
                         RoleId = c.Int(nullable: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -449,15 +450,15 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpSettings",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
-                        UserId = c.Long(),
+                        UserId = c.Int(),
                         Name = c.String(nullable: false, maxLength: 256, storeType: "nvarchar"),
                         Value = c.String(maxLength: 2000, storeType: "nvarchar"),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -481,7 +482,7 @@ namespace CarFactory.EntityFramework.Migrations
                         EntityId = c.String(maxLength: 96, storeType: "nvarchar"),
                         Severity = c.Byte(nullable: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -500,12 +501,12 @@ namespace CarFactory.EntityFramework.Migrations
                         ConnectionString = c.String(maxLength: 1024, storeType: "nvarchar"),
                         IsActive = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -525,20 +526,20 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpUserAccounts",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
-                        UserId = c.Long(nullable: false),
-                        UserLinkId = c.Long(),
+                        UserId = c.Int(nullable: false),
+                        UserLinkId = c.Int(),
                         UserName = c.String(unicode: false),
                         EmailAddress = c.String(unicode: false),
                         LastLoginTime = c.DateTime(precision: 0),
                         IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
+                        DeleterUserId = c.Int(),
                         DeletionTime = c.DateTime(precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        LastModifierUserId = c.Int(),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {
@@ -550,10 +551,10 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpUserLoginAttempts",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
                         TenancyName = c.String(maxLength: 64, storeType: "nvarchar"),
-                        UserId = c.Long(),
+                        UserId = c.Int(),
                         UserNameOrEmailAddress = c.String(maxLength: 255, storeType: "nvarchar"),
                         ClientIpAddress = c.String(maxLength: 64, storeType: "nvarchar"),
                         ClientName = c.String(maxLength: 128, storeType: "nvarchar"),
@@ -575,7 +576,7 @@ namespace CarFactory.EntityFramework.Migrations
                     {
                         Id = c.Guid(nullable: false),
                         TenantId = c.Int(),
-                        UserId = c.Long(nullable: false),
+                        UserId = c.Int(nullable: false),
                         TenantNotificationId = c.Guid(nullable: false),
                         State = c.Int(nullable: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
@@ -591,13 +592,13 @@ namespace CarFactory.EntityFramework.Migrations
                 "dbo.AbpUserOrganizationUnits",
                 c => new
                     {
-                        Id = c.Long(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         TenantId = c.Int(),
-                        UserId = c.Long(nullable: false),
-                        OrganizationUnitId = c.Long(nullable: false),
+                        UserId = c.Int(nullable: false),
+                        OrganizationUnitId = c.Int(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
+                        CreatorUserId = c.Int(),
                     },
                 annotations: new Dictionary<string, object>
                 {

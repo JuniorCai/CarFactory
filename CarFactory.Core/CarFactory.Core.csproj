@@ -195,6 +195,11 @@
     <Compile Include="CustomDomain\Category\____CategoryReadme.cs" />
     <Compile Include="CustomDomain\Products\ProductManage.cs" />
     <Compile Include="CustomDomain\Products\____ProductReadme.cs" />
+    <Compile Include="CustomDomain\Report\Authorization\ReportAppAuthorizationProvider.cs" />
+    <Compile Include="CustomDomain\Report\Authorization\ReportAppPermissions.cs" />
+    <Compile Include="CustomDomain\Report\Report.cs" />
+    <Compile Include="CustomDomain\Report\ReportManage.cs" />
+    <Compile Include="CustomDomain\Report\____ReportReadme.cs" />
     <Compile Include="Messages\Message.cs" />
     <Compile Include="CarFactoryCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />

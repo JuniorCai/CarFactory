@@ -256,6 +256,14 @@
     <Compile Include="Products\Mappers\ProductDtoMapper.cs" />
     <Compile Include="Products\ProductAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Dtos\CreateOrUpdateReportInput.cs" />
+    <Compile Include="Report\Dtos\GetReportForEditOutput.cs" />
+    <Compile Include="Report\Dtos\GetReportInput.cs" />
+    <Compile Include="Report\Dtos\ReportEditDto.cs" />
+    <Compile Include="Report\Dtos\ReportListDto.cs" />
+    <Compile Include="Report\IReportAppService.cs" />
+    <Compile Include="Report\Mappers\ReportDtoMapper.cs" />
+    <Compile Include="Report\ReportAppService.cs" />
     <Compile Include="Roles\Dto\CreateRoleDto.cs" />
     <Compile Include="Roles\Dto\PermissionDto.cs" />
     <Compile Include="Roles\Dto\RoleDto.cs" />

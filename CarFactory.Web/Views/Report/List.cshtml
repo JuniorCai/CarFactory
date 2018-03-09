@@ -1,0 +1,52 @@
+﻿@using CarFactory.Application.Report.Dtos
+@using X.PagedList.Mvc.Common
+@using X.PagedList.Mvc
+@using X.PagedList
+@model X.PagedList.StaticPagedList<ReportListDto>
+
+@{
+    ViewBag.Title = "企业资质报告";
+    ViewBag.PageName = "资质报告";
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+}
+
+@section styles
+{
+    <link rel="stylesheet" href="~/Content/css/XPagedList.css" />
+}
+
+@section Navigation
+{
+@*    <a href="/products">@ViewBag.PageName</a> &gt;*@
+    @Html.ActionLink("资质报告", "List", "Report")&gt;
+}
+
+<div class="qlswu_Reception"></div>
+<div id="listContainer">
+    <div class="ri_2">
+
+        @foreach (ReportListDto dto in Model)
+        {
+            <div class="cp">
+                <div class="chanpin1">
+                    <a href="@Url.Action("Detail",new{id=@dto.Id})" title="@dto.ReportName" target="_blank">
+                        <img src="@dto.Img" alt="@dto.ReportName">
+                    </a>
+                </div>
+                <div class="chanpin2">
+                    @Html.ActionLink(dto.ReportName, "Detail", new { id = dto.Id }, new { target = "_blank", title = dto.ReportName })
+                </div>
+            </div>
+        }
+    </div>
+    <div style="clear:both"></div>
+
+    <!--Pager Content-->
+    <div style="text-align: center">
+        @if (Model.PageCount > 1)
+        {
+            @Html.PagedListPager(Model, page => Url.Action("List", new { page = page }), PagedListRenderOptionsBase.Classic)
+        }
+    </div>
+</div>
+

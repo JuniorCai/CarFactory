@@ -20,9 +20,9 @@ namespace CarFactory.EntityFramework.EntityMapper.Products
 
 
             // Name
-            Property(a => a.CategoryName).HasMaxLength(4000);
+            Property(a => a.CategoryName).HasMaxLength(50);
             // ShortName
-            Property(a => a.ShortName).HasMaxLength(4000);
+            Property(a => a.ShortName).HasMaxLength(50);
             // Products - 关系映射
             //HasOptional(a => a.Products).WithMany().HasForeignKey(c => c.ProductsId).WillCascadeOnDelete(true);
 
