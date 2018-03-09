@@ -14,7 +14,16 @@ namespace CarFactory.Application.Products
     /// </summary>
     public interface IProductAppService : IApplicationService
 	{
-	    Task<ProductListDto> GetFirstOrDefaultAsync(Expression<Func<Product, bool>> predicate);
+	    /// <summary>
+	    /// 根据查询条件获取第一个或默认对象
+	    /// </summary>
+	    /// <typeparam name="TOrderKey"></typeparam>
+	    /// <param name="predicate">查询条件</param>
+	    /// <param name="orderPredicate">排序条件</param>
+	    /// <param name="isAsc">是否正序</param>
+	    /// <returns></returns>
+        Task<ProductListDto> GetFirstOrDefaultAsync<TOrderKey>(Expression<Func<Product, bool>> predicate, Func<Product, TOrderKey> orderPredicate, bool isAsc);
+
 
 
         #region 产品信息管理

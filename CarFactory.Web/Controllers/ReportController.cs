@@ -51,11 +51,12 @@ namespace CarFactory.Web.Controllers
             if (currentDto != null)
             {
                 dtoNavModel.CurrentItem = currentDto;
-                var preDto = _reportAppService.GetFirstOrDefaultAsync(p => p.CreationTime < currentDto.CreationTime)
-                    .Result;
+                var preDto = _reportAppService.GetFirstOrDefaultAsync(p => p.CreationTime < currentDto.CreationTime,
+                        r => r.CreationTime, false).Result;
 
-                var nextDto = _reportAppService.GetFirstOrDefaultAsync(p => p.CreationTime > currentDto.CreationTime)
-                    .Result;
+                var nextDto = _reportAppService.GetFirstOrDefaultAsync(p => p.CreationTime > currentDto.CreationTime,
+                        r => r.CreationTime, true).Result;
+
                 dtoNavModel.PreviousItem = preDto;
                 dtoNavModel.NextItem = nextDto;
             }

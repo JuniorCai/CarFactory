@@ -1,34 +1,42 @@
 ﻿@model CarFactory.Web.Models.Common.PreAndNextNavModel<CarFactory.Application.Products.Dtos.ProductListDto>
-    @{
-        ViewBag.Title = Model.CurrentItem.Title;
-        ViewBag.PageName = Model.CurrentItem.Title;
-        Layout = "~/Views/Shared/_LayoutList.cshtml";
-    }
+@{
+    ViewBag.Title = Model.CurrentItem.Title;
+    ViewBag.PageName = "产品展示";
+    Layout = "~/Views/Shared/_LayoutList.cshtml";
+}
 
-    @section Navigation
-    {
-        @Html.ActionLink(Model.CurrentItem.Title, "Detail", "Product")
-    }
+@section Navigation
+{
+    @Html.ActionLink(Model.CurrentItem.Title.Length > 6 ? Model.CurrentItem.Title.Substring(0, 6) + "..." : Model.CurrentItem.Title, "Detail", "Product", new { title = Model.CurrentItem.Title })
+}
 
 
 
-    <div class="pbt">@Model.CurrentItem.Title</div>
-    <div class="sj">发布时间：@Model.CurrentItem.CreationTime.ToShortDateString()</div>
+<div class="pbt">@Model.CurrentItem.Title</div>
+<div class="sj">发布时间：@Model.CurrentItem.CreationTime.ToShortDateString()</div>
 
 
 <div class="js">@Html.Raw(Model.CurrentItem.Detail)</div>
 
 <div class="pager">
+    上一篇：
     @if (Model.PreviousItem != null)
     {
-        @:上一篇：
         @Html.ActionLink(Model.PreviousItem.Title.Length > 24 ? Model.PreviousItem.Title.Substring(0, 24) : Model.PreviousItem.Title, "Detail", new { id = Model.PreviousItem.Id })
     }
+    else
+    {
+        @:当前为最新一篇
+    }
     &nbsp;&nbsp;
+    下一篇：
     @if (Model.NextItem != null)
     {
-        @:下一篇：
         @Html.ActionLink(Model.NextItem.Title.Length > 24 ? Model.NextItem.Title.Substring(0, 24) : Model.NextItem.Title, "Detail", new { id = Model.NextItem.Id })
+    }
+    else
+    {
+        @:当前为最后一篇
     }
 
 </div>
@@ -50,3 +58,19 @@
 @*    </div>*@
 
 
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            var categoryList = $("#categoryList  a");
+            if (categoryList != null) {
+                $(categoryList).each(function (index, item) {
+                    var shortName = $(item).attr("id");
+                    if (shortName == "@Model.CurrentItem.ProductCategory.ShortName") {
+                        $(item).css("color", "#65b542");
+                    }
+                });
+            }
+        })
+    </script>
+}

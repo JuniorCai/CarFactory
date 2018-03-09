@@ -54,10 +54,11 @@ namespace CarFactory.Application.Report
         #region 检测报告管理
 
 
-        public async Task<ReportListDto> GetFirstOrDefaultAsync(Expression<Func<Core.CustomDomain.Report.Report, bool>> predicate)
+        public async Task<ReportListDto> GetFirstOrDefaultAsync<TOrderKey>(Expression<Func<Core.CustomDomain.Report.Report, bool>> predicate, Func<Core.CustomDomain.Report.Report, TOrderKey> orderPredicate,bool isAsc)
         {
-            Core.CustomDomain.Report.Report entity = await _reportRepository.FirstOrDefaultAsync(predicate);
-
+            var entityTask = await _reportRepository.GetAllListAsync(predicate);
+            
+            Core.CustomDomain.Report.Report entity = isAsc? entityTask.OrderBy(orderPredicate).FirstOrDefault(): entityTask.OrderByDescending(orderPredicate).FirstOrDefault();
             ReportListDto infoDto = entity.MapTo<ReportListDto>();
             return infoDto;
 

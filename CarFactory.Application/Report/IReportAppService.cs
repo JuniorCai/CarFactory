@@ -14,13 +14,17 @@ namespace CarFactory.Application.Report
     public interface IReportAppService : IApplicationService
     {
         #region 检测报告管理
-
+        
         /// <summary>
         /// 根据查询条件获取第一个或默认对象
         /// </summary>
-        /// <param name="predicate"></param>
+        /// <typeparam name="TOrderKey"></typeparam>
+        /// <param name="predicate">查询条件</param>
+        /// <param name="orderPredicate">排序条件</param>
+        /// <param name="isAsc">是否正序</param>
         /// <returns></returns>
-        Task<ReportListDto> GetFirstOrDefaultAsync(Expression<Func<Core.CustomDomain.Report.Report, bool>> predicate);
+        Task<ReportListDto> GetFirstOrDefaultAsync<TOrderKey>(Expression<Func<Core.CustomDomain.Report.Report, bool>> predicate,
+            Func<Core.CustomDomain.Report.Report, TOrderKey> orderPredicate, bool isAsc);
 
 
         /// <summary>

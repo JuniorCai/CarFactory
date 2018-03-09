@@ -1,12 +1,12 @@
 ﻿@model CarFactory.Web.Models.Common.PreAndNextNavModel<CarFactory.Application.Report.Dtos.ReportListDto>
 @{
     ViewBag.Title = Model.CurrentItem.ReportName;
-    ViewBag.PageName = Model.CurrentItem.ReportName;
+    ViewBag.PageName = "检测报告";
     Layout = "~/Views/Shared/_LayoutList.cshtml";
 }
 @section Navigation
 {
-    @Html.ActionLink(Model.CurrentItem.ReportName, "Detail", "Product")
+    @Html.ActionLink(Model.CurrentItem.ReportName.Length>6? Model.CurrentItem.ReportName.Substring(0,6)+"...": Model.CurrentItem.ReportName, "Detail", "Product",new {title = Model.CurrentItem.ReportName })
 }
 
 
@@ -15,19 +15,27 @@
 <div class="sj">发布时间：@Model.CurrentItem.CreationTime.ToShortDateString()</div>
 
 
-<div class="js">@Html.Raw(Model.CurrentItem.Img)</div>
+<div class="js"><img src="@Model.CurrentItem.Img" /></div>
 
 <div class="pager">
+    上一篇：
     @if (Model.PreviousItem != null)
     {
-        @:上一篇：
         @Html.ActionLink(Model.PreviousItem.ReportName.Length > 24 ? Model.PreviousItem.ReportName.Substring(0, 24) : Model.PreviousItem.ReportName, "Detail", new { id = Model.PreviousItem.Id })
     }
+    else
+    {
+        @:当前为最新一篇
+    }
     &nbsp;&nbsp;
+    下一篇：
     @if (Model.NextItem != null)
     {
-        @:下一篇：
         @Html.ActionLink(Model.NextItem.ReportName.Length > 24 ? Model.NextItem.ReportName.Substring(0, 24) : Model.NextItem.ReportName, "Detail", new { id = Model.NextItem.Id })
+    }
+    else
+    {
+        @:当前为最后一篇
     }
 
 </div>

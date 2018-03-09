@@ -6,10 +6,11 @@
 @using X.PagedList.Mvc.Common
 @model X.PagedList.StaticPagedList<CarFactory.Application.Products.Dtos.ProductListDto>
 @{
-    ViewBag.Title = "List";
+    CategoryListDto activeCategory = ViewBag.ActiveCategory as CategoryListDto;
+
+    ViewBag.Title = activeCategory.CategoryName;
     ViewBag.PageName = "产品展示";
     Layout = "~/Views/Shared/_LayoutList.cshtml";
-    CategoryListDto activeCategory = ViewBag.ActiveCategory as CategoryListDto;
 }
 @section styles
 {
@@ -50,17 +51,20 @@
     </div>
 </div>
 
+@section scripts
+{
+    <script type="text/javascript">
+        $(function () {
+            var categoryList = $("#categoryList  a");
+            if (categoryList != null) {
+                $(categoryList).each(function (index, item) {
+                    var shortName = $(item).attr("id");
+                    if (shortName == "@activeCategory.ShortName") {
+                        $(item).css("color", "#65b542");
+                    }
+                });
+            }
+        })
+    </script>
+}
 
-<script type="text/javascript">
-    $(function () {
-        var categoryList = $("#categoryList  a");
-        if (categoryList != null) {
-            $(categoryList).each(function (index, item) {
-                var shortName = $(item).attr("id");
-                if (shortName == "@activeCategory.ShortName") {
-                    $(item).css("color", "#65b542");
-                }
-            });
-        }
-    })
-</script>

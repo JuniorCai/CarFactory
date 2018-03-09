@@ -21,7 +21,7 @@ namespace CarFactory.EntityFramework.EntityMapper.Report
             // ReportName
             Property(a => a.ReportName).HasMaxLength(50);
             // Img
-            Property(a => a.Img).HasMaxLength(50);
+            Property(a => a.Img).HasMaxLength(100);
             // RelativeId
             Property(a => a.RelativeId).HasMaxLength(11);
         }

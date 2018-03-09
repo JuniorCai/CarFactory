@@ -12,7 +12,6 @@
     @Scripts.Render("~/scripts/jquery")
     <!-- View specific styles -->
     @RenderSection("styles", required: false)
-    @RenderSection("scripts",false)
 
 </head>
 <body>
@@ -64,6 +63,7 @@
     }
 
 </body>
+@RenderSection("scripts",false)
 
 </html>
 

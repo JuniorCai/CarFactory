@@ -38,9 +38,11 @@ namespace CarFactory.Application.Products
 
         }
 
-        public async Task<ProductListDto> GetFirstOrDefaultAsync(Expression<Func<Product, bool>> predicate)
+        public async Task<ProductListDto> GetFirstOrDefaultAsync<TOrderKey>(Expression<Func<Product, bool>> predicate, Func<Product, TOrderKey> orderPredicate, bool isAsc)
         {
-            Product entity = await _productRepository.FirstOrDefaultAsync(predicate);
+            var entityTask = await _productRepository.GetAllListAsync(predicate);
+
+            Product entity = isAsc ? entityTask.OrderBy(orderPredicate).FirstOrDefault() : entityTask.OrderByDescending(orderPredicate).FirstOrDefault();
 
             ProductListDto infoDto = entity.MapTo<ProductListDto>();
             return infoDto;
