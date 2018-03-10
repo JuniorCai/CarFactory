@@ -35,7 +35,7 @@ namespace CarFactory.Web.Controllers
 {
     public class AccountController : CarFactoryControllerBase
     {
-        private readonly TenantManager _tenantManager;
+        //private readonly TenantManager _tenantManager;
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
         private readonly IUnitOfWorkManager _unitOfWorkManager;
@@ -47,7 +47,7 @@ namespace CarFactory.Web.Controllers
         private readonly IAuthenticationManager _authenticationManager;
 
         public AccountController(
-            TenantManager tenantManager,
+            //TenantManager tenantManager,
             UserManager userManager,
             RoleManager roleManager,
             IUnitOfWorkManager unitOfWorkManager,
@@ -58,7 +58,7 @@ namespace CarFactory.Web.Controllers
             ITenantCache tenantCache, 
             IAuthenticationManager authenticationManager)
         {
-            _tenantManager = tenantManager;
+            //_tenantManager = tenantManager;
             _userManager = userManager;
             _roleManager = roleManager;
             _unitOfWorkManager = unitOfWorkManager;
@@ -81,7 +81,7 @@ namespace CarFactory.Web.Controllers
 
             ViewBag.IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled;
 
-            return View(
+            return View("~/Views/Admin/Account/Login.cshtml",
                 new LoginFormViewModel
                 {
                     ReturnUrl = returnUrl,
@@ -318,72 +318,72 @@ namespace CarFactory.Web.Controllers
 
         #region External Login
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult ExternalLogin(string provider, string returnUrl)
-        {
-            return new ChallengeResult(
-                provider,
-                Url.Action(
-                    "ExternalLoginCallback",
-                    "Account",
-                    new
-                    {
-                        ReturnUrl = returnUrl,
-                        tenancyName = GetTenancyNameOrNull()
-                    })
-            );
-        }
+//        [HttpPost]
+//        [ValidateAntiForgeryToken]
+//        public ActionResult ExternalLogin(string provider, string returnUrl)
+//        {
+//            return new ChallengeResult(
+//                provider,
+//                Url.Action(
+//                    "ExternalLoginCallback",
+//                    "Account",
+//                    new
+//                    {
+//                        ReturnUrl = returnUrl,
+//                        tenancyName = GetTenancyNameOrNull()
+//                    })
+//            );
+//        }
 
-        [UnitOfWork]
-        [DisableAbpAntiForgeryTokenValidation]
-        public virtual async Task<ActionResult> ExternalLoginCallback(string returnUrl, string tenancyName = "")
-        {
-            var loginInfo = await _authenticationManager.GetExternalLoginInfoAsync();
-            if (loginInfo == null)
-            {
-                return RedirectToAction("Login");
-            }
-
-            //Try to find tenancy name
-            if (tenancyName.IsNullOrEmpty())
-            {
-                var tenants = await FindPossibleTenantsOfUserAsync(loginInfo.Login);
-                switch (tenants.Count)
-                {
-                    case 0:
-                        return await RegisterView(loginInfo);
-                    case 1:
-                        tenancyName = tenants[0].TenancyName;
-                        break;
-                    default:
-                        return View("TenantSelection", new TenantSelectionViewModel
-                        {
-                            Action = Url.Action("ExternalLoginCallback", "Account", new { returnUrl }),
-                            Tenants = tenants.MapTo<List<TenantSelectionViewModel.TenantInfo>>()
-                        });
-                }
-            }
-
-            var loginResult = await _logInManager.LoginAsync(loginInfo.Login, tenancyName);
-
-            switch (loginResult.Result)
-            {
-                case AbpLoginResultType.Success:
-                    await SignInAsync(loginResult.User, loginResult.Identity, false);
-
-                    if (string.IsNullOrWhiteSpace(returnUrl))
-                    {
-                        returnUrl = Url.Action("Index", "Home");
-                    }
-
-                    return Redirect(returnUrl);
-                case AbpLoginResultType.UnknownExternalLogin:
-                    return await RegisterView(loginInfo, tenancyName);
-                default:
-                    throw CreateExceptionForFailedLoginAttempt(loginResult.Result, loginInfo.Email ?? loginInfo.DefaultUserName, tenancyName);
-            }
-        }
+//        [UnitOfWork]
+//        [DisableAbpAntiForgeryTokenValidation]
+//        public virtual async Task<ActionResult> ExternalLoginCallback(string returnUrl, string tenancyName = "")
+//        {
+//            var loginInfo = await _authenticationManager.GetExternalLoginInfoAsync();
+//            if (loginInfo == null)
+//            {
+//                return RedirectToAction("Login");
+//            }
+//
+//            //Try to find tenancy name
+//            if (tenancyName.IsNullOrEmpty())
+//            {
+//                var tenants = await FindPossibleTenantsOfUserAsync(loginInfo.Login);
+//                switch (tenants.Count)
+//                {
+//                    case 0:
+//                        return await RegisterView(loginInfo);
+//                    case 1:
+//                        tenancyName = tenants[0].TenancyName;
+//                        break;
+//                    default:
+//                        return View("TenantSelection", new TenantSelectionViewModel
+//                        {
+//                            Action = Url.Action("ExternalLoginCallback", "Account", new { returnUrl }),
+//                            Tenants = tenants.MapTo<List<TenantSelectionViewModel.TenantInfo>>()
+//                        });
+//                }
+//            }
+//
+//            var loginResult = await _logInManager.LoginAsync(loginInfo.Login, tenancyName);
+//
+//            switch (loginResult.Result)
+//            {
+//                case AbpLoginResultType.Success:
+//                    await SignInAsync(loginResult.User, loginResult.Identity, false);
+//
+//                    if (string.IsNullOrWhiteSpace(returnUrl))
+//                    {
+//                        returnUrl = Url.Action("Index", "Home");
+//                    }
+//
+//                    return Redirect(returnUrl);
+//                case AbpLoginResultType.UnknownExternalLogin:
+//                    return await RegisterView(loginInfo, tenancyName);
+//                default:
+//                    throw CreateExceptionForFailedLoginAttempt(loginResult.Result, loginInfo.Email ?? loginInfo.DefaultUserName, tenancyName);
+//            }
+//        }
 
         private async Task<ActionResult> RegisterView(ExternalLoginInfo loginInfo, string tenancyName = null)
         {
@@ -408,19 +408,19 @@ namespace CarFactory.Web.Controllers
             return RegisterView(viewModel);
         }
 
-        protected virtual async Task<List<Tenant>> FindPossibleTenantsOfUserAsync(UserLoginInfo login)
-        {
-            List<User> allUsers;
-            using (_unitOfWorkManager.Current.DisableFilter(AbpDataFilters.MayHaveTenant))
-            {
-                allUsers = await _userManager.FindAllAsync(login);
-            }
-
-            return allUsers
-                .Where(u => u.TenantId != null)
-                .Select(u => AsyncHelper.RunSync(() => _tenantManager.FindByIdAsync(u.TenantId.Value)))
-                .ToList();
-        }
+//        protected virtual async Task<List<Tenant>> FindPossibleTenantsOfUserAsync(UserLoginInfo login)
+//        {
+//            List<User> allUsers;
+//            using (_unitOfWorkManager.Current.DisableFilter(AbpDataFilters.MayHaveTenant))
+//            {
+//                allUsers = await _userManager.FindAllAsync(login);
+//            }
+//
+//            return allUsers
+//                .Where(u => u.TenantId != null)
+//                .Select(u => AsyncHelper.RunSync(() => _tenantManager.FindByIdAsync(u.TenantId.Value)))
+//                .ToList();
+//        }
 
         private static bool TryExtractNameAndSurnameFromClaims(List<Claim> claims, ref string name, ref string surname)
         {
@@ -478,21 +478,21 @@ namespace CarFactory.Web.Controllers
 
         #region Common private methods
 
-        private async Task<Tenant> GetActiveTenantAsync(string tenancyName)
-        {
-            var tenant = await _tenantManager.FindByTenancyNameAsync(tenancyName);
-            if (tenant == null)
-            {
-                throw new UserFriendlyException(L("ThereIsNoTenantDefinedWithName{0}", tenancyName));
-            }
-
-            if (!tenant.IsActive)
-            {
-                throw new UserFriendlyException(L("TenantIsNotActive", tenancyName));
-            }
-
-            return tenant;
-        }
+//        private async Task<Tenant> GetActiveTenantAsync(string tenancyName)
+//        {
+//            var tenant = await _tenantManager.FindByTenancyNameAsync(tenancyName);
+//            if (tenant == null)
+//            {
+//                throw new UserFriendlyException(L("ThereIsNoTenantDefinedWithName{0}", tenancyName));
+//            }
+//
+//            if (!tenant.IsActive)
+//            {
+//                throw new UserFriendlyException(L("TenantIsNotActive", tenancyName));
+//            }
+//
+//            return tenant;
+//        }
 
         private string GetTenancyNameOrNull()
         {

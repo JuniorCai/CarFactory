@@ -445,6 +445,7 @@
     <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
     <Content Include="App_Data\sql\carFactory.sql" />
     <Content Include="App_Data\sql\company.sql" />
+    <Content Include="Content\admin\css\app.css" />
     <Content Include="Content\assets\global\css\components.css" />
     <Content Include="Content\assets\global\css\components.min.css" />
     <Content Include="Content\assets\global\css\plugins.css" />
@@ -3251,22 +3252,14 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Views\Account\Login.css">
+    <Content Include="Views\Admin\Account\Login.css">
       <DependentUpon>Login.less</DependentUpon>
     </Content>
-    <Content Include="Views\Account\Login.js" />
-    <Content Include="Views\Account\Login.min.css">
+    <Content Include="Views\Admin\Account\Login.js" />
+    <Content Include="Views\Admin\Account\Login.min.css">
       <DependentUpon>Login.css</DependentUpon>
     </Content>
-    <Content Include="Views\Account\Register.js" />
-    <Content Include="Views\Account\_Layout.css">
-      <DependentUpon>_Layout.less</DependentUpon>
-    </Content>
-    <Content Include="Views\Account\_Layout.min.css">
-      <DependentUpon>_Layout.css</DependentUpon>
-    </Content>
-    <Content Include="Views\Account\_TenantChange.js" />
-    <Content Include="Views\Account\_TenantChangeModal.js" />
+    <Content Include="Views\Admin\Account\Register.js" />
     <Content Include="Views\Roles\Index.js" />
     <Content Include="Views\Roles\_EditRoleModal.js" />
     <Content Include="Views\Tenants\Index.js" />
@@ -3333,15 +3326,13 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Scripts\sweetalert\sweet-alert.scss" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Login.less" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\RegisterResult.cshtml" />
-    <Content Include="Views\Account\TenantSelection.cshtml" />
+    <Content Include="Views\Admin\Account\Login.cshtml" />
+    <Content Include="Views\Admin\Account\Login.less" />
+    <Content Include="Views\Admin\Account\Register.cshtml" />
+    <Content Include="Views\Admin\Account\RegisterResult.cshtml" />
     <Content Include="Views\Tenants\Index.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\Account\_Layout.cshtml" />
-    <Content Include="Views\Account\_ViewStart.cshtml" />
+    <Content Include="Views\Admin\Account\_ViewStart.cshtml" />
     <Content Include="scss\browser-support\_ie10.scss" />
     <Content Include="scss\browser-support\_ie11.scss" />
     <Content Include="scss\pages\_404.scss" />
@@ -3424,10 +3415,6 @@
     <Content Include="scss\_tooltippopovers.scss" />
     <Content Include="scss\_variables.scss" />
     <Content Include="scss\_waveseffect.scss" />
-    <Content Include="Views\Account\_TenantChange.cshtml" />
-    <Content Include="Views\Account\_AccountLanguages.cshtml" />
-    <Content Include="Views\Account\_Layout.less" />
-    <Content Include="Views\Account\_TenantChangeModal.cshtml" />
     <Content Include="Views\Users\_EditUserModal.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\_EditRoleModal.cshtml" />
@@ -3464,6 +3451,7 @@
     <Content Include="Views\Shared\Admin\_PartialHeader.cshtml" />
     <Content Include="Views\Shared\Admin\_SideBar.cshtml" />
     <Content Include="Views\Shared\Admin\Error.cshtml" />
+    <Content Include="Views\Shared\Admin\_LayoutLogin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3492,7 +3480,6 @@
   <ItemGroup>
     <Folder Include="Content\images\products\" />
     <Folder Include="Content\uploadImg\20180309\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
