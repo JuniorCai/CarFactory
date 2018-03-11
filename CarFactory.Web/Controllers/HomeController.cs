@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Threading;
+using System.Web.Mvc;
 using Abp.Web.Mvc.Authorization;
 
 namespace CarFactory.Web.Controllers
@@ -8,6 +9,8 @@ namespace CarFactory.Web.Controllers
     {
         public ActionResult Index()
         {
+            var t = Thread.CurrentThread;
+
             return View();
         }
 	}

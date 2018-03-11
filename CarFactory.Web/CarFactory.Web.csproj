@@ -47,57 +47,56 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.3.4.0\lib\netstandard2.0\Abp.dll</HintPath>
+    <Reference Include="Abp, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.3.3.0\lib\netstandard2.0\Abp.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.AutoMapper, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.AutoMapper.3.4.0\lib\netstandard2.0\Abp.AutoMapper.dll</HintPath>
+    <Reference Include="Abp.AutoMapper, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.AutoMapper.3.3.0\lib\netstandard2.0\Abp.AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Castle.Log4Net, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Castle.Log4Net.3.4.0\lib\netstandard2.0\Abp.Castle.Log4Net.dll</HintPath>
+    <Reference Include="Abp.Castle.Log4Net, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Castle.Log4Net.3.3.0\lib\netstandard2.0\Abp.Castle.Log4Net.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.EntityFramework, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.EntityFramework.3.4.0\lib\net461\Abp.EntityFramework.dll</HintPath>
+    <Reference Include="Abp.EntityFramework, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.EntityFramework.3.3.0\lib\net461\Abp.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.EntityFramework.Common, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.EntityFramework.Common.3.4.0\lib\netstandard2.0\Abp.EntityFramework.Common.dll</HintPath>
+    <Reference Include="Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.EntityFramework.Common.3.3.0\lib\netstandard2.0\Abp.EntityFramework.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.HangFire, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.HangFire.3.4.0\lib\netstandard2.0\Abp.HangFire.dll</HintPath>
+    <Reference Include="Abp.HangFire, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.HangFire.3.3.0\lib\netstandard2.0\Abp.HangFire.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Owin, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Owin.3.4.0\lib\net461\Abp.Owin.dll</HintPath>
+    <Reference Include="Abp.Owin, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Owin.3.3.0\lib\net461\Abp.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Web, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.3.4.0\lib\net461\Abp.Web.dll</HintPath>
+    <Reference Include="Abp.Web, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.3.3.0\lib\net461\Abp.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Web.Api, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Api.3.4.0\lib\net461\Abp.Web.Api.dll</HintPath>
+    <Reference Include="Abp.Web.Api, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.Api.3.3.0\lib\net461\Abp.Web.Api.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Web.Common, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Common.3.4.0\lib\netstandard2.0\Abp.Web.Common.dll</HintPath>
+    <Reference Include="Abp.Web.Common, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.Common.3.3.0\lib\netstandard2.0\Abp.Web.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Web.Mvc, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.Mvc.3.4.0\lib\net461\Abp.Web.Mvc.dll</HintPath>
+    <Reference Include="Abp.Web.Mvc, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.Mvc.3.3.0\lib\net461\Abp.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Web.SignalR, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Web.SignalR.3.4.0\lib\net461\Abp.Web.SignalR.dll</HintPath>
+    <Reference Include="Abp.Web.SignalR, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Web.SignalR.3.3.0\lib\net461\Abp.Web.SignalR.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Zero, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Zero.3.4.0\lib\net461\Abp.Zero.dll</HintPath>
+    <Reference Include="Abp.Zero, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Zero.3.3.0\lib\net461\Abp.Zero.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Zero.Common, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Zero.Common.3.4.0\lib\netstandard2.0\Abp.Zero.Common.dll</HintPath>
+    <Reference Include="Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Zero.Common.3.3.0\lib\netstandard2.0\Abp.Zero.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Zero.EntityFramework, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Zero.EntityFramework.3.4.0\lib\net461\Abp.Zero.EntityFramework.dll</HintPath>
+    <Reference Include="Abp.Zero.EntityFramework, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Zero.EntityFramework.3.3.0\lib\net461\Abp.Zero.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    <Reference Include="AutoMapper, Version=6.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.1\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
@@ -128,19 +127,15 @@
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.SystemWeb, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
@@ -161,63 +156,57 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.2.0.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.FileSystems, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.FileSystems.4.0.0\lib\net451\Microsoft.Owin.FileSystems.dll</HintPath>
+    <Reference Include="Microsoft.Owin.FileSystems, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.FileSystems.3.1.0\lib\net45\Microsoft.Owin.FileSystems.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Owin.StaticFiles, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Owin.StaticFiles.4.0.0\lib\net451\Microsoft.Owin.StaticFiles.dll</HintPath>
+    <Reference Include="Microsoft.Owin.StaticFiles, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.StaticFiles.3.1.0\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Win32.Primitives">
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.6.9.11\lib\net45\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.10\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.Entity.6.9.11\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.10\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Nito.AsyncEx, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nito.AsyncEx.4.0.1\lib\net45\Nito.AsyncEx.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Nito.AsyncEx.Concurrent, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nito.AsyncEx.4.0.1\lib\net45\Nito.AsyncEx.Concurrent.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Nito.AsyncEx.Context, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nito.AsyncEx.Context.1.1.0\lib\net46\Nito.AsyncEx.Context.dll</HintPath>
@@ -227,7 +216,6 @@
     </Reference>
     <Reference Include="Nito.AsyncEx.Enlightenment, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nito.AsyncEx.4.0.1\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Nito.AsyncEx.Tasks, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nito.AsyncEx.Tasks.1.1.0\lib\net46\Nito.AsyncEx.Tasks.dll</HintPath>
@@ -240,29 +228,26 @@
     </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="System.AppContext">
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Collections.Immutable.1.4.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
     </Reference>
-    <Reference Include="System.ComponentModel, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.4.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
-    <Reference Include="System.Configuration.Install" />
-    <Reference Include="System.Console">
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Data.Common">
+    <Reference Include="System.Data.Common, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.Common.4.3.0\lib\net451\System.Data.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
@@ -270,83 +255,79 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
-    <Reference Include="System.Drawing.Design" />
-    <Reference Include="System.Globalization.Calendars">
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.IO.Compression">
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.Compression.FileSystem" />
-    <Reference Include="System.IO.Compression.ZipFile">
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.IO.FileSystem">
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.IO.FileSystem.Primitives">
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Linq.Dynamic.Core, Version=0.0.0.0, Culture=neutral, PublicKeyToken=0f07ec44de6ac832, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Linq.Dynamic.Core.1.0.8.2\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
+      <HintPath>..\packages\System.Linq.Dynamic.Core.1.0.7.13\lib\net46\System.Linq.Dynamic.Core.dll</HintPath>
     </Reference>
-    <Reference Include="System.Management" />
     <Reference Include="System.Net" />
-    <Reference Include="System.Net.Http">
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
-    <Reference Include="System.Net.Sockets">
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Runtime, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.4.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Runtime.Serialization.Formatters">
+    <Reference Include="System.Runtime.Serialization.Formatters, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.Serialization.Formatters.4.3.0\lib\net46\System.Runtime.Serialization.Formatters.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime.Serialization.Primitives">
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security" />
-    <Reference Include="System.Security.Claims">
+    <Reference Include="System.Security.Claims, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Claims.4.3.0\lib\net46\System.Security.Claims.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security.Cryptography.Algorithms">
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security.Cryptography.Encoding">
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security.Cryptography.Primitives">
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security.Cryptography.X509Certificates">
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
       <Private>True</Private>
     </Reference>
@@ -358,34 +339,34 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Optimization">
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -393,29 +374,25 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Xml.XmlDocument">
+    <Reference Include="System.Xml.XmlDocument, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Xml.XmlDocument.4.3.0\lib\net46\System.Xml.XmlDocument.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Xml.XPath">
+    <Reference Include="System.Xml.XPath, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Xml.XPath.4.3.0\lib\net46\System.Xml.XPath.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.XPath.XmlDocument, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Xml.XPath.XmlDocument.4.3.0\lib\net46\System.Xml.XPath.XmlDocument.dll</HintPath>
     </Reference>
-    <Reference Include="TimeZoneConverter, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\TimeZoneConverter.2.3.0\lib\net45\TimeZoneConverter.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
     </Reference>
-    <Reference Include="X.PagedList, Version=7.2.4.0, Culture=neutral, PublicKeyToken=00b6c4f97602e5e8, processorArchitecture=MSIL">
-      <HintPath>..\packages\X.PagedList.7.2.4\lib\net461\X.PagedList.dll</HintPath>
+    <Reference Include="X.PagedList, Version=7.2.0.0, Culture=neutral, PublicKeyToken=00b6c4f97602e5e8, processorArchitecture=MSIL">
+      <HintPath>..\packages\X.PagedList.7.2.0\lib\netstandard1.2\X.PagedList.dll</HintPath>
     </Reference>
     <Reference Include="X.PagedList.Mvc, Version=7.2.0.0, Culture=neutral, PublicKeyToken=c6e0b5b21f916f4f, processorArchitecture=MSIL">
       <HintPath>..\packages\X.PagedList.Mvc.7.2.0\lib\net452\X.PagedList.Mvc.dll</HintPath>
@@ -445,515 +422,8 @@
     <Content Include="Abp\Framework\styles\utils\ie10fix.css" />
     <Content Include="App_Data\sql\carFactory.sql" />
     <Content Include="App_Data\sql\company.sql" />
-    <Content Include="Content\admin\css\app.css" />
-    <Content Include="Content\assets\global\css\components.css" />
-    <Content Include="Content\assets\global\css\components.min.css" />
-    <Content Include="Content\assets\global\css\plugins.css" />
-    <Content Include="Content\assets\global\css\plugins.min.css" />
-    <Content Include="Content\assets\global\img\loading-spinner-grey.gif" />
-    <Content Include="Content\assets\global\img\remove-icon-small.png" />
-    <Content Include="Content\assets\global\plugins\bootstrap-confirmation\bootstrap-confirmation.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-confirmation\bootstrap-confirmation.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker.standalone.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker.standalone.min.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.min.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\css\bootstrap-datepicker3.standalone.min.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\js\bootstrap-datepicker.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ar.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.az.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.bg.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.bs.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ca.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.cs.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.cy.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.da.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.de.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.el.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.eo.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.es.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.et.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.eu.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fa.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fi.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fo.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.fr.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.gl.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.he.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.hr.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.hu.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.hy.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.id.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.is.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.it.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ja.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ka.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.kh.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.kk.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ko.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.kr.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.lt.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.lv.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.me.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.mk.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.mn.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ms.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.nb.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.nl.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.no.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.pl.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.pt.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ro.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.rs.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.ru.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sk.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sl.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sq.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sr.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sv.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.sw.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.th.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.tr.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.uk.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.vi.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.zh-CN.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-fileinput\bootstrap-fileinput.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-fileinput\bootstrap-fileinput.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-growl\demo.html" />
-    <Content Include="Content\assets\global\plugins\bootstrap-growl\jquery.bootstrap-growl.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-growl\jquery.bootstrap-growl.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-modal\css\bootstrap-modal-bs3patch.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-modal\css\bootstrap-modal.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-modal\js\bootstrap-modal.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-modal\js\bootstrap-modalmanager.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\css\bootstrap-select.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\css\bootstrap-select.min.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\bootstrap-select.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\bootstrap-select.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ar_AR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ar_AR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-bg_BG.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-bg_BG.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-cro_CRO.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-cro_CRO.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-cs_CZ.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-cs_CZ.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-da_DK.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-da_DK.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-de_DE.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-de_DE.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-en_US.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-en_US.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-es_CL.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-es_CL.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-eu.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-eu.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-fa_IR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-fa_IR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-fi_FI.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-fi_FI.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-fr_FR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-fr_FR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-hu_HU.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-hu_HU.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-id_ID.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-id_ID.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-it_IT.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-it_IT.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ko_KR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ko_KR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-lt_LT.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-lt_LT.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-nb_NO.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-nb_NO.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-nl_NL.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-nl_NL.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-pl_PL.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-pl_PL.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-pt_BR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-pt_BR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-pt_PT.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-pt_PT.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ro_RO.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ro_RO.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ru_RU.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ru_RU.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-sk_SK.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-sk_SK.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-sl_SI.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-sl_SI.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-sv_SE.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-sv_SE.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-tr_TR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-tr_TR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ua_UA.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-ua_UA.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-zh_CN.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-zh_CN.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-zh_TW.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\i18n\defaults-zh_TW.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ar-AR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ar-AR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-bg-BG.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-bg-BG.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ca-ES.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ca-ES.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-cs-CZ.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-cs-CZ.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-da-DK.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-da-DK.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-de-DE.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-de-DE.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-es-ES.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-es-ES.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-es-EU.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-es-EU.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-fa-IR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-fa-IR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-fi-FI.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-fi-FI.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-fr-FR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-fr-FR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-he-IL.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-he-IL.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-hu-HU.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-hu-HU.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-id-ID.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-id-ID.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-it-IT.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-it-IT.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ja-JP.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ja-JP.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ko-KR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ko-KR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-lt-LT.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-lt-LT.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-nb-NO.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-nb-NO.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-nl-NL.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-nl-NL.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-pl-PL.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-pl-PL.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-pt-BR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-pt-BR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-pt-PT.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-pt-PT.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ro-RO.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ro-RO.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ru-RU.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-ru-RU.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sk-SK.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sk-SK.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sl-SI.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sl-SI.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sr-RS-Latin.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sr-RS-Latin.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sr-RS.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sr-RS.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sv-SE.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-sv-SE.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-th-TH.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-th-TH.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-tr-TR.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-tr-TR.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-uk-UA.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-uk-UA.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-vi-VN.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-vi-VN.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-zh-CN.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-zh-CN.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-zh-TW.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\lang\summernote-zh-TW.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\summernote.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\summernote.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\summernote.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-sweetalert\sweetalert.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-sweetalert\sweetalert.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-sweetalert\sweetalert.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-switch\css\bootstrap-switch.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-switch\css\bootstrap-switch.min.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap-switch\js\bootstrap-switch.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap-switch\js\bootstrap-switch.min.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap\css\bootstrap-rtl.min.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap\css\bootstrap.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Content\assets\global\plugins\bootstrap\fonts\bootstrap\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\assets\global\plugins\bootstrap\js\bootstrap.js" />
-    <Content Include="Content\assets\global\plugins\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Content\assets\global\plugins\datatables\datatables.min.css" />
-    <Content Include="Content\assets\global\plugins\datatables\datatables.min.js" />
-    <Content Include="Content\assets\global\plugins\datatables\images\sort_asc.png" />
-    <Content Include="Content\assets\global\plugins\datatables\images\sort_both.png" />
-    <Content Include="Content\assets\global\plugins\datatables\images\sort_desc.png" />
-    <Content Include="Content\assets\global\plugins\datatables\pdfmake.min.js" />
-    <Content Include="Content\assets\global\plugins\datatables\plugins\bootstrap\datatables.bootstrap.css" />
-    <Content Include="Content\assets\global\plugins\datatables\plugins\bootstrap\datatables.bootstrap.js" />
-    <Content Include="Content\assets\global\plugins\excanvas.min.js" />
-    <Content Include="Content\assets\global\plugins\font-awesome\css\font-awesome.css" />
-    <Content Include="Content\assets\global\plugins\font-awesome\css\font-awesome.min.css" />
-    <Content Include="Content\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\assets\global\plugins\ie8.fix.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-multi-select\css\multi-select.css" />
-    <Content Include="Content\assets\global\plugins\jquery-multi-select\img\switch.png" />
-    <Content Include="Content\assets\global\plugins\jquery-multi-select\img\switch_original.png" />
-    <Content Include="Content\assets\global\plugins\jquery-multi-select\js\jquery.multi-select.js" />
-    <Content Include="Content\assets\global\plugins\jquery-multi-select\LICENSE.txt" />
-    <Content Include="Content\assets\global\plugins\jquery-slimscroll\jquery.slimscroll.js" />
-    <Content Include="Content\assets\global\plugins\jquery-slimscroll\jquery.slimscroll.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\additional-methods.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\additional-methods.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\jquery.validate.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\jquery.validate.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ar.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ar.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_bg.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_bg.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_bn_BD.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_bn_BD.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ca.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ca.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_cs.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_cs.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_da.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_da.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_de.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_de.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_el.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_el.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_es.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_es.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_es_AR.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_es_AR.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_es_PE.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_es_PE.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_et.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_et.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_eu.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_eu.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_fa.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_fa.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_fi.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_fi.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_fr.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_fr.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ge.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ge.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_gl.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_gl.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_he.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_he.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_hr.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_hr.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_hu.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_hu.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_hy_AM.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_hy_AM.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_id.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_id.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_is.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_is.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_it.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_it.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ja.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ja.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ka.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ka.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_kk.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_kk.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ko.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ko.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_lt.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_lt.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_lv.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_lv.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_my.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_my.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_nl.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_nl.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_no.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_no.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_pl.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_pl.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_pt_BR.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_pt_BR.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_pt_PT.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_pt_PT.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ro.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ro.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ru.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_ru.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_si.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_si.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sk.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sk.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sl.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sl.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sr.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sr.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sr_lat.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sr_lat.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sv.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_sv.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_th.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_th.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_tj.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_tj.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_tr.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_tr.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_uk.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_uk.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_vi.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_vi.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_zh.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_zh.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_zh_TW.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\messages_zh_TW.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_de.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_de.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_es_CL.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_es_CL.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_fi.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_fi.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_nl.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_nl.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_pt.js" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\js\localization\methods_pt.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery.blockui.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery.min.js" />
-    <Content Include="Content\assets\global\plugins\jquery.sparkline.min.js" />
-    <Content Include="Content\assets\global\plugins\js.cookie.min.js" />
-    <Content Include="Content\assets\global\plugins\respond.min.js" />
-    <Content Include="Content\assets\global\plugins\select2\css\select2-bootstrap.min.css" />
-    <Content Include="Content\assets\global\plugins\select2\css\select2.css" />
-    <Content Include="Content\assets\global\plugins\select2\css\select2.min.css" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\ar.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\az.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\bg.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\ca.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\cs.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\da.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\de.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\el.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\en.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\es.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\et.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\eu.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\fa.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\fi.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\fr.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\gl.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\he.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\hi.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\hr.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\hu.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\id.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\is.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\it.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\ja.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\km.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\ko.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\lt.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\lv.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\mk.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\ms.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\nb.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\nl.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\pl.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\pt-BR.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\pt.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\ro.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\ru.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\sk.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\sr-Cyrl.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\sr.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\sv.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\th.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\tr.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\uk.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\vi.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\zh-CN.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\i18n\zh-TW.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\select2.full.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\select2.full.min.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\select2.js" />
-    <Content Include="Content\assets\global\plugins\select2\js\select2.min.js" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.dev.svg" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.svg" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\icons-lte-ie7.js" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\License.txt" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\Readme.txt" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\simple-line-icons.css" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\simple-line-icons.min.css" />
-    <Content Include="Content\assets\global\scripts\app.js" />
-    <Content Include="Content\assets\global\scripts\app.min.js" />
-    <Content Include="Content\assets\global\scripts\datatable.js" />
-    <Content Include="Content\assets\global\scripts\datatable.min.js" />
-    <Content Include="Content\assets\layouts\global\scripts\quick-nav.js" />
-    <Content Include="Content\assets\layouts\global\scripts\quick-nav.min.js" />
-    <Content Include="Content\assets\layouts\global\scripts\quick-sidebar.js" />
-    <Content Include="Content\assets\layouts\global\scripts\quick-sidebar.min.js" />
-    <Content Include="Content\assets\layouts\layout\css\custom.css" />
-    <Content Include="Content\assets\layouts\layout\css\custom.min.css" />
-    <Content Include="Content\assets\layouts\layout\css\layout.css" />
-    <Content Include="Content\assets\layouts\layout\css\layout.min.css" />
-    <Content Include="Content\assets\layouts\layout\css\themes\darkblue.css" />
-    <Content Include="Content\assets\layouts\layout\css\themes\darkblue.min.css" />
-    <Content Include="Content\assets\layouts\layout\img\avatar.png" />
-    <Content Include="Content\assets\layouts\layout\img\logo.png" />
-    <Content Include="Content\assets\layouts\layout\scripts\demo.js" />
-    <Content Include="Content\assets\layouts\layout\scripts\demo.min.js" />
-    <Content Include="Content\assets\layouts\layout\scripts\layout.js" />
-    <Content Include="Content\assets\layouts\layout\scripts\layout.min.js" />
-    <Content Include="Content\assets\pages\css\login.css" />
-    <Content Include="Content\assets\pages\css\login.min.css" />
-    <Content Include="Content\assets\pages\css\profile.css" />
-    <Content Include="Content\assets\pages\css\profile.min.css" />
-    <Content Include="Content\assets\pages\img\login\login-invert.png" />
-    <Content Include="Content\assets\pages\img\logo-big-white.png" />
-    <Content Include="Content\assets\pages\img\logo-big.png" />
-    <Content Include="Content\assets\pages\img\logo-invert.png" />
-    <Content Include="Content\assets\pages\img\logo.png" />
-    <Content Include="Content\assets\pages\media\profile\avatar.png" />
-    <Content Include="Content\assets\pages\scripts\components-bootstrap-switch.js" />
-    <Content Include="Content\assets\pages\scripts\components-bootstrap-switch.min.js" />
-    <Content Include="Content\assets\pages\scripts\components-editors.js" />
-    <Content Include="Content\assets\pages\scripts\components-editors.min.js" />
-    <Content Include="Content\assets\pages\scripts\components-multi-select.js" />
-    <Content Include="Content\assets\pages\scripts\components-multi-select.min.js" />
-    <Content Include="Content\assets\pages\scripts\form-validation.js" />
-    <Content Include="Content\assets\pages\scripts\form-validation.min.js" />
-    <Content Include="Content\assets\pages\scripts\login.js" />
-    <Content Include="Content\assets\pages\scripts\login.min.js" />
-    <Content Include="Content\assets\pages\scripts\profile.js" />
-    <Content Include="Content\assets\pages\scripts\profile.min.js" />
-    <Content Include="Content\assets\pages\scripts\table-datatables-ajax.js" />
-    <Content Include="Content\assets\pages\scripts\table-datatables-ajax.min.js" />
-    <Content Include="Content\assets\pages\scripts\table-datatables-managed.js" />
-    <Content Include="Content\assets\pages\scripts\table-datatables-managed.min.js" />
-    <Content Include="Content\assets\pages\scripts\ui-bootstrap-growl.js" />
-    <Content Include="Content\assets\pages\scripts\ui-bootstrap-growl.min.js" />
-    <Content Include="Content\assets\pages\scripts\ui-confirmations.js" />
-    <Content Include="Content\assets\pages\scripts\ui-confirmations.min.js" />
-    <Content Include="Content\assets\pages\scripts\ui-extended-modals.js" />
-    <Content Include="Content\assets\pages\scripts\ui-extended-modals.min.js" />
-    <Content Include="Content\assets\pages\scripts\ui-sweetalert.js" />
-    <Content Include="Content\assets\pages\scripts\ui-sweetalert.min.js" />
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\admin\commonStyle.css" />
@@ -966,6 +436,8 @@
     <Content Include="Content\css\layout.css" />
     <Content Include="Content\css\pagerStyle.css" />
     <Content Include="Content\css\XPagedList.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\fonts\material-icons\materialicons.css" />
@@ -994,6 +466,49 @@
     <Content Include="Content\images\public\show_12.jpg" />
     <Content Include="Content\images\public\show_15.jpg" />
     <Content Include="Content\images\public\tel_05.jpg" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="Content\uploadImg\20151127\1-15112G411010-L.jpg" />
     <Content Include="Content\uploadImg\20151127\1-15112G411390-L.jpg" />
     <Content Include="Content\uploadImg\20151127\1-15112G42A90-L.jpg" />
@@ -1028,6 +543,8 @@
     <Content Include="Content\uploadImg\201708\2b192f5854019ca68d418668edf0f6a6.jpg" />
     <Content Include="Content\uploadImg\201708\41b16269574a143ab5c69cc283645799.jpg" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="lib\abp-web-resources\Abp\Framework\scripts\abp.js" />
     <Content Include="lib\abp-web-resources\Abp\Framework\scripts\libs\abp.blockUI.js" />
@@ -3153,77 +2670,42 @@
     <Content Include="Content\css\bootstrap-theme.min.css.map" />
     <Content Include="Content\css\bootstrap.css.map" />
     <Content Include="Content\css\bootstrap.min.css.map" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\esm\popper-utils.js" />
-    <Content Include="Scripts\esm\popper-utils.min.js" />
-    <Content Include="Scripts\esm\popper.js" />
-    <Content Include="Scripts\esm\popper.min.js" />
-    <Content Include="Scripts\esm\popper.min.js.map" />
-    <Content Include="Scripts\esm\popper.js.map" />
-    <Content Include="Scripts\esm\popper-utils.min.js.map" />
-    <Content Include="Scripts\esm\popper-utils.js.map" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Content\assets\global\plugins\bootstrap\fonts\bootstrap\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\assets\global\plugins\bootstrap\fonts\bootstrap\glyphicons-halflings-regular.ttf" />
-    <Content Include="Content\assets\global\plugins\bootstrap\fonts\bootstrap\glyphicons-halflings-regular.woff" />
-    <Content Include="Content\assets\global\plugins\bootstrap\fonts\bootstrap\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\assets\global\plugins\bootstrap-confirmation\README.md" />
-    <Content Include="Content\assets\global\plugins\bootstrap-growl\LICENSE.md" />
-    <Content Include="Content\assets\global\plugins\bootstrap-growl\README.md" />
-    <Content Include="Content\assets\global\plugins\bootstrap-modal\LICENSE" />
-    <Content Include="Content\assets\global\plugins\bootstrap-modal\README.md" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\css\bootstrap-select.css.map" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\js\bootstrap-select.js.map" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\LICENSE" />
-    <Content Include="Content\assets\global\plugins\bootstrap-select\README.md" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\font\summernote.eot" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\font\summernote.ttf" />
-    <Content Include="Content\assets\global\plugins\bootstrap-summernote\font\summernote.woff" />
-    <Content Include="Content\assets\global\plugins\bootstrap-switch\LICENSE" />
-    <Content Include="Content\assets\global\plugins\bootstrap-switch\README.md" />
-    <Content Include="Content\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\assets\global\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\assets\global\plugins\font-awesome\fonts\FontAwesome.otf" />
-    <Content Include="Content\assets\global\plugins\jquery-multi-select\README.markdown" />
-    <Content Include="Content\assets\global\plugins\jquery-slimscroll\README.md" />
-    <Content Include="Content\assets\global\plugins\jquery-slimscroll\slimScroll.jquery.json" />
-    <Content Include="Content\assets\global\plugins\jquery-validation\README.md" />
-    <Content Include="Content\assets\global\plugins\select2\LICENSE.md" />
-    <Content Include="Content\assets\global\plugins\select2\README.md" />
-    <Content Include="Content\assets\global\plugins\select2\sass\select2-bootstrap.min.scss" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.eot" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
-    <Content Include="Content\assets\global\plugins\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
+    <None Include="packages.config" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
     <Content Include="Scripts\jquery-ui-1.12.1.js" />
     <Content Include="Scripts\jquery-ui-1.12.1.min.js" />
     <Content Include="Scripts\jquery.blockUI.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.signalR-2.2.2.js" />
     <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\json2.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\moment-with-locales.js" />
     <Content Include="Scripts\moment-with-locales.min.js" />
@@ -3234,13 +2716,7 @@
     <Content Include="Scripts\others\respond.src.js" />
     <Content Include="Scripts\others\spinjs\jquery.spin.js" />
     <Content Include="Scripts\others\spinjs\spin.js" />
-    <Content Include="Scripts\json2.js" />
-    <Content Include="Scripts\json2.min.js" />
     <Content Include="Scripts\pages\bannerSlider.js" />
-    <Content Include="Scripts\popper-utils.js" />
-    <Content Include="Scripts\popper-utils.min.js" />
-    <Content Include="Scripts\popper.js" />
-    <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\sweetalert\ie9.css" />
     <Content Include="Scripts\sweetalert\sweet-alert.css" />
     <Content Include="Scripts\sweetalert\sweet-alert.html" />
@@ -3248,18 +2724,6 @@
     <Content Include="Scripts\sweetalert\sweet-alert.min.js" />
     <Content Include="Scripts\toastr.js" />
     <Content Include="Scripts\toastr.min.js" />
-    <Content Include="Scripts\umd\popper-utils.js" />
-    <Content Include="Scripts\umd\popper-utils.min.js" />
-    <Content Include="Scripts\umd\popper.js" />
-    <Content Include="Scripts\umd\popper.min.js" />
-    <Content Include="Views\Admin\Account\Login.css">
-      <DependentUpon>Login.less</DependentUpon>
-    </Content>
-    <Content Include="Views\Admin\Account\Login.js" />
-    <Content Include="Views\Admin\Account\Login.min.css">
-      <DependentUpon>Login.css</DependentUpon>
-    </Content>
-    <Content Include="Views\Admin\Account\Register.js" />
     <Content Include="Views\Roles\Index.js" />
     <Content Include="Views\Roles\_EditRoleModal.js" />
     <Content Include="Views\Tenants\Index.js" />
@@ -3281,14 +2745,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AboutController.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
-    <Compile Include="Controllers\RolesController.cs" />
-    <Compile Include="Controllers\TenantsController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\WebLayoutController.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Models\Account\TenantChangeModalViewModel.cs" />
@@ -3320,19 +2780,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="packages.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Scripts\sweetalert\sweet-alert.scss" />
-    <Content Include="Views\Admin\Account\Login.cshtml" />
-    <Content Include="Views\Admin\Account\Login.less" />
-    <Content Include="Views\Admin\Account\Register.cshtml" />
-    <Content Include="Views\Admin\Account\RegisterResult.cshtml" />
     <Content Include="Views\Tenants\Index.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\Admin\Account\_ViewStart.cshtml" />
     <Content Include="scss\browser-support\_ie10.scss" />
     <Content Include="scss\browser-support\_ie11.scss" />
     <Content Include="scss\pages\_404.scss" />
@@ -3435,23 +2887,8 @@
     <Content Include="Views\Shared\PartialPages\_PartialPagination.cshtml" />
     <Content Include="Views\Report\List.cshtml" />
     <Content Include="Views\Report\Detail.cshtml" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="Scripts\umd\popper.min.js.map" />
-    <Content Include="Scripts\umd\popper.js.map" />
-    <Content Include="Scripts\umd\popper-utils.min.js.map" />
-    <Content Include="Scripts\umd\popper-utils.js.map" />
-    <Content Include="Scripts\README.md" />
-    <Content Include="Scripts\popper.min.js.map" />
-    <Content Include="Scripts\popper.js.map" />
-    <Content Include="Scripts\popper-utils.min.js.map" />
-    <Content Include="Scripts\popper-utils.js.map" />
-    <Content Include="Views\Shared\Admin\_Layout.cshtml" />
-    <Content Include="Views\Shared\Admin\_PartialFooter.cshtml" />
-    <Content Include="Views\Shared\Admin\_PartialHeader.cshtml" />
-    <Content Include="Views\Shared\Admin\_SideBar.cshtml" />
-    <Content Include="Views\Shared\Admin\Error.cshtml" />
-    <Content Include="Views\Shared\Admin\_LayoutLogin.cshtml" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3483,9 +2920,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

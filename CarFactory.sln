@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarFactory.Web", "CarFactor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarFactory.WebApi", "CarFactory.WebApi\CarFactory.WebApi.csproj", "{5EB52D3D-09FD-463A-B02A-8D9856BD3724}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarFactory.Admin", "CarFactory.Admin\CarFactory.Admin.csproj", "{2430593A-6A55-4894-989F-7128F97E6C97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EB52D3D-09FD-463A-B02A-8D9856BD3724}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2430593A-6A55-4894-989F-7128F97E6C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2430593A-6A55-4894-989F-7128F97E6C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2430593A-6A55-4894-989F-7128F97E6C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2430593A-6A55-4894-989F-7128F97E6C97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

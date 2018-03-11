@@ -33,12 +33,14 @@ namespace CarFactory.Core
                     CarFactoryConsts.LocalizationSourceName,
                     new XmlEmbeddedFileLocalizationDictionaryProvider(
                         Assembly.GetExecutingAssembly(),
-                        "CarFactory.Localization.Source"
+                        "CarFactory.Core.Localization.Source"
                         )
                     )
                 );
 
             AppRoleConfig.Configure(Configuration.Modules.Zero().RoleManagement);
+
+            Configuration.Navigation.Providers.Add<CarFactoryAdminNavigationProvider>();
 
             Configuration.Authorization.Providers.Add<CarFactoryAuthorizationProvider>();
 

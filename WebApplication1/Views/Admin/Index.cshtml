@@ -1,0 +1,26 @@
+﻿@model CarFactory.Application.Users.Dto.UserDto
+@using System.Web.Optimization
+@using CarFactory.Admin
+@{
+    ViewBag.ActiveMenu = PageNames.Home; //The menu item will be active for this page.
+    ViewBag.PageName = "主页";
+    ViewBag.UserName = Model.UserName;
+    
+}
+
+@section BreadCrumb
+{
+    <li>
+        <a href="/admin">首页</a>
+        <i class="fa fa-circle"></i>
+    </li>
+}
+
+
+
+<div class="note note-info">
+    <p> A black page template with a minimal dependency assets to use as a base for any custom page you create </p>
+</div>
+
+
+
