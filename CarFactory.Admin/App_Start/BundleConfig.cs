@@ -11,6 +11,9 @@ namespace CarFactory.Admin
 
 
             //Admin Configuration
+            bundles.Add(new ScriptBundle("~/assets/app/scripts").Include(
+                "~/Content/assets/app.js"));
+
             bundles.Add(new ScriptBundle("~/assets/global/scripts").Include(
                 "~/Content/assets/global/plugins/jquery.min.js",
                 "~/Content/assets/global/plugins/js.cookie.min.js",
@@ -55,6 +58,36 @@ namespace CarFactory.Admin
                 "~/Content/assets/layouts/layout/css/layout.min.css",
                 "~/Content/assets/layouts/layout/css/themes/darkblue.min.css",
                 "~/Content/assets/layouts/layout/css/custom.min.css"));
+
+
+            //ProductCategory-Index
+            bundles.Add(new StyleBundle("~/assets/global/datatables/css").Include(
+                "~/Content/assets/global/plugins/datatables/datatables.min.css",
+                "~/Content/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css"
+                ));
+
+            bundles.Add(new StyleBundle("~/assets/global/bootstrapModal/css").Include(
+                "~/Content/assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css",
+                "~/Content/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css"
+            ));
+
+            bundles.Add(new ScriptBundle("~/assets/global/datatables/scripts").Include(
+                "~/Content/assets/global/scripts/datatable.js",
+                "~/Content/assets/global/plugins/datatables/datatables.min.js",
+                "~/Content/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"));
+
+
+            bundles.Add(new ScriptBundle("~/assets/global/bootstrapModal/scripts").Include(
+                "~/Content/assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js",
+                "~/Content/assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js"));
+
+            bundles.Add(new ScriptBundle("~/assets/global/bootstrapConfirmation/scripts").Include(
+                "~/Content/assets/global/plugins/bootstrap-confirmation/bootstrap-confirmation.min.js"));
+            //ProductCategory-Index End
+
+
+
+
         }
     }
 }

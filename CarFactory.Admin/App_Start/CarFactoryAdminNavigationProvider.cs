@@ -42,8 +42,20 @@ namespace CarFactory.Admin
                 //requiredPermissionName: ProductAppPermissions.Product
             );
 
-            
-            contentManageMenu.AddItem(product);
+            var productCategory = new MenuItemDefinition(
+                PageNames.ProductCategory,
+                L(PageNames.ProductCategory),
+                url: "admin/CategoryManage",
+                icon: "icon-grid");
+
+            var report = new MenuItemDefinition(
+                PageNames.Reports,
+                L(PageNames.Reports),
+                url: "admin/ReportManage",
+                icon: "icon-grid");
+
+
+            contentManageMenu.AddItem(product).AddItem(productCategory).AddItem(report);
 
             context.Manager.MainMenu.AddItem(homeMenu).AddItem(contentManageMenu).AddItem(settingsManageMenu);
 

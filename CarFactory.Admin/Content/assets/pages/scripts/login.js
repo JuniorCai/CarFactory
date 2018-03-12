@@ -37,7 +37,7 @@ var Login = function() {
             },
 
             success: function(label) {
-                //$('.alert-danger', $('.login-form')).hide();
+                $('.alert-danger', $('.login-form')).hide();
                 label.closest('.form-group').removeClass('has-error');
                 label.remove();
             },

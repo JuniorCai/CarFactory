@@ -24,7 +24,7 @@ namespace CarFactory.Application.Category.Dtos
         public string ShortName { get; set; }
 
         [Required]
-        public bool IsActive { get; set; }
+        public bool IsShow { get; set; }
 
         [Required]
         public int Sort { get; set; }

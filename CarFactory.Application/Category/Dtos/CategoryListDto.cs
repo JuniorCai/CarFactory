@@ -13,7 +13,7 @@ namespace CarFactory.Application.Category.Dtos
     {
         public string CategoryName { get; set; }
         public string ShortName { get; set; }
-        public bool IsActive { get; set; }
+        public bool IsShow { get; set; }
 
         public int Sort { get; set; }
 
