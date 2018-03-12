@@ -64,68 +64,53 @@
 @*            {{--</li>--}}*@
 @*            {{--</ul>--}}*@
 @*            {{--</li>--}}*@
-@*            {{--暂时不显示首页标签 End--}}*@
-            @if ($adminMenu != "")
+            @*            {{--暂时不显示首页标签 End--}}*@
+            
+            
+            @if (Model.MainMenu.Items.Count != 0)
+            {
+                foreach (var item in Model.MainMenu.Items)
+                {
+                    bool isActive = item.Items.Count(i => i.Name == Model.ActiveMenuItemName) > 0;
+                    string activeCss = isActive ? "active open" : "";
+                    string parentMenuUrl = string.IsNullOrEmpty(item.Url) ? "javascript:;" : item.Url;
 
-@if (!$adminMenu->where('moduleCode', '<', '2010')->isEmpty())
-<li class="nav-item  {{substr($currentModule,0,1)=='1'?"active open":""}}">
-    <a href="javascript:;" class="nav-link nav-toggle">
-        <i class="icon-layers"></i>
-        <span class="title">内容管理</span>
-        <!--<span class="selected"></span>
-        <span class="arrow open"></span>-->
-        @if (substr($currentModule, 0, 1) == '1')
-                        <span class="selected"></span>
-        <span class="arrow open"></span>
-        @else
-        <span class="arrow"></span>
-        @endif
-    </a>
-    <ul class="sub-menu">
-        @foreach ($adminMenu->where('moduleCode', '<', '2010') as $rolePermission)
-<li class="nav-item  {{$rolePermission->moduleCode == $currentModule?"active open":""}}">
-    <a href="{{config('app.moduleUrl.'.$rolePermission->moduleCode)}}" class="nav-link ">
-        <span class="title">{{$rolePermission->modulePermission->moduleValue}}</span>
-        @if ($rolePermission->moduleCode ==$currentModule)
-        <span class="selected"></span>
-        @endif
-    </a>
-</li>
-
-        @endforeach
-    </ul>
-</li>
-@endif
-@if (!$adminMenu->where('moduleCode', '>', '2000')->isEmpty())
-<li class="nav-item  {{substr($currentModule,0,1)=='2'?"active open":""}}">
-    <a href="javascript:;" class="nav-link nav-toggle">
-        <i class="icon-layers"></i>
-        <span class="title">系统管理</span>
-        <!--<span class="selected"></span>
-        <span class="arrow open"></span>-->
-        @if (substr($currentModule, 0, 1) == '1')
-                        <span class="selected"></span>
-        <span class="arrow open"></span>
-        @else
-        <span class="arrow"></span>
-        @endif
-    </a>
-    <ul class="sub-menu">
-        @foreach ($adminMenu->where('moduleCode', '>', '2000') as $rolePermission)
-<li class="nav-item  {{$rolePermission->moduleCode == $currentModule?"active open":""}}">
-    <a href="{{config('app.moduleUrl.'.$rolePermission->moduleCode)}}" class="nav-link ">
-        <span class="title">{{$rolePermission->modulePermission->moduleValue}}</span>
-        @if ($rolePermission->moduleCode ==$currentModule)
-        <span class="selected"></span>
-        @endif
-    </a>
-</li>
-
-        @endforeach
-    </ul>
-</li>
-@endif
-@endif
+                    <li class="nav-item  @activeCss">
+                        <a href="@parentMenuUrl" class="nav-link nav-toggle">
+                            <i class="icon-layers"></i>
+                            <span class="title">@item.DisplayName</span>
+                            @if (isActive)
+                            {
+                                <span class="selected"></span>
+                                <span class="arrow open"></span>
+                            }
+                            else
+                            {
+                                <span class="arrow"></span>
+                            }
+                        </a>
+                        @if (item.Items.Count != 0)
+                        {
+                            <ul class="sub-menu">
+                                @foreach (var subItem in item.Items)
+                                {
+                                    <li class="nav-item  @activeCss">
+                                        <a href="@subItem.Url" class="nav-link ">
+                                            <span class="title">@subItem.DisplayName</span>
+                                            @if (subItem.Name == Model.ActiveMenuItemName)
+                                            {
+                                                <span class="selected"></span>
+                                            }
+                                        </a>
+                                    </li>
+                                }
+                                
+                            </ul>
+                        }
+                            
+                    </li>
+                }
+            }
 </ul>
 <!-- END SIDEBAR MENU -->
 <!-- END SIDEBAR MENU -->

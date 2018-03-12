@@ -26,7 +26,7 @@ namespace CarFactory.Admin.Controllers
             var userId = AbpSession.UserId;
             var userMenu = GetUserMenu("").Result;
             ViewBag.UserMenu = userMenu;
-            var t = Thread.CurrentThread;
+
 
             var userInfo = _userAppService.Get(new EntityDto<long>(userId.Value));
 

@@ -83,17 +83,17 @@ namespace CarFactory.Admin.Controllers
             {
                 returnUrl = Request.ApplicationPath;
             }
-            var t = Thread.CurrentThread;
+
 
             ViewBag.IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled;
 
             return View(
-                new LoginFormViewModel
+                new LoginViewModel
                 {
                     ReturnUrl = returnUrl,
-                    IsMultiTenancyEnabled = _multiTenancyConfig.IsEnabled,
-                    IsSelfRegistrationAllowed = IsSelfRegistrationEnabled(),
-                    MultiTenancySide = AbpSession.MultiTenancySide
+                    UsernameOrEmailAddress = "",
+                    Password = "",
+                    RememberMe = false
                 });
         }
 
@@ -110,7 +110,20 @@ namespace CarFactory.Admin.Controllers
                 GetTenancyNameOrNull()
                 );
 
-            await SignInAsync(loginResult.User, loginResult.Identity, loginModel.RememberMe);
+            switch (loginResult.Result)
+            {
+                case AbpLoginResultType.Success:
+                    await SignInAsync(loginResult.User, loginResult.Identity, loginModel.RememberMe);
+                    break;
+                case AbpLoginResultType.InvalidUserNameOrEmailAddress:
+                case AbpLoginResultType.InvalidPassword:
+                    ModelState.AddModelError("UsernameOrEmailAddress", L("InvalidUserNameOrPassword"));
+                    return View(loginModel);
+                default:
+                    throw CreateExceptionForFailedLoginAttempt(loginResult.Result, loginModel.UsernameOrEmailAddress,
+                        GetTenancyNameOrNull());
+            }
+
 
             if (string.IsNullOrWhiteSpace(returnUrl))
             {
@@ -133,6 +146,8 @@ namespace CarFactory.Admin.Controllers
             switch (loginResult.Result)
             {
                 case AbpLoginResultType.Success:
+                case AbpLoginResultType.InvalidUserNameOrEmailAddress:
+                case AbpLoginResultType.InvalidPassword:
                     return loginResult;
                 default:
                     throw CreateExceptionForFailedLoginAttempt(loginResult.Result, usernameOrEmailAddress, tenancyName);

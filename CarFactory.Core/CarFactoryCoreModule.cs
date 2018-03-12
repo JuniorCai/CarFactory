@@ -40,7 +40,6 @@ namespace CarFactory.Core
 
             AppRoleConfig.Configure(Configuration.Modules.Zero().RoleManagement);
 
-            Configuration.Navigation.Providers.Add<CarFactoryAdminNavigationProvider>();
 
             Configuration.Authorization.Providers.Add<CarFactoryAuthorizationProvider>();
 

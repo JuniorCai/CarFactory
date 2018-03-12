@@ -202,13 +202,9 @@
     <Compile Include="EntityMapper\Products\CategoryCfg.cs" />
     <Compile Include="EntityMapper\Products\ProductCfg.cs" />
     <Compile Include="EntityMapper\Report\ReportCfg.cs" />
-    <Compile Include="Migrations\201803091730034_initialCreate.cs" />
-    <Compile Include="Migrations\201803091730034_initialCreate.Designer.cs">
-      <DependentUpon>201803091730034_initialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803101035267_initialCreate1.cs" />
-    <Compile Include="Migrations\201803101035267_initialCreate1.Designer.cs">
-      <DependentUpon>201803101035267_initialCreate1.cs</DependentUpon>
+    <Compile Include="Migrations\201803120404177_initialCreate.cs" />
+    <Compile Include="Migrations\201803120404177_initialCreate.Designer.cs">
+      <DependentUpon>201803120404177_initialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -233,11 +229,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803091730034_initialCreate.resx">
-      <DependentUpon>201803091730034_initialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803101035267_initialCreate1.resx">
-      <DependentUpon>201803101035267_initialCreate1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803120404177_initialCreate.resx">
+      <DependentUpon>201803120404177_initialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

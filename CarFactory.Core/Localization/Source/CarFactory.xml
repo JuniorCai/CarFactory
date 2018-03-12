@@ -5,6 +5,7 @@
     <text name="About" value="关于我们" />
     <text name="WellcomeMessage" value="欢迎使用 CarFactory!" />
 
+    <!-- 登录注册验证 -->
     <text name="FormIsNotValidMessage" value="部分输入信息不符合要求,请检查并改正." />
     <text name="TenantNameCanNotBeEmpty" value="租户名不能为空" />
 
@@ -28,6 +29,7 @@
     <text name="Name" value="名" />
     <text name="Surname" value="姓" />
     <text name="EmailAddress" value="邮箱地址" />
+    <!-- 登录注册验证 End-->
 
     <text name="Tenants" value="租户" />
     <text name="SavedSuccessfully" value="保存成功" />
@@ -58,9 +60,12 @@
 
     <text name="ContentManage" value="内容管理" />
     <text name="Settings" value="设置" />
+    <text name="ProductManage" value="产品管理" />
+    <text name="Roles" value="角色管理" />
 
     <!-- 产品类别管理 -->
     <text name="MustBe_Required" value="不能为空" />
+    <text name="ProductCategory" value="产品类别管理" />
     <text name="Category" value="产品类别" />
     <text name="CategoryHeaderInfo" value="产品类别管理列表" />
     <text name="CreateCategory" value="新增产品类别" />
@@ -98,6 +103,7 @@
 
 
     <!-- 检测报告管理 -->
+    <text name="ReportManage" value="资质报告管理" />
     <text name="Report" value="检测报告" />
     <text name="ReportHeaderInfo" value="检测报告管理列表" />
     <text name="CreateReport" value="新增检测报告" />

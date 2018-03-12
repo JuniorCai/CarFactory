@@ -901,7 +901,6 @@
     <Content Include="Content\assets\pages\scripts\form-validation.js" />
     <Content Include="Content\assets\pages\scripts\form-validation.min.js" />
     <Content Include="Content\assets\pages\scripts\login.js" />
-    <Content Include="Content\assets\pages\scripts\login.min.js" />
     <Content Include="Content\assets\pages\scripts\profile.js" />
     <Content Include="Content\assets\pages\scripts\profile.min.js" />
     <Content Include="Content\assets\pages\scripts\table-datatables-ajax.js" />
@@ -3110,7 +3109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\CarFactoryNavigationProvider.cs" />
+    <Compile Include="App_Start\CarFactoryAdminNavigationProvider.cs" />
     <Compile Include="App_Start\CarFactoryWebModule.cs" />
     <Compile Include="App_Start\PageNames.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -3203,7 +3202,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61814</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61759/</IISUrl>
+          <IISUrl>http://localhost:61815/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

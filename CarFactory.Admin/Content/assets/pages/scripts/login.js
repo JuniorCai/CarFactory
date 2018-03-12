@@ -7,22 +7,22 @@ var Login = function() {
             errorClass: 'help-block', // default input error message class
             focusInvalid: true, // do not focus the last invalid input
             rules: {
-                email: {
+                UsernameOrEmailAddress: {
                     required: true
                 },
-                password: {
+                Password: {
                     required: true
                 },
-                remember: {
+                RememberMe: {
                     required: false
                 }
             },
 
             messages: {
-                email: {
+                UsernameOrEmailAddress: {
                     required: "请输入邮箱"
                 },
-                password: {
+                Password: {
                     required: "请输入密码"
                 }
             },
@@ -37,7 +37,7 @@ var Login = function() {
             },
 
             success: function(label) {
-                $('.alert-danger', $('.login-form')).hide();
+                //$('.alert-danger', $('.login-form')).hide();
                 label.closest('.form-group').removeClass('has-error');
                 label.remove();
             },

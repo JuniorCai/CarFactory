@@ -30,7 +30,7 @@ namespace CarFactory.Admin
             Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
 
             //Configure navigation/menu
-            Configuration.Navigation.Providers.Add<CarFactoryNavigationProvider>();
+            Configuration.Navigation.Providers.Add<CarFactoryAdminNavigationProvider>();
 
             //Configure Hangfire - ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
             //Configuration.BackgroundJobs.UseHangfire(configuration =>
