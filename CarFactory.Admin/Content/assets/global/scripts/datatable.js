@@ -65,7 +65,14 @@ var Datatable = function() {
                     },
 
                     "orderCellsTop": true,
-                    "columnDefs": [{ // define columns sorting options(by default all columns are sortable extept the first checkbox column)
+                    "columnDefs": [
+//                        { "name": "CheckBoxStrTag","targets":0},
+//                        { "name": "Id","targets":1},
+//                        { "name": "CreateTime","targets":2},
+//                        { "name": "Name","targets":3},
+//                        { "name": "StautsStrTag","targets":4},
+//                        { "name": "ViewDetailUrlTag","targets":5},
+                        { // define columns sorting options(by default all columns are sortable extept the first checkbox column)
                         'orderable': false,
                         'targets': [0]
                     }],
@@ -74,7 +81,14 @@ var Datatable = function() {
                     "autoWidth": false, // disable fixed width and enable fluid table
                     "processing": false, // enable/disable display message box on record load
                     "serverSide": true, // enable/disable server side ajax loading
-
+                    "columns": [
+                        { "data": "checkBoxStrTag" },
+                        { "data": "id" },
+                        { "data": "createTime" },
+                        { "data": "name" },
+                        { "data": "stautsStrTag" },
+                        { "data": "viewDetailUrlTag" }
+                    ],
                     "ajax": { // define ajax settings
                         "url": "", // ajax URL
                         "type": "post", // request type
@@ -130,7 +144,7 @@ var Datatable = function() {
 
                             App.unblockUI(tableContainer);
 
-                            return res.data;
+                            return res.result.data;
                         },
                         "error": function() { // handle general connection errors
                             if (tableOptions.onError) {

@@ -12,9 +12,12 @@ namespace CarFactory.Application.Report.Dtos
     [AutoMapFrom(typeof(Core.CustomDomain.Report.Report))]
     public class ReportListDto : EntityDto<int>
     {
+        public int Id { get; set; }
         public string ReportName { get; set; }
         public string Img { get; set; }
         public string RelativeId { get; set; }
+
+        public bool IsShow { get; set; }
 
         /// <summary>
         /// 创建时间
