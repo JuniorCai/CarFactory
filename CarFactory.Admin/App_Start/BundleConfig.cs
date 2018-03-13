@@ -70,6 +70,10 @@ namespace CarFactory.Admin
                 "~/Content/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css"
                 ));
 
+            bundles.Add(new StyleBundle("~/assets/global/bootstrapDatePicker/css").Include(
+                "~/Content/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css"
+            ));
+
             bundles.Add(new StyleBundle("~/assets/global/bootstrapModal/css").Include(
                 "~/Content/assets/global/plugins/bootstrap-modal/css/bootstrap-modal-bs3patch.css",
                 "~/Content/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css"
@@ -80,6 +84,8 @@ namespace CarFactory.Admin
                 "~/Content/assets/global/plugins/datatables/datatables.min.js",
                 "~/Content/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/assets/global/bootstrapDatePicker/scripts").Include(
+                "~/Content/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"));
 
             bundles.Add(new ScriptBundle("~/assets/global/bootstrapModal/scripts").Include(
                 "~/Content/assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js",

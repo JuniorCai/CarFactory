@@ -17,5 +17,7 @@ namespace CarFactory.Core.CustomDomain.Report
 
         public virtual string RelativeId { get; set; }
 
+        public virtual bool IsShow{ get; set; }
+
     }
 }

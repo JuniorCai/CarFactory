@@ -75,7 +75,11 @@ namespace CarFactory.Application.Report
             //TODO:根据传入的参数添加过滤条件
 
             query = query.WhereIf(!string.IsNullOrEmpty(input.FilterText),
-                p => p.ReportName.Contains(input.FilterText));
+                    p => p.ReportName.Contains(input.FilterText))
+                .WhereIf(input.Id != null, p => p.Id == input.Id)
+                .WhereIf(input.Status != null, p => p.IsShow == input.Status)
+                .WhereIf(input.BeginDate != null, p => p.CreationTime >= input.BeginDate)
+                .WhereIf(input.EndDate != null, p => p.CreationTime <= input.EndDate);
 
 
             var reportCount = await query.CountAsync();

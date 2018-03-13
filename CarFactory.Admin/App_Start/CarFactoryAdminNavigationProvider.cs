@@ -37,7 +37,7 @@ namespace CarFactory.Admin
             var product = new MenuItemDefinition(
                 PageNames.Products,
                 L(PageNames.Products),
-                url: "admin/ProductManage",
+                url: "/admin/ProductManage",
                 icon: "icon-grid"//,
                 //requiredPermissionName: ProductAppPermissions.Product
             );
@@ -45,13 +45,13 @@ namespace CarFactory.Admin
             var productCategory = new MenuItemDefinition(
                 PageNames.ProductCategory,
                 L(PageNames.ProductCategory),
-                url: "admin/CategoryManage",
+                url: "/admin/CategoryManage",
                 icon: "icon-grid");
 
             var report = new MenuItemDefinition(
                 PageNames.Reports,
                 L(PageNames.Reports),
-                url: "admin/ReportManage",
+                url: "/admin/ReportManage",
                 icon: "icon-grid");
 
 
