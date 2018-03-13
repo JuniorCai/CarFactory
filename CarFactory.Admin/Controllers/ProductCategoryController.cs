@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
+using Abp.Application.Services.Dto;
+using Abp.Runtime.Validation;
+using Abp.Web.Models;
 using Abp.Web.Mvc.Authorization;
 using CarFactory.Application.Category;
 using CarFactory.Application.Category.Dtos;
@@ -47,6 +51,38 @@ namespace CarFactory.Admin.Controllers
             ViewBag.UserMenu = userMenu;
 
             return View(pagedProducts);
+        }
+
+
+        [HttpPost]
+        [Route("CategoryManage/delCategory")]
+        public JsonResult DelCategory(int id = 0)
+        {
+            bool status = false;
+            string msg = "";
+
+            try
+            {
+                if (id > 0)
+                {
+                    _categoryAppService.DeleteCategoryAsync(new EntityDto(id));
+                    status = true;
+                }
+            }
+            catch (Exception e)
+            {
+                msg = "-1";
+                status = false;
+            }
+
+
+            return Json(new {success = status});
+        }
+
+        public JsonResult UpdateCategory(CategoryEditDto categoryEdit)
+        {
+            bool status = false;
+            string msg = "";
         }
     }
 }

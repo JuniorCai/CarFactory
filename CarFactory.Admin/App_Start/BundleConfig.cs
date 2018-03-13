@@ -11,8 +11,12 @@ namespace CarFactory.Admin
 
 
             //Admin Configuration
-            bundles.Add(new ScriptBundle("~/assets/app/scripts").Include(
-                "~/Content/assets/app.js"));
+
+            bundles.Add(new ScriptBundle("~/abp/scripts").Include(
+                "~/lib/abp-web-resources/Abp/Framework/scripts/abp.js",
+                "~/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.jquery.js",
+                "~/lib/json2/json2.js"
+                ));
 
             bundles.Add(new ScriptBundle("~/assets/global/scripts").Include(
                 "~/Content/assets/global/plugins/jquery.min.js",

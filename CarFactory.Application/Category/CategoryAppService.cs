@@ -140,7 +140,7 @@ namespace CarFactory.Application.Category
         /// <summary>
         /// 新增产品类别
         /// </summary>
-        [AbpAuthorize(CategoryAppPermissions.Category_CreateCategory)]
+        //[AbpAuthorize(CategoryAppPermissions.Category_CreateCategory)]
         public virtual async Task<CategoryEditDto> CreateCategoryAsync(CategoryEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
@@ -154,7 +154,7 @@ namespace CarFactory.Application.Category
         /// <summary>
         /// 编辑产品类别
         /// </summary>
-        [AbpAuthorize(CategoryAppPermissions.Category_EditCategory)]
+        //[AbpAuthorize(CategoryAppPermissions.Category_EditCategory)]
         public virtual async Task UpdateCategoryAsync(CategoryEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
@@ -168,17 +168,18 @@ namespace CarFactory.Application.Category
         /// <summary>
         /// 删除产品类别
         /// </summary>
-        [AbpAuthorize(CategoryAppPermissions.Category_DeleteCategory)]
+        //[AbpAuthorize(CategoryAppPermissions.Category_DeleteCategory)]
         public async Task DeleteCategoryAsync(EntityDto<int> input)
         {
             //TODO:删除前的逻辑判断，是否允许删除
+
             await _categoryRepository.DeleteAsync(input.Id);
         }
 
         /// <summary>
         /// 批量删除产品类别
         /// </summary>
-        [AbpAuthorize(CategoryAppPermissions.Category_DeleteCategory)]
+        //[AbpAuthorize(CategoryAppPermissions.Category_DeleteCategory)]
         public async Task BatchDeleteCategoryAsync(List<int> input)
         {
             //TODO:批量删除前的逻辑判断，是否允许删除

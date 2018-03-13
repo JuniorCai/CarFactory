@@ -1,5 +1,8 @@
 ﻿@using System.Web.Optimization
 @using CarFactory.Admin.Models.Layout
+@{
+    SetAntiForgeryCookie();
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +10,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
-    @Scripts.Render("~/assets/app/scripts")
+@*    @Scripts.Render("~/assets/app/scripts")*@
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     @Styles.Render("~/assets/global/css")
     <!-- END GLOBAL MANDATORY STYLES -->
@@ -75,7 +78,7 @@
 
 
 <!-- BEGIN CORE PLUGINS -->
-@Scripts.Render("~/assets/global/scripts", "~/assets/global/bootstrap")
+@Scripts.Render("~/assets/global/scripts", "~/abp/scripts", "~/assets/global/bootstrap")
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 @Scripts.Render("~/assets/pagelevel/jqueryval", "~/assets/pagelevel/scripts")

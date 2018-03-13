@@ -79,7 +79,7 @@
                 <label class="control-label visible-ie8 visible-ie9">密码</label>
                 <div class="input-icon right">
 @*                    <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="登录密码" name="Password" />*@
-                    @Html.TextBoxFor(f => f.Password, new { @class= "form-control form-control-solid placeholder-no-fix",autocomplete="off",placeholder= "登录密码" })
+                    @Html.PasswordFor(f => f.Password, new { @class= "form-control form-control-solid placeholder-no-fix",autocomplete="off",placeholder= "登录密码" })
                 </div>
 @*                @if ($errors->has('password'))*@
 @*                <span class="help-block">*@

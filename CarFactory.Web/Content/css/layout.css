@@ -37,14 +37,40 @@ strong{font-size:13px}
 .w2 p{ color:#f7f7f7; line-height:28px; padding-left:75px; padding-top:15px;}
 
 .main1{ height:520px; background:#f7f7f7; width:100%;}
-.main1t{ width:999px; margin:0 auto; height:500px; padding-top:20px;}
-.main1_tt{ background:url(/Content/images/public/index_11.jpg) no-repeat; height:108px;}
+.main1t{ width:1200px; margin:0 auto; height:500px; padding-top:20px;}
+.main1_tt {
+/*     background:url(/Content/images/public/index_11.jpg) no-repeat;*/
+     height:108px;
+}
 
-.product{ height:39px;}
-.product ul{ height:39px; text-align:center; margin-top:25px;}
-.product ul li{ width:115px; height:39px; background:url(/Content/images/public/cpfllibg.png) no-repeat; text-align:center; margin:0px 4px; color:#444; font-family:"微软雅黑", "宋体"; font-size:14px; display:inline-block; line-height:34px; }
-.product ul li a{}
-.product ul li a:hover{ background:url(/Content/images/public/cpfllihover.png) no-repeat; color:#65b541; width:115px; height:39px; display:block;}
+.product{ height:41px;}
+.product ul{ height:41px; text-align:center; margin-top:25px;}
+.product ul li {
+     width:156px; 
+     height:39px; 
+/*     background:url(/Content/images/public/cpfllibg.png) no-repeat;*/
+    border: solid 1px #BFBFBF;
+     text-align:center; 
+     margin:0px 4px; 
+     color:#444; 
+     font-family:"微软雅黑", "宋体";
+     font-size:14px; 
+     display:inline-block; 
+     line-height:34px;
+}
+
+    .product ul li:hover {
+        border: solid 1px #65b541;
+    }
+    .product ul li a {
+    }
+    .product ul li a:hover {
+        /*     background:url(/Content/images/public/cpfllihover.png) no-repeat; */
+        color: #65b541;
+        width: 156px;
+        height: 39px;
+        display: block;
+    }
 
 .product_body{ padding-top:15px;}
 .td{ width:225px; float:left; overflow:hidden; border:#dadada solid 1px; margin:10px 10px; background:#fff;}
