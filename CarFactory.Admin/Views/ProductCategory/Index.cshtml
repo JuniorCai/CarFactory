@@ -84,6 +84,18 @@
                                             <input type="checkbox" id="categoryState" class="make-switch" checked data-on-color="success" data-off-color="danger">
                                         </div>
                                     </div>
+                                    <div class="form-group ">
+                                        <label class="control-label col-md-4">
+                                            排序
+                                            <span class="required" aria-required="true"> &nbsp; </span>
+                                        </label>
+                                        <div class="col-md-4">
+                                            <div class="input-icon right">
+                                                <i class="fa"></i>
+                                                <input type="text" id="sort" class="form-control" style="width: 70px;padding-right:0" name="sort" value="" >填写大于0的数字，数字越大越靠前，不填则默认排序
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -116,7 +128,7 @@
                             <!--</label>-->
                             <!--</th>-->
                             <th> 名称 </th>
-                            <th> 英文简称 </th>
+                            <th> 简称 </th>
                             <th> 状态 </th>
                             <th> 添加时间 </th>
                             <th> 操作 </th>
@@ -127,8 +139,9 @@
                         {
                             string stateCss = category.IsShow ? "label-success" : "label-danger";
                             string stateTip = category.IsShow ? "开启" : "禁用";
+                            string status = category.IsShow ? "1" : "0";
 
-                            <tr class="odd gradeX" categoryId="@category.Id" state="@category.IsShow">
+                            <tr class="odd gradeX" categoryId="@category.Id" state="@status" sort="@category.Sort">
                                 <!--<td>-->
                                 <!--<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">-->
                                 <!--<input type="checkbox" class="checkboxes" value="1"/>-->
@@ -177,4 +190,96 @@
     <script src="/Content/assets/pages/scripts/ui-extended-modals.min.js" type="text/javascript"></script>
     <script src="/Content/assets/pages/scripts/ui-confirmations.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
+}
+
+
+@section PageCustomScripts
+{
+    <script type="text/javascript">
+        $(function () {
+            initValidate();
+
+            $('#addCategory').click(function () {
+                setModalData(0, '', '', false);
+            });
+
+            $('.table .btn-group > a:first-child').click(function () {
+                if ($(this).attr('data-toggle') != "undefined") {
+                    var trParent = $(this).parents('tr');
+                    var state = trParent.attr('state');
+                    var name = trParent.children(":eq(0)").text();
+                    var shortName = trParent.children().eq(1).text();
+                    var sort = trParent.attr('sort');
+                    setModalData(trParent.attr(("categoryId")), name, shortName, state == 1,sort);
+
+                    $('#responsive').modal();
+                }
+            })
+
+        });
+
+        function setModalData(category, name, shortName, state,sort) {
+            $("#editCategoryId").val(category);
+            $('#categoryState').bootstrapSwitch('state', state);
+            $("#responsive .form-horizontal .row").find('input[name="name"]').val(name);
+            $("#responsive .form-horizontal .row").find('input[name="shortName"]').val(shortName);
+            $("#responsive .form-horizontal .row").find('input[name="sort"]').val(sort);
+           
+        }
+
+        function initValidate() {
+            $("#addCategorForm").validate({
+                onsubmit: true,
+                onfocusout: false,
+                onkeyup: false,
+
+                rules: {　　　　//规则
+                    name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    shortName: {
+                        required: true,
+                        minlength: 2
+                    }
+                },
+                messages: {　　　　//验证错误信息
+                    name: {
+                        required: "请输入类别名称",
+                        minlength: "类别名称最小长度为2"
+                    },
+                    shortName: {
+                        required: "请输入类别简写，建议使用名称拼音首字母缩写，也可使用其他英文字母描述。",
+                        minlength: "类别简称要求至少由2个字母组成"
+                    }
+                },
+                submitHandler: function (form) { //通过之后回调
+                    var updateUrl = "/admin/CategoryManage/uodateCategory";
+                    var addUrl = "/admin/CategoryManage/addCategory";
+                    //进行ajax传值
+                    var editCategory = {
+                        id: $('#editCategoryId').val().trim(),
+                        categoryName: $("#categoryName").val().trim(),
+                        shortName: $("#shortName").val().trim(),
+                        isShow: $('#categoryState').bootstrapSwitch('state'),
+                        sort: $("#sort").val().trim() > 0 ? $("#sort").val().trim() : "0"
+                };
+                    abp.ajax({
+                        url: $("#editCategoryId").val().trim() > 0 ? updateUrl : addUrl,
+                        data: JSON.stringify(editCategory)
+                    }).done(function(data) {
+                        //要执行的代码
+                        if (data.success == true) {
+                            UIBootstrapGrowl.show('#responsive', '保存成功', 'success');
+                            setTimeout("location.reload()", 2000);
+                        } else {
+                            UIBootstrapGrowl.show('#responsive', '保存失败，请联系技术人员', 'warning');
+                        }
+                    });
+                },
+                invalidHandler: function (form, validator) { return false; }
+            });
+        }
+
+    </script>
 }

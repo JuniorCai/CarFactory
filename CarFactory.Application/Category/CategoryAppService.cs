@@ -58,7 +58,7 @@ namespace CarFactory.Application.Category
             //TODO:根据传入的参数添加过滤条件
 
             var categoryCount = await query.CountAsync();
-            var categorys = await query.OrderBy(ca => ca.Id).PageBy(input).ToListAsync();
+            var categorys = await query.OrderByDescending(ca => ca.Sort).PageBy(input).ToListAsync();
 
             if (!string.IsNullOrEmpty(input.FilterText))
             {

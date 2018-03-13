@@ -39,7 +39,7 @@ namespace CarFactory.Admin.Controllers
                 FilterText = "",
                 MaxResultCount = CarFactoryConsts.MaxPageSize,
                 SkipCount = pageIndex * CarFactoryConsts.MaxPageSize,
-                Sorting = "Id"
+                Sorting = "sort"
             };
 
             var list = _categoryAppService.GetPagedCategorysAsync(input).Result;
@@ -74,15 +74,49 @@ namespace CarFactory.Admin.Controllers
                 msg = "-1";
                 status = false;
             }
-
-
             return Json(new {success = status});
         }
 
+        [Route("CategoryManage/uodateCategory")]
         public JsonResult UpdateCategory(CategoryEditDto categoryEdit)
         {
             bool status = false;
             string msg = "";
+
+            CheckModelState();
+
+            try
+            {
+                _categoryAppService.UpdateCategoryAsync(categoryEdit);
+                status = true;
+            }
+            catch (Exception e)
+            {
+                msg = "-1";
+                status = false;
+            }
+            return Json(new { success = status });
+        }
+
+        [Route("CategoryManage/addCategory")]
+        public JsonResult AddCategory(CategoryEditDto categoryEdit)
+        {
+            bool status = false;
+            string msg = "";
+
+            CheckModelState();
+
+            try
+            {
+                _categoryAppService.CreateCategoryAsync(categoryEdit);
+                status = true;
+            }
+            catch (Exception e)
+            {
+                msg = "-1";
+                status = false;
+            }
+            return Json(new { success = status });
         }
     }
 }

@@ -16,6 +16,7 @@ namespace CarFactory.Core.CustomDomain.Category
         [Required]
         public virtual bool IsShow { get; set; }
 
+        [Required]
         public virtual int Sort { get; set; }
 
         //public virtual IList<Product> Products{ get; set; }
