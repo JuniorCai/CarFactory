@@ -19,14 +19,23 @@ namespace CarFactory.Application.Report.Dtos
         public int? Id { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MinLength(2)]
         public string ReportName { get; set; }
 
-        [Required]
-        [MaxLength(200)]
         public string Img { get; set; }
+
 
         public string RelativeId { get; set; }
 
+    }
+
+    /// <summary>
+    /// 图片上传状态枚举
+    /// </summary>
+    public enum ImageUploadStatus
+    {
+        WaittingUpload,
+        Success,
+        Failed
     }
 }

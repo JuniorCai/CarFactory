@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
+using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 using Abp.Collections.Extensions;
 using Abp.Runtime.Validation;
@@ -71,7 +72,7 @@ namespace CarFactory.Admin.Controllers
                 list.TotalCount);
 
 
-            var viewModelList = GenerateTablePagerData(pagedProducts, "/admin/detail/");
+            var viewModelList = GenerateTablePagerData(pagedProducts, "/admin/reports/detail/");
 
             return Json(new {draw=Request.Form["draw"], recordsTotal = pagedProducts.TotalItemCount, recordsFiltered = pagedProducts.Count, data = viewModelList },JsonRequestBehavior.AllowGet);
         }
@@ -101,5 +102,54 @@ namespace CarFactory.Admin.Controllers
             return list;
         }
 
+        [Route("reports/detail/{id?}")]
+        public ActionResult Detail(int? id)
+        {
+            ReportListDto info = new ReportListDto();
+
+            if (id == null)
+            {
+
+            }
+            else
+            {
+                info = _reportAppService.GetReportByIdAsync(new EntityDto<int>(id.Value)).Result;
+            }
+
+            var userMenu = GetUserMenu(PageNames.ProductCategory).Result;
+            ViewBag.UserMenu = userMenu;
+
+            return View(info);
+        }
+
+        [Route("reports/save")]
+        [DisableValidation]
+        public JsonResult Save(ReportEditDto detail)
+        {
+
+            if (detail.Id != null)
+            {
+                var oldReport = _reportAppService.GetReportByIdAsync(new EntityDto<int>(detail.Id.Value));
+                if (oldReport != null)
+                {
+                    var file = Request.Files[0];
+                }
+            }
+            //https://www.cnblogs.com/csqb-511612371/p/5504659.html
+            //http://blog.csdn.net/rt_1170406609/article/details/51331064
+            //https://www.cnblogs.com/CreateMyself/p/5414200.html
+            return Json(new { });
+        }
+
+        private Tuple<ImageUploadStatus, string> StoreUploadImg()
+        {
+            ImageUploadStatus status = ImageUploadStatus.WaittingUpload;
+            string imgUrl = "";
+
+
+
+
+            return new Tuple<ImageUploadStatus, string>(status,imgUrl);
+        }
     }
 }

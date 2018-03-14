@@ -70,6 +70,15 @@ namespace CarFactory.Admin
                 "~/Content/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css"
                 ));
 
+            bundles.Add(new StyleBundle("~/assets/global/bootstrapFileinput/css").Include(
+                "~/Content/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css"
+            ));
+
+            bundles.Add(new StyleBundle("~/assets/global/select2/css").Include(
+                "~/Content/assets/global/plugins/select2/css/select2.min.css",
+                "~/Content/assets/global/plugins/select2/css/select2-bootstrap.min.css"
+            ));
+
             bundles.Add(new StyleBundle("~/assets/global/bootstrapDatePicker/css").Include(
                 "~/Content/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css"
             ));
@@ -86,6 +95,12 @@ namespace CarFactory.Admin
 
             bundles.Add(new ScriptBundle("~/assets/global/bootstrapDatePicker/scripts").Include(
                 "~/Content/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"));
+
+            bundles.Add(new ScriptBundle("~/assets/global/bootstrapFileinput/scripts").Include(
+                "~/Content/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js"));
+
+            bundles.Add(new ScriptBundle("~/assets/global/select2/scripts").Include(
+                "~/Content/assets/global/plugins/select2/js/select2.full.min.js"));
 
             bundles.Add(new ScriptBundle("~/assets/global/bootstrapModal/scripts").Include(
                 "~/Content/assets/global/plugins/bootstrap-modal/js/bootstrap-modalmanager.js",
