@@ -81,7 +81,7 @@ namespace CarFactory.Admin
 
             bundles.Add(new ScriptBundle("~/assets/global/datatables/scripts").Include(
                 "~/Content/assets/global/scripts/datatable.js",
-                "~/Content/assets/global/plugins/datatables/datatables.min.js",
+                "~/Content/assets/global/plugins/datatables/jquery.dataTables.js",
                 "~/Content/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/assets/global/bootstrapDatePicker/scripts").Include(

@@ -42,7 +42,6 @@ var Datatable = function() {
                 loadingMessage: 'Loading...',
                 dataTable: {
                     "dom": "<'row'<'col-md-8 col-sm-12'pli><'col-md-4 col-sm-12'<'table-group-actions pull-right'>>r><'table-responsive't><'row'<'col-md-8 col-sm-12'pli><'col-md-4 col-sm-12'>>", // datatable layout
-                    "pageLength": 3, // default records per page
                     "language": { // language settings
                         // metronic spesific
                         "metronicGroupActions": "已选择: _TOTAL_   ",
@@ -65,30 +64,17 @@ var Datatable = function() {
                     },
 
                     "orderCellsTop": true,
-                    "columnDefs": [
-//                        { "name": "CheckBoxStrTag","targets":0},
-//                        { "name": "Id","targets":1},
-//                        { "name": "CreateTime","targets":2},
-//                        { "name": "Name","targets":3},
-//                        { "name": "StautsStrTag","targets":4},
-//                        { "name": "ViewDetailUrlTag","targets":5},
-                        { // define columns sorting options(by default all columns are sortable extept the first checkbox column)
+                    "columnDefs": [{ // define columns sorting options(by default all columns are sortable extept the first checkbox column)
                         'orderable': false,
                         'targets': [0]
                     }],
-
-                    "pagingType": "bootstrap_extended", // pagination type(bootstrap, bootstrap_full_number or bootstrap_extended)
+                    "paging": true,
+                    "pageLength": 3, // default record count per page
+                    "pagingType": "bootstrap_full_number", // pagination type(bootstrap, bootstrap_full_number or bootstrap_extended)
                     "autoWidth": false, // disable fixed width and enable fluid table
                     "processing": false, // enable/disable display message box on record load
-                    "serverSide": true, // enable/disable server side ajax loading
-                    "columns": [
-                        { "data": "checkBoxStrTag" },
-                        { "data": "id" },
-                        { "data": "createTime" },
-                        { "data": "name" },
-                        { "data": "stautsStrTag" },
-                        { "data": "viewDetailUrlTag" }
-                    ],
+                    "serverSide": false, // enable/disable server side ajax loading
+
                     "ajax": { // define ajax settings
                         "url": "", // ajax URL
                         "type": "post", // request type
@@ -144,7 +130,7 @@ var Datatable = function() {
 
                             App.unblockUI(tableContainer);
 
-                            return res.result.data;
+                            return res.data;
                         },
                         "error": function() { // handle general connection errors
                             if (tableOptions.onError) {

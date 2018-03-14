@@ -23,12 +23,12 @@
         /// <summary>
         /// 默认分页大小
         /// </summary>
-        public const int DefaultPageSize = 2;
+        public const int DefaultPageSize = 20;
 
         /// <summary>
         /// 最大分页大小
         /// </summary>
-        public const int MaxPageSize = 50;
+        public const int MaxPageSize = int.MaxValue;
 
         /// <summary>
         /// 数据库架构名

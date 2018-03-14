@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
 using Abp.AutoMapper;
+using Abp.Web.Models;
 using Abp.Web.Mvc.Authorization;
 using CarFactory.Admin.Models.Reports;
 using CarFactory.Application.Report;
@@ -36,13 +37,14 @@ namespace CarFactory.Admin.Controllers
 
         // GET: Report
         [Route("reports/getDataPager")]
+        [DontWrapResult]
         public JsonResult GetDataPager(GetReportInput searchInput)
         {
             GetReportInput filterInput = searchInput ?? (new GetReportInput());
             int pageIndex = (filterInput.Page ?? 1) - 1;
 
             filterInput.MaxResultCount = CarFactoryConsts.MaxPageSize;
-            filterInput.SkipCount = pageIndex * CarFactoryConsts.MaxPageSize;
+            filterInput.SkipCount = pageIndex * filterInput.MaxResultCount;
             filterInput.Sorting = "CreationTime";
             filterInput.Page = pageIndex + 1;
 
@@ -56,7 +58,7 @@ namespace CarFactory.Admin.Controllers
 
             var viewModelList = GenerateTablePagerData(pagedProducts, "/admin/detail/");
 
-            return Json(new {draw=Request.QueryString["draw"], recordsTotal = pagedProducts.TotalItemCount, recordsFiltered = pagedProducts.Count, data = viewModelList },JsonRequestBehavior.AllowGet);
+            return Json(new {draw=Request.Form["draw"], recordsTotal = pagedProducts.TotalItemCount, recordsFiltered = pagedProducts.Count, data = viewModelList },JsonRequestBehavior.AllowGet);
         }
 
         protected List<ReportTableViewModel> GenerateTablePagerData(StaticPagedList<ReportListDto> pagedList, string detailUrl)
@@ -72,7 +74,7 @@ namespace CarFactory.Admin.Controllers
                         item.Id + "'><span></span></label>",
                     Id = item.Id,
                     CreateTime = item.CreationTime.ToString("yyyy-MM-dd HH:mm:ss"),
-                    Name = item.ReportName,
+                    Name = item.ReportName.Length > 28 ? item.ReportName.Substring(0, 28) + "...": item.ReportName,
                     StautsStrTag = "<span class='label label-sm " +
                                    (item.IsShow ? "label-success" : "label-danger")
                                    + "'>" + (item.IsShow ? "展示" : "下架") + "</span>",

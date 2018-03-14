@@ -15,6 +15,7 @@ var TableDatatablesAjax = function () {
         grid.init({
             src: $("#listTable"),
             onSuccess: function (grid, response) {
+                var data = response;
                 // grid:        grid object
                 // response:    json object of server side ajax response
                 // execute some code after table records loaded
@@ -32,16 +33,22 @@ var TableDatatablesAjax = function () {
                 // setup uses scrollable div(table-scrollable) with overflow:auto to enable vertical scroll(see: assets/global/scripts/datatable.js).
                 // So when dropdowns used the scrollable div should be removed.
                 //"dom": "<'row'<'col-md-8 col-sm-12'pli><'col-md-4 col-sm-12'<'table-group-actions pull-right'>>r>t<'row'<'col-md-8 col-sm-12'pli><'col-md-4 col-sm-12'>>",
-
-                "dom": "<'row'<'col-md-8 col-sm-12'i><'col-md-4 col-sm-12'<'table-group-actions pull-right'>>r>t<'row'<'col-md-8 col-sm-12'i><'col-md-4 col-sm-12'>>",
+                "pageLength":10,
+                "dom": "<'row'<'col-md-8 col-sm-12' ><'col-md-4 col-sm-12'<'table-group-actions pull-right'>>r>t<'row'<'col-md-8 col-sm-12'i><'col-md-4 col-sm-12' p>>",
 
                 "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
-
-                "pageLength": 1, // default record count per page
 
                 "ajax": {
                     "url": pageUrl, // ajax source"/admin/reports/getDataPager"
                 },
+                "columns": [
+                    { data:"CheckBoxStrTag"},
+                    { data:"Id"},
+                    { data:"CreateTime"},
+                    { data:"Name"},
+                    { data:"StautsStrTag"},
+                    { data:"ViewDetailUrlTag"}
+                ],
                 "order": [
                     [1, "asc"]
                 ],// set first column as a default sort by asc,
@@ -51,11 +58,19 @@ var TableDatatablesAjax = function () {
                     "zeroRecords": "没有相关数据",
                     "emptyTable": "没有相关数据",
                     "info": "显示总数 _TOTAL_ 中的 _START_ 到 _END_",//Showing _START_ to _END_ of _TOTAL_ entries
+                    "infoFiltered": "",
+                    "paginate": {
+                        "first": "第一页",
+                        "previous": " 上一页 ",
+                        "next": " 下一页 ",
+                        "last": " 最后一页 "
+                    }
                 },
 
-                scrollY: 400,
-                deferRender:    true,
-                scroller: {
+                "scrollY": 520,
+                "deferRender": true,
+                "lengthChange":false,
+                "scroller": {
                     loadingIndicator: true
                 }
             }
