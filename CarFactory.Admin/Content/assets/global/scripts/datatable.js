@@ -222,7 +222,7 @@ var Datatable = function() {
         },
 
         submitFilter: function() {
-            the.setAjaxParam("action", tableOptions.filterApplyAction);
+            the.setAjaxParam("actionType", tableOptions.filterApplyAction);
 
             // get all typeable inputs
             // $('textarea.form-filter, select.form-filter, input.form-filter:not([type="radio"],[type="checkbox"])', table).each(function() {

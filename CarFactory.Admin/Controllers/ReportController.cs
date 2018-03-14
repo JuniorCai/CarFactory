@@ -5,8 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
 using Abp.AutoMapper;
+using Abp.Collections.Extensions;
+using Abp.Runtime.Validation;
 using Abp.Web.Models;
 using Abp.Web.Mvc.Authorization;
+using CarFactory.Admin.Models;
 using CarFactory.Admin.Models.Reports;
 using CarFactory.Application.Report;
 using CarFactory.Application.Report.Dtos;
@@ -38,21 +41,33 @@ namespace CarFactory.Admin.Controllers
         // GET: Report
         [Route("reports/getDataPager")]
         [DontWrapResult]
-        public JsonResult GetDataPager(GetReportInput searchInput)
+        [DisableValidation]
+        public JsonResult GetDataPager(DataTableSearchModel searchInput)
         {
-            GetReportInput filterInput = searchInput ?? (new GetReportInput());
-            int pageIndex = (filterInput.Page ?? 1) - 1;
 
-            filterInput.MaxResultCount = CarFactoryConsts.MaxPageSize;
-            filterInput.SkipCount = pageIndex * filterInput.MaxResultCount;
-            filterInput.Sorting = "CreationTime";
-            filterInput.Page = pageIndex + 1;
+            int pageIndex = 0;
 
-          
+            GetReportInput defaultInput = new GetReportInput()
+            {
+                MaxResultCount = CarFactoryConsts.MaxPageSize,
+                SkipCount = pageIndex * CarFactoryConsts.MaxPageSize,
+                Sorting = "CreationTime",
+                Page = pageIndex + 1
+            };
 
-            var list = _reportAppService.GetPagedReportsAsync(filterInput).Result;
+            if (searchInput != null && searchInput.ActionType == "filter")
+            {
+                defaultInput.Id = searchInput.FilterId;
+                defaultInput.BeginDate = searchInput.FilterDateFrom;
+                defaultInput.EndDate = searchInput.FilterDateTo;
+                defaultInput.FilterText = searchInput.FilterName??"";
+                defaultInput.Status = searchInput.FilterStatus;
+            }
 
-            var pagedProducts = new StaticPagedList<ReportListDto>(list.Items, filterInput.Page.Value, filterInput.MaxResultCount,
+
+            var list = _reportAppService.GetPagedReportsAsync(defaultInput).Result;
+
+            var pagedProducts = new StaticPagedList<ReportListDto>(list.Items, defaultInput.Page.Value, defaultInput.MaxResultCount,
                 list.TotalCount);
 
 

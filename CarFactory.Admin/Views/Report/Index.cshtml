@@ -72,8 +72,8 @@
                         <span> </span>
                         <select class="table-group-action-input form-control input-inline input-small input-sm">
                             <option value="">选择状态</option>
-                            <option value="1">展示</option>
-                            <option value="0">下架</option>
+                            <option value="true">展示</option>
+                            <option value="false">下架</option>
                         </select>
                         <button class="btn btn-sm green table-group-action-submit">
                             <i class="fa fa-check"></i> 提交
@@ -94,11 +94,11 @@
                             <tr role="row" class="filter">
                                 <td> </td>
                                 <td>
-                                    <input type="text" class="form-control form-filter input-sm" name="order_id">
+                                    <input type="text" class="form-control form-filter input-sm" name="filterId">
                                 </td>
                                 <td>
                                     <div class="input-group date date-picker margin-bottom-5" data-date-format="dd/mm/yyyy">
-                                        <input type="text" class="form-control form-filter input-sm" readonly name="order_date_from" placeholder="From">
+                                        <input type="text" class="form-control form-filter input-sm" readonly name="filterDateFrom" placeholder="From">
                                         <span class="input-group-btn">
                                             <button class="btn btn-sm default" type="button">
                                                 <i class="fa fa-calendar"></i>
@@ -106,7 +106,7 @@
                                         </span>
                                     </div>
                                     <div class="input-group date date-picker" data-date-format="dd/mm/yyyy">
-                                        <input type="text" class="form-control form-filter input-sm" readonly name="order_date_to" placeholder="To">
+                                        <input type="text" class="form-control form-filter input-sm" readonly name="filterDateTo" placeholder="To">
                                         <span class="input-group-btn">
                                             <button class="btn btn-sm default" type="button">
                                                 <i class="fa fa-calendar"></i>
@@ -115,13 +115,13 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control form-filter input-sm" name="name">
+                                    <input type="text" class="form-control form-filter input-sm" name="filterName">
                                 </td>
                                 <td>
-                                    <select name="order_status" class="form-control form-filter input-sm">
+                                    <select name="filterStatus" class="form-control form-filter input-sm">
                                         <option value="">选择状态</option>
-                                        <option value="1">展示</option>
-                                        <option value="0">下架</option>
+                                        <option value="true">展示</option>
+                                        <option value="false">下架</option>
                                     </select>
                                 </td>
                                 <td>
