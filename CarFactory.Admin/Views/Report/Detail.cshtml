@@ -1,8 +1,8 @@
 ﻿@using System.Web.Optimization
 @model CarFactory.Application.Report.Dtos.ReportListDto
 @{
-    ViewBag.Title = "Detail";
-    ViewBag.PageName = Model == null ? "添加报告" : "编辑报告";
+    ViewBag.Title = Model.Id == 0 ? "添加报告" : "编辑报告"; ;
+    ViewBag.PageName = Model.Id == 0 ? "添加报告" : "编辑报告";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 

@@ -84,7 +84,7 @@ namespace CarFactory.Application.Report
 
             var reportCount = await query.CountAsync();
 
-            var reports = await query.OrderBy(input.Sorting).PageBy(input).ToListAsync();
+            var reports = await query.OrderByDescending(r=>r.CreationTime).PageBy(input).ToListAsync();
 
             var reportListDtos = reports.MapTo<List<ReportListDto>>();
             return new PagedResultDto<ReportListDto>(

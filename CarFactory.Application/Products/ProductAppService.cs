@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
@@ -9,6 +10,7 @@ using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
+using Abp.Domain.Uow;
 using Abp.Linq.Extensions;
 using CarFactory.Application.Products.Dtos;
 using CarFactory.Core.CustomDomain.Products;
@@ -67,12 +69,20 @@ namespace CarFactory.Application.Products
 
             var query = _productRepositoryAsNoTrack;
             //TODO:根据传入的参数添加过滤条件
-            query = query.WhereIf(input.CategoryId > 0, p => p.CategoryId == input.CategoryId);
-            query = query.WhereIf(!string.IsNullOrEmpty(input.FilterText), p => p.Title.Contains(input.FilterText));
+
+            query = query.WhereIf(input.CategoryId > 0, p => p.CategoryId == input.CategoryId)
+                .WhereIf(!string.IsNullOrEmpty(input.FilterText),
+                    p => p.Title.Contains(input.FilterText))
+                .WhereIf(input.Id != null, p => p.Id == input.Id)
+                .WhereIf(input.Status != null, p => p.IsShow == input.Status)
+                .WhereIf(input.BeginDate != null, p => p.CreationTime >= input.BeginDate)
+                .WhereIf(input.EndDate != null, p => p.CreationTime <= input.EndDate);
+
+
             var productCount = await query.CountAsync();
 
             var products = await query
-                .OrderBy(input.Sorting)
+                .OrderByDescending(p=>p.CreationTime)
                 .PageBy(input)
                 .ToListAsync();
 
@@ -136,7 +146,7 @@ namespace CarFactory.Application.Products
         /// <summary>
         /// 新增产品信息
         /// </summary>
-        [AbpAuthorize(ProductAppPermissions.Product_CreateProduct)]
+        //[AbpAuthorize(ProductAppPermissions.Product_CreateProduct)]
         public virtual async Task<ProductEditDto> CreateProductAsync(ProductEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
@@ -150,7 +160,7 @@ namespace CarFactory.Application.Products
         /// <summary>
         /// 编辑产品信息
         /// </summary>
-        [AbpAuthorize(ProductAppPermissions.Product_EditProduct)]
+        //[AbpAuthorize(ProductAppPermissions.Product_EditProduct)]
         public virtual async Task UpdateProductAsync(ProductEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
@@ -161,10 +171,28 @@ namespace CarFactory.Application.Products
             await _productRepository.UpdateAsync(entity);
         }
 
+        public virtual void BatchUpdateStatusAsync(List<int> input, bool status)
+        {
+            try
+            {
+                foreach (var product in _productRepository.GetAll().Where(r => input.Contains(r.Id)).ToList())
+                {
+                    //product.Detail = "内容测试";
+                    product.IsShow = status;
+                    _productRepository.Update(product);
+                }
+            }
+            catch (DbEntityValidationException e)
+            {
+                
+                throw;
+            }
+        }
+
         /// <summary>
         /// 删除产品信息
         /// </summary>
-        [AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
+        //[AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
         public async Task DeleteProductAsync(EntityDto<int> input)
         {
             //TODO:删除前的逻辑判断，是否允许删除
@@ -174,7 +202,7 @@ namespace CarFactory.Application.Products
         /// <summary>
         /// 批量删除产品信息
         /// </summary>
-        [AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
+        //[AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
         public async Task BatchDeleteProductAsync(List<int> input)
         {
             //TODO:批量删除前的逻辑判断，是否允许删除

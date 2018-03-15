@@ -5,7 +5,7 @@ using System.Web;
 
 namespace CarFactory.Admin.Models.Reports
 {
-    public class ReportTableViewModel
+    public class ReportAndProductTableViewModel
     {
         public int Id { get; set; }
 

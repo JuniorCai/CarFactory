@@ -62,6 +62,9 @@ namespace CarFactory.Application.Products
         /// </summary>
         Task UpdateProductAsync(ProductEditDto input);
 
+	    void BatchUpdateStatusAsync(List<int> input, bool status);
+
+
         /// <summary>
         /// 删除产品信息
         /// </summary>

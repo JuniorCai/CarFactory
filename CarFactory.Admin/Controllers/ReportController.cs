@@ -98,13 +98,13 @@ namespace CarFactory.Admin.Controllers
             return Json(new {draw=Request.Form["draw"], recordsTotal = pagedProducts.TotalItemCount, recordsFiltered = pagedProducts.Count, data = viewModelList },JsonRequestBehavior.AllowGet);
         }
 
-        protected List<ReportTableViewModel> GenerateTablePagerData(StaticPagedList<ReportListDto> pagedList, string detailUrl)
+        protected List<ReportAndProductTableViewModel> GenerateTablePagerData(StaticPagedList<ReportListDto> pagedList, string detailUrl)
         {
-            List<ReportTableViewModel> list = new List<ReportTableViewModel>();
+            List<ReportAndProductTableViewModel> list = new List<ReportAndProductTableViewModel>();
 
             foreach (var item in pagedList)
             {
-                ReportTableViewModel viewModel = new ReportTableViewModel()
+                ReportAndProductTableViewModel viewModel = new ReportAndProductTableViewModel()
                 {
                     CheckBoxStrTag =
                         "<label class='mt-checkbox mt-checkbox-single mt-checkbox-outline'><input name='id[]' type='checkbox' class='checkboxes' value='" +
@@ -219,12 +219,6 @@ namespace CarFactory.Admin.Controllers
             return Json(new {status = status, message = msg});
         }
 
-        [Route("reports/changeStatus")]
-        public JsonResult ChangeStatus(List<int> idList,bool status)
-        {
-
-            return Json(new { });
-        }
 
        
     }
