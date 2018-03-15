@@ -47,6 +47,26 @@ namespace CarFactory.Admin.Controllers
         public JsonResult GetDataPager(DataTableSearchModel searchInput)
         {
 
+            if (searchInput.ActionType == "group_action")
+            {
+                if (string.IsNullOrEmpty(searchInput.CustomActionValue) || searchInput.id == null ||
+                    searchInput.id.Count == 0)
+                {
+                    return Json(new {actionType=searchInput.ActionType,customActionStatus = false, customActionMsg = "无效参数"});
+                }
+                try
+                {
+                    _reportAppService.BatchUpdateStatusAsync(searchInput.id, bool.Parse(searchInput.CustomActionValue));
+                    return Json(new { actionType = searchInput.ActionType, customActionStatus = true, customActionMsg = "" });
+
+                }
+                catch (Exception e)
+                {
+                    return Json(new { actionType = searchInput.ActionType, customActionStatus = false, customActionMsg = "无效参数" });
+                }
+            }
+
+
             int pageIndex = 0;
 
             GetReportInput defaultInput = new GetReportInput()

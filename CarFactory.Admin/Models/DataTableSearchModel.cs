@@ -18,5 +18,9 @@ namespace CarFactory.Admin.Models
         public bool? FilterStatus { get; set; }
 
         public string ActionType { get; set; }
+
+        public string CustomActionValue { get; set; }
+
+        public List<int> id { get; set; }
     }
 }

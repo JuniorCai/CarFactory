@@ -198,6 +198,7 @@
   <ItemGroup>
     <Compile Include="EntityFramework\CarFactoryDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\CarFactoryRepositoryBase.cs" />
+    <Compile Include="EntityFramework\Repositories\IRepositoryExtension.cs" />
     <Compile Include="EntityMapper\Company\CompanyCfg.cs" />
     <Compile Include="EntityMapper\Products\CategoryCfg.cs" />
     <Compile Include="EntityMapper\Products\ProductCfg.cs" />

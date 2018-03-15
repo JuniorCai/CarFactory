@@ -113,8 +113,8 @@ var TableDatatablesAjax = function () {
             e.preventDefault();
             var action = $(".table-group-action-input", grid.getTableWrapper());
             if (action.val() != "" && grid.getSelectedRowsCount() > 0) {
-                grid.setAjaxParam("customActionType", "group_action");
-                grid.setAjaxParam("customActionName", action.val());
+                grid.setAjaxParam("ActionType", "group_action");
+                grid.setAjaxParam("CustomActionValue", action.val());
                 grid.setAjaxParam("id", grid.getSelectedRows());
                 grid.getDataTable().ajax.reload();
                 grid.clearAjaxParams();

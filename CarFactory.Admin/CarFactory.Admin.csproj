@@ -876,7 +876,6 @@
     <Content Include="Content\assets\global\scripts\app.js" />
     <Content Include="Content\assets\global\scripts\app.min.js" />
     <Content Include="Content\assets\global\scripts\datatable.js" />
-    <Content Include="Content\assets\global\scripts\datatable.min.js" />
     <Content Include="Content\assets\layouts\global\scripts\quick-nav.js" />
     <Content Include="Content\assets\layouts\global\scripts\quick-nav.min.js" />
     <Content Include="Content\assets\layouts\global\scripts\quick-sidebar.js" />

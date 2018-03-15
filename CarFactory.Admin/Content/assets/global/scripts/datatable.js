@@ -94,7 +94,7 @@ var Datatable = function() {
 
                         },
                         "dataSrc": function(res) { // Manipulate the data returned from the server
-                            if (res.customActionMessage) {
+                            if (res.actionType=="group_action") {
                                 // App.alert({
                                 //     type: (res.customActionStatus == 'OK' ? 'success' : 'danger'),
                                 //     icon: (res.customActionStatus == 'OK' ? 'check' : 'warning'),
@@ -102,15 +102,15 @@ var Datatable = function() {
                                 //     container: tableWrapper,
                                 //     place: 'prepend'
                                 // });
-                                if(res.customActionStatus == 'OK')
+                                if(res.customActionStatus == true)
                                 {
                                     UIBootstrapGrowl.show(tableWrapper,'保存成功','success');
-                                    setTimeout("location.reload()", 5000);
-                                    window.location.reload();
+                                    setTimeout(function () { window.location.reload();}, 2000);
+                                    
                                 }
                                 else
                                 {
-                                    UIBootstrapGrowl.show(tableWrapper,'保存失败，请联系技术人员'+'错误编号：'+msg.state,'warning');
+                                    UIBootstrapGrowl.show(tableWrapper,'保存失败，请联系技术人员','warning');
                                 }
                             }
 

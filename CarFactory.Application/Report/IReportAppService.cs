@@ -59,6 +59,10 @@ namespace CarFactory.Application.Report
         /// </summary>
         Task UpdateReportAsync(ReportEditDto input);
 
+
+        Task BatchUpdateStatusAsync(List<int> input, bool status);
+
+
         /// <summary>
         /// 删除检测报告
         /// </summary>

@@ -172,6 +172,16 @@ namespace CarFactory.Application.Report
             await _reportRepository.UpdateAsync(entity);
         }
 
+
+        public virtual async Task BatchUpdateStatusAsync(List<int> input,bool status)
+        {
+            foreach (var report in _reportRepository.GetAll().Where(r=> input.Contains(r.Id)).ToList())
+            {
+                report.IsShow = status;
+                await _reportRepository.UpdateAsync(report);
+            }
+        }
+
         /// <summary>
         /// 删除检测报告
         /// </summary>
