@@ -30,7 +30,7 @@ var UIBootstrapGrowl = function() {
                 type: showType, // (null, 'info', 'danger', 'success', 'warning')
                 offset: {
                     from: 'top',
-                    amount: 10
+                    amount: 100
                 }, // 'top', or 'bottom'
                 align: 'center', // ('left', 'right', or 'center')
                 width: 'auto', // (integer, or 'auto')

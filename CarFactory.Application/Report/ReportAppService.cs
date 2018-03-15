@@ -128,13 +128,13 @@ namespace CarFactory.Application.Report
         }
 
 
-        
+
         /// <summary>
         /// 新增或更改检测报告
         /// </summary>
         public async Task CreateOrUpdateReportAsync(CreateOrUpdateReportInput input)
         {
-            if (input.ReportEditDto.Id.HasValue)
+            if (input.ReportEditDto.Id.HasValue && input.ReportEditDto.Id > 0)
             {
                 await UpdateReportAsync(input.ReportEditDto);
             }
@@ -147,7 +147,7 @@ namespace CarFactory.Application.Report
         /// <summary>
         /// 新增检测报告
         /// </summary>
-        [AbpAuthorize(ReportAppPermissions.Report_CreateReport)]
+        //[AbpAuthorize(ReportAppPermissions.Report_CreateReport)]
         public virtual async Task<ReportEditDto> CreateReportAsync(ReportEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
@@ -161,7 +161,7 @@ namespace CarFactory.Application.Report
         /// <summary>
         /// 编辑检测报告
         /// </summary>
-        [AbpAuthorize(ReportAppPermissions.Report_EditReport)]
+        //[AbpAuthorize(ReportAppPermissions.Report_EditReport)]
         public virtual async Task UpdateReportAsync(ReportEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新

@@ -35,6 +35,7 @@
                 <form class="form-horizontal form-bordered" name="reportForm" id="addReportsForm" method="post">
                     @*                    <input type="hidden" name="modelId" id="modelId" value="{{$model!=null?$model->id:0}}">*@
                     @Html.HiddenFor(r => r.Id,new {id="modelId"})
+                    @Html.HiddenFor(r=>r.IsShow)
                     <div class="form-body">
                         <div class="form-group ">
                             <label class="control-label col-md-2">
@@ -68,11 +69,11 @@
                             </label>
                             <div class="col-md-10">
                                 @*                                @if ($model != null &&$model->img != "")*@
-                                @if (Model != null && string.IsNullOrEmpty(Model.Img))
+                                @if (Model != null && !string.IsNullOrEmpty(Model.Img))
                                 {
                                     <div class="fileinput fileinput-exists" data-provides="fileinput">
                                         <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 1000px; height: 750px;">
-                                            <img src="@Model.Img">
+                                            <img id="oldImg" src="@Model.Img">
                                         </div>
                                         <div>
                                             <span class="btn red btn-outline btn-file">
@@ -133,7 +134,7 @@
     @Scripts.Render("~/assets/global/bootstrapFileinput/scripts", "~/assets/global/select2/scripts", "~/assets/global/bootstrapDatePicker/scripts")
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
-    <script src="/Content/assets/pages/scripts/form-validation.js" type="text/javascript"></script>
+@*    <script src="/Content/assets/pages/scripts/form-validation.js" type="text/javascript"></script>*@
 
     <!-- END PAGE LEVEL SCRIPTS -->
 }
@@ -149,8 +150,7 @@
             $('#btnCancel').click(function () {
                 window.close();
             });
-
-
+        
         })
 
         function initFileInput() {
@@ -166,13 +166,13 @@
                 onkeyup: false,
 
                 rules: {　　　　//规则
-                    name: {
+                    ReportName: {
                         required: true,
                         minlength: 2
                     }
                 },
                 messages: {　　　　//验证错误信息
-                    name: {
+                    ReportName: {
                         required: "请输入报告名称",
                         minlength: "报告名称最小长度为2"
                     }
@@ -185,14 +185,21 @@
                 submitHandler: function (form) { //通过之后回调
                     var formData = new FormData();
                     formData.append('id', $('#modelId').val().trim());
-                    formData.append('name', $.trim($("#name").val().trim()));
+                    formData.append('reportName', $.trim($("#name").val().trim()));
+                    formData.append('isShow', $.trim($("#IsShow").val().trim()));
 
-                    if (document.reportForm.img != null && document.reportForm.img.files.length>0) {
+                    if (document.reportForm.img != null && document.reportForm.img.files != null && document.reportForm.img.files.length>0) {
                         formData.append('image', document.reportForm.img.files[0]);
+                    } else {
+                        if ($("#oldImg").length == 0 || $("#oldImg").attr("src").length == 0) {
+                            UIBootstrapGrowl.show('body', '未选择上传的图片', 'danger');
+                            return;
+                        } else {
+                            formData.append('img', $("#oldImg").attr("src"));
+                        }
                     }
 
 
-                    //var fileV = document.reportForm.img.files[0];
                     //进行ajax传值
                     $.ajax({
                         url: "/admin/reports/save",
@@ -203,13 +210,14 @@
                         data: formData,
                         success: function (msg) {
                             //要执行的代码
-                            if (msg.state == 1) {
+                            if (msg.result.status == true) {
                                 UIBootstrapGrowl.show('body', '保存成功', 'success');
-                                setTimeout("location.reload()", 2000);
-                                window.location.href = "/admin/reportManagement";
+                                setTimeout(function() {
+                                    window.location.href = "/admin/ReportManage";
+                                }, 2000);
                             }
                             else {
-                                UIBootstrapGrowl.show('body', '保存失败，请联系技术人员' + '错误编号：' + msg.state, 'warning');
+                                UIBootstrapGrowl.show('body', '保存失败，请联系技术人员', 'warning');
                             }
                         }
                     });

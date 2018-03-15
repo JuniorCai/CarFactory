@@ -24,18 +24,9 @@ namespace CarFactory.Application.Report.Dtos
 
         public string Img { get; set; }
 
-
-        public string RelativeId { get; set; }
+        public bool IsShow { get; set; }
 
     }
 
-    /// <summary>
-    /// 图片上传状态枚举
-    /// </summary>
-    public enum ImageUploadStatus
-    {
-        WaittingUpload,
-        Success,
-        Failed
-    }
+    
 }

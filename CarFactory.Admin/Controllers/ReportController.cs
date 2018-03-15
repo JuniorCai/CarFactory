@@ -10,6 +10,7 @@ using Abp.Collections.Extensions;
 using Abp.Runtime.Validation;
 using Abp.Web.Models;
 using Abp.Web.Mvc.Authorization;
+using CarFactory.Admin.Helpers;
 using CarFactory.Admin.Models;
 using CarFactory.Admin.Models.Reports;
 using CarFactory.Application.Report;
@@ -34,7 +35,7 @@ namespace CarFactory.Admin.Controllers
         [Route("ReportManage")]
         public ActionResult Index()
         {
-            var userMenu = GetUserMenu(PageNames.ProductCategory).Result;
+            var userMenu = GetUserMenu(PageNames.Reports).Result;
             ViewBag.UserMenu = userMenu;
             return View();
         }
@@ -107,49 +108,104 @@ namespace CarFactory.Admin.Controllers
         {
             ReportListDto info = new ReportListDto();
 
-            if (id == null)
-            {
-
-            }
-            else
+            if (id != null)
             {
                 info = _reportAppService.GetReportByIdAsync(new EntityDto<int>(id.Value)).Result;
             }
 
-            var userMenu = GetUserMenu(PageNames.ProductCategory).Result;
+
+            var userMenu = GetUserMenu(PageNames.Reports).Result;
             ViewBag.UserMenu = userMenu;
 
             return View(info);
         }
 
         [Route("reports/save")]
-        [DisableValidation]
         public JsonResult Save(ReportEditDto detail)
         {
+            bool status = false;
+            string msg = "";
 
-            if (detail.Id != null)
+            if (detail.Id > 0)
             {
-                var oldReport = _reportAppService.GetReportByIdAsync(new EntityDto<int>(detail.Id.Value));
-                if (oldReport != null)
+                try
                 {
-                    var file = Request.Files[0];
+                    var oldReport = _reportAppService.GetReportByIdAsync(new EntityDto<int>(detail.Id.Value));
+                    if (oldReport != null)
+                    {
+                        detail.Img = oldReport.Result.Img;
+
+                        ImgUploadHelpers uploadHelpers = new ImgUploadHelpers(Request.Files, Server.MapPath("/"));
+                        var uploadResult = uploadHelpers.UploadImg();
+                        if (uploadResult.Item1 == ImageUploadStatus.Success)
+                        {
+                            detail.Img = uploadResult.Item2;
+
+                            _reportAppService.CreateOrUpdateReportAsync(
+                                new CreateOrUpdateReportInput {ReportEditDto = detail});
+
+                            status = true;
+                        }
+                        else if (uploadResult.Item1 == ImageUploadStatus.NoFile)
+                        {
+                            _reportAppService.CreateOrUpdateReportAsync(
+                                new CreateOrUpdateReportInput {ReportEditDto = detail});
+
+                            status = true;
+                        }
+                        else
+                        {
+                            status = false;
+                            msg = uploadResult.Item2;
+                        }
+
+                    }
                 }
+                catch (Exception e)
+                {
+                    status = false;
+                    msg = "运行时出错";
+                }
+
             }
-            //https://www.cnblogs.com/csqb-511612371/p/5504659.html
-            //http://blog.csdn.net/rt_1170406609/article/details/51331064
-            //https://www.cnblogs.com/CreateMyself/p/5414200.html
+            else
+            {
+                try
+                {
+                    ImgUploadHelpers uploadHelpers = new ImgUploadHelpers(Request.Files, Server.MapPath("/"));
+                    var uploadResult = uploadHelpers.UploadImg();
+                    if (uploadResult.Item1 == ImageUploadStatus.Success)
+                    {
+                        detail.Img = uploadResult.Item2;
+                        detail.IsShow = true;
+
+                        _reportAppService.CreateOrUpdateReportAsync(
+                            new CreateOrUpdateReportInput { ReportEditDto = detail });
+
+                        status = true;
+                    }
+                    else
+                    {
+                        status = false;
+                        msg = uploadResult.Item2;
+                    }
+                }
+                catch (Exception e)
+                {
+                    status = false;
+                    msg = "运行时出错";
+                }  
+            }
+            return Json(new {status = status, message = msg});
+        }
+
+        [Route("reports/changeStatus")]
+        public JsonResult ChangeStatus(List<int> idList,bool status)
+        {
+
             return Json(new { });
         }
 
-        private Tuple<ImageUploadStatus, string> StoreUploadImg()
-        {
-            ImageUploadStatus status = ImageUploadStatus.WaittingUpload;
-            string imgUrl = "";
-
-
-
-
-            return new Tuple<ImageUploadStatus, string>(status,imgUrl);
-        }
+       
     }
 }
