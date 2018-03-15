@@ -133,7 +133,7 @@ namespace CarFactory.Application.Products
         /// </summary>
         public async Task CreateOrUpdateProductAsync(CreateOrUpdateProductInput input)
         {
-            if (input.ProductEditDto.Id.HasValue)
+            if (input.ProductEditDto.Id.HasValue && input.ProductEditDto.Id > 0)
             {
                 await UpdateProductAsync(input.ProductEditDto);
             }
@@ -173,19 +173,10 @@ namespace CarFactory.Application.Products
 
         public virtual void BatchUpdateStatusAsync(List<int> input, bool status)
         {
-            try
+            foreach (var product in _productRepository.GetAll().Where(r => input.Contains(r.Id)).ToList())
             {
-                foreach (var product in _productRepository.GetAll().Where(r => input.Contains(r.Id)).ToList())
-                {
-                    //product.Detail = "内容测试";
-                    product.IsShow = status;
-                    _productRepository.Update(product);
-                }
-            }
-            catch (DbEntityValidationException e)
-            {
-                
-                throw;
+                product.IsShow = status;
+                _productRepository.Update(product);
             }
         }
 

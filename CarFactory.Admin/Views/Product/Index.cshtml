@@ -1,8 +1,8 @@
 ﻿@using System.Web.Optimization
 
 @{
-    ViewBag.Title = "Index";
-    ViewBag.PageName = "";
+    ViewBag.Title = "产品管理";
+    ViewBag.PageName = "产品管理";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -42,31 +42,31 @@
                         </button>
                     </div>
                 </div>
-                <div class="actions">
-                    <div class="btn-group pull-right">
-                        <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">
-                            导出
-                            <i class="fa fa-angle-down"></i>
-                        </button>
-                        <ul class="dropdown-menu pull-right">
-                            <li>
-                                <a href="javascript:;">
-                                    <i class="fa fa-print"></i> 打印
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <i class="fa fa-file-pdf-o"></i> 导出到PDF
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:;">
-                                    <i class="fa fa-file-excel-o"></i> 导出到Excel
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+@*                <div class="actions">*@
+@*                    <div class="btn-group pull-right">*@
+@*                        <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">*@
+@*                            导出*@
+@*                            <i class="fa fa-angle-down"></i>*@
+@*                        </button>*@
+@*                        <ul class="dropdown-menu pull-right">*@
+@*                            <li>*@
+@*                                <a href="javascript:;">*@
+@*                                    <i class="fa fa-print"></i> 打印*@
+@*                                </a>*@
+@*                            </li>*@
+@*                            <li>*@
+@*                                <a href="javascript:;">*@
+@*                                    <i class="fa fa-file-pdf-o"></i> 导出到PDF*@
+@*                                </a>*@
+@*                            </li>*@
+@*                            <li>*@
+@*                                <a href="javascript:;">*@
+@*                                    <i class="fa fa-file-excel-o"></i> 导出到Excel*@
+@*                                </a>*@
+@*                            </li>*@
+@*                        </ul>*@
+@*                    </div>*@
+@*                </div>*@
             </div>
             <div class="portlet-body">
                 <div class="table-container">
@@ -166,7 +166,7 @@
     <script type="text/javascript">
         $(function(){
             $('#addNew').click(function(){
-                window.open('');
+                window.open('/admin/products/detail');
             });
         })
     </script>

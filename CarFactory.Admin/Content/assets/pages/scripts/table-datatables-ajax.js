@@ -50,7 +50,7 @@ var TableDatatablesAjax = function () {
                     { data:"ViewDetailUrlTag"}
                 ],
                 "order": [
-                    [1, "asc"]
+                    [2, "desc"]
                 ],// set first column as a default sort by asc,
 
                 "language": {

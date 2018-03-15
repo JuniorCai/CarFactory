@@ -24,7 +24,7 @@ namespace CarFactory.EntityFramework.EntityMapper.Products
             Property(a => a.Img).HasMaxLength(100);
             // 产品链接
             Property(a => a.Url).HasMaxLength(50);
-            Property(a => a.Detail).HasMaxLength(4000);
+            Property(a => a.Detail).HasMaxLength(20000);
             // 产品类别 - 关系映射
             HasRequired(a => a.ProductCategory).WithMany().HasForeignKey(c => c.CategoryId);
             

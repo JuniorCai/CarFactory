@@ -5,14 +5,16 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
+using Abp.Application.Services.Dto;
 using Abp.Domain.Uow;
 using Abp.Runtime.Validation;
 using Abp.Web.Models;
+using CarFactory.Admin.Helpers;
 using CarFactory.Admin.Models;
 using CarFactory.Admin.Models.Reports;
+using CarFactory.Application.Category;
 using CarFactory.Application.Products;
 using CarFactory.Application.Products.Dtos;
-using CarFactory.Application.Report.Dtos;
 using CarFactory.Core;
 using X.PagedList;
 
@@ -24,9 +26,11 @@ namespace CarFactory.Admin.Controllers
         private readonly IUserNavigationManager _userNavigationManager;
 
         private readonly IProductAppService _productAppService;
+        private readonly ICategoryAppService _categoryAppService;
 
-        public ProductController(IProductAppService productAppService,IUserNavigationManager userNavigationManager) : base(userNavigationManager)
+        public ProductController(ICategoryAppService categoryAppService,IProductAppService productAppService,IUserNavigationManager userNavigationManager) : base(userNavigationManager)
         {
+            _categoryAppService = categoryAppService;
             _productAppService = productAppService;
             _userNavigationManager = userNavigationManager;
         }
@@ -59,7 +63,7 @@ namespace CarFactory.Admin.Controllers
                     return Json(new { actionType = searchInput.ActionType, customActionStatus = true, customActionMsg = "" });
 
                 }
-                catch (DbEntityValidationException e)
+                catch (Exception e)
                 {
                     return Json(new { actionType = searchInput.ActionType, customActionStatus = false, customActionMsg = "无效参数" });
                 }
@@ -120,6 +124,106 @@ namespace CarFactory.Admin.Controllers
                 list.Add(viewModel);
             }
             return list;
+        }
+
+
+        [Route("products/detail/{id?}")]
+        public ActionResult Detail(int? id)
+        {
+            ProductListDto info = new ProductListDto();
+
+            if (id != null)
+            {
+                info = _productAppService.GetProductByIdAsync(new EntityDto<int>(id.Value)).Result;
+            }
+
+            var categoryList = _categoryAppService.GetCategorysOnShowAsync();
+            ViewBag.CategoryList = categoryList.Result;
+
+            var userMenu = GetUserMenu(PageNames.Products).Result;
+            ViewBag.UserMenu = userMenu;
+
+            return View(info);
+        }
+
+        [Route("products/save")]
+        [HttpPost]
+        public JsonResult Save(ProductEditDto editModel)
+        {
+            bool status = false;
+            string msg = "";
+
+            if (editModel.Id > 0)
+            {
+                try
+                {
+                    var oldReport = _productAppService.GetProductByIdAsync(new EntityDto<int>(editModel.Id.Value));
+                    if (oldReport != null)
+                    {
+                        editModel.Img = oldReport.Result.Img;
+
+                        ImgUploadHelpers uploadHelpers = new ImgUploadHelpers(Request.Files, Server.MapPath("/"));
+                        var uploadResult = uploadHelpers.UploadImg();
+                        if (uploadResult.Item1 == ImageUploadStatus.Success)
+                        {
+                            editModel.Img = uploadResult.Item2;
+
+                            _productAppService.CreateOrUpdateProductAsync(
+                                new CreateOrUpdateProductInput() { ProductEditDto = editModel });
+
+                            status = true;
+                        }
+                        else if (uploadResult.Item1 == ImageUploadStatus.NoFile)
+                        {
+                            _productAppService.CreateOrUpdateProductAsync(
+                                new CreateOrUpdateProductInput() { ProductEditDto = editModel });
+
+                            status = true;
+                        }
+                        else
+                        {
+                            status = false;
+                            msg = uploadResult.Item2;
+                        }
+
+                    }
+                }
+                catch (Exception e)
+                {
+                    status = false;
+                    msg = "运行时出错";
+                }
+
+            }
+            else
+            {
+                try
+                {
+                    ImgUploadHelpers uploadHelpers = new ImgUploadHelpers(Request.Files, Server.MapPath("/"));
+                    var uploadResult = uploadHelpers.UploadImg();
+                    if (uploadResult.Item1 == ImageUploadStatus.Success)
+                    {
+                        editModel.Img = uploadResult.Item2;
+                        editModel.IsShow = true;
+
+                        _productAppService.CreateOrUpdateProductAsync(
+                            new CreateOrUpdateProductInput() { ProductEditDto = editModel });
+
+                        status = true;
+                    }
+                    else
+                    {
+                        status = false;
+                        msg = uploadResult.Item2;
+                    }
+                }
+                catch (Exception e)
+                {
+                    status = false;
+                    msg = "运行时出错";
+                }
+            }
+            return Json(new { status = status, message = msg });
         }
     }
 }

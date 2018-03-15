@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Text;
 using Abp.AutoMapper;
 using CarFactory.Core.CustomDomain.Products;
 
@@ -29,7 +30,6 @@ namespace CarFactory.Application.Products.Dtos
         /// 产品图片
         /// </summary>
         [DisplayName("产品图片")]
-        [Required]
         public string Img { get; set; }
 
         /// <summary>
@@ -53,7 +53,6 @@ namespace CarFactory.Application.Products.Dtos
         public bool IsShow { get; set; }
 
         [DisplayName("产品详情")]
-        [Required]
         public string Detail { get; set; }
 
     }

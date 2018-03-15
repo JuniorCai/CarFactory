@@ -88,6 +88,12 @@ namespace CarFactory.Admin
                 "~/Content/assets/global/plugins/bootstrap-modal/css/bootstrap-modal.css"
             ));
 
+            bundles.Add(new StyleBundle("~/assets/global/bootstrapSummernote/css").Include(
+                "~/Content/assets/global/plugins/bootstrap-summernote/summernote.css"));
+
+            bundles.Add(new ScriptBundle("~/assets/global/bootstrapSummernote/scripts").Include(
+                "~/Content/assets/global/plugins/bootstrap-summernote/summernote.min.js"));
+
             bundles.Add(new ScriptBundle("~/assets/global/datatables/scripts").Include(
                 "~/Content/assets/global/scripts/datatable.js",
                 "~/Content/assets/global/plugins/datatables/jquery.dataTables.js",
