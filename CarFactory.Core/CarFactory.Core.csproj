@@ -173,31 +173,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\CarFactoryAdminNavigationProvider.cs" />
-    <Compile Include="CustomDomain\Company\Authorization\CompanyAppAuthorizationProvider.cs" />
     <Compile Include="CustomDomain\Company\Authorization\CompanyAppPermissions.cs" />
     <Compile Include="CustomDomain\Company\Company.cs" />
     <Compile Include="CustomDomain\Company\CompanyManage.cs" />
-    <Compile Include="CustomDomain\Company\____CompanyReadme.cs" />
     <Compile Include="CustomDomain\Information\Information.cs" />
-    <Compile Include="CustomDomain\Category\Authorization\CategoryAppAuthorizationProvider.cs" />
     <Compile Include="CustomDomain\Category\Authorization\CategoryAppPermissions.cs" />
     <Compile Include="CustomDomain\Category\Category.cs" />
     <Compile Include="CustomDomain\Category\CategoryManage.cs" />
-    <Compile Include="CustomDomain\Products\Authorization\ProductAppAuthorizationProvider.cs" />
     <Compile Include="CustomDomain\Products\Authorization\ProductAppPermissions.cs" />
     <Compile Include="CustomDomain\Products\Product.cs" />
-    <Compile Include="CustomDomain\Category\____CategoryReadme.cs" />
     <Compile Include="CustomDomain\Products\ProductManage.cs" />
-    <Compile Include="CustomDomain\Products\____ProductReadme.cs" />
-    <Compile Include="CustomDomain\Report\Authorization\ReportAppAuthorizationProvider.cs" />
     <Compile Include="CustomDomain\Report\Authorization\ReportAppPermissions.cs" />
     <Compile Include="CustomDomain\Report\Report.cs" />
     <Compile Include="CustomDomain\Report\ReportManage.cs" />
-    <Compile Include="CustomDomain\Report\____ReportReadme.cs" />
     <Compile Include="Messages\Message.cs" />
     <Compile Include="CarFactoryCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />
-    <Compile Include="Authorization\CarFactoryAuthorizationProvider.cs" />
+    <Compile Include="CarFactoryAuthorizationProvider.cs" />
     <Compile Include="Authorization\LoginManager.cs" />
     <Compile Include="Authorization\PermissionChecker.cs" />
     <Compile Include="Authorization\PermissionNames.cs" />

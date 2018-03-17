@@ -11,12 +11,13 @@ using CarFactory.Application.Company.Dtos;
 using CarFactory.Core.CustomDomain.Company;
 using CarFactory.Core.CustomDomain.Company.Authorization;
 
+
 namespace CarFactory.Application.Company
 {
     /// <summary>
     /// 公司信息服务实现
     /// </summary>
-    //[AbpAuthorize(CompanyAppPermissions.Company)]
+    //
     public class CompanyAppService : CarFactoryAppServiceBase, ICompanyAppService
     {
         private readonly IRepository<Core.CustomDomain.Company.Company, int> _companyRepository;
@@ -119,7 +120,7 @@ namespace CarFactory.Application.Company
         /// <summary>
         /// 新增公司信息
         /// </summary>
-        [AbpAuthorize(CompanyAppPermissions.Company_CreateCompany)]
+        [AbpAuthorize(CompanyAppPermissions.Company)]
         public virtual async Task<CompanyEditDto> CreateCompanyAsync(CompanyEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
@@ -133,7 +134,7 @@ namespace CarFactory.Application.Company
         /// <summary>
         /// 编辑公司信息
         /// </summary>
-        [AbpAuthorize(CompanyAppPermissions.Company_EditCompany)]
+        [AbpAuthorize(CompanyAppPermissions.Company)]
         public virtual async Task UpdateCompanyAsync(CompanyEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
@@ -147,7 +148,7 @@ namespace CarFactory.Application.Company
         /// <summary>
         /// 删除公司信息
         /// </summary>
-        [AbpAuthorize(CompanyAppPermissions.Company_DeleteCompany)]
+        [AbpAuthorize(CompanyAppPermissions.Company)]
         public async Task DeleteCompanyAsync(EntityDto<int> input)
         {
             //TODO:删除前的逻辑判断，是否允许删除
@@ -157,7 +158,7 @@ namespace CarFactory.Application.Company
         /// <summary>
         /// 批量删除公司信息
         /// </summary>
-        [AbpAuthorize(CompanyAppPermissions.Company_DeleteCompany)]
+        [AbpAuthorize(CompanyAppPermissions.Company)]
         public async Task BatchDeleteCompanyAsync(List<int> input)
         {
             //TODO:批量删除前的逻辑判断，是否允许删除

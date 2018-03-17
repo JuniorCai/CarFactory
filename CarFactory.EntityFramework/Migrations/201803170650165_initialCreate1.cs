@@ -7,12 +7,12 @@ namespace CarFactory.EntityFramework.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Report", "IsShow", c => c.Boolean(nullable: false));
+            AddColumn("dbo.AbpRoles", "IsActive", c => c.Boolean(nullable: false));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Report", "IsShow");
+            DropColumn("dbo.AbpRoles", "IsActive");
         }
     }
 }

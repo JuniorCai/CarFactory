@@ -74,6 +74,14 @@ namespace CarFactory.Admin
                 "~/Content/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css"
             ));
 
+            bundles.Add(new StyleBundle("~/assets/global/bootstrapSelect/css").Include(
+                "~/Content/assets/global/plugins/bootstrap-select/css/bootstrap-select.min.css"
+            ));
+
+            bundles.Add(new StyleBundle("~/assets/global/jqueryMultiSelect/css").Include(
+                "~/Content/assets/global/plugins/jquery-multi-select/css/multi-select.css"
+            ));
+
             bundles.Add(new StyleBundle("~/assets/global/select2/css").Include(
                 "~/Content/assets/global/plugins/select2/css/select2.min.css",
                 "~/Content/assets/global/plugins/select2/css/select2-bootstrap.min.css"
@@ -113,7 +121,13 @@ namespace CarFactory.Admin
                 "~/Content/assets/global/plugins/bootstrap-modal/js/bootstrap-modal.js"));
 
             bundles.Add(new ScriptBundle("~/assets/global/bootstrapConfirmation/scripts").Include(
-                "~/Content/assets/global/plugins/bootstrap-confirmation/bootstrap-confirmation.min.js"));
+                "~/Content/assets/global/plugins/bootstrap-confirmation/bootstrap-confirmation.js"));
+
+            bundles.Add(new ScriptBundle("~/assets/global/jqueryMultiSelect/scripts").Include(
+                "~/Content/assets/global/plugins/jquery-multi-select/js/jquery.multi-select.js"));
+
+            bundles.Add(new ScriptBundle("~/assets/global/bootstrapSelect/scripts").Include(
+                "~/Content/assets/global/plugins/bootstrap-select/js/bootstrap-select.min.js"));
             //ProductCategory-Index End
 
 

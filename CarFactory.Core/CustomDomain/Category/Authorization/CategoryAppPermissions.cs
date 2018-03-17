@@ -12,22 +12,22 @@ namespace CarFactory.Core.CustomDomain.Category.Authorization
         /// <summary>
         /// 产品类别管理权限
         /// </summary>
-        public const string Category = "Pages.Category";
+        public const string Category = "Admin.Category";
 
         /// <summary>
         /// 产品类别创建权限
         /// </summary>
-        public const string Category_CreateCategory = "Pages.Category.CreateCategory";
+        public const string Category_CreateCategory = "Admin.Category.CreateCategory";
 
         /// <summary>
         /// 产品类别修改权限
         /// </summary>
-        public const string Category_EditCategory = "Pages.Category.EditCategory";
+        public const string Category_EditCategory = "Admin.Category.EditCategory";
 
         /// <summary>
         /// 产品类别删除权限
         /// </summary>
-        public const string Category_DeleteCategory = "Pages.Category.DeleteCategory";
+        public const string Category_DeleteCategory = "Admin.Category.DeleteCategory";
     }
 
 }

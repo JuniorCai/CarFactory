@@ -257,7 +257,7 @@
     <Compile Include="Report\IReportAppService.cs" />
     <Compile Include="Report\Mappers\ReportDtoMapper.cs" />
     <Compile Include="Report\ReportAppService.cs" />
-    <Compile Include="Roles\Dto\CreateRoleDto.cs" />
+    <Compile Include="Roles\Dto\EditRoleDto.cs" />
     <Compile Include="Roles\Dto\PermissionDto.cs" />
     <Compile Include="Roles\Dto\RoleDto.cs" />
     <Compile Include="Roles\IRoleAppService.cs" />
@@ -275,7 +275,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

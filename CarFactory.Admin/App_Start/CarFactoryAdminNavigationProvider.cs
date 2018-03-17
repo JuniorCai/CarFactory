@@ -1,6 +1,10 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
 using CarFactory.Core;
+using CarFactory.Core.Authorization;
+using CarFactory.Core.CustomDomain.Category.Authorization;
+using CarFactory.Core.CustomDomain.Products.Authorization;
+using CarFactory.Core.CustomDomain.Report.Authorization;
 
 namespace CarFactory.Admin
 {
@@ -38,24 +42,44 @@ namespace CarFactory.Admin
                 PageNames.Products,
                 L(PageNames.Products),
                 url: "/admin/ProductManage",
-                icon: "icon-grid"//,
-                //requiredPermissionName: ProductAppPermissions.Product
+                icon: "icon-grid",
+                requiredPermissionName: ProductAppPermissions.Product
             );
 
             var productCategory = new MenuItemDefinition(
                 PageNames.ProductCategory,
                 L(PageNames.ProductCategory),
                 url: "/admin/CategoryManage",
-                icon: "icon-grid");
+                icon: "icon-grid",
+                requiredPermissionName: CategoryAppPermissions.Category
+            );
 
             var report = new MenuItemDefinition(
                 PageNames.Reports,
                 L(PageNames.Reports),
                 url: "/admin/ReportManage",
-                icon: "icon-grid");
+                icon: "icon-grid",
+                requiredPermissionName: ReportAppPermissions.Report
+                );
+
+            var role = new MenuItemDefinition(
+                    PageNames.Roles,
+                    L(PageNames.Roles),
+                    url: "/admin/RoleManage",
+                    icon: "icon-grid",
+                    requiredPermissionName: PermissionNames.Pages_Roles
+                    );
+
+            var user = new MenuItemDefinition(
+                PageNames.Users,
+                L(PageNames.Users),
+                url: "/admin/UserManage",
+                icon: "icon-grid",
+            requiredPermissionName: PermissionNames.Pages_Users);
 
 
             contentManageMenu.AddItem(product).AddItem(productCategory).AddItem(report);
+            settingsManageMenu.AddItem(role).AddItem(user);
 
             context.Manager.MainMenu.AddItem(homeMenu).AddItem(contentManageMenu).AddItem(settingsManageMenu);
 

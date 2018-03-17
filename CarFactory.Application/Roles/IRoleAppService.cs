@@ -5,7 +5,7 @@ using CarFactory.Application.Roles.Dto;
 
 namespace CarFactory.Application.Roles
 {
-    public interface IRoleAppService : IAsyncCrudAppService<RoleDto, int, PagedResultRequestDto, CreateRoleDto, RoleDto>
+    public interface IRoleAppService : IAsyncCrudAppService<RoleDto, int, PagedResultRequestDto, EditRoleDto, EditRoleDto>
     {
         Task<ListResultDto<PermissionDto>> GetAllPermissions();
     }

@@ -16,7 +16,6 @@ namespace CarFactory.Application.Category
     /// <summary>
     /// 产品类别服务实现
     /// </summary>
-    //[AbpAuthorize(CategoryAppPermissions.Category)]
     public class CategoryAppService : CarFactoryAppServiceBase, ICategoryAppService
     {
         private readonly IRepository<Core.CustomDomain.Category.Category, int> _categoryRepository;
@@ -116,11 +115,7 @@ namespace CarFactory.Application.Category
             return entity.MapTo<CategoryListDto>();
         }
 
-
-
-
-
-
+        
 
         /// <summary>
         /// 新增或更改产品类别
@@ -140,7 +135,7 @@ namespace CarFactory.Application.Category
         /// <summary>
         /// 新增产品类别
         /// </summary>
-        //[AbpAuthorize(CategoryAppPermissions.Category_CreateCategory)]
+        [AbpAuthorize(CategoryAppPermissions.Category)]
         public virtual async Task<CategoryEditDto> CreateCategoryAsync(CategoryEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
@@ -154,7 +149,7 @@ namespace CarFactory.Application.Category
         /// <summary>
         /// 编辑产品类别
         /// </summary>
-        //[AbpAuthorize(CategoryAppPermissions.Category_EditCategory)]
+        [AbpAuthorize(CategoryAppPermissions.Category)]
         public virtual async Task UpdateCategoryAsync(CategoryEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
@@ -168,7 +163,7 @@ namespace CarFactory.Application.Category
         /// <summary>
         /// 删除产品类别
         /// </summary>
-        //[AbpAuthorize(CategoryAppPermissions.Category_DeleteCategory)]
+        [AbpAuthorize(CategoryAppPermissions.Category)]
         public async Task DeleteCategoryAsync(EntityDto<int> input)
         {
             //TODO:删除前的逻辑判断，是否允许删除
@@ -179,7 +174,7 @@ namespace CarFactory.Application.Category
         /// <summary>
         /// 批量删除产品类别
         /// </summary>
-        //[AbpAuthorize(CategoryAppPermissions.Category_DeleteCategory)]
+        [AbpAuthorize(CategoryAppPermissions.Category)]
         public async Task BatchDeleteCategoryAsync(List<int> input)
         {
             //TODO:批量删除前的逻辑判断，是否允许删除

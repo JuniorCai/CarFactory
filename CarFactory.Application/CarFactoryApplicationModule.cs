@@ -29,7 +29,7 @@ namespace CarFactory.Application
                 cfg.CreateMap<Permission, string>().ConvertUsing(r => r.Name);
                 cfg.CreateMap<RolePermissionSetting, string>().ConvertUsing(r => r.Name);
 
-                cfg.CreateMap<CreateRoleDto, Role>().ForMember(x => x.Permissions, opt => opt.Ignore());
+                cfg.CreateMap<EditRoleDto, Role>().ForMember(x => x.Permissions, opt => opt.Ignore());
                 cfg.CreateMap<RoleDto, Role>().ForMember(x => x.Permissions, opt => opt.Ignore());
                 
                 cfg.CreateMap<UserDto, User>();

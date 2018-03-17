@@ -16,12 +16,13 @@ using CarFactory.Admin.Models.Reports;
 using CarFactory.Application.Report;
 using CarFactory.Application.Report.Dtos;
 using CarFactory.Core;
+using CarFactory.Core.CustomDomain.Report.Authorization;
 using X.PagedList;
 
 namespace CarFactory.Admin.Controllers
 {
     [RoutePrefix("admin")]
-    [AbpMvcAuthorize()]
+    [AbpMvcAuthorize(ReportAppPermissions.Report)]
     public class ReportController : CarFactoryControllerBase
     {
         private readonly IReportAppService _reportAppService;

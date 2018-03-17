@@ -50,7 +50,7 @@
     <text name="RegisterFormUserNameInvalidMessage">请不要在用户名中输入邮箱地址.</text>
 
     <text name="DatabaseConnectionString" value="数据库连接串" />
-    <text name="Users" value="用户" />
+    <text name="Users" value="用户管理" />
     <text name="IsActive" value="是否激活" />
     <text name="FullName" value="姓名" />
     <text name="CreateNewUser" value="创建新用户" />
@@ -63,6 +63,21 @@
     <text name="ProductManage" value="产品管理" />
     <text name="Roles" value="角色管理" />
 
+
+    <!-- 产品信息管理 -->
+    <text name="Product" value="产品管理" />
+    <text name="ProductHeaderInfo" value="产品信息管理列表" />
+    <text name="CreateProduct" value="新增产品信息" />
+    <text name="EditProduct" value="编辑产品信息" />
+    <text name="DeleteProduct" value="删除产品信息" />
+    <text name="ProductDeleteWarningMessage" value="产品信息名称: {0} 将被删除,是否确定删除它。" />
+    <!--//用于表格展示的数据信息的标题-->
+    <text name="Title" value="产品名称" />
+    <text name="Img" value="产品图片" />
+    <text name="Url" value="产品链接" />
+    <text name="CategoryId" value="产品类别ID" />
+    <!-- 产品信息管理 End-->
+
     <!-- 产品类别管理 -->
     <text name="MustBe_Required" value="不能为空" />
     <text name="ProductCategory" value="产品类别管理" />
@@ -74,9 +89,9 @@
     <text name="CategoryDeleteWarningMessage" value="产品类别名称: {0} 将被删除,是否确定删除它。" />
     <!--//用于表格展示的数据信息的标题-->
     <text name="CategoryName" value="Name" />
-    <text name="ShortName" value="ShortName" />
-    <text name="IsShow" value="IsActive" />
-    <text name="Sort" value="Sort" />
+    <text name="ShortName" value="简称" />
+    <text name="IsShow" value="是否可见" />
+    <text name="Sort" value="排序" />
     <text name="Products" value="Products" />
     <text name="LastModificationTime" value="最后编辑时间" />
     <text name="CreationTime" value="创建时间" />
@@ -112,9 +127,15 @@
     <text name="ReportDeleteWarningMessage" value="检测报告名称: {0} 将被删除,是否确定删除它。" />
     <!--//用于表格展示的数据信息的标题-->
     <text name="ReportName" value="ReportName" />
-    <text name="Img" value="Img" />
     <text name="RelativeId" value="RelativeId" />
 
     <!-- 检测报告管理 End -->
+
+
+    <!-- 后台管理权限 -->
+    <text name="Administration" value="后台管理员" />
+
+    <!-- 后台管理权限 End -->
+    
   </texts>
 </localizationDictionary>

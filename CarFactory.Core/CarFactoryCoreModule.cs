@@ -8,6 +8,7 @@ using CarFactory.Core.Authorization;
 using CarFactory.Core.Authorization.Roles;
 using CarFactory.Core.Authorization.Users;
 using CarFactory.Core.Configuration;
+using CarFactory.Core.CustomDomain.Category.Authorization;
 using CarFactory.Core.MultiTenancy;
 
 namespace CarFactory.Core
@@ -42,6 +43,7 @@ namespace CarFactory.Core
 
 
             Configuration.Authorization.Providers.Add<CarFactoryAuthorizationProvider>();
+
 
             Configuration.Settings.Providers.Add<AppSettingProvider>();
         }

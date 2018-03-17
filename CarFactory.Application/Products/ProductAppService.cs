@@ -21,7 +21,6 @@ namespace CarFactory.Application.Products
     /// <summary>
     /// 产品信息服务实现
     /// </summary>
-    //[AbpAuthorize(ProductAppPermissions.Product)]
     public class ProductAppService : CarFactoryAppServiceBase, IProductAppService
     {
         private readonly IRepository<Product, int> _productRepository;
@@ -146,7 +145,7 @@ namespace CarFactory.Application.Products
         /// <summary>
         /// 新增产品信息
         /// </summary>
-        //[AbpAuthorize(ProductAppPermissions.Product_CreateProduct)]
+        [AbpAuthorize(ProductAppPermissions.Product)]
         public virtual async Task<ProductEditDto> CreateProductAsync(ProductEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
@@ -160,7 +159,7 @@ namespace CarFactory.Application.Products
         /// <summary>
         /// 编辑产品信息
         /// </summary>
-        //[AbpAuthorize(ProductAppPermissions.Product_EditProduct)]
+        [AbpAuthorize(ProductAppPermissions.Product)]
         public virtual async Task UpdateProductAsync(ProductEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
@@ -170,6 +169,8 @@ namespace CarFactory.Application.Products
 
             await _productRepository.UpdateAsync(entity);
         }
+
+        [AbpAuthorize(ProductAppPermissions.Product)]
 
         public virtual void BatchUpdateStatusAsync(List<int> input, bool status)
         {
@@ -183,7 +184,7 @@ namespace CarFactory.Application.Products
         /// <summary>
         /// 删除产品信息
         /// </summary>
-        //[AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
+        [AbpAuthorize(ProductAppPermissions.Product)]
         public async Task DeleteProductAsync(EntityDto<int> input)
         {
             //TODO:删除前的逻辑判断，是否允许删除
@@ -193,7 +194,7 @@ namespace CarFactory.Application.Products
         /// <summary>
         /// 批量删除产品信息
         /// </summary>
-        //[AbpAuthorize(ProductAppPermissions.Product_DeleteProduct)]
+        [AbpAuthorize(ProductAppPermissions.Product)]
         public async Task BatchDeleteProductAsync(List<int> input)
         {
             //TODO:批量删除前的逻辑判断，是否允许删除

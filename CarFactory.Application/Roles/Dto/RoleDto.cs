@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
 using Abp.Authorization.Roles;
@@ -22,6 +23,10 @@ namespace CarFactory.Application.Roles.Dto
         public string Description { get; set; }
 
         public bool IsStatic { get; set; }
+
+        public bool IsActive { get; set; }
+
+        public DateTime CreationTime { get; set; }
 
         public List<string> Permissions { get; set; }
     }

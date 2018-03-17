@@ -3,9 +3,11 @@ using Abp.Authorization;
 using Abp.Authorization.Roles;
 using Abp.Authorization.Users;
 using Abp.MultiTenancy;
+using CarFactory.Core;
 using CarFactory.Core.Authorization;
 using CarFactory.Core.Authorization.Roles;
 using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.CustomDomain.Category.Authorization;
 using CarFactory.EntityFramework.EntityFramework;
 
 namespace CarFactory.EntityFramework.Migrations.SeedData
@@ -41,6 +43,7 @@ namespace CarFactory.EntityFramework.Migrations.SeedData
                     .GetAllPermissions(new CarFactoryAuthorizationProvider())
                     .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Tenant))
                     .ToList();
+
 
                 foreach (var permission in permissions)
                 {

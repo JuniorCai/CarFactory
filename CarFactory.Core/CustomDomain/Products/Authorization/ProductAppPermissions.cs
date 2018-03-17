@@ -13,22 +13,22 @@ namespace CarFactory.Core.CustomDomain.Products.Authorization
         /// <summary>
         /// 产品信息管理权限
         /// </summary>
-        public const string Product = "Pages.Product";
+        public const string Product = "Admin.Product";
 
 	 
 
 		/// <summary>
         /// 产品信息创建权限
         /// </summary>
-        public const string Product_CreateProduct = "Pages.Product.CreateProduct";
+        public const string Product_CreateProduct = "Admin.Product.CreateProduct";
 		/// <summary>
         /// 产品信息修改权限
         /// </summary>
-        public const string Product_EditProduct = "Pages.Product.EditProduct";
+        public const string Product_EditProduct = "Admin.Product.EditProduct";
 		/// <summary>
         /// 产品信息删除权限
         /// </summary>
-        public const string Product_DeleteProduct = "Pages.Product.DeleteProduct";
+        public const string Product_DeleteProduct = "Admin.Product.DeleteProduct";
     }
 	
 }

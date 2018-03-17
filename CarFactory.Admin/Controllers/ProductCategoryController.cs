@@ -6,18 +6,21 @@ using System.Web;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
 using Abp.Application.Services.Dto;
+using Abp.Authorization;
 using Abp.Runtime.Validation;
 using Abp.Web.Models;
 using Abp.Web.Mvc.Authorization;
 using CarFactory.Application.Category;
 using CarFactory.Application.Category.Dtos;
 using CarFactory.Core;
+using CarFactory.Core.Authorization;
+using CarFactory.Core.CustomDomain.Category.Authorization;
 using X.PagedList;
 
 namespace CarFactory.Admin.Controllers
 {
     [RoutePrefix("admin")]
-    [AbpMvcAuthorize()]
+    [AbpMvcAuthorize(CategoryAppPermissions.Category)]
     public class ProductCategoryController : CarFactoryControllerBase
     {
 

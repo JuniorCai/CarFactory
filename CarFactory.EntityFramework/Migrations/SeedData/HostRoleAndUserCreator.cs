@@ -3,9 +3,11 @@ using Abp.Authorization;
 using Abp.Authorization.Roles;
 using Abp.Authorization.Users;
 using Abp.MultiTenancy;
+using CarFactory.Core;
 using CarFactory.Core.Authorization;
 using CarFactory.Core.Authorization.Roles;
 using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.CustomDomain.Category.Authorization;
 using CarFactory.EntityFramework.EntityFramework;
 using Microsoft.AspNet.Identity;
 

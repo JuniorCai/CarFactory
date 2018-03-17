@@ -907,7 +907,6 @@
     <Content Include="Content\assets\pages\scripts\components-editors.js" />
     <Content Include="Content\assets\pages\scripts\components-editors.min.js" />
     <Content Include="Content\assets\pages\scripts\components-multi-select.js" />
-    <Content Include="Content\assets\pages\scripts\components-multi-select.min.js" />
     <Content Include="Content\assets\pages\scripts\form-validation.js" />
     <Content Include="Content\assets\pages\scripts\form-validation.min.js" />
     <Content Include="Content\assets\pages\scripts\login.js" />
@@ -3111,7 +3110,6 @@
     <Content Include="Scripts\toastr.min.js" />
     <Content Include="Views\Account\Login.js" />
     <Content Include="Views\Account\Register.js" />
-    <Content Include="Views\Admin\Index.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -3175,6 +3173,7 @@
     <Content Include="Views\Report\Index.cshtml" />
     <Content Include="Views\Report\Detail.cshtml" />
     <Content Include="Views\Product\Detail.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

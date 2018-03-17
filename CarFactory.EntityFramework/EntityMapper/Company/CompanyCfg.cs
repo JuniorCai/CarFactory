@@ -20,17 +20,17 @@ namespace CarFactory.EntityFramework.EntityMapper.Company
             // CompanyName
             Property(a => a.CompanyName).HasMaxLength(4000);
             // Phone
-            Property(a => a.Phone).HasMaxLength(4000);
+            Property(a => a.Phone).HasMaxLength(20);
             // Tel
-            Property(a => a.Tel).HasMaxLength(4000);
+            Property(a => a.Tel).HasMaxLength(20);
             // Email
-            Property(a => a.Email).HasMaxLength(4000);
+            Property(a => a.Email).HasMaxLength(50);
             // Address
-            Property(a => a.Address).HasMaxLength(4000);
+            Property(a => a.Address).HasMaxLength(100);
             // Longitude
-            Property(a => a.Longitude).HasMaxLength(4000);
+            Property(a => a.Longitude).HasMaxLength(100);
             // Latitude
-            Property(a => a.Latitude).HasMaxLength(4000);
+            Property(a => a.Latitude).HasMaxLength(100);
         }
     }
 }

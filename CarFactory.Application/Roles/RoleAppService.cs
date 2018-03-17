@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Abp.Application.Services;
@@ -17,7 +18,7 @@ using Microsoft.AspNet.Identity;
 namespace CarFactory.Application.Roles
 {
     [AbpAuthorize(PermissionNames.Pages_Roles)]
-    public class RoleAppService : AsyncCrudAppService<Role, RoleDto, int, PagedResultRequestDto, CreateRoleDto, RoleDto>, IRoleAppService
+    public class RoleAppService : AsyncCrudAppService<Role, RoleDto, int, PagedResultRequestDto, EditRoleDto, EditRoleDto>, IRoleAppService
     {
         private readonly RoleManager _roleManager;
         private readonly UserManager _userManager;
@@ -41,25 +42,44 @@ namespace CarFactory.Application.Roles
             _roleRepository = roleRepository;
         }
 
-        public override async Task<RoleDto> Create(CreateRoleDto input)
+        public override async Task<RoleDto> Create(EditRoleDto input)
         {
             CheckCreatePermission();
 
             var role = ObjectMapper.Map<Role>(input);
 
-            CheckErrors(await _roleManager.CreateAsync(role));
+           // CheckErrors(await _roleManager.CreateAsync(role));
+
+            var result = await _roleManager.CheckDuplicateRoleNameAsync(role.Id, role.Name, role.DisplayName);
+            if (!result.Succeeded)
+            {
+                return null;
+            }
+
+            var tenantId = AbpSession.TenantId;
+            if (tenantId.HasValue && !role.TenantId.HasValue)
+            {
+                role.TenantId = tenantId.Value;
+            }
+
+            var newRoleId = _roleRepository.InsertAndGetId(role);
+            if (newRoleId == 0)
+            {
+                throw new Exception("保存角色出错");
+            }
+
 
             var grantedPermissions = PermissionManager
                 .GetAllPermissions()
                 .Where(p => input.Permissions.Contains(p.Name))
                 .ToList();
 
-            await _roleManager.SetGrantedPermissionsAsync(role, grantedPermissions);
+            await _roleManager.SetGrantedPermissionsAsync(newRoleId, grantedPermissions);
 
             return MapToEntityDto(role);
         }
 
-        public override async Task<RoleDto> Update(RoleDto input)
+        public override async Task<RoleDto> Update(EditRoleDto input)
         {
             CheckUpdatePermission();
 

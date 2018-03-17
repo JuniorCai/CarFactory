@@ -9,6 +9,7 @@ using Abp.Application.Services.Dto;
 using Abp.Domain.Uow;
 using Abp.Runtime.Validation;
 using Abp.Web.Models;
+using Abp.Web.Mvc.Authorization;
 using CarFactory.Admin.Helpers;
 using CarFactory.Admin.Models;
 using CarFactory.Admin.Models.Reports;
@@ -16,10 +17,12 @@ using CarFactory.Application.Category;
 using CarFactory.Application.Products;
 using CarFactory.Application.Products.Dtos;
 using CarFactory.Core;
+using CarFactory.Core.CustomDomain.Products.Authorization;
 using X.PagedList;
 
 namespace CarFactory.Admin.Controllers
 {
+    [AbpMvcAuthorize(ProductAppPermissions.Product)]
     [RoutePrefix("admin")]
     public class ProductController : CarFactoryControllerBase
     {

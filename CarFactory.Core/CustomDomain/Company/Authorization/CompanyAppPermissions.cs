@@ -11,22 +11,22 @@
         /// <summary>
         /// 公司信息管理权限
         /// </summary>
-        public const string Company = "Pages.Company";
+        public const string Company = "Admin.Company";
         
         /// <summary>
         /// 公司信息创建权限
         /// </summary>
-        public const string Company_CreateCompany = "Pages.Company.CreateCompany";
+        public const string Company_CreateCompany = "Admin.Company.CreateCompany";
 
         /// <summary>
         /// 公司信息修改权限
         /// </summary>
-        public const string Company_EditCompany = "Pages.Company.EditCompany";
+        public const string Company_EditCompany = "Admin.Company.EditCompany";
 
         /// <summary>
         /// 公司信息删除权限
         /// </summary>
-        public const string Company_DeleteCompany = "Pages.Company.DeleteCompany";
+        public const string Company_DeleteCompany = "Admin.Company.DeleteCompany";
     }
 
 }

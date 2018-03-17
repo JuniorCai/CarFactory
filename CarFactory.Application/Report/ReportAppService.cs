@@ -20,7 +20,6 @@ namespace CarFactory.Application.Report
     /// <summary>
     /// 检测报告服务实现
     /// </summary>
-    //[AbpAuthorize(ReportAppPermissions.Report)]
     public class ReportAppService : CarFactoryAppServiceBase, IReportAppService
     {
         private readonly IRepository<Core.CustomDomain.Report.Report, int> _reportRepository;
@@ -147,7 +146,7 @@ namespace CarFactory.Application.Report
         /// <summary>
         /// 新增检测报告
         /// </summary>
-        //[AbpAuthorize(ReportAppPermissions.Report_CreateReport)]
+        [AbpAuthorize(ReportAppPermissions.Report)]
         public virtual async Task<ReportEditDto> CreateReportAsync(ReportEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
@@ -161,7 +160,7 @@ namespace CarFactory.Application.Report
         /// <summary>
         /// 编辑检测报告
         /// </summary>
-        //[AbpAuthorize(ReportAppPermissions.Report_EditReport)]
+        [AbpAuthorize(ReportAppPermissions.Report)]
         public virtual async Task UpdateReportAsync(ReportEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
@@ -172,7 +171,7 @@ namespace CarFactory.Application.Report
             await _reportRepository.UpdateAsync(entity);
         }
 
-
+        [AbpAuthorize(ReportAppPermissions.Report)]
         public virtual async Task BatchUpdateStatusAsync(List<int> input,bool status)
         {
             foreach (var report in _reportRepository.GetAll().Where(r=> input.Contains(r.Id)).ToList())
@@ -185,7 +184,7 @@ namespace CarFactory.Application.Report
         /// <summary>
         /// 删除检测报告
         /// </summary>
-        [AbpAuthorize(ReportAppPermissions.Report_DeleteReport)]
+        [AbpAuthorize(ReportAppPermissions.Report)]
         public async Task DeleteReportAsync(EntityDto<int> input)
         {
             //TODO:删除前的逻辑判断，是否允许删除
@@ -195,7 +194,7 @@ namespace CarFactory.Application.Report
         /// <summary>
         /// 批量删除检测报告
         /// </summary>
-        [AbpAuthorize(ReportAppPermissions.Report_DeleteReport)]
+        [AbpAuthorize(ReportAppPermissions.Report)]
         public async Task BatchDeleteReportAsync(List<int> input)
         {
             //TODO:批量删除前的逻辑判断，是否允许删除

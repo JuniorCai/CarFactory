@@ -25,22 +25,22 @@ namespace CarFactory.Core.CustomDomain.Report.Authorization
         /// <summary>
         /// 检测报告管理权限
         /// </summary>
-        public const string Report = "Pages.Report";
+        public const string Report = "Admin.Report";
 
 	 
 
 		/// <summary>
         /// 检测报告创建权限
         /// </summary>
-        public const string Report_CreateReport = "Pages.Report.CreateReport";
+        public const string Report_CreateReport = "Admin.Report.CreateReport";
 		/// <summary>
         /// 检测报告修改权限
         /// </summary>
-        public const string Report_EditReport = "Pages.Report.EditReport";
+        public const string Report_EditReport = "Admin.Report.EditReport";
 		/// <summary>
         /// 检测报告删除权限
         /// </summary>
-        public const string Report_DeleteReport = "Pages.Report.DeleteReport";
+        public const string Report_DeleteReport = "Admin.Report.DeleteReport";
     }
 	
 }
