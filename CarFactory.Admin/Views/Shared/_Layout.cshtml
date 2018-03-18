@@ -59,7 +59,10 @@
                 </div>
                 <!-- END PAGE BAR -->
                 <!-- BEGIN PAGE TITLE-->
-                <h1 class="page-title"> @ViewBag.PageName</h1>
+                @if (!string.IsNullOrEmpty(ViewBag.PageName))
+                {
+                    <h1 class="page-title"> @ViewBag.PageName</h1>
+                }
                 <!-- END PAGE TITLE-->
                 <!-- END PAGE HEADER-->
                 @RenderBody()

@@ -70,31 +70,33 @@ namespace CarFactory.EntityFramework.EntityFramework
             modelBuilder.Configurations.Add(new ProductCfg());
             modelBuilder.Configurations.Add(new CompanyCfg());
             modelBuilder.Configurations.Add(new ReportCfg());
+
+            modelBuilder.Entity<User>().Property(u => u.EmailAddress).IsOptional();
             base.OnModelCreating(modelBuilder);
         }
 
-//        public override int SaveChanges()
-//        {
-//            try
-//            {
-//                return base.SaveChanges();
-//            }
-//            catch (DbEntityValidationException exception)
-//            {
-//                var errorMessages =
-//                    exception.EntityValidationErrors
-//                        .SelectMany(validationResult => validationResult.ValidationErrors)
-//                        .Select(m => m.ErrorMessage);
-//
-//                var fullErrorMessage = string.Join(", ", errorMessages);
-//                //记录日志
-//                //Log.Error(fullErrorMessage);
-//                var exceptionMessage = string.Concat(exception.Message, " 验证异常消息是：", fullErrorMessage);
-//
-//                throw new DbEntityValidationException(exceptionMessage, exception.EntityValidationErrors);
-//            }
-//
-//            //其他异常throw到上层
-//        }
+        public override int SaveChanges()
+        {
+            try
+            {
+                return base.SaveChanges();
+            }
+            catch (DbEntityValidationException exception)
+            {
+                var errorMessages =
+                    exception.EntityValidationErrors
+                        .SelectMany(validationResult => validationResult.ValidationErrors)
+                        .Select(m => m.ErrorMessage);
+
+                var fullErrorMessage = string.Join(", ", errorMessages);
+                //记录日志
+                //Log.Error(fullErrorMessage);
+                var exceptionMessage = string.Concat(exception.Message, " 验证异常消息是：", fullErrorMessage);
+
+                throw new DbEntityValidationException(exceptionMessage, exception.EntityValidationErrors);
+            }
+
+            //其他异常throw到上层
+        }
     }
 }

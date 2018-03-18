@@ -35,6 +35,10 @@ namespace CarFactory.Application
                 cfg.CreateMap<UserDto, User>();
                 cfg.CreateMap<UserDto, User>().ForMember(x => x.Roles, opt => opt.Ignore());
 
+//                cfg.CreateMap<User, UserDto>();
+//                cfg.CreateMap<User, UserDto>().ForMember(x => x.UserRole, opt => opt.MapFrom(input => input.Roles));
+//                cfg.CreateMap<User, UserDto>().ForMember(x => x.Roles, opt => opt.Ignore());
+
                 cfg.CreateMap<CreateUserDto, User>();
                 cfg.CreateMap<CreateUserDto, User>().ForMember(x => x.Roles, opt => opt.Ignore());
             });

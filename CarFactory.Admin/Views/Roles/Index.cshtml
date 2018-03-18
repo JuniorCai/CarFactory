@@ -98,19 +98,6 @@
                 {
                                 <option code="@permission.Name">@permission.DisplayName</option>
 }
-
-
-                                                @*                                                @foreach ($moduleList as $module)*@
-                                                @*                                    <option code="{{$module->moduleCode}}">{{$module->moduleValue}}</option>*@
-                                                @**@
-                                                @*                                                @endforeach*@
-                                                @*                                                {{--<option id="right1">产品管理</option>--}}*@
-                                                @*                                                {{--<option id="right2">新闻管理</option>--}}*@
-                                                @*                                                {{--<option id="right3">工程管理</option>--}}*@
-                                                @*                                                {{--<option id="right4">报告管理</option>--}}*@
-                                                @*                                                {{--<option id="right5">产品类别管理</option>--}}*@
-                                                @*                                                {{--<option id="right6">角色管理</option>--}}*@
-                                                @*                                                {{--<option id="right7">用户管理</option>--}}*@
                                             </select>
                                         </div>
                                     </div>
@@ -303,10 +290,10 @@
 
                     var editRole = {
                         id: $('#editRoleId').val(),
-                        name: $("#roleName").val(),
-                        displayName: $("#roleName").val(),
+                        name: $("#roleName").val().trim(),
+                        displayName: $("#roleName").val().trim(),
                         isActive: $('#roleState').bootstrapSwitch('state'),
-                        description: $("#roleDescription").val(),
+                        description: $("#roleDescription").val().trim(),
                         permissions: codeArray
                     };
 
@@ -319,7 +306,7 @@
                             UIBootstrapGrowl.show('#responsive', '保存成功', 'success');
                             setTimeout(function() { location.reload() }, 2000);
                         } else {
-                            UIBootstrapGrowl.show('#responsive', '保存失败，请联系技术人员', 'warning');
+                            UIBootstrapGrowl.show('#responsive', '保存失败，' + data.message, 'warning');
                         }
                     });
 

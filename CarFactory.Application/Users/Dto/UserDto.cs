@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Abp.Application.Services.Dto;
 using Abp.Authorization.Users;
@@ -35,6 +36,7 @@ namespace CarFactory.Application.Users.Dto
 
         public DateTime CreationTime { get; set; }
 
+        //public List<UserRole> UserRole { get; set; }
         public string[] Roles { get; set; }
     }
 }

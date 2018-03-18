@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Abp.Authorization.Users;
 using Abp.Extensions;
 using Microsoft.AspNet.Identity;
@@ -28,5 +29,12 @@ namespace CarFactory.Core.Authorization.Users
 
             return user;
         }
+
+        public override string FullName {
+            get { return Surname +" "+ Name; }
+        }
+
+        [Required(AllowEmptyStrings = true)]
+        public override string EmailAddress { get; set; }
     }
 }

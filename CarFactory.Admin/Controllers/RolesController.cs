@@ -81,7 +81,7 @@ namespace CarFactory.Admin.Controllers
                     else
                     {
                         status = false;
-                        msg = "添加失败";
+                        msg = "角色名称不能重复";
                     }
                 }
                 catch (Exception e)
