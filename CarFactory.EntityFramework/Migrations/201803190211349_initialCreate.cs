@@ -341,6 +341,7 @@ namespace CarFactory.EntityFramework.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Description = c.String(maxLength: 5000, storeType: "nvarchar"),
+                        IsActive = c.Boolean(nullable: false),
                         TenantId = c.Int(),
                         Name = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
                         DisplayName = c.String(nullable: false, maxLength: 64, storeType: "nvarchar"),
@@ -372,10 +373,10 @@ namespace CarFactory.EntityFramework.Migrations
                 c => new
                     {
                         Id = c.Long(nullable: false, identity: true),
+                        EmailAddress = c.String(maxLength: 256, storeType: "nvarchar"),
                         AuthenticationSource = c.String(maxLength: 64, storeType: "nvarchar"),
                         UserName = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
                         TenantId = c.Int(),
-                        EmailAddress = c.String(nullable: false, maxLength: 256, storeType: "nvarchar"),
                         Name = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
                         Surname = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
                         Password = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),

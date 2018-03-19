@@ -70,11 +70,11 @@
                                 <td class="center"> @userInfo.CreationTime.ToString("yyyy-MM-dd HH:mm:ss") </td>
                                 <td>
                                     <div class="btn-group">
-                                        <a href="javascript:;" data-toggle="modal" class="btn btn-circle btn-outline green margin-right-10">
+                                        <a href="users/detail/@userInfo.Id" target="_blank" data-toggle="modal" class="btn btn-circle btn-outline green margin-right-10">
                                             <i class="fa fa-pencil"></i> 编辑
                                         </a>
 
-                                        <a href="javascript:;" data-toggle="confirmation" data-placement="left" data-popout="true" aria-describedby="confirmation909172" class="btn btn-circle btn-outline btn-danger ">
+                                        <a href="javascript:;" itemid="@userInfo.Id" data-toggle="confirmation" data-placement="left" data-popout="true" aria-describedby="confirmation909172" class="userDelete btn btn-circle btn-outline btn-danger ">
                                             <i class="fa fa-close"></i> 删除
                                         </a>
 
@@ -97,7 +97,7 @@
     @Scripts.Render("~/assets/global/datatables/scripts", "~/assets/global/bootstrapConfirmation/scripts")
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="/Content/assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>
-    <script src="/Content/assets/pages/scripts/ui-confirmations.min.js" type="text/javascript"></script>
+    <script src="/Content/assets/pages/scripts/ui-confirmations.js" type="text/javascript"></script>
     <!-- END PAGE LEVEL SCRIPTS -->
 }
 
@@ -108,7 +108,7 @@
         $(function(){
 
             $('#addNew').click(function(){
-                window.open('/admin/roles/detail');
+                window.open('/admin/users/detail');
             });
         });
     </script>

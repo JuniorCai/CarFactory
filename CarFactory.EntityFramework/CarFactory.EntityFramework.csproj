@@ -203,17 +203,9 @@
     <Compile Include="EntityMapper\Products\CategoryCfg.cs" />
     <Compile Include="EntityMapper\Products\ProductCfg.cs" />
     <Compile Include="EntityMapper\Report\ReportCfg.cs" />
-    <Compile Include="Migrations\201803170403259_initialCreate.cs" />
-    <Compile Include="Migrations\201803170403259_initialCreate.Designer.cs">
-      <DependentUpon>201803170403259_initialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803170650165_initialCreate1.cs" />
-    <Compile Include="Migrations\201803170650165_initialCreate1.Designer.cs">
-      <DependentUpon>201803170650165_initialCreate1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803181218154_initialCreate2.cs" />
-    <Compile Include="Migrations\201803181218154_initialCreate2.Designer.cs">
-      <DependentUpon>201803181218154_initialCreate2.cs</DependentUpon>
+    <Compile Include="Migrations\201803190211349_initialCreate.cs" />
+    <Compile Include="Migrations\201803190211349_initialCreate.Designer.cs">
+      <DependentUpon>201803190211349_initialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -238,14 +230,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803170403259_initialCreate.resx">
-      <DependentUpon>201803170403259_initialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803170650165_initialCreate1.resx">
-      <DependentUpon>201803170650165_initialCreate1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803181218154_initialCreate2.resx">
-      <DependentUpon>201803181218154_initialCreate2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803190211349_initialCreate.resx">
+      <DependentUpon>201803190211349_initialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

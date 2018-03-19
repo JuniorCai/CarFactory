@@ -134,7 +134,7 @@
 
     <!-- 后台管理权限 -->
     <text name="Administration" value="后台管理员" />
-
+    <tex name="DuplicateName" value="账号名重复:{0}"/>
     <!-- 后台管理权限 End -->
     
   </texts>

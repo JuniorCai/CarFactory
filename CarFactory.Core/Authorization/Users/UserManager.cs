@@ -52,7 +52,7 @@ namespace CarFactory.Core.Authorization.Users
             var user = (await FindByNameAsync(userName));
             if (user != null && user.Id != expectedUserId)
             {
-                return AbpIdentityResult.Failed(string.Format(L("Identity.DuplicateName"), userName));
+                return AbpIdentityResult.Failed(string.Format("重复账号名{0}", userName));
             }
 
 
@@ -61,7 +61,7 @@ namespace CarFactory.Core.Authorization.Users
 
         private string L(string name)
         {
-            return LocalizationManager.GetString(AbpZeroConsts.LocalizationSourceName, name);
+            return LocalizationManager.GetString(CarFactoryConsts.LocalizationSourceName, name);
         }
 
         public override async Task<IdentityResult> CreateAsync(User user)

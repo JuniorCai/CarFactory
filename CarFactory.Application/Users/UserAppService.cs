@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -52,6 +53,7 @@ namespace CarFactory.Application.Users
             CheckCreatePermission();
 
             var user = ObjectMapper.Map<User>(input);
+            
 
             user.TenantId = AbpSession.TenantId;
             user.Password = new PasswordHasher().HashPassword(input.Password);
@@ -68,6 +70,20 @@ namespace CarFactory.Application.Users
             CheckErrors(await _userManager.CreateAsync(user));
 
             return MapToEntityDto(user);
+        }
+
+        public async Task<Tuple<bool,string>> ResetUserPwd(long userId)
+        {
+            var user = await _userManager.GetUserByIdAsync(userId);
+            if (user == null)
+            {
+                return new Tuple<bool, string>(false, "无可用操作对象");
+            }
+
+            user.Password = new PasswordHasher().HashPassword(User.DefaultPassword);
+
+            var status = _userManager.UpdateAsync(user);
+            return new Tuple<bool, string>(status.Result.Succeeded,status.Result.Errors.ToString());
         }
 
         public override async Task<UserDto> Update(UpdateUserDto input)

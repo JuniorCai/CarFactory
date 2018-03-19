@@ -59,18 +59,15 @@
 
             <div class="alert alert-danger @hideClass">
                 <button class="close" data-close="alert"></button>
-@*                @if ($errors->has('email'))*@
                 <span>
                    @Html.ValidationMessage("UsernameOrEmailAddress")
                 </span>
-                @*                @endif*@
                 
             </div>
             <div class="form-group">
                 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                 <label class="control-label visible-ie8 visible-ie9">邮箱</label>
                 <div class="input-icon right">
-@*                    <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="用户名或邮箱" name="UsernameOrEmailAddress" />*@
                     @Html.TextBoxFor(f => f.UsernameOrEmailAddress, new { @class= "form-control form-control-solid placeholder-no-fix",autocomplete="off",placeholder= "用户名或邮箱" })
                 </div>
 
@@ -78,19 +75,12 @@
             <div class="form-group">
                 <label class="control-label visible-ie8 visible-ie9">密码</label>
                 <div class="input-icon right">
-@*                    <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="登录密码" name="Password" />*@
                     @Html.PasswordFor(f => f.Password, new { @class= "form-control form-control-solid placeholder-no-fix",autocomplete="off",placeholder= "登录密码" })
                 </div>
-@*                @if ($errors->has('password'))*@
-@*                <span class="help-block">*@
-@*                    {{ $errors->first('password') }}*@
-@*                </span>*@
-@*                @endif*@
             </div>
             <div class="form-actions">
                 <button type="submit" class="btn green uppercase">登录</button>
                 <label class="rememberme check mt-checkbox mt-checkbox-outline">
-@*                    <input id="rememberMe" type="checkbox" name="RememberMe" value="1" />*@
                     @Html.CheckBoxFor(f=>f.RememberMe,new {id= "rememberMe",value=false })记住
                     <span></span>
                 </label>
