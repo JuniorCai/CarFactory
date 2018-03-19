@@ -1,18 +1,14 @@
 ﻿@using System.Web.Optimization
-@using CarFactory.Application.Roles.Dto
-@model CarFactory.Application.Users.Dto.UserDto
+@model CarFactory.Application.Company.Dtos.CompanyListDto
 @{
-    ViewBag.Title = "用户详情";
+    ViewBag.Title = "公司详情";
     ViewBag.PageName = "";
-    var roleList = ViewBag.Roles as IReadOnlyList<RoleDto>;
-    string readOnly = (Model != null && Model.Id > 0) ? "readonly" : "";
-    string formPostUrl = (Model != null && Model.Id > 0) ? "/admin/users/detail/update" : "/admin/users/detail/create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section PageLevelStylePlugins
 {
-    @Styles.Render("~/assets/global/profile/css", "~/assets/global/select2/css")
+    @Styles.Render("~/assets/global/profile/css")
 }
 
 
@@ -43,60 +39,41 @@
                     <div class="tab-content">
                         <!-- PERSONAL INFO TAB -->
                         <div class="tab-pane active" id="tab_1_1">
-                            <form role="form" id="AddUserForm" class="AddUserForm">
+                            <form role="form" id="AddUserForm" class="editCompanyForm">
                                 @Html.HiddenFor(m => m.Id)
-                                @Html.HiddenFor(m => m.IsActive)
                                 <div class="form-group">
-                                    <label class="control-label">账号<span style="color: grey">(保存后不能更改)</span></label>
-                                    @*                                    <input type="text" placeholder="填写用于登录的账号名称，推荐英文字符与数字的组合" class="form-control" />*@
-                                    @Html.TextBoxFor(u => u.UserName, new { @class = "form-control", name = "userName", id = "userName", placeholder = "填写用于登录的英文与数字组合的账号名称，首字母须为英文" })
+                                    <label class="control-label">公司名称</label>
+                                    @Html.TextBoxFor(u => u.CompanyName, new { @class = "form-control", placeholder = "填写公司全名" })
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">姓<span style="color: grey">(保存后不能更改)</span></label>
-                                    @*                                                                        <input type="text" name="surName" id = "surName" placeholder="填写用户姓氏，如：张" class="form-control" />*@
-                                    @Html.TextBoxFor(u => u.Surname, new { @class = "form-control", name = "surName", id = "surName", placeholder = "填写用户姓氏，如：张" })
+                                    <label class="control-label">公司手机号码</label>
+                                    @Html.TextBoxFor(u => u.Phone, new { @class = "form-control", placeholder = "填写联系人手机号码，不填则留空" })
 
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">名<span style="color: grey">(保存后不能更改)</span></label>
-                                    @*                                    <input type="text" placeholder="填写用户名字，如：老三" class="form-control" />*@
-                                    @Html.TextBoxFor(u => u.Name, new { @class = "form-control", name = "name", id = "name", placeholder = "填写用户名字，如：老三" })
+                                    <label class="control-label">公司电话</label>
+                                    @Html.TextBoxFor(u => u.Tel, new { @class = "form-control", placeholder = "填写公司电话" })
                                 </div>
-                                @if (Model == null || Model.Id == 0)
-                                {
-                                    <div class="form-group">
-                                        <label class="control-label">密码</label>
-                                        <input type="password" placeholder="填写登录密码，英文与数字组合，首字母须为英文，至少6个字符" id="password" name="password" class="form-control" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label">确认密码</label>
-                                        <input type="password" placeholder="确认密码" class="form-control" name="confirmPassword" />
-                                    </div>
-                                }
                                 <div class="form-group">
-                                    <label class="control-label">角色分配</label>
-                                    <select class="form-control select2me" name="options2" id="roleSelect">
-                                        <option value="0">选择类别</option>
-                                        @foreach (var item in roleList)
-                                        {
-                                            var selectedCss = (Model != null && Model.Id > 0 && item.Name == Model.Roles[0]) ? "selected" : "";
-                                            <option value="@item.Name.Trim()" @selectedCss>@item.DisplayName.Trim()</option>
-                                        }
-                                    </select>
+                                    <label class="control-label">公司邮箱</label>
+                                    @Html.TextBoxFor(u => u.Email, new { @class = "form-control", placeholder = "填写公司电话" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">公司地址</label>
+                                    @Html.TextBoxFor(u => u.Address, new { @class = "form-control", placeholder = "填写公司地址" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">公司地理位置经度</label>
+                                    @Html.TextBoxFor(u => u.Longitude, new { @class = "form-control", placeholder = "填写公司地理位置经度" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">公司地理位置纬度</label>
+                                    @Html.TextBoxFor(u => u.Latitude, new { @class = "form-control", placeholder = "填写公司地理位置纬度" })
                                 </div>
                                 <div class="margiv-top-10">
                                     <button type="submit" class="btn green">
                                         <i class="fa fa-check"></i> 保存
                                     </button>
-                                    <a href="javascript:;" class="btn default" id="btnCancel"> 取消 </a>
-                                    @if (Model != null && Model.Id > 0)
-                                    {
-
-                                        <a href="javascript:void(0);" class="resetPwd btn red" data-toggle="confirmation" style="float: right">
-                                            <i class="fa fa-refresh"></i> 重置用户密码
-                                        </a>
-                                        <span style="color: #e7505a; float: right;margin-top: 10px"> 注：该操作会重置用户登录密码，请谨慎操作&nbsp;&nbsp; </span>
-                                    }
                                 </div>
                             </form>
                         </div>
@@ -111,9 +88,6 @@
 
 @section PageLevelScriptsPlugins
 {
-    @Scripts.Render("~/assets/global/select2/scripts", "~/assets/global/bootstrapConfirmation/scripts")
-
-    <script src="/Content/assets/pages/scripts/ui-confirmations.js" type="text/javascript"></script>
     <script src="/Content/assets/pages/scripts/profile.js" type="text/javascript"></script>
 }
 
@@ -123,29 +97,17 @@
         $(function () {
             initValidate();
 
-            initInput();
-
             $(".btn-success").on('click', function (e) {
 
             })
 
-            $('#btnCancel').click(function () {
-                window.close();
-            });
 
         });
 
-        function initInput() {
-            var readOnly = "@readOnly";
-            if (readOnly.length > 0) {
-                $("#userName").attr("readOnly","readOnly");
-                $("#name").attr("readOnly", "readOnly");
-                $("#surName").attr("readOnly", "readOnly");
-            }
-        }
+        
 
         function initValidate() {
-            $(".AddUserForm").validate({
+            $(".editCompanyForm").validate({
                 errorElement: 'span', //default input error message container
                 errorClass: 'help-block', // default input error message class
                 onsubmit: true,
@@ -153,31 +115,31 @@
                 onkeyup: false,
 
                 rules: {　　　　//规则
-                    UserName: {
+                    CompanyName: {
                         required: true
                     },
-                    Surname: {
+                    Address: {
                         required: true
                     },
-                    Name: {
+                    Longitude: {
                         required: true
                     },
-                    confirmPassword: {
-                        equalTo:"#password"
+                    Latitude: {
+                        required: true
                     }
                 },
                 messages: {　　　　//验证错误信息
-                    UserName: {
-                        required: "请输入用户名"
+                    CompanyName: {
+                        required: "未输入公司名称"
                     },
-                    Surname: {
-                        required: "请输入姓氏"
+                    Address: {
+                        required: "未输入公司地址"
                     },
-                    Name: {
-                        required: "请输入名字"
+                    Longitude: {
+                        required: "未输入公司地理位置经度"
                     },
-                    confirmPassword: {
-                        equalTo: "两次密码不一致"
+                    Latitude: {
+                        required: "未输入公司地理位置纬度"
                     }
                 },
                 highlight: function (element) { // hightlight error inputs
@@ -185,49 +147,24 @@
                         .closest('.form-group').addClass('has-error'); // set error class to the control group
                 },
                 submitHandler: function (form) { //通过之后回调
-                    var authStatus = false;
-
-                    authStatus = checkEnAndDigit("#userName");
-                    toggleError("#userName", authStatus, "英文与数字组合，首字母须为英文，至少6个字符");
-                    if (!authStatus)
-                        return false;
-                    authStatus = checkName("#surName");
-                    toggleError("#surName", authStatus, "只支持中文姓氏");
-                    if (!authStatus)
-                        return false;
-                    authStatus = checkName("#name");
-                    toggleError("#name", authStatus, "只支持中文名字");
-                    if (!authStatus)
-                        return false;
-                    if ($("#password").length > 0 ) {
-                        authStatus = checkEnAndDigit("#password");
-                        toggleError("#password", authStatus, "英文与数字组合，首字母须为英文，至少6个字符");
-                        toggleError("#confirmPassword", authStatus, "");
-                    }
-                    if (!authStatus)
-                        return false;
-                    var role = $("#roleSelect").val();
-                    authStatus = role != 0;
-                    toggleError(".select2-container", authStatus, "未选择所属角色");
-
-                    if (!authStatus)
-                        return false;
+                    
 
                     //进行ajax传值
 
-                    var editUser = {
+                    var editCompany = {
                         id: $('#Id').val(),
-                        name: $("#name").val().trim(),
-                        surName: $("#surName").val().trim(),
-                        userName: $("#userName").val().trim(),
-                        isActive: $("#IsActive").val().trim(),
-                        roleNames: [$("#roleSelect").val()],
-                        password: $("#password").length > 0 ? $("#password").val().trim() : ""
+                        companyName: $("#CompanyName").val().trim(),
+                        address: $("#Address").val().trim(),
+                        longitude: $("#Longitude").val().trim(),
+                        latitude: $("#Latitude").val().trim(),
+                        phone: $("#Phone").val().trim(),
+                        tel: $("#Tel").val().trim(),
+                        email: $("#Email").val().trim()
                     };
 
                     abp.ajax({
-                        url: "@formPostUrl",
-                        data: JSON.stringify(editUser)
+                        url: "/admin/company/save",
+                        data: JSON.stringify(editCompany)
                     }).done(function (data) {
                         //要执行的代码
                         if (data.success == true) {
@@ -243,79 +180,7 @@
             });
         }
 
-        function initMultiSelect() {
-            $(".ms-selectable li").attr("class", "ms-elem-selectable").show();
-            $(".ms-selection li").attr("class", "ms-elem-selection").hide();
-        }
-
-        function toggleMultiSelect(index) {
-            $(".ms-selectable li:eq(" + index + ")").attr("class", "ms-elem-selectable ms-selected").css("display", "none");
-            $(".ms-selection li:eq(" + index + ")").attr("class", "ms-elem-selection ms-selected").css("display", "");
-        }
-
-        function selectRoleModule(trObject) {
-            var moduleArray = trObject.attr("moduleStr").split(',');
-            $(moduleArray).each(function (index, data) {
-                var selectedIndex = $("#my_multi_select1").find("option[code='" + data + "']").index();
-                if (selectedIndex >= 0)
-                    toggleMultiSelect(selectedIndex);
-            });
-        }
-
-        function checkName(obj)
-        {
-            var val = $.trim($(obj).val());
-            var nameTest = /^[\u4e00-\u9fa5]{1,4}$/;
-            return nameTest.test(val);
-        }
-
-        function checkEnAndDigit(obj)
-        {
-            var result = true;
-            var val = $.trim($(obj).val());
-            var length = val.length;
-            var pwdTest = /^[a-zA-Z](?![a-zA-Z]+$)[a-zA-Z0-9]{5,19}$/;
-            if(!pwdTest.test(val))
-            {
-                result = false;
-
-            }
-            return result;
-        }
-
-
-        function toggleError(obj,authStatus,msg,authObj)
-        {
-            if(authStatus){
-                if(authObj!="")
-                    $("#"+authObj).val(1);
-
-                if($(obj).closest('.form-group').hasClass('has-error'))
-                {
-                    $(obj).closest('.form-group').removeClass('has-error');
-                    $(obj).closest('.form-group').find(".help-block").remove();
-                }
-            }
-            else {
-                if(authObj!="")
-                    $("#"+authObj).val(0);
-
-                if($(obj).closest('.form-group').hasClass('has-error'))
-                {
-                    $(obj).closest('.form-group').find(".help-block").text(msg);
-                    $(obj).closest('.form-group').find(".help-block").show();
-                }
-                else
-                {
-                    $(obj).closest('.form-group').addClass('has-error');
-                    var error = $("<span>");
-                    error.attr("id","verifyCode-error");
-                    error.attr("class","help-block");
-                    error.text(msg);
-                    error.appendTo($(obj).parent());
-                }
-            }
-        }
+        
     </script>
 }
 

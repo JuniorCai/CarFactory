@@ -3,6 +3,7 @@ using Abp.Localization;
 using CarFactory.Core;
 using CarFactory.Core.Authorization;
 using CarFactory.Core.CustomDomain.Category.Authorization;
+using CarFactory.Core.CustomDomain.Company.Authorization;
 using CarFactory.Core.CustomDomain.Products.Authorization;
 using CarFactory.Core.CustomDomain.Report.Authorization;
 
@@ -62,6 +63,14 @@ namespace CarFactory.Admin
                 requiredPermissionName: ReportAppPermissions.Report
                 );
 
+            var company = new MenuItemDefinition(
+                PageNames.Company,
+                L(PageNames.Company),
+                url: "/admin/company",
+                icon: "icon-grid",
+                requiredPermissionName: CompanyAppPermissions.Company
+                );
+
             var role = new MenuItemDefinition(
                     PageNames.Roles,
                     L(PageNames.Roles),
@@ -78,7 +87,7 @@ namespace CarFactory.Admin
             requiredPermissionName: PermissionNames.Pages_Users);
 
 
-            contentManageMenu.AddItem(product).AddItem(productCategory).AddItem(report);
+            contentManageMenu.AddItem(product).AddItem(productCategory).AddItem(report).AddItem(company);
             settingsManageMenu.AddItem(role).AddItem(user);
 
             context.Manager.MainMenu.AddItem(homeMenu).AddItem(contentManageMenu).AddItem(settingsManageMenu);
