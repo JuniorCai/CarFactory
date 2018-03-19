@@ -3125,6 +3125,7 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
@@ -3177,6 +3178,7 @@
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Users\EditUser.cshtml" />
     <Content Include="Views\Users\ProfileInfo.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
