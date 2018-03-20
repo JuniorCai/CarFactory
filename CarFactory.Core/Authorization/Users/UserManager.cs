@@ -18,6 +18,8 @@ namespace CarFactory.Core.Authorization.Users
     public class UserManager : AbpUserManager<Role, User>
     {
         private readonly IUnitOfWorkManager _unitOfWorkManager;
+        private readonly UserStore _userStore;
+
         public UserManager(
             UserStore userStore,
             RoleManager roleManager,
@@ -45,6 +47,7 @@ namespace CarFactory.Core.Authorization.Users
                   settingManager,
                   userTokenProviderAccessor)
         {
+            _userStore = userStore;
             _unitOfWorkManager = unitOfWorkManager;
         }
         public override async Task<IdentityResult> CheckDuplicateUsernameOrEmailAddressAsync(long? expectedUserId, string userName, string emailAddress)
@@ -62,6 +65,11 @@ namespace CarFactory.Core.Authorization.Users
         private string L(string name)
         {
             return LocalizationManager.GetString(CarFactoryConsts.LocalizationSourceName, name);
+        }
+
+        public async Task<string> GetUserPwdHash(User user)
+        {
+            return await _userStore.GetPasswordHashAsync(user);
         }
 
         public override async Task<IdentityResult> CreateAsync(User user)

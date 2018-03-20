@@ -28,56 +28,55 @@
 <!-- END HEAD -->
 
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
-<div class="page-wrapper">
-    <!-- BEGIN HEADER -->
-    @{
-        Html.RenderPartial("_PartialHeader");
-    }
-    <!-- END HEADER -->
-    <!-- BEGIN HEADER & CONTENT DIVIDER -->
-    <div class="clearfix"> </div>
-    <!-- END HEADER & CONTENT DIVIDER -->
-    <!-- BEGIN CONTAINER -->
-    <div class="page-container">
-        <!-- BEGIN SIDEBAR -->
-        @{
-            Html.RenderPartial("_SideBar",ViewBag.UserMenu as SideBarNavViewModel);
-        }
-        <!-- END SIDEBAR -->
-        <!-- BEGIN CONTENT -->
-        <div class="page-content-wrapper">
-            <!-- BEGIN CONTENT BODY -->
-            <div class="page-content">
-                <!-- BEGIN PAGE HEADER-->
-                <!-- BEGIN PAGE BAR -->
-                <div class="page-bar">
-                    <ul class="page-breadcrumb">
-                        <!-- 面包屑导航 -->
-                        @RenderSection("BreadCrumb")
-                        <!-- 面包屑导航 End-->
-                    </ul>
-                </div>
-                <!-- END PAGE BAR -->
-                <!-- BEGIN PAGE TITLE-->
-                @if (!string.IsNullOrEmpty(ViewBag.PageName))
+    <div class="page-wrapper">
+        <!-- BEGIN HEADER -->
+        @{ Html.RenderAction("PartialHeader", "Layout");}
+       
+        <!-- END HEADER -->
+        <!-- BEGIN HEADER & CONTENT DIVIDER -->
+        <div class="clearfix"> </div>
+        <!-- END HEADER & CONTENT DIVIDER -->
+        <!-- BEGIN CONTAINER -->
+        <div class="page-container">
+            <!-- BEGIN SIDEBAR -->
+            @{
+            Html.RenderPartial("_SideBar", ViewBag.UserMenu as SideBarNavViewModel);
+            }
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                    <!-- BEGIN PAGE HEADER-->
+                    <!-- BEGIN PAGE BAR -->
+                    <div class="page-bar">
+                        <ul class="page-breadcrumb">
+                            <!-- 面包屑导航 -->
+                            @RenderSection("BreadCrumb")
+                            <!-- 面包屑导航 End-->
+                        </ul>
+                    </div>
+                    <!-- END PAGE BAR -->
+                    <!-- BEGIN PAGE TITLE-->
+                    @if (!string.IsNullOrEmpty(ViewBag.PageName))
                 {
                     <h1 class="page-title"> @ViewBag.PageName</h1>
-                }
-                <!-- END PAGE TITLE-->
-                <!-- END PAGE HEADER-->
-                @RenderBody()
+            }
+                    <!-- END PAGE TITLE-->
+                    <!-- END PAGE HEADER-->
+                    @RenderBody()
+                </div>
+                <!-- END CONTENT BODY -->
             </div>
-            <!-- END CONTENT BODY -->
+            <!-- END CONTENT -->
         </div>
-        <!-- END CONTENT -->
-    </div>
-    <!-- END CONTAINER -->
-    <!-- BEGIN FOOTER -->
-    @{
+        <!-- END CONTAINER -->
+        <!-- BEGIN FOOTER -->
+        @{
         Html.RenderPartial("_PartialFooter");
-    }
-    <!-- END FOOTER -->
-</div>
+        }
+        <!-- END FOOTER -->
+    </div>
 
 
 <!-- BEGIN CORE PLUGINS -->

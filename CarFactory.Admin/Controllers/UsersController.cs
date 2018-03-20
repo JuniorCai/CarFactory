@@ -169,15 +169,5 @@ namespace CarFactory.Admin.Controllers
 
 
 
-        [Route("users/profile/{id}")]
-        public async Task<ActionResult> ProfileInfo(long id = 0)
-        {
-
-
-            var userMenu = GetUserMenu(PageNames.Users).Result;
-            ViewBag.UserMenu = userMenu;
-
-            return View();
-        }
     }
 }

@@ -243,25 +243,6 @@
             });
         }
 
-        function initMultiSelect() {
-            $(".ms-selectable li").attr("class", "ms-elem-selectable").show();
-            $(".ms-selection li").attr("class", "ms-elem-selection").hide();
-        }
-
-        function toggleMultiSelect(index) {
-            $(".ms-selectable li:eq(" + index + ")").attr("class", "ms-elem-selectable ms-selected").css("display", "none");
-            $(".ms-selection li:eq(" + index + ")").attr("class", "ms-elem-selection ms-selected").css("display", "");
-        }
-
-        function selectRoleModule(trObject) {
-            var moduleArray = trObject.attr("moduleStr").split(',');
-            $(moduleArray).each(function (index, data) {
-                var selectedIndex = $("#my_multi_select1").find("option[code='" + data + "']").index();
-                if (selectedIndex >= 0)
-                    toggleMultiSelect(selectedIndex);
-            });
-        }
-
         function checkName(obj)
         {
             var val = $.trim($(obj).val());

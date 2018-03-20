@@ -1,0 +1,242 @@
+﻿@using System.Web.Optimization
+@using CarFactory.Application.Roles.Dto
+@model CarFactory.Application.Users.Dto.UserDto
+@{
+    ViewBag.Title = "用户详情";
+    ViewBag.PageName = "";
+    string readOnly = (Model != null && Model.Id > 0) ? "readonly" : "";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section PageLevelStylePlugins
+{
+    @Styles.Render("~/assets/global/profile/css", "~/assets/global/select2/css")
+}
+
+
+@section BreadCrumb
+{
+    <li>
+        <a href="javascript:void(0)">首页</a>
+        <i class="fa fa-circle"></i>
+    </li>
+    <li>
+        <a href="javascript:void(0)">@ViewBag.Title</a>
+        <i class="fa fa-circle"></i>
+    </li>
+}
+<!-- BEGIN PROFILE CONTENT -->
+<div class="profile-content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet light ">
+                <div class="portlet-title tabbable-line">
+                    <div class="caption caption-md">
+                        <i class="icon-globe theme-font hide"></i>
+                        <span class="caption-subject font-blue-madison bold uppercase">账号信息</span>
+                    </div>
+
+                </div>
+                <div class="portlet-body">
+                    <div class="tab-content">
+                        <!-- PERSONAL INFO TAB -->
+                        <div class="tab-pane active" id="tab_1_1">
+                            <form role="form" id="saveUserForm" class="saveUserForm">
+                                @Html.HiddenFor(m => m.Id)
+                                @Html.HiddenFor(m => m.IsActive)
+                                <div class="form-group">
+                                    <label class="control-label">账号<span style="color: grey">(保存后不能更改)</span></label>
+                                    @Html.TextBoxFor(u => u.UserName, new { @readOnly, @class = "form-control", name = "userName", id = "userName", placeholder = "填写用于登录的英文与数字组合的账号名称，首字母须为英文" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">姓<span style="color: grey">(保存后不能更改)</span></label>
+                                    @Html.TextBoxFor(u => u.Surname, new { @readOnly, @class = "form-control", name = "surName", id = "surName", placeholder = "填写用户姓氏，如：张" })
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">名<span style="color: grey">(保存后不能更改)</span></label>
+                                    @Html.TextBoxFor(u => u.Name, new { @readOnly, @class = "form-control", name = "name", id = "name", placeholder = "填写用户名字，如：老三" })
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">旧密码</label>
+                                    <input type="password" placeholder="填写旧密码" id="oldPassword" name="oldPassword" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">新密码</label>
+                                    <input type="password" placeholder="填写登录密码，英文与数字组合，首字母须为英文，至少6个字符" id="password" name="password" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">确认密码</label>
+                                    <input type="password" placeholder="确认密码" class="form-control" name="confirmPassword" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">角色分配</label>
+                                    <input type="text" readonly="readonly" value="@Model.Roles[0]" class="form-control" name="roleName" />
+
+
+                                </div>
+                                <div class="margiv-top-10">
+                                    <button type="submit" class="btn green">
+                                        <i class="fa fa-check"></i> 保存
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- END PERSONAL INFO TAB -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PROFILE CONTENT -->
+
+@section PageLevelScriptsPlugins
+{
+
+    <script src="/Content/assets/pages/scripts/profile.js" type="text/javascript"></script>
+}
+
+@section PageCustomScripts
+{
+    <script type="text/javascript">
+        $(function () {
+            initValidate();
+
+
+            $(".btn-success").on('click', function (e) {
+
+            })
+
+            $('#btnCancel').click(function () {
+                window.close();
+            });
+
+        });
+
+
+        function initValidate() {
+            $(".saveUserForm").validate({
+                errorElement: 'span', //default input error message container
+                errorClass: 'help-block', // default input error message class
+                onsubmit: true,
+                onfocusout: false,
+                onkeyup: false,
+
+                rules: { //规则
+//                    oldPassword: {
+//                        required: true
+//                    },
+                    password:{
+                        required:true  
+                    },
+                    confirmPassword: {
+                        equalTo: "#password"
+                    }
+                },
+                messages: { //验证错误信息
+                    oldPassword: {
+                        required: "未填写旧密码"
+                    },
+                    password:{
+                        required: "未填写新密码"  
+                    },
+                    confirmPassword: {
+                        equalTo: "两次密码不一致"
+                    }
+                },
+                highlight: function(element) { // hightlight error inputs
+                    $(element)
+                        .closest('.form-group').addClass('has-error'); // set error class to the control group
+                },
+                submitHandler: function(form) { //通过之后回调
+                    var authStatus = false;
+
+
+                    if ($("#password").length > 0) {
+                        authStatus = checkEnAndDigit("#password");
+                        toggleError("#password", authStatus, "英文与数字组合，首字母须为英文，至少6个字符");
+                        toggleError("#confirmPassword", authStatus, "");
+                    }
+                    if (!authStatus)
+                        return false;
+
+                    //进行ajax传值
+
+                    var editUser = {
+                        id: $('#Id').val(),
+                        oldPassword: "111",//$("#oldPassword").val().trim(),
+                        password: $("#password").val().trim()
+                    };
+
+                    abp.ajax({
+                        url: "/admin/profile/save",
+                        data: JSON.stringify(editUser)
+                    }).done(function(data) {
+                        //要执行的代码
+                        if (data.success == true) {
+                            UIBootstrapGrowl.show('body', '保存成功', 'success');
+                            setTimeout(function() { location.reload() }, 2000);
+                        } else {
+                            UIBootstrapGrowl.show('body', '保存失败，' + data.message, 'warning');
+                        }
+                    });
+
+                },
+                invalidHandler: function(form, validator) { return false; }
+            });
+        }
+
+
+       
+
+        function checkEnAndDigit(obj)
+        {
+            var result = true;
+            var val = $.trim($(obj).val());
+            var length = val.length;
+            var pwdTest = /^[a-zA-Z](?![a-zA-Z]+$)[a-zA-Z0-9]{5,19}$/;
+            if(!pwdTest.test(val))
+            {
+                result = false;
+
+            }
+            return result;
+        }
+
+
+        function toggleError(obj,authStatus,msg,authObj)
+        {
+            if(authStatus){
+                if(authObj!="")
+                    $("#"+authObj).val(1);
+
+                if($(obj).closest('.form-group').hasClass('has-error'))
+                {
+                    $(obj).closest('.form-group').removeClass('has-error');
+                    $(obj).closest('.form-group').find(".help-block").remove();
+                }
+            }
+            else {
+                if(authObj!="")
+                    $("#"+authObj).val(0);
+
+                if($(obj).closest('.form-group').hasClass('has-error'))
+                {
+                    $(obj).closest('.form-group').find(".help-block").text(msg);
+                    $(obj).closest('.form-group').find(".help-block").show();
+                }
+                else
+                {
+                    $(obj).closest('.form-group').addClass('has-error');
+                    var error = $("<span>");
+                    error.attr("id","verifyCode-error");
+                    error.attr("class","help-block");
+                    error.text(msg);
+                    error.appendTo($(obj).parent());
+                }
+            }
+        }
+    </script>
+}
+

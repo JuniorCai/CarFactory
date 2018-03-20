@@ -12,5 +12,8 @@ namespace CarFactory.Application.Users
         Task<ListResultDto<RoleDto>> GetRoles();
 
         Task<Tuple<bool, string>> ResetUserPwd(long userId);
+
+        Task<Tuple<bool, string>> ChangeUserPwd(UserChangePwdDto pwdDto);
+
     }
 }

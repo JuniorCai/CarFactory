@@ -18,7 +18,6 @@ using Microsoft.AspNet.Identity;
 
 namespace CarFactory.Application.Users
 {
-    [AbpAuthorize(PermissionNames.Pages_Users)]
     public class UserAppService : AsyncCrudAppService<User, UserDto, long, PagedResultRequestDto, CreateUserDto, UpdateUserDto>, IUserAppService
     {
         private readonly UserManager _userManager;
@@ -37,6 +36,7 @@ namespace CarFactory.Application.Users
             _roleManager = roleManager;
         }
 
+        [AbpAllowAnonymous]
         public override async Task<UserDto> Get(EntityDto<long> input)
         {
             var user = await base.Get(input);
@@ -48,6 +48,7 @@ namespace CarFactory.Application.Users
             return user;
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Users)]
         public override async Task<UserDto> Create(CreateUserDto input)
         {
             CheckCreatePermission();
@@ -72,6 +73,7 @@ namespace CarFactory.Application.Users
             return MapToEntityDto(user);
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Users)]
         public async Task<Tuple<bool,string>> ResetUserPwd(long userId)
         {
             var user = await _userManager.GetUserByIdAsync(userId);
@@ -86,6 +88,30 @@ namespace CarFactory.Application.Users
             return new Tuple<bool, string>(status.Result.Succeeded,status.Result.Errors.ToString());
         }
 
+        [AbpAllowAnonymous]
+        public async Task<Tuple<bool, string>> ChangeUserPwd(UserChangePwdDto pwdDto)
+        {
+            var user = await _userManager.GetUserByIdAsync(pwdDto.Id);
+            if (user == null)
+            {
+                return new Tuple<bool, string>(false, "无可用操作对象");
+            }
+//            string oldPwd = await _userManager.GetUserPwdHash(user);
+//            string userPwd = 
+
+//            if (!oldPwd.Equals(_userManager.))
+//            {
+//                return new Tuple<bool, string>(false, "旧密码不正确");
+//            }
+
+            var result = await _userManager.ChangePasswordAsync(user, pwdDto.Password);
+
+
+            return new Tuple<bool, string>(result.Succeeded, result.Errors.ToString());
+        }
+
+
+        [AbpAuthorize(PermissionNames.Pages_Users)]
         public override async Task<UserDto> Update(UpdateUserDto input)
         {
             CheckUpdatePermission();
@@ -104,6 +130,7 @@ namespace CarFactory.Application.Users
             return await Get(input);
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Users)]
         public override async Task Delete(EntityDto<long> input)
         {
             var user = await _userManager.GetUserByIdAsync(input.Id);
