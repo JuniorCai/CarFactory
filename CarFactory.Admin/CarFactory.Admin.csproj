@@ -3132,6 +3132,7 @@
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\SeoController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Helpers\HtmlHelpers.cs" />
     <Compile Include="Helpers\ImgUploadHelpers.cs" />
@@ -3210,6 +3211,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\uploadImg\" />
     <Folder Include="Views\Layout\" />
+    <Folder Include="Views\Seo\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
