@@ -96,13 +96,11 @@ namespace CarFactory.Application.Users
             {
                 return new Tuple<bool, string>(false, "无可用操作对象");
             }
-//            string oldPwd = await _userManager.GetUserPwdHash(user);
-//            string userPwd = 
 
-//            if (!oldPwd.Equals(_userManager.))
-//            {
-//                return new Tuple<bool, string>(false, "旧密码不正确");
-//            }
+            if (!_userManager.CheckUserPwd(user,pwdDto.OldPassword))
+            {
+                return new Tuple<bool, string>(false, "旧密码不正确");
+            }
 
             var result = await _userManager.ChangePasswordAsync(user, pwdDto.Password);
 

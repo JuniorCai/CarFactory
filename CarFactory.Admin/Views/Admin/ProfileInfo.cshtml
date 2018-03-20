@@ -72,8 +72,6 @@
                                 <div class="form-group">
                                     <label class="control-label">角色分配</label>
                                     <input type="text" readonly="readonly" value="@Model.Roles[0]" class="form-control" name="roleName" />
-
-
                                 </div>
                                 <div class="margiv-top-10">
                                     <button type="submit" class="btn green">
@@ -124,9 +122,9 @@
                 onkeyup: false,
 
                 rules: { //规则
-//                    oldPassword: {
-//                        required: true
-//                    },
+                    oldPassword: {
+                        required: true
+                    },
                     password:{
                         required:true  
                     },
@@ -165,7 +163,7 @@
 
                     var editUser = {
                         id: $('#Id').val(),
-                        oldPassword: "111",//$("#oldPassword").val().trim(),
+                        oldPassword: $("#oldPassword").val().trim(),
                         password: $("#password").val().trim()
                     };
 

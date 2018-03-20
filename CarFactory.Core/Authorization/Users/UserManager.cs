@@ -67,9 +67,19 @@ namespace CarFactory.Core.Authorization.Users
             return LocalizationManager.GetString(CarFactoryConsts.LocalizationSourceName, name);
         }
 
-        public async Task<string> GetUserPwdHash(User user)
+
+
+        public bool CheckUserPwd(User user,string providedPwd)
         {
-            return await _userStore.GetPasswordHashAsync(user);
+            var verificationResult = PasswordHasher.VerifyHashedPassword(user.Password, providedPwd);
+            if (verificationResult == PasswordVerificationResult.Success)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public override async Task<IdentityResult> CreateAsync(User user)
