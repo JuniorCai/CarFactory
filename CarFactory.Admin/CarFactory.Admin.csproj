@@ -3182,6 +3182,7 @@
     <Content Include="Views\Users\ProfileInfo.cshtml" />
     <Content Include="Views\Company\Index.cshtml" />
     <Content Include="Views\Admin\ProfileInfo.cshtml" />
+    <Content Include="Views\Seo\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -3211,7 +3212,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Content\uploadImg\" />
     <Folder Include="Views\Layout\" />
-    <Folder Include="Views\Seo\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

@@ -6,6 +6,7 @@ using CarFactory.Core.CustomDomain.Category.Authorization;
 using CarFactory.Core.CustomDomain.Company.Authorization;
 using CarFactory.Core.CustomDomain.Products.Authorization;
 using CarFactory.Core.CustomDomain.Report.Authorization;
+using CarFactory.Core.CustomDomain.Seo.Authorization;
 
 namespace CarFactory.Core
 {
@@ -41,6 +42,9 @@ namespace CarFactory.Core
 //            report.CreateChildPermission(ReportAppPermissions.Report_CreateReport, L("CreateReport"), L("CreateReport"));
 //            report.CreateChildPermission(ReportAppPermissions.Report_EditReport, L("EditReport"), L("EditReport"));           
 //            report.CreateChildPermission(ReportAppPermissions. Report_DeleteReport, L("DeleteReport"), L("DeleteReport"));
+
+            var seo = entityNameModel.CreateChildPermission(SeoAppPermissions.Seo, L("Seo"), L("Seo"));
+
 
 
         }

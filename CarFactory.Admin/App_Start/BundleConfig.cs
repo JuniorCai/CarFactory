@@ -116,6 +116,9 @@ namespace CarFactory.Admin
             bundles.Add(new ScriptBundle("~/assets/global/bootstrapFileinput/scripts").Include(
                 "~/Content/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js"));
 
+            bundles.Add(new StyleBundle("~/assets/global/profile/scripts").Include(
+                "~/Content/assets/pages/scripts/profile.js"));
+
             bundles.Add(new ScriptBundle("~/assets/global/select2/scripts").Include(
                 "~/Content/assets/global/plugins/select2/js/select2.full.min.js"));
 

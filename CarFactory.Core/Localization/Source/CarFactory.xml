@@ -132,6 +132,24 @@
     <!-- 检测报告管理 End -->
 
 
+    <!-- SEO设置管理 -->
+    <text name="Seo" value="SEO设置" />
+    <text name="SeoHeaderInfo" value="SEO设置管理列表" />
+    <text name="CreateSeo" value="新增SEO设置" />
+    <text name="EditSeo" value="编辑SEO设置" />
+    <text name="DeleteSeo" value="删除SEO设置" />
+    <text name="SeoDeleteWarningMessage" value="SEO设置名称: {0} 将被删除,是否确定删除它。" />
+    <!--//用于表格展示的数据信息的标题-->
+    <text name="SiteTitle" value="网站名称" />
+    <text name="SiteKeywords" value="网站关键词" />
+    <text name="SiteDescription" value="网站描述" />
+    <text name="SiteBannerImgs" value="首页Banner" />
+    <text name="WatermarkAble" value="开启水印" />
+    <text name="Watermark" value="水印名称" />
+    <text name="IcpNumber" value="ICP备案序号" />
+
+
+
     <!-- 后台管理权限 -->
     <text name="Administration" value="后台管理员" />
     <tex name="DuplicateName" value="账号名重复:{0}"/>

@@ -9,10 +9,12 @@ using CarFactory.Core.CustomDomain.Category;
 using CarFactory.Core.CustomDomain.Company;
 using CarFactory.Core.CustomDomain.Products;
 using CarFactory.Core.CustomDomain.Report;
+using CarFactory.Core.CustomDomain.Seo;
 using CarFactory.Core.MultiTenancy;
 using CarFactory.EntityFramework.EntityMapper.Company;
 using CarFactory.EntityFramework.EntityMapper.Products;
 using CarFactory.EntityFramework.EntityMapper.Report;
+using CarFactory.EntityFramework.EntityMapper.Seo;
 
 namespace CarFactory.EntityFramework.EntityFramework
 {
@@ -27,6 +29,10 @@ namespace CarFactory.EntityFramework.EntityFramework
         public IDbSet<Company> Companys { get; set; }
 
         public IDbSet<Report> Reports { get; set; }
+
+        public IDbSet<Seo> Seos { get; set; }
+
+
 
 
         /* NOTE: 
@@ -70,6 +76,8 @@ namespace CarFactory.EntityFramework.EntityFramework
             modelBuilder.Configurations.Add(new ProductCfg());
             modelBuilder.Configurations.Add(new CompanyCfg());
             modelBuilder.Configurations.Add(new ReportCfg());
+            modelBuilder.Configurations.Add(new SeoCfg());
+
 
             modelBuilder.Entity<User>().Property(u => u.EmailAddress).IsOptional();
             base.OnModelCreating(modelBuilder);

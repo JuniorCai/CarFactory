@@ -190,6 +190,7 @@ namespace CarFactory.Admin.Controllers
             }
         }
 
+        [Route("logout")]
         public ActionResult Logout()
         {
             _authenticationManager.SignOut();

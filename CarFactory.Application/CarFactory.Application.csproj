@@ -261,6 +261,14 @@
     <Compile Include="Roles\Dto\PermissionDto.cs" />
     <Compile Include="Roles\Dto\RoleDto.cs" />
     <Compile Include="Roles\IRoleAppService.cs" />
+    <Compile Include="Seo\Dtos\CreateOrUpdateSeoInput.cs" />
+    <Compile Include="Seo\Dtos\GetSeoForEditOutput.cs" />
+    <Compile Include="Seo\Dtos\GetSeoInput.cs" />
+    <Compile Include="Seo\Dtos\SeoEditDto.cs" />
+    <Compile Include="Seo\Dtos\SeoListDto.cs" />
+    <Compile Include="Seo\ISeoAppService.cs" />
+    <Compile Include="Seo\Mappers\SeoDtoMapper.cs" />
+    <Compile Include="Seo\SeoAppService.cs" />
     <Compile Include="Users\Dto\CreateUserDto.cs" />
     <Compile Include="Users\Dto\UpdateUserDto.cs" />
     <Compile Include="Users\Dto\UserChangePwdDto.cs" />

@@ -203,10 +203,7 @@
     <Compile Include="EntityMapper\Products\CategoryCfg.cs" />
     <Compile Include="EntityMapper\Products\ProductCfg.cs" />
     <Compile Include="EntityMapper\Report\ReportCfg.cs" />
-    <Compile Include="Migrations\201803190211349_initialCreate.cs" />
-    <Compile Include="Migrations\201803190211349_initialCreate.Designer.cs">
-      <DependentUpon>201803190211349_initialCreate.cs</DependentUpon>
-    </Compile>
+    <Compile Include="EntityMapper\Seo\SeoCfg.cs" />
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="CarFactoryDataModule.cs" />
@@ -228,11 +225,6 @@
       <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
       <Name>CarFactory.Core</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803190211349_initialCreate.resx">
-      <DependentUpon>201803190211349_initialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

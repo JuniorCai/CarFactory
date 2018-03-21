@@ -9,5 +9,6 @@ namespace CarFactory.Admin
         public const string Company = "Company";
         public const string Users = "Users";
         public const string Roles = "Roles";
+        public const string Seo = "Seo";
     }
 }

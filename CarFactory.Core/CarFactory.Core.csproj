@@ -186,6 +186,9 @@
     <Compile Include="CustomDomain\Report\Authorization\ReportAppPermissions.cs" />
     <Compile Include="CustomDomain\Report\Report.cs" />
     <Compile Include="CustomDomain\Report\ReportManage.cs" />
+    <Compile Include="CustomDomain\Seo\Authorization\SeoAppPermissions.cs" />
+    <Compile Include="CustomDomain\Seo\Seo.cs" />
+    <Compile Include="CustomDomain\Seo\SeoManage.cs" />
     <Compile Include="Messages\Message.cs" />
     <Compile Include="CarFactoryCoreModule.cs" />
     <Compile Include="AppVersionHelper.cs" />
