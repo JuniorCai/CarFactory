@@ -105,7 +105,7 @@
                                 <span class="required"> * </span>
                             </label>
                             <div class="col-md-4">
-                                <select class="form-control select2me" name="options2" id="categoryIdSelect">
+                                <select class="form-control select2me" name="categoryIdSelect" id="categoryIdSelect">
                                     <option value="0">选择类别</option>
                                     @foreach (var item in categoryList)
                                     {
@@ -130,9 +130,9 @@
                         <div class="row">
                             <div class="col-md-offset-2 col-md-10">
                                 <button type="submit" class="btn green">
-                                    <i class="fa fa-check"></i> Submit
+                                    <i class="fa fa-check"></i> 保存
                                 </button>
-                                <button type="button" class="btn default" id="btnCancel">Cancel</button>
+                                <button type="button" class="btn default" id="btnCancel">取消</button>
                             </div>
                         </div>
                     </div>
@@ -188,15 +188,13 @@
                 onkeyup: false,
 
                 rules: {　　　　//规则
-                    name: {
-                        required: true,
-                        minlength: 2
+                    Title: {
+                        required: true
                     }
                 },
                 messages: {　　　　//验证错误信息
-                    name: {
-                        required: "请输入产品名称",
-                        minlength: "产品名称最小长度为2"
+                    Title: {
+                        required: "请输入产品名称"
                     }
                 },
                 highlight: function (element) { // hightlight error inputs
@@ -205,7 +203,17 @@
                 },
 
                 submitHandler: function (form) { //通过之后回调
+                    var status = $("#categoryIdSelect").val() > 0;
 
+                    toggleError("#categoryIdSelect", status, "未选择产品分类");
+                    if (!status)
+                        return false;
+
+
+                    status = $.trim($("#summernoteWithImage").summernote("code")).length > 0;
+                    toggleError(".panel-default", status, "未填写产品详情");
+                    if (!status)
+                        return false;
 
 
                     var formData = new FormData();
@@ -215,9 +223,18 @@
                     formData.append('CategoryId', $("#categoryIdSelect").val()); //$('<div/>').text(value).html()
                     formData.append('Detail', $('<div/>').text($.trim($("#summernoteWithImage").summernote("code"))).html());
                     //formData.append('Detail', $.trim($("#summernoteWithImage").summernote("code")));
-                    if (document.productForm.img != null && document.productForm.img.files != null) {
+                    if (document.productForm.img != null && document.productForm.img.files != null && document.productForm.img.files.length>0) {
                         formData.append('image', document.productForm.img.files[0]);
+                        status = true;
+                    } else {
+                        status = false;
                     }
+                    if (!status) {
+                        UIBootstrapGrowl.show('body', '未上传产品图片', 'danger');
+                        return false;
+                    }
+                        
+
                     
 
                     //进行ajax传值
@@ -245,6 +262,40 @@
                 invalidHandler: function (form, validator) { return false; }
             });
         }
+
+        function toggleError(obj,authStatus,msg,authObj)
+        {
+            if(authStatus){
+                if(authObj!="")
+                    $("#"+authObj).val(1);
+
+                if($(obj).closest('.form-group').hasClass('has-error'))
+                {
+                    $(obj).closest('.form-group').removeClass('has-error');
+                    $(obj).closest('.form-group').find(".help-block").remove();
+                }
+            }
+            else {
+                if(authObj!="")
+                    $("#"+authObj).val(0);
+
+                if($(obj).closest('.form-group').hasClass('has-error'))
+                {
+                    $(obj).closest('.form-group').find(".help-block").text(msg);
+                    $(obj).closest('.form-group').find(".help-block").show();
+                }
+                else
+                {
+                    $(obj).closest('.form-group').addClass('has-error');
+                    var error = $("<span>");
+                    error.attr("id","verifyCode-error");
+                    error.attr("class","help-block");
+                    error.text(msg);
+                    error.appendTo($(obj).parent());
+                }
+            }
+        }
+
 
     </script>
 }

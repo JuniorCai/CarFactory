@@ -18,7 +18,6 @@ namespace CarFactory.Core.CustomDomain.Seo
 
         public virtual string SiteDescription { get; set; }
 
-        [Required]
         public virtual string SiteBannerImgs { get; set; }
 
         [Required]

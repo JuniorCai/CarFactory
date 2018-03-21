@@ -16,7 +16,7 @@
 <div class="sj">发布时间：@Model.CurrentItem.CreationTime.ToShortDateString()</div>
 
 
-<div class="js">@Html.Raw(Model.CurrentItem.Detail)</div>
+<div class="js">@Html.Raw(Server.HtmlDecode(Model.CurrentItem.Detail))</div>
 
 <div class="pager">
     上一篇：

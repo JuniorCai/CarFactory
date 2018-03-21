@@ -1,9 +1,10 @@
 ﻿@using System.Web.Optimization
-
+@model CarFactory.Application.Seo.Dtos.SeoListDto
 @{
     ViewBag.Title = "Index";
     ViewBag.PageName = "";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string checkState = Model != null ? (Model.WatermarkAble ? "checked" : "") : "";
 }
 
 @section PageLevelStylePlugins
@@ -30,65 +31,55 @@
                 <div class="portlet-title tabbable-line">
                     <div class="caption caption-md">
                         <i class="icon-globe theme-font hide"></i>
-                        <span class="caption-subject font-blue-madison bold uppercase">Profile Account</span>
+                        <span class="caption-subject font-blue-madison bold uppercase">网站SEO设置</span>
                     </div>
                     <ul class="nav nav-tabs">
-                        <li class="">
-                            <a href="#tab_1_1" data-toggle="tab" aria-expanded="false">Personal Info</a>
-                        </li>
                         <li class="active">
-                            <a href="#tab_1_2" data-toggle="tab" aria-expanded="true">Change Avatar</a>
+                            <a href="#tab_1_1" data-toggle="tab" aria-expanded="false">SEO设置</a>
                         </li>
                         <li class="">
-                            <a href="#tab_1_3" data-toggle="tab" aria-expanded="false">Change Password</a>
+                            <a href="#tab_1_2" data-toggle="tab" aria-expanded="true">首页Banner上传</a>
                         </li>
                         <li class="">
-                            <a href="#tab_1_4" data-toggle="tab" aria-expanded="false">Privacy Settings</a>
+                            <a href="#tab_1_3" data-toggle="tab" aria-expanded="false">水印设置</a>
                         </li>
+
                     </ul>
                 </div>
                 <div class="portlet-body">
                     <div class="tab-content">
                         <!-- PERSONAL INFO TAB -->
-                        <div class="tab-pane" id="tab_1_1">
-                            <form role="form" action="#">
+                        @Html.HiddenFor(s=>s.Id)
+                        <div class="tab-pane active" id="tab_1_1">
+                            <form role="form" id="siteSettingForm" postUrl="/admin/seo/saveseo">
                                 <div class="form-group">
-                                    <label class="control-label">First Name</label>
-                                    <input type="text" placeholder="John" class="form-control">
+                                    <label class="control-label">网站名称</label>
+@*                                    <input type="text" placeholder="填写网站名称" class="form-control">*@
+                                    @Html.TextBoxFor(s=>s.SiteTitle,new{placeholder= "填写网站名称",@class= "form-control" })
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Last Name</label>
-                                    <input type="text" placeholder="Doe" class="form-control">
+                                    <label class="control-label">网站关键词</label>
+@*                                    <input type="text" placeholder="" class="form-control">*@
+                                    @Html.TextBoxFor(s=>s.SiteKeywords,new{placeholder= "填写网站关键词", @class= "form-control" })
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Mobile Number</label>
-                                    <input type="text" placeholder="+1 646 580 DEMO (6284)" class="form-control">
+                                    <label class="control-label">网站描述</label>
+@*                                    <input type="text" placeholder="" class="form-control">*@
+                                    @Html.TextAreaFor(s=>s.SiteDescription,new{placeholder= "填写网站描述", @class= "form-control" })
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Interests</label>
-                                    <input type="text" placeholder="Design, Web etc." class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Occupation</label>
-                                    <input type="text" placeholder="Web Developer" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">About</label>
-                                    <textarea class="form-control" rows="3" placeholder="We are KeenThemes!!!"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Website Url</label>
-                                    <input type="text" placeholder="http://www.mywebsite.com" class="form-control">
+                                    <label class="control-label">ICP备案序号</label>
+@*                                    <input type="text" placeholder="" class="form-control">*@
+                                    @Html.TextBoxFor(s=>s.IcpNumber,new{placeholder= "填写ICP备案序号", @class= "form-control" })
                                 </div>
                                 <div class="margiv-top-10">
-                                    <a href="javascript:;" class="btn green"> Save Changes </a>
-                                    <a href="javascript:;" class="btn default"> Cancel </a>
+                                    <button type="submit" id="submitBtn" class="btn green">保存</button>
                                 </div>
                             </form>
                         </div>
                         <!-- END PERSONAL INFO TAB -->
                         <!-- CHANGE AVATAR TAB -->
-                        <div class="tab-pane active" id="tab_1_2">
+                        <div class="tab-pane " id="tab_1_2">
                             <p>
                                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
                                 eiusmod.
@@ -123,101 +114,21 @@
                         <!-- END CHANGE AVATAR TAB -->
                         <!-- CHANGE PASSWORD TAB -->
                         <div class="tab-pane" id="tab_1_3">
-                            <form action="#">
+                            <form id="watermarkForm" postUrl="/admin/seo/savewatermark">
                                 <div class="form-group">
-                                    <label class="control-label">Current Password</label>
-                                    <input type="password" class="form-control">
+                                    <label class="control-label">是否启用图片上传添加水印</label><br/>
+                                    <input type="checkbox" id="watermarkState" class="make-switch" @checkState data-on-color="success" data-off-color="danger">
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">New Password</label>
-                                    <input type="password" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Re-type New Password</label>
-                                    <input type="password" class="form-control">
+                                    <label class="control-label">水印名称</label>
+                                    @Html.TextBoxFor(s=>s.Watermark,new{@class= "form-control",placeholder= "填写水印名称" })
                                 </div>
                                 <div class="margin-top-10">
-                                    <a href="javascript:;" class="btn green"> Change Password </a>
-                                    <a href="javascript:;" class="btn default"> Cancel </a>
+                                    <button type="submit" id="saveWaterMark" class="btn green">保存设置</button>
                                 </div>
                             </form>
                         </div>
                         <!-- END CHANGE PASSWORD TAB -->
-                        <!-- PRIVACY SETTINGS TAB -->
-                        <div class="tab-pane" id="tab_1_4">
-                            <form action="#">
-                                <table class="table table-light table-hover">
-                                    <tbody>
-                                    <tr>
-                                        <td> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus.. </td>
-                                        <td>
-                                            <div class="mt-radio-inline">
-                                                <label class="mt-radio">
-                                                    <input type="radio" name="optionsRadios1" value="option1"> Yes
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                    <input type="radio" name="optionsRadios1" value="option2" checked=""> No
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td>
-                                        <td>
-                                            <div class="mt-radio-inline">
-                                                <label class="mt-radio">
-                                                    <input type="radio" name="optionsRadios11" value="option1"> Yes
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                    <input type="radio" name="optionsRadios11" value="option2" checked=""> No
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td>
-                                        <td>
-                                            <div class="mt-radio-inline">
-                                                <label class="mt-radio">
-                                                    <input type="radio" name="optionsRadios21" value="option1"> Yes
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                    <input type="radio" name="optionsRadios21" value="option2" checked=""> No
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td> Enim eiusmod high life accusamus terry richardson ad squid wolf moon </td>
-                                        <td>
-                                            <div class="mt-radio-inline">
-                                                <label class="mt-radio">
-                                                    <input type="radio" name="optionsRadios31" value="option1"> Yes
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-radio">
-                                                    <input type="radio" name="optionsRadios31" value="option2" checked=""> No
-                                                    <span></span>
-                                                </label>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <!--end profile-settings-->
-                                <div class="margin-top-10">
-                                    <a href="javascript:;" class="btn red"> Save Changes </a>
-                                    <a href="javascript:;" class="btn default"> Cancel </a>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- END PRIVACY SETTINGS TAB -->
                     </div>
                 </div>
             </div>
@@ -232,4 +143,95 @@
     @Scripts.Render("~/assets/global/bootstrapFileinput/scripts")
 }
 
+
+@section PageCustomScripts
+{
+<script type="text/javascript">
+        $(function () {
+            initValidate("siteSettingForm");
+            initValidate("watermarkForm");
+
+        });
+
+
+        function initValidate(formId) {
+            var postUrl = $("#" + formId).attr("postUrl");
+            $("#" + formId).validate({
+                errorElement: 'span', //default input error message container
+                errorClass: 'help-block', // default input error message class
+                onsubmit: true,
+                onfocusout: false,
+                onkeyup: false,
+
+                rules: { //规则
+                    SiteTitle: {
+                        required: true,
+                        maxlength: 50
+                    }
+                },
+                messages: { //验证错误信息
+                    SiteTitle: {
+                        required: "请输入网站名称",
+                        minlength: "网站名称限制在50个字符以内"
+                    }
+                },
+                highlight: function (element) { // hightlight error inputs
+                    $(element)
+                        .closest('.form-group').addClass('has-error'); // set error class to the control group
+                },
+
+                submitHandler: function (form) { //通过之后回调
+
+                    //进行ajax传值
+                    var editModel = null;
+                    
+                    switch(formId) {
+                        case "siteSettingForm":
+                            editModel = {
+                                Id: $('#Id').val().trim(),
+                                SiteTitle: $("#SiteTitle").val().trim(),
+                                SiteKeywords: $("#SiteKeywords").val().trim(),
+                                SiteDescription: $('#SiteDescription').val().trim(),
+                                IcpNumber: $("#IcpNumber").val().trim()
+                            };
+                            break;
+                        case "watermarkForm":
+                            if ($("#watermarkState").bootstrapSwitch('state')) {
+                                var mark = $("#Watermark").val().trim();
+                                if (mark.length == 0) {
+                                    UIBootstrapGrowl.show('body', '开启水印后，应填写水印内容', 'danger');
+                                    break;
+                                }
+                            }
+                            editModel = {
+                                Id: $('#Id').val().trim(),
+                                SiteTitle: $("#Watermark").val().trim(),
+                                WatermarkAble: $("#watermarkState").bootstrapSwitch('state'),
+                                Watermark: $("#Watermark").val().trim()
+                            };
+                            break;
+                    }
+                    if (editModel == null) {
+                        return false;
+                    }
+
+                    abp.ajax({
+                        url: postUrl,
+                        data: JSON.stringify(editModel)
+                    }).done(function(data) {
+                        //要执行的代码
+                        if (data.success == true) {
+                            UIBootstrapGrowl.show('body', '保存成功', 'success');
+                            setTimeout(function () { location.reload() }, 2000);
+                        } else {
+                            UIBootstrapGrowl.show('body', '保存失败，请联系技术人员', 'warning');
+                        }
+                    });
+                },
+                invalidHandler: function(form, validator) { return false; }
+            });
+        }
+
+</script>
+}
 

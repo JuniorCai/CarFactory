@@ -43,7 +43,6 @@ namespace CarFactory.Application.Seo.Dtos
         /// 首页Banner
         /// </summary>
         [DisplayName("首页Banner")]
-        [Required]
         [MaxLength(1000)]
         public string SiteBannerImgs { get; set; }
 

@@ -31,6 +31,7 @@ namespace CarFactory.Application.Seo
         Task CreateOrUpdateSeoAsync(CreateOrUpdateSeoInput input);
 
 
+        Task<SeoListDto> GetDefaultSeoAsync();
 
 
 

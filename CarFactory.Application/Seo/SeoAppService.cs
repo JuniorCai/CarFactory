@@ -17,8 +17,6 @@ namespace CarFactory.Application.Seo
     /// SEO设置服务实现
     /// </summary>
     [AbpAuthorize(SeoAppPermissions.Seo)]
-
-
     public class SeoAppService : CarFactoryAppServiceBase, ISeoAppService
     {
         private readonly IRepository<Core.CustomDomain.Seo.Seo, int> _seoRepository;
@@ -87,7 +85,16 @@ namespace CarFactory.Application.Seo
 
 
 
+        public async Task<SeoListDto> GetDefaultSeoAsync()
+        {
+            SeoListDto seoListDto;
 
+            List<Core.CustomDomain.Seo.Seo> entityList = await _seoRepository.GetAllListAsync();
+
+            seoListDto = entityList.FirstOrDefault().MapTo<SeoListDto>();
+
+            return seoListDto;
+        }
 
 
 
@@ -109,7 +116,6 @@ namespace CarFactory.Application.Seo
         /// <summary>
         /// 新增SEO设置
         /// </summary>
-        [AbpAuthorize(SeoAppPermissions.Seo_CreateSeo)]
         public virtual async Task<SeoEditDto> CreateSeoAsync(SeoEditDto input)
         {
             //TODO:新增前的逻辑判断，是否允许新增
@@ -123,7 +129,6 @@ namespace CarFactory.Application.Seo
         /// <summary>
         /// 编辑SEO设置
         /// </summary>
-        [AbpAuthorize(SeoAppPermissions.Seo_EditSeo)]
         public virtual async Task UpdateSeoAsync(SeoEditDto input)
         {
             //TODO:更新前的逻辑判断，是否允许更新
@@ -137,7 +142,6 @@ namespace CarFactory.Application.Seo
         /// <summary>
         /// 删除SEO设置
         /// </summary>
-        [AbpAuthorize(SeoAppPermissions.Seo_DeleteSeo)]
         public async Task DeleteSeoAsync(EntityDto<int> input)
         {
             //TODO:删除前的逻辑判断，是否允许删除

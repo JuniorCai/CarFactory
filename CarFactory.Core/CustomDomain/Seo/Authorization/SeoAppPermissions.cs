@@ -12,24 +12,24 @@ namespace CarFactory.Core.CustomDomain.Seo.Authorization
         /// <summary>
         /// SEO设置管理权限
         /// </summary>
-        public const string Seo = "Pages.Seo";
+        public const string Seo = "Admin.Seo";
 
 
 
         /// <summary>
         /// SEO设置创建权限
         /// </summary>
-        public const string Seo_CreateSeo = "Pages.Seo.CreateSeo";
+        public const string Seo_CreateSeo = "Admin.Seo.CreateSeo";
 
         /// <summary>
         /// SEO设置修改权限
         /// </summary>
-        public const string Seo_EditSeo = "Pages.Seo.EditSeo";
+        public const string Seo_EditSeo = "Admin.Seo.EditSeo";
 
         /// <summary>
         /// SEO设置删除权限
         /// </summary>
-        public const string Seo_DeleteSeo = "Pages.Seo.DeleteSeo";
+        public const string Seo_DeleteSeo = "Admin.Seo.DeleteSeo";
     }
 
 }

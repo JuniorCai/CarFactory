@@ -12,11 +12,25 @@ namespace CarFactory.Application.Seo.Dtos
     [AutoMapFrom(typeof(Core.CustomDomain.Seo.Seo))]
     public class SeoListDto : EntityDto<int>
     {
+        public virtual string SiteTitle { get; set; }
+
+
+        public virtual string SiteKeywords { get; set; }
+
+        public virtual string SiteDescription { get; set; }
+
+        public virtual string SiteBannerImgs { get; set; }
+
+
         /// <summary>
         /// 开启水印
         /// </summary>
         [DisplayName("开启水印")]
         public bool WatermarkAble { get; set; }
+
+        public virtual string Watermark { get; set; }
+
+        public virtual string IcpNumber { get; set; }
 
         /// <summary>
         /// 创建时间

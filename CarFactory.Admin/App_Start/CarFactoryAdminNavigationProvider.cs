@@ -56,12 +56,12 @@ namespace CarFactory.Admin
             );
 
             var report = new MenuItemDefinition(
-                PageNames.Seo,
-                L(PageNames.Seo),
-                url: "/admin/seo",
-                icon: "icon-grid"//,
-                //requiredPermissionName: ReportAppPermissions.Report
-                );
+                PageNames.Reports,
+                L(PageNames.Reports),
+                url: "/admin/ReportManage",
+                icon: "icon-grid",
+                requiredPermissionName: ReportAppPermissions.Report
+            );
 
             var company = new MenuItemDefinition(
                 PageNames.Company,
@@ -87,11 +87,10 @@ namespace CarFactory.Admin
             requiredPermissionName: PermissionNames.Pages_Users);
 
             var seo = new MenuItemDefinition(
-                PageNames.Users,
-                L(PageNames.Users),
-                url: "/admin/UserManage",
-                icon: "icon-grid",
-                requiredPermissionName: PermissionNames.Pages_Users);
+                PageNames.Seo,
+                L(PageNames.Seo),
+                url: "/admin/Seo",
+                icon: "icon-grid");
 
 
             contentManageMenu.AddItem(product).AddItem(productCategory).AddItem(report).AddItem(company);
