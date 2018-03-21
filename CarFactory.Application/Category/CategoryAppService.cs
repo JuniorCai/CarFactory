@@ -78,7 +78,7 @@ namespace CarFactory.Application.Category
 
             List<CategoryListDto> listDtos = list.MapTo<List<CategoryListDto>>();
 
-            return listDtos;
+            return listDtos.OrderByDescending(c => c.Sort).ToList<CategoryListDto>();
         }
 
         /// <summary>

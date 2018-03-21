@@ -1,4 +1,5 @@
-﻿<div class="banner">
+﻿@model CarFactory.Application.Company.Dtos.CompanyListDto
+<div class="banner">
     <div id="full-screen-slider">
         <ul id="slides">
             <li style="background:url('/Content/images/public/01.jpg') no-repeat center top"></li>
@@ -12,14 +13,14 @@
         <span class="tel"><img src="~/Content/images/public/tel_05.jpg" width="225" height="59" onclick="javascript:popup_qs()" style="cursor:pointer;" /></span>
         <span class="w1">
             <p>
-                联系人：蔡经理<br />
-                电话：0574-62707516
+                联系人：@Model.LinkMan<br />
+                电话：@Model.Tel
             </p>
         </span>
         <span class="w2">
             <p>
-                地址：浙江省余姚市梨洲路11号<br />
-                邮箱：281480642@qq.com
+                地址：@Model.Address<br />
+                邮箱：@Model.Email
             </p>
         </span>
     </div>

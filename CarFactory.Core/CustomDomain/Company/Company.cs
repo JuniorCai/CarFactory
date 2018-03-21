@@ -8,6 +8,7 @@ namespace CarFactory.Core.CustomDomain.Company
         [Required]
         public virtual string CompanyName { get; set; }
 
+        public virtual string LinkMan { get; set; }
 
         public virtual string Phone { get; set; }
 

@@ -58,9 +58,7 @@
         </div>
     </div>
     <div style="clear: both"></div>
-    @{
-        Html.RenderPartial("~/Views/Shared/PartialPages/_PartialFooter.cshtml");
-    }
+    @{Html.RenderAction("PartialFooter","Layout");}
 
 </body>
 @RenderSection("scripts",false)

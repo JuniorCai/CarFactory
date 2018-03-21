@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using CarFactory.Application.Products.Dtos;
 
 namespace CarFactory.Application.Category.Dtos
 {
@@ -17,7 +19,8 @@ namespace CarFactory.Application.Category.Dtos
 
         public int Sort { get; set; }
 
-        //public      Product> Products { get; set; }
+        public List<ProductListDto> Products { get; set; }
+
         /// <summary>
         /// 创建时间
         /// </summary>

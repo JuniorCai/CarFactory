@@ -20,6 +20,9 @@ namespace CarFactory.Application.Company.Dtos
         [Required]
         public string CompanyName { get; set; }
 
+        public string LinkMan { get; set; }
+
+
         public string Phone { get; set; }
 
         public string Tel { get; set; }

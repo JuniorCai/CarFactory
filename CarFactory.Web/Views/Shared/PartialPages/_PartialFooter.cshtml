@@ -1,22 +1,23 @@
-﻿<div class="foot">
+﻿@model CarFactory.Application.Company.Dtos.CompanyListDto
+<div class="foot">
     <div class="footer">
         <div class="b_nav">
             <ul>
                 <li style="background:none;"><a href="/">网站首页</a></li>
 
-                <li><a href='#'>关于我们</a></li>
+                <li>@Html.ActionLink("关于我们", "Index", "About", null, new { rel = "nofollow" })</li>
 
-                <li><a href='#'>产品展示</a></li>
+                <li><a href='/product'>产品展示</a></li>
 
-                <li><a href='#'>检测报告</a></li>
+                <li>@Html.ActionLink("检测报告", "List", "Report", null, new { rel = "nofollow" })</li>
 
-                <li><a href='#'>联系我们</a></li>
+                <li>@Html.ActionLink("联系我们", "Contact", "About", null, new { rel = "nofollow" })</li>
 
             </ul>
         </div>
         <div class="fo">
-            <p>Copyright &copy;宁波澳史福环保科技有限公司 版权所有 网站备案号：鲁ICP备15045413号</p>
-            <p>地址：宁波市庄桥石材城内  手机：15192359577  电话：0535-6105723   <a href="http://www.ytaochang.com/sitemap.html">网站地图</a><a href="http://www.ytaochang.com/sitemap.xml"> XML</a></p>
+            <p>Copyright &copy;@Model.CompanyName 版权所有 网站备案号：鲁ICP备15045413号</p>
+            <p>地址：@Model.Address  联系我们：@Model.Tel     <a href="http://www.ytaochang.com/sitemap.html">网站地图</a><a href="http://www.ytaochang.com/sitemap.xml"> XML</a></p>
         </div>
     </div>
 </div>

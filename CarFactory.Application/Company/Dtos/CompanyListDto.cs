@@ -12,6 +12,9 @@ namespace CarFactory.Application.Company.Dtos
     public class CompanyListDto : EntityDto<int>
     {
         public string CompanyName { get; set; }
+
+        public string LinkMan { get; set; }
+
         public string Phone { get; set; }
         public string Tel { get; set; }
         public string Email { get; set; }

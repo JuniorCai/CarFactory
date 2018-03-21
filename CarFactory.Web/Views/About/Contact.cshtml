@@ -13,10 +13,22 @@
 <div class="right_ow">
     <div class="contactd" style="padding-bottom:20px;">
         <p style="color: #444; font-size: 14px">@Model.CompanyName</p>
-        <p>手机：@Model.Phone</p>
-        <p>电话：@Model.Tel</p>
-        <p>邮箱：@Model.Email</p>
-        <p>地址：@Model.Address</p>
+        @if (!string.IsNullOrEmpty(Model.Phone))
+        {
+            <p>手机：@Model.Phone</p>
+        }
+        @if (!string.IsNullOrEmpty(Model.Tel))
+        {
+            <p>电话：@Model.Tel</p>
+        }
+        @if (!string.IsNullOrEmpty(Model.Email))
+        {
+            <p>邮箱：@Model.Email</p>
+        }
+        @if (!string.IsNullOrEmpty(Model.Address))
+        {
+            <p>地址：@Model.Address</p>
+        }
         <!-- <p style="color: #ff0000;"><span class="qlswu_call" onclick="javascript:popup_qs()">400 670 0535转XXXX</span></p> -->
     </div>
 

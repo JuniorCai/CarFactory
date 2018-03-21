@@ -44,7 +44,6 @@
 </div>
     @RenderBody()
     
-    @{
-    Html.RenderPartial("~/Views/Shared/PartialPages/_PartialFooter.cshtml");}
+    @{Html.RenderAction("PartialFooter","Layout");}
 </body>
 </html>
