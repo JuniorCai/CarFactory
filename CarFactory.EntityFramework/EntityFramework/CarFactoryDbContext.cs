@@ -5,12 +5,14 @@ using System.Linq;
 using Abp.Zero.EntityFramework;
 using CarFactory.Core.Authorization.Roles;
 using CarFactory.Core.Authorization.Users;
+using CarFactory.Core.CustomDomain.Banner;
 using CarFactory.Core.CustomDomain.Category;
 using CarFactory.Core.CustomDomain.Company;
 using CarFactory.Core.CustomDomain.Products;
 using CarFactory.Core.CustomDomain.Report;
 using CarFactory.Core.CustomDomain.Seo;
 using CarFactory.Core.MultiTenancy;
+using CarFactory.EntityFramework.EntityMapper.Banner;
 using CarFactory.EntityFramework.EntityMapper.Company;
 using CarFactory.EntityFramework.EntityMapper.Products;
 using CarFactory.EntityFramework.EntityMapper.Report;
@@ -32,7 +34,7 @@ namespace CarFactory.EntityFramework.EntityFramework
 
         public IDbSet<Seo> Seos { get; set; }
 
-
+        public IDbSet<Banner> Banners { get; set; }
 
 
         /* NOTE: 
@@ -77,7 +79,7 @@ namespace CarFactory.EntityFramework.EntityFramework
             modelBuilder.Configurations.Add(new CompanyCfg());
             modelBuilder.Configurations.Add(new ReportCfg());
             modelBuilder.Configurations.Add(new SeoCfg());
-
+            modelBuilder.Configurations.Add(new BannerCfg());
 
             modelBuilder.Entity<User>().Property(u => u.EmailAddress).IsOptional();
             base.OnModelCreating(modelBuilder);

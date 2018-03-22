@@ -199,6 +199,7 @@
     <Compile Include="EntityFramework\CarFactoryDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\CarFactoryRepositoryBase.cs" />
     <Compile Include="EntityFramework\Repositories\IRepositoryExtension.cs" />
+    <Compile Include="EntityMapper\Banner\BannerCfg.cs" />
     <Compile Include="EntityMapper\Company\CompanyCfg.cs" />
     <Compile Include="EntityMapper\Products\CategoryCfg.cs" />
     <Compile Include="EntityMapper\Products\ProductCfg.cs" />
@@ -207,6 +208,14 @@
     <Compile Include="Migrations\201803220144563_initialCreate.cs" />
     <Compile Include="Migrations\201803220144563_initialCreate.Designer.cs">
       <DependentUpon>201803220144563_initialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803221250588_initialCreate1.cs" />
+    <Compile Include="Migrations\201803221250588_initialCreate1.Designer.cs">
+      <DependentUpon>201803221250588_initialCreate1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803221337117_initialCreate2.cs" />
+    <Compile Include="Migrations\201803221337117_initialCreate2.Designer.cs">
+      <DependentUpon>201803221337117_initialCreate2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -233,6 +242,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201803220144563_initialCreate.resx">
       <DependentUpon>201803220144563_initialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803221250588_initialCreate1.resx">
+      <DependentUpon>201803221250588_initialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803221337117_initialCreate2.resx">
+      <DependentUpon>201803221337117_initialCreate2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

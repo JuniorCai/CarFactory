@@ -39,12 +39,6 @@ namespace CarFactory.Application.Seo.Dtos
         [MaxLength(1000)]
         public string SiteDescription { get; set; }
 
-        /// <summary>
-        /// 首页Banner
-        /// </summary>
-        [DisplayName("首页Banner")]
-        [MaxLength(1000)]
-        public string SiteBannerImgs { get; set; }
 
         /// <summary>
         /// 开启水印

@@ -19,9 +19,6 @@ namespace CarFactory.Application.Seo.Dtos
 
         public virtual string SiteDescription { get; set; }
 
-        public virtual string SiteBannerImgs { get; set; }
-
-
         /// <summary>
         /// 开启水印
         /// </summary>

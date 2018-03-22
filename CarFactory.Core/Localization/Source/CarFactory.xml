@@ -62,6 +62,7 @@
     <text name="Settings" value="设置" />
     <text name="ProductManage" value="产品管理" />
     <text name="Roles" value="角色管理" />
+    <text name="BannerManage" value="Banner管理" />
 
 
     <!-- 产品信息管理 -->
@@ -148,7 +149,18 @@
     <text name="Watermark" value="水印名称" />
     <text name="IcpNumber" value="ICP备案序号" />
 
+    <!-- 首页Banner管理 -->
+    <text name="Banner" value="首页Banner" />
+    <text name="BannerHeaderInfo" value="首页Banner管理列表" />
+    <text name="CreateBanner" value="新增首页Banner" />
+    <text name="EditBanner" value="编辑首页Banner" />
+    <text name="DeleteBanner" value="删除首页Banner" />
+    <text name="BannerDeleteWarningMessage" value="首页Banner名称: {0} 将被删除,是否确定删除它。" />
+    <!--//用于表格展示的数据信息的标题-->
+    <text name="ImgAlt" value="说明" />
+    <text name="ImgTitle" value="标题" />
 
+    
 
     <!-- 后台管理权限 -->
     <text name="Administration" value="后台管理员" />

@@ -205,6 +205,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banner\BannerAppService.cs" />
+    <Compile Include="Banner\Dtos\BannerEditDto.cs" />
+    <Compile Include="Banner\Dtos\BannerListDto.cs" />
+    <Compile Include="Banner\Dtos\CreateOrUpdateBannerInput.cs" />
+    <Compile Include="Banner\Dtos\GetBannerForEditOutput.cs" />
+    <Compile Include="Banner\Dtos\GetBannerInput.cs" />
+    <Compile Include="Banner\IBannerAppService.cs" />
+    <Compile Include="Banner\Mappers\BannerDtoMapper.cs" />
     <Compile Include="CarFactoryApplicationModule.cs" />
     <Compile Include="CarFactoryAppServiceBase.cs" />
     <Compile Include="Authorization\Accounts\AccountAppService.cs" />

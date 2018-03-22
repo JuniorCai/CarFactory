@@ -102,6 +102,12 @@ namespace CarFactory.Admin
             bundles.Add(new StyleBundle("~/assets/global/profile/css").Include(
                 "~/Content/assets/pages/css/profile.min.css"));
 
+            bundles.Add(new StyleBundle("~/assets/global/dropzone/css").Include(
+                "~/Content/assets/global/plugins/dropzone/dropzone.css"));
+
+            bundles.Add(new ScriptBundle("~/assets/global/dropzone/scripts").Include(
+                "~/Content/assets/global/plugins/dropzone/dropzone.js"));
+
             bundles.Add(new ScriptBundle("~/assets/global/bootstrapSummernote/scripts").Include(
                 "~/Content/assets/global/plugins/bootstrap-summernote/summernote.min.js"));
 

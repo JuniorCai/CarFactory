@@ -2,6 +2,7 @@
 using Abp.Localization;
 using CarFactory.Core;
 using CarFactory.Core.Authorization;
+using CarFactory.Core.CustomDomain.Banner.Authorization;
 using CarFactory.Core.CustomDomain.Category.Authorization;
 using CarFactory.Core.CustomDomain.Company.Authorization;
 using CarFactory.Core.CustomDomain.Products.Authorization;
@@ -71,6 +72,14 @@ namespace CarFactory.Admin
                 requiredPermissionName: CompanyAppPermissions.Company
                 );
 
+            var banner = new MenuItemDefinition(
+                PageNames.Banner,
+                L(PageNames.Banner),
+                url: "/admin/BannerManage",
+                icon: "icon-grid",
+                requiredPermissionName: BannerAppPermissions.Banner
+            );
+
             var role = new MenuItemDefinition(
                     PageNames.Roles,
                     L(PageNames.Roles),
@@ -93,7 +102,7 @@ namespace CarFactory.Admin
                 icon: "icon-grid");
 
 
-            contentManageMenu.AddItem(product).AddItem(productCategory).AddItem(report).AddItem(company);
+            contentManageMenu.AddItem(product).AddItem(productCategory).AddItem(report).AddItem(company).AddItem(banner);
             settingsManageMenu.AddItem(role).AddItem(user).AddItem(seo);
 
             context.Manager.MainMenu.AddItem(homeMenu).AddItem(contentManageMenu).AddItem(settingsManageMenu);

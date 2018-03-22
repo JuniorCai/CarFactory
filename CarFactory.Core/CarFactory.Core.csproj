@@ -173,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\CarFactoryAdminNavigationProvider.cs" />
+    <Compile Include="CustomDomain\Banner\Authorization\BannerAppPermissions.cs" />
+    <Compile Include="CustomDomain\Banner\Banner.cs" />
+    <Compile Include="CustomDomain\Banner\BannerManage.cs" />
     <Compile Include="CustomDomain\Company\Authorization\CompanyAppPermissions.cs" />
     <Compile Include="CustomDomain\Company\Company.cs" />
     <Compile Include="CustomDomain\Company\CompanyManage.cs" />

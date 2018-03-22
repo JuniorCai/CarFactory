@@ -677,6 +677,14 @@
     <Content Include="Content\assets\global\plugins\datatables\pdfmake.min.js" />
     <Content Include="Content\assets\global\plugins\datatables\plugins\bootstrap\datatables.bootstrap.css" />
     <Content Include="Content\assets\global\plugins\datatables\plugins\bootstrap\datatables.bootstrap.js" />
+    <Content Include="Content\assets\global\plugins\dropzone\basic.css" />
+    <Content Include="Content\assets\global\plugins\dropzone\dropzone-amd-module.js" />
+    <Content Include="Content\assets\global\plugins\dropzone\dropzone.css" />
+    <Content Include="Content\assets\global\plugins\dropzone\dropzone.js" />
+    <Content Include="Content\assets\global\plugins\dropzone\min\basic.min.css" />
+    <Content Include="Content\assets\global\plugins\dropzone\min\dropzone-amd-module.min.js" />
+    <Content Include="Content\assets\global\plugins\dropzone\min\dropzone.min.css" />
+    <Content Include="Content\assets\global\plugins\dropzone\min\dropzone.min.js" />
     <Content Include="Content\assets\global\plugins\excanvas.min.js" />
     <Content Include="Content\assets\global\plugins\font-awesome\css\font-awesome.css" />
     <Content Include="Content\assets\global\plugins\font-awesome\css\font-awesome.min.css" />
@@ -907,13 +915,13 @@
     <Content Include="Content\assets\pages\scripts\components-editors.js" />
     <Content Include="Content\assets\pages\scripts\components-editors.min.js" />
     <Content Include="Content\assets\pages\scripts\components-multi-select.js" />
+    <Content Include="Content\assets\pages\scripts\form-dropzone.js" />
     <Content Include="Content\assets\pages\scripts\form-validation.js" />
     <Content Include="Content\assets\pages\scripts\form-validation.min.js" />
     <Content Include="Content\assets\pages\scripts\login.js" />
     <Content Include="Content\assets\pages\scripts\profile.js" />
     <Content Include="Content\assets\pages\scripts\profile.min.js" />
     <Content Include="Content\assets\pages\scripts\table-datatables-ajax.js" />
-    <Content Include="Content\assets\pages\scripts\table-datatables-ajax.min.js" />
     <Content Include="Content\assets\pages\scripts\table-datatables-managed.js" />
     <Content Include="Content\assets\pages\scripts\table-datatables-managed.min.js" />
     <Content Include="Content\assets\pages\scripts\ui-bootstrap-growl.js" />
@@ -3070,6 +3078,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\assets\global\plugins\dropzone\readme.md" />
     <None Include="packages.config" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
@@ -3125,6 +3134,7 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BannerController.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\LayoutController.cs" />
     <Compile Include="Controllers\ProductCategoryController.cs" />
@@ -3183,6 +3193,7 @@
     <Content Include="Views\Company\Index.cshtml" />
     <Content Include="Views\Admin\ProfileInfo.cshtml" />
     <Content Include="Views\Seo\Index.cshtml" />
+    <Content Include="Views\Banner\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

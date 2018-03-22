@@ -80,7 +80,7 @@ namespace CarFactory.Admin.Controllers
             return Json(new {success = status});
         }
 
-        [Route("CategoryManage/uodateCategory")]
+        [Route("CategoryManage/updateCategory")]
         public JsonResult UpdateCategory(CategoryEditDto categoryEdit)
         {
             bool status = false;

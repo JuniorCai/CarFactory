@@ -2,6 +2,7 @@
 using Abp.Localization;
 using Abp.MultiTenancy;
 using CarFactory.Core.Authorization;
+using CarFactory.Core.CustomDomain.Banner.Authorization;
 using CarFactory.Core.CustomDomain.Category.Authorization;
 using CarFactory.Core.CustomDomain.Company.Authorization;
 using CarFactory.Core.CustomDomain.Products.Authorization;
@@ -44,6 +45,7 @@ namespace CarFactory.Core
 //            report.CreateChildPermission(ReportAppPermissions. Report_DeleteReport, L("DeleteReport"), L("DeleteReport"));
 
             var seo = entityNameModel.CreateChildPermission(SeoAppPermissions.Seo, L("Seo"), L("Seo"));
+            var banner = entityNameModel.CreateChildPermission(BannerAppPermissions.Banner, L("Banner"), L("Banner"));
 
 
 

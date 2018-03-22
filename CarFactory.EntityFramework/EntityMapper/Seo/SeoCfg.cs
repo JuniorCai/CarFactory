@@ -26,8 +26,7 @@ namespace CarFactory.EntityFramework.EntityMapper.Seo
             Property(a => a.SiteKeywords).HasMaxLength(200);
             // 网站描述
             Property(a => a.SiteDescription).HasMaxLength(1000);
-            // 首页Banner
-            Property(a => a.SiteBannerImgs).HasMaxLength(1000);
+
             // 水印名称
             Property(a => a.Watermark).HasMaxLength(50);
             // ICP备案序号

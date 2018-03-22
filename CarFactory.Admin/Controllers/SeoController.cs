@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Abp.Application.Navigation;
 using Abp.Application.Services.Dto;
 using Abp.Runtime.Validation;
+using Abp.Web.Security.AntiForgery;
 using CarFactory.Application.Seo;
 using CarFactory.Application.Seo.Dtos;
 using CarFactory.Application.Users;
@@ -51,7 +52,6 @@ namespace CarFactory.Admin.Controllers
                 var oldModel = await _seoAppService.GetDefaultSeoAsync();
                 if (oldModel != null)
                 {
-                    editDto.SiteBannerImgs = oldModel.SiteBannerImgs;
                     editDto.Watermark = oldModel.Watermark;
                     editDto.WatermarkAble = oldModel.WatermarkAble;
                 }
@@ -73,7 +73,6 @@ namespace CarFactory.Admin.Controllers
         public async Task<JsonResult> SaveWatermark(SeoEditDto editDto)
         {
             
-
             CheckModelState();
 
             bool status = false;
@@ -84,7 +83,6 @@ namespace CarFactory.Admin.Controllers
                 var oldModel = await _seoAppService.GetDefaultSeoAsync();
                 if (oldModel != null)
                 {
-                    editDto.SiteBannerImgs = oldModel.SiteBannerImgs;
                     editDto.SiteTitle = oldModel.SiteTitle;
                     editDto.SiteKeywords = oldModel.SiteKeywords;
                     editDto.SiteDescription = oldModel.SiteDescription;
@@ -104,6 +102,7 @@ namespace CarFactory.Admin.Controllers
         [Route("seo/savebanner")]
         [HttpPost]
         [DisableValidation]
+        //[DisableAbpAntiForgeryTokenValidation]
         public async Task<JsonResult> SaveBanner(int id = 0)
         {
             CheckModelState();
@@ -134,5 +133,7 @@ namespace CarFactory.Admin.Controllers
 
             return Json(new { success = status, message = message });
         }
+
+
     }
 }

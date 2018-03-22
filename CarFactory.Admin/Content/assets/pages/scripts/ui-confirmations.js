@@ -88,6 +88,27 @@ var UIConfirmations = function () {
 
         });
 
+        $('.bannerDelete').on('confirmed.bs.confirmation', function () {
+            var val = $(this).attr('banner');
+            var resetModel = { id: val };
+
+            abp.ajax({
+                url: "/admin/bannermanage/delBanner",
+                data: JSON.stringify(resetModel)
+            }).done(function (data) {
+                //要执行的代码
+                if (data.success == true) {
+                    UIBootstrapGrowl.show('body', '操作成功', 'success');
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000);
+                } else {
+                    UIBootstrapGrowl.show('body', '操作失败，请联系技术人员', 'warning');
+                }
+            });
+
+        });
+
         // $('#bs_confirmation_demo_1').on('canceled.bs.confirmation', function () {
         //     alert('You canceled action #1');
         // });
