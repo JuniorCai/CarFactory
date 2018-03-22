@@ -47,7 +47,7 @@ namespace CarFactory.Admin.Controllers
 
             try
             {
-                await _companyAppService.UpdateCompanyAsync(editModel);
+                await _companyAppService.CreateOrUpdateCompanyAsync(new CreateOrUpdateCompanyInput(){CompanyEditDto = editModel });
                 status = true;
             }
             catch (Exception e)

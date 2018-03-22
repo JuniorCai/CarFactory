@@ -31,6 +31,8 @@ namespace CarFactory.EntityFramework.EntityMapper.Company
             Property(a => a.Longitude).HasMaxLength(100);
             // Latitude
             Property(a => a.Latitude).HasMaxLength(100);
+            //Introduce
+            Property(a => a.Introduce).HasMaxLength(4000);
         }
     }
 }

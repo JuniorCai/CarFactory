@@ -38,5 +38,7 @@ namespace CarFactory.Application.Company.Dtos
         [Required]
         public string Latitude { get; set; }
 
+        public string Introduce { get; set; }
+
     }
 }

@@ -17,7 +17,9 @@ namespace CarFactory.Web.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            CompanyListDto info = _companyAppService.GetDefaultCompanyAsync().Result;
+
+            return View(info);
         }
 
         public async Task<ActionResult> Contact()

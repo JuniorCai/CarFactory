@@ -22,5 +22,7 @@ namespace CarFactory.Core.CustomDomain.Company
 
         public virtual string Latitude { get; set; }
 
+        public virtual string Introduce { get; set; }
+
     }
 }

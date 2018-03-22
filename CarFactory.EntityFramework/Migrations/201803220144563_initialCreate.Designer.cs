@@ -13,7 +13,7 @@ namespace CarFactory.EntityFramework.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201803210230215_initialCreate"; }
+            get { return "201803220144563_initialCreate"; }
         }
         
         string IMigrationMetadata.Source

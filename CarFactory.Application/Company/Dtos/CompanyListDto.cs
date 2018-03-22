@@ -22,6 +22,9 @@ namespace CarFactory.Application.Company.Dtos
         public string Longitude { get; set; }
         public string Latitude { get; set; }
 
+        public string Introduce { get; set; }
+
+
         /// <summary>
         /// 创建时间
         /// </summary>
