@@ -4583,3 +4583,7 @@ DEBUG 2018-03-22 10:20:03,940 [1    ] Abp.Logging.LogHelper                    -
 DEBUG 2018-03-22 10:20:03,941 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Application.Configuration.IConfigurationAppService' with service name 'app/configuration'.
 DEBUG 2018-03-22 10:20:03,942 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Application.Company.ICompanyAppService' with service name 'app/company'.
 DEBUG 2018-03-22 10:20:03,943 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'CarFactory.Application.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-03-22 10:43:21,582 [66   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-03-22 10:43:21,583 [66   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-22 10:43:21,584 [66   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-03-22 10:43:21,584 [66   ] Abp.Modules.AbpModuleManager             - Shutting down completed.

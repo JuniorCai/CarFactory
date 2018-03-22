@@ -73,7 +73,15 @@ strong{font-size:13px}
     }
 
 .product_body{ padding-top:15px;}
-.td{ width:225px; float:left; overflow:hidden; border:#dadada solid 1px; margin:10px 10px; background:#fff;}
+.td {
+    width: 225px;
+    float: left;
+    overflow: hidden;
+    border: #dadada solid 1px;
+    margin: 10px 6px;
+    background: #fff;
+}
+
 .td1{padding:3px 3px;}
 .td1 a img{width:219px;}
 .td2{ width:225px; text-align:center; color:#666666; height:50px; }

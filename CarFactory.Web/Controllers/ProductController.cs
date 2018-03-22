@@ -6,6 +6,7 @@ using CarFactory.Application.Products.Dtos;
 using CarFactory.Web.Models.Common;
 using System.Linq;
 using System.Web.Mvc;
+using CarFactory.Application.Seo;
 using X.PagedList;
 
 namespace CarFactory.Web.Controllers
@@ -17,7 +18,7 @@ namespace CarFactory.Web.Controllers
         private readonly ICategoryAppService _categoryAppService;
 
 
-        public ProductController(IProductAppService productAppService,ICategoryAppService categoryAppService)
+        public ProductController(ISeoAppService seoAppService, IProductAppService productAppService,ICategoryAppService categoryAppService):base(seoAppService)
         {
             _productAppService = productAppService;
             _categoryAppService = categoryAppService;
@@ -55,6 +56,7 @@ namespace CarFactory.Web.Controllers
             var pagedProducts = new StaticPagedList<ProductListDto>(products.Items, pageIndex + 1, pagedInput.MaxResultCount,
                 products.TotalCount);
 
+            ViewBag.SeoSetting = GetSeoSetting();
 
             return View(pagedProducts);
         }
@@ -80,6 +82,7 @@ namespace CarFactory.Web.Controllers
             }
 
 
+            ViewBag.SeoSetting = GetSeoSetting();
 
             return View(dtoNavModel);
         }

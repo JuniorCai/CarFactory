@@ -1,8 +1,11 @@
-﻿using Abp.IdentityFramework;
+﻿using System.Threading.Tasks;
+using Abp.IdentityFramework;
 using Abp.UI;
 using Abp.Web.Mvc.Controllers;
 using Microsoft.AspNet.Identity;
 using CarFactory;
+using CarFactory.Application.Seo;
+using CarFactory.Application.Seo.Dtos;
 using CarFactory.Core;
 
 namespace CarFactory.Web.Controllers
@@ -12,8 +15,12 @@ namespace CarFactory.Web.Controllers
     /// </summary>
     public abstract class CarFactoryControllerBase : AbpController
     {
-        protected CarFactoryControllerBase()
+
+        private readonly ISeoAppService _seoAppService;
+
+        protected CarFactoryControllerBase(ISeoAppService seoAppService)
         {
+            _seoAppService = seoAppService;
             LocalizationSourceName = CarFactoryConsts.LocalizationSourceName;
         }
 
@@ -28,6 +35,12 @@ namespace CarFactory.Web.Controllers
         protected void CheckErrors(IdentityResult identityResult)
         {
             identityResult.CheckErrors(LocalizationManager);
+        }
+
+        protected SeoListDto GetSeoSetting()
+        {
+            var setting = _seoAppService.GetDefaultSeoAsync().Result;
+            return setting;
         }
     }
 }

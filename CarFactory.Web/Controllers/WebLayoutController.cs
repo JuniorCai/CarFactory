@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Abp.Application.Services.Dto;
 using CarFactory.Application.Category;
 using CarFactory.Application.Category.Dtos;
+using CarFactory.Application.Seo;
 using CarFactory.Web.Models.Layout;
 
 namespace CarFactory.Web.Controllers
@@ -17,7 +18,7 @@ namespace CarFactory.Web.Controllers
 
         private readonly ICategoryAppService _categoryAppService;
 
-        public WebLayoutController(ICategoryAppService categoryAppService)
+        public WebLayoutController(ICategoryAppService categoryAppService, ISeoAppService seoAppService):base(seoAppService)
         {
             _categoryAppService = categoryAppService;
         }

@@ -7,17 +7,18 @@ using Abp.Application.Services.Dto;
 using CarFactory.Application.Products.Dtos;
 using CarFactory.Application.Report;
 using CarFactory.Application.Report.Dtos;
+using CarFactory.Application.Seo;
 using CarFactory.Web.Models.Common;
 using X.PagedList;
 
 namespace CarFactory.Web.Controllers
 {
-    public class ReportController : Controller
+    public class ReportController : CarFactoryControllerBase
     {
 
         private readonly IReportAppService _reportAppService;
 
-        public ReportController(IReportAppService reportAppService)
+        public ReportController(IReportAppService reportAppService, ISeoAppService seoAppService):base(seoAppService)
         {
             _reportAppService = reportAppService;
         }
@@ -37,6 +38,7 @@ namespace CarFactory.Web.Controllers
 
             var pagedReports = new StaticPagedList<ReportListDto>(reports.Items, pageIndex + 1, pagedInput.MaxResultCount,
                 reports.TotalCount);
+            ViewBag.SeoSetting = GetSeoSetting();
 
             return View(pagedReports);
         }
@@ -61,6 +63,7 @@ namespace CarFactory.Web.Controllers
                 dtoNavModel.NextItem = nextDto;
             }
 
+            ViewBag.SeoSetting = GetSeoSetting();
 
 
             return View(dtoNavModel);

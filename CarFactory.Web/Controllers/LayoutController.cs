@@ -13,6 +13,7 @@ using CarFactory.Application.Company;
 using CarFactory.Application.Configuration.Ui;
 using CarFactory.Application.Products;
 using CarFactory.Application.Products.Dtos;
+using CarFactory.Application.Seo;
 using CarFactory.Application.Sessions;
 using CarFactory.Core;
 using CarFactory.Core.Configuration;
@@ -29,7 +30,8 @@ namespace CarFactory.Web.Controllers
 
         public LayoutController(IProductAppService productAppService,
             ICategoryAppService categoryAppService,
-            ICompanyAppService companyAppService)
+            ICompanyAppService companyAppService,
+            ISeoAppService seoAppService):base(seoAppService)
         {
             _companyAppService = companyAppService;
             _productAppService = productAppService;
@@ -66,6 +68,8 @@ namespace CarFactory.Web.Controllers
 
             return PartialView("PartialPages/Home/_PartialProducts", categoryList);
         }
+
+
 
     }
 }

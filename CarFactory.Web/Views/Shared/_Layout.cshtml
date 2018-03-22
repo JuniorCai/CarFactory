@@ -5,32 +5,35 @@
 @using Abp.Timing
 @using Abp.Web.Mvc.Extensions
 @using CarFactory
+@using CarFactory.Application.Seo.Dtos
 @{
     Layout = null;
     //SetAntiForgeryCookie();
-    
+    var SeoSetting = ViewBag.SeoSetting as SeoListDto;
+
 }
 <!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <meta name="description" content="">
+    <meta name="description" content="@SeoSetting.SiteDescription">
+    <meta name="keywords" content="@SeoSetting.SiteKeywords" />
     <meta name="author" content="">
 
     <link rel="shortcut icon" href="~/favicon.ico">
 
-    <title>@ViewBag.Title</title>
+    <title>@(SeoSetting.SiteTitle)</title>
 
     @Styles.Render("~/Content/css/commom")
-    
+
     @Scripts.Render("~/scripts/jquery")
 
     <!-- View specific styles -->
     @RenderSection("styles", required: false)
-    @RenderSection("scripts",false)
+    @RenderSection("scripts", false)
 
-    
+
 </head>
 <body >
 <div class="head">

@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using Abp.Web.Mvc.Authorization;
 using CarFactory.Application.Company;
 using CarFactory.Application.Company.Dtos;
+using CarFactory.Application.Seo;
 
 namespace CarFactory.Web.Controllers
 {
@@ -14,14 +15,14 @@ namespace CarFactory.Web.Controllers
         private readonly ICompanyAppService _companyAppService;
 
 
-        public HomeController(ICompanyAppService companyAppService)
+        public HomeController(ISeoAppService seoAppService,ICompanyAppService companyAppService):base(seoAppService)
         {
             _companyAppService = companyAppService;
         }
         public async Task<ActionResult> Index()
         {
             CompanyListDto info = await _companyAppService.GetDefaultCompanyAsync();
-
+            ViewBag.SeoSetting = GetSeoSetting ();
             return View(info);
         }
 	}

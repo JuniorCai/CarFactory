@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using CarFactory.Application.Company;
 using CarFactory.Application.Company.Dtos;
+using CarFactory.Application.Seo;
 using CarFactory.Core.CustomDomain.Company;
 
 namespace CarFactory.Web.Controllers
@@ -11,13 +12,14 @@ namespace CarFactory.Web.Controllers
         private readonly ICompanyAppService _companyAppService;
         
 
-        public AboutController(ICompanyAppService companyAppService)
+        public AboutController(ISeoAppService seoAppService, ICompanyAppService companyAppService):base(seoAppService)
         {
             _companyAppService = companyAppService;
         }
         public ActionResult Index()
         {
             CompanyListDto info = _companyAppService.GetDefaultCompanyAsync().Result;
+            ViewBag.SeoSetting = GetSeoSetting();
 
             return View(info);
         }
@@ -25,6 +27,8 @@ namespace CarFactory.Web.Controllers
         public async Task<ActionResult> Contact()
         {
             CompanyListDto info = await _companyAppService.GetDefaultCompanyAsync();
+            ViewBag.SeoSetting = GetSeoSetting();
+
             return View(info);
         }
 	}

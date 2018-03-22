@@ -1,10 +1,17 @@
 ﻿@using System.Web.Optimization
+@using CarFactory.Application.Seo.Dtos
+@{
+    var SeoSetting = ViewBag.SeoSetting as SeoListDto;
+
+}
 <!DOCTYPE html>
 <html lang="zh">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
-    <title>@ViewBag.Title</title>
+    <title>@(ViewBag.Title + "-" + SeoSetting.SiteTitle)</title>
+    <meta name="description" content="@SeoSetting.SiteDescription">
+    <meta name="keywords" content="@SeoSetting.SiteKeywords" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
 

@@ -26,38 +26,32 @@
                 string liId = "navij" + (i + 1);
                 <li class="@hoverStr" id="@liId" onmouseover="ctab(@(i+1), 7)"><a href="javascript:void(0);">@Model[i].CategoryName</a></li>
         }
-                @*                <li class="hover" id="navij1" onmouseover="ctab(1, 7)"><a href="#">润滑系统深化保养</a></li>*@
-                @*                <li id="navij2" onmouseover="ctab(2, 7)"><a href="#">进气系统深化保养</a></li>*@
-                @*                <li id="navij3" onmouseover="ctab(3, 7)"><a href="#">空调系统深化保养</a></li>*@
-                @*                <li id="navij4" onmouseover="ctab(4, 7)"><a href="#">冷却/自动变速箱系统</a></li>*@
-                @*                <li id="navij5" onmouseover="ctab(5, 7)"><a href="#">动力转向/手动齿轮系统</a></li>*@
-                @*                <li id="navij6" onmouseover="ctab(6, 7)"><a href="#">制动系统深化保养</a></li>*@
-                @*                <li id="navij7" onmouseover="ctab(7, 7)"><a href="#">KingCool系列</a></li>*@
             </ul>
         </div>
-        @for (int i = 0; i < Model.Count; i++)
+                @for (int i = 0; i < Model.Count; i++)
+                {
+                    string idStr = "subij" + (i + 1);
+                    var categoryInfo = Model[i];
+                    string hiddenStr = i != 0 ? "display:none" : "";
+        
+                    foreach (var item in categoryInfo.Products)
                     {
-                        string idStr = "subij" + (i + 1);
-                        var categoryInfo = Model[i];
-                        string hiddenStr = i != 0 ? "display:none" : "";
-            
-            foreach (var item in categoryInfo.Products)
-                        {
-                <div class="product_body" id="@idStr" style="@hiddenStr">
-                    <div class="td">
-                        <div class="td1">
-                            <a href="/product/dpsgfa/20151221517.html" alt="@item.Title" target="_blank">
-                                <img src="@item.Img" alt="@item.Title" />
-                            </a>
+                        <div class="product_body" id="@idStr" style="@hiddenStr">
+                            <div class="td">
+                                <div class="td1">
+                                    <a href="/product/dpsgfa/20151221517.html" alt="@item.Title" target="_blank">
+                                        <img src="@item.Img" alt="@item.Title"/>
+                                    </a>
+                                </div>
+                                <div class="td2">
+                                    <a href="/product/dpsgfa/20151221517.html" alt="@item.Title" target="_blank">@(item.Title.Length > 14 ? (item.Title.Substring(0, 14) + "...") : item.Title)</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="td2">
-                            <a href="/product/dpsgfa/20151221517.html" alt="@item.Title" target="_blank">@(item.Title.Length>14? (item.Title.Substring(0,14)+"...") : item.Title)</a>
-                        </div>
-                    </div>
-                </div>
-            }
-
-        }
+                    }
+        
+                }
+        
 
     </div>
 </div>
