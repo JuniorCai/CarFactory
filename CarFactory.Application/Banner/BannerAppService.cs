@@ -59,12 +59,13 @@ namespace CarFactory.Application.Banner
 
             var query = _bannerRepositoryAsNoTrack;
             //TODO:根据传入的参数添加过滤条件
+            query = query.Where(b => b.IsShow == true);
 
             var bannerCount = await query.CountAsync();
 
             var banners = await query
-                .OrderBy(b=>b.Sort)
-                .ThenBy(b=>b.IsShow)
+                .OrderBy(b=>b.IsShow)
+                .ThenBy(b=>b.Sort)
                 .PageBy(input)
                 .ToListAsync();
 

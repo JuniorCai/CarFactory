@@ -26,6 +26,14 @@ namespace CarFactory.Admin.Helpers
             get { return int.Parse(ConfigurationManager.AppSettings["SizeLimit"]); }
         }
 
+        public string FileServer
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["FileServer"];
+            }
+        }
+
         public string WebRootPath { get; set; }
 
         public ImageUploadStatus UploadStatus { get; set; }

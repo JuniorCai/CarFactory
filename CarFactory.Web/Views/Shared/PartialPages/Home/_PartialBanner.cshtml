@@ -1,10 +1,25 @@
-﻿@model CarFactory.Application.Company.Dtos.CompanyListDto
+﻿@using System.Configuration
+@using Abp.Application.Services.Dto
+@using CarFactory.Application.Banner.Dtos
+@model CarFactory.Application.Company.Dtos.CompanyListDto
+@{
+    var bannerList = ViewBag.BannerList as PagedResultDto<BannerListDto>;
+    string fileServer = ConfigurationManager.AppSettings["FileServer"];
+}
 <div class="banner">
     <div id="full-screen-slider">
         <ul id="slides">
-            <li style="background:url('/Content/images/public/01.jpg') no-repeat center top"></li>
-            <li style="background:url('/Content/images/public/02.jpg') no-repeat center top"></li>
-            <li style="background:url('/Content/images/public/03.jpg') no-repeat center top"></li>
+            @if (bannerList != null)
+            {
+                foreach (var banner in bannerList.Items)
+                {
+                    <li >
+                        <img style="width: 1600px; height: 466px; " src="@(fileServer + banner.Img)"/>
+                    </li>
+                }
+            }
+            @*            <li style="background: url('/Content/images/public/02.jpg') no-repeat center top"></li>*@
+            @*            <li style="background: url('/Content/images/public/03.jpg') no-repeat center top"></li>*@
         </ul>
     </div>
 </div>
