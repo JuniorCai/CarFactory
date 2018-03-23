@@ -18,7 +18,7 @@ namespace CarFactory.EntityFramework.EntityMapper.Banner
             ToTable("Banner", CarFactoryConsts.SchemaName.Basic);
 
             // Img
-            Property(a => a.Img).HasMaxLength(50);
+            Property(a => a.Img).HasMaxLength(100);
             // ImgAlt
             Property(a => a.ImgAlt).HasMaxLength(50);
             // ImgTitle

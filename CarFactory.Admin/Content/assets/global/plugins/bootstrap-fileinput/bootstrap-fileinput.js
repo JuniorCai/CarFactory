@@ -76,7 +76,7 @@
 
     var file = files[0]
 
-    if (this.$preview.length > 0 && (typeof file.type !== "undefined" ? file.type.match(/^image\/(gif|png|jpeg)$/) : file.name.match(/\.(gif|png|jpe?g)$/i)) && typeof FileReader !== "undefined") {
+    if (this.$preview.length > 0 && (typeof file.type !== "undefined" ? file.type.match(/^image\/(gif|jpg|jpeg|png|bmp|GIF|JPG|PNG)$/) : file.name.match(/\.(gif|jpg|jpeg|png|bmp?g)$/i)) && typeof FileReader !== "undefined") {
       var reader = new FileReader()
       var preview = this.$preview
       var element = this.$element

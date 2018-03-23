@@ -5,7 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
 using Abp.Application.Services.Dto;
+using Abp.Runtime.Validation;
 using Abp.Web.Mvc.Authorization;
+using CarFactory.Admin.Helpers;
 using CarFactory.Application.Banner;
 using CarFactory.Application.Banner.Dtos;
 using CarFactory.Core;
@@ -54,6 +56,7 @@ namespace CarFactory.Admin.Controllers
 
         [HttpPost]
         [Route("bannermanage/savebanner")]
+        [DisableValidation]
         public JsonResult SaveBanner(BannerEditDto editModel)
         {
             bool status = false;
@@ -63,8 +66,41 @@ namespace CarFactory.Admin.Controllers
 
             try
             {
-                _bannerAppService.CreateOrUpdateBannerAsync(new CreateOrUpdateBannerInput(){BannerEditDto = editModel });
-                status = true;
+                BannerListDto oldBanner = new BannerListDto();
+                if (editModel.Id.HasValue && editModel.Id > 0)
+                {
+                    oldBanner = _bannerAppService.GetBannerByIdAsync(new EntityDto(editModel.Id.Value)).Result;
+                }
+                if (oldBanner != null)
+                {
+                    editModel.Img = oldBanner.Img;
+
+                    ImgUploadHelpers uploadHelpers = new ImgUploadHelpers(Request.Files, Server.MapPath("/"));
+                    var uploadResult = uploadHelpers.UploadImg();
+                    if (uploadResult.Item1 == ImageUploadStatus.Success)
+                    {
+                        editModel.Img = uploadResult.Item2;
+
+                        _bannerAppService.CreateOrUpdateBannerAsync(
+                            new CreateOrUpdateBannerInput() { BannerEditDto = editModel });
+
+                        status = true;
+                    }
+                    else if (uploadResult.Item1 == ImageUploadStatus.NoFile)
+                    {
+                        _bannerAppService.CreateOrUpdateBannerAsync(
+                            new CreateOrUpdateBannerInput() { BannerEditDto = editModel });
+
+                        status = true;
+                    }
+                    else
+                    {
+                        msg = "图片上传失败，原因可能为图片格式不匹配，图片过大，请检查重新上传";
+                        status = false;
+
+                    }
+                }
+
             }
             catch (Exception e)
             {

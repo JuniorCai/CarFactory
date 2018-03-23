@@ -12,7 +12,7 @@
 
 @section PageLevelStylePlugins
 {
-    @Styles.Render("~/assets/global/datatables/css", "~/assets/global/bootstrapModal/css")
+    @Styles.Render("~/assets/global/datatables/css", "~/assets/global/bootstrapModal/css", "~/assets/global/bootstrapFileinput/css")
 
     <!-- END PAGE LEVEL PLUGINS -->
     <!--override style-->
@@ -45,7 +45,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                         <h4 class="modal-title">添加Banner</h4>
                     </div>
-                    <form id="bannerForm" class="form-horizontal form-bordered">
+                    <form id="bannerForm" name="bannerForm" class="form-horizontal form-bordered">
                         <input type="hidden" id="editId" value="0">
                         <div class="form-body">
                             <div class="modal-body">
@@ -53,12 +53,20 @@
                                     <div class="form-group ">
                                         <label class="control-label col-md-4">
                                             图片
-                                            <span class="required" aria-required="true"> * </span>
                                         </label>
                                         <div class="col-md-4">
-                                            <div class="input-icon right">
-                                                <i class="fa"></i>
-                                                <input type="text" id="categoryName" class="form-control" name="name">
+                                            <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 400px; height: 120px;">
+
+                                                </div>
+                                                <div>
+                                                    <span class="btn red btn-outline btn-file">
+                                                        <span class="fileinput-new"> 选择图片 </span>
+                                                        <span class="fileinput-exists"> 修改 </span>
+                                                        <input type="file" name="img">
+                                                    </span>
+                                                    <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> 移除 </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -76,8 +84,8 @@
                                     </div>
                                     <div class="form-group ">
                                         <label class="control-label col-md-4">
-                                            图片alt<br/>（不填则与Banner标题一致）
-                                            <span class="required" aria-required="true"> &nbsp; </span>
+                                            图片alt<span class="required" aria-required="true"> &nbsp; </span><br/>（不填则与Banner标题一致）
+                                            
                                         </label>
                                         <div class="col-md-4">
                                             <div class="input-icon right">
@@ -147,13 +155,7 @@
                             string stateTip = banner.IsShow ? "开启" : "禁用";
                             string status = banner.IsShow ? "1" : "0";
 
-                            <tr class="odd gradeX" bannerId="@banner.Id" state="@status" sort="@banner.Sort">
-                                <!--<td>-->
-                                <!--<label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">-->
-                                <!--<input type="checkbox" class="checkboxes" value="1"/>-->
-                                <!--<span></span>-->
-                                <!--</label>-->
-                                <!--</td>-->
+                            <tr class="odd gradeX" bannerId="@banner.Id" state="@status" sort="@banner.Sort" itemUrl="@banner.Img">
                                 <td> @banner.ImgTitle </td>
                                 <td> @banner.ImgAlt </td>
                                 <td> @banner.Sort </td>
@@ -189,7 +191,7 @@
 @section PageLevelScriptsPlugins
 {
     <!-- BEGIN PAGE LEVEL PLUGINS -->
-    @Scripts.Render("~/assets/global/datatables/scripts", "~/assets/global/bootstrapModal/scripts", "~/assets/global/bootstrapConfirmation/scripts")
+    @Scripts.Render("~/assets/global/datatables/scripts", "~/assets/global/bootstrapModal/scripts", "~/assets/global/bootstrapConfirmation/scripts", "~/assets/global/bootstrapFileinput/scripts")
 
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
@@ -207,17 +209,20 @@
             initValidate();
 
             $('#addCategory').click(function () {
-                setModalData(0, '', '', true);
+                setModalData(0,'', '', '', true);
             });
 
             $('.table .btn-group > a:first-child').click(function () {
                 if ($(this).attr('data-toggle') != "undefined") {
+                    setModalData(0,'', '', '', true);
+
                     var trParent = $(this).parents('tr');
                     var state = trParent.attr('state');
+                    var imgUrl = trParent.attr("itemurl");
                     var imgTitle = trParent.children(":eq(0)").text().trim();
                     var imgAlt = trParent.children().eq(1).text().trim();
                     var sort = trParent.attr('sort');
-                    setModalData(trParent.attr(("bannerId")), imgTitle, imgAlt, state == 1,sort);
+                    setModalData(trParent.attr(("bannerId")),imgUrl, imgTitle, imgAlt, state == 1,sort);
 
                     $('#responsive').modal();
                 }
@@ -225,61 +230,125 @@
 
         });
 
-        function setModalData(category, title, alt, state,sort) {
-            $("#editId").val(category);
+        function setModalData(editId, imgUrl, title, alt, state,sort) {
+            $("#editId").val(editId);
             $('#bannerState').bootstrapSwitch('state', state);
             $("#responsive .form-horizontal .row").find('input[name="imgTitle"]').val(title);
             $("#responsive .form-horizontal .row").find('input[name="imgAlt"]').val(alt);
             $("#responsive .form-horizontal .row").find('input[name="sort"]').val(sort);
 
+
+            var fileInputModel = $(".fileinput-preview").closest(".fileinput");
+            if (imgUrl.length > 0) {
+                if (fileInputModel.hasClass("fileinput-new")) {
+                    fileInputModel.removeClass("fileinput-new");
+                    fileInputModel.addClass("fileinput-exists");
+                    var img = $("<img/>").attr("src", imgUrl);
+                    $(".fileinput-preview").append(img);
+                } 
+            } else {
+                if ($(".fileinput-preview img").length > 0) {
+                    $(".fileinput-preview img").remove();
+                }
+                if (fileInputModel.hasClass("fileinput-exists")) {
+                    fileInputModel.removeClass("fileinput-exists");
+                    fileInputModel.addClass("fileinput-new");
+                }
+
+            }
         }
 
         function initValidate() {
             $("#bannerForm").validate({
+                errorElement: 'span', //default input error message container
+                errorClass: 'help-block', // default input error message class
                 onsubmit: true,
                 onfocusout: false,
                 onkeyup: false,
 
-                rules: {　　　　//规则
+                rules: { //规则
                     imgTitle: {
                         required: true,
                         minlength: 2
                     }
                 },
-                messages: {　　　　//验证错误信息
+                messages: { //验证错误信息
                     imgTitle: {
                         required: "请输入标题",
                         minlength: "标题最小长度为2"
                     }
                 },
-                submitHandler: function (form) { //通过之后回调
+                highlight: function(element) { // hightlight error inputs
+                    $(element)
+                        .closest('.form-group').addClass('has-error'); // set error class to the control group
+                },
+                submitHandler: function(form) { //通过之后回调
+                    var status = false;
+                    
+
                     //进行ajax传值
-                    var editCategory = {
-                        Id: $('#editId').val().trim(),
-                        ImgTitle: $("#imgTitle").val().trim(),
-                        Img: $("#imgTitle").val().trim(),
-                        ImgAlt: $("#imgAlt").val().trim().length > 0 ? $("#imgAlt").val().trim() : $("#imgTitle").val().trim(),
-                        IsShow: $('#bannerState').bootstrapSwitch('state'),
-                        Sort: $("#sort").val().trim() > 0 ? $("#sort").val().trim() : "0"
-                };
-                    abp.ajax({
-                        url: "/admin/bannermanage/savebanner",
-                        data: JSON.stringify(editCategory)
-                    }).done(function(data) {
-                        //要执行的代码
-                        if (data.success == true) {
-                            UIBootstrapGrowl.show('#responsive', '保存成功', 'success');
-                            setTimeout(function() {
-                                location.reload();
-                            }, 2000);
+                    var formData = new FormData();
+                    formData.append('Id', $('#editId').val().trim());
+                    formData.append('ImgTitle', $("#imgTitle").val().trim());
+                    formData.append('ImgAlt',
+                        $("#imgAlt").val().trim().length > 0
+                        ? $("#imgAlt").val().trim()
+                        : $("#imgTitle").val().trim()); //$('<div/>').text(value).html()
+                    formData.append('IsShow',
+                        $('#bannerState').bootstrapSwitch('state')); //$('<div/>').text(value).html()
+                    formData.append('Sort',
+                        $("#sort").val().trim() > 0 ? $("#sort").val().trim() : "0"); //$('<div/>').text(value).html()
+
+
+                    if (document.bannerForm.img != null &&
+                        document.bannerForm.img.files != null &&
+                        document.bannerForm.img.files.length > 0) {
+                        if (checkUploadImgValid(document.bannerForm.img.files[0])) {
+                            formData.append('image', document.bannerForm.img.files[0]);
+                            status = true;
                         } else {
-                            UIBootstrapGrowl.show('#responsive', '保存失败，请联系技术人员', 'warning');
+                            return false;
+                        }
+                    } else {
+                        if ($(".fileinput-preview img").length == 0 || $(".fileinput-preview img").attr("src").length == 0) {
+                            UIBootstrapGrowl.show('#responsive', '未选择上传的图片', 'danger');
+                            return false;
+                        } else {
+                            formData.append('Img', $(".fileinput-preview img").attr("src"));
+                        }
+                    }
+//                    if (!status) {
+//                        UIBootstrapGrowl.show('#responsive', '未选择上传的图片', 'danger');
+//                        return false;
+//                    }
+
+                    $.ajax({
+                        url: "/admin/bannermanage/savebanner",
+                        type: "post",
+                        dataType: "json",
+                        processData: false,
+                        contentType: false,
+                        data: formData,
+                        success: function(msg) {
+                            //要执行的代码
+                            if (msg.result.success == true) {
+                                UIBootstrapGrowl.show('#responsive', '保存成功', 'success');
+                                setTimeout(function() {
+                                        location.reload();
+                                    },
+                                    2000);
+                            } else {
+                                UIBootstrapGrowl.show('#responsive', '保存失败，' + msg.result.message, 'warning');
+                            }
                         }
                     });
                 },
-                invalidHandler: function (form, validator) { return false; }
+                invalidHandler: function(form, validator) { return false; }
             });
         }
+
+        
+        
 
     </script>
 }

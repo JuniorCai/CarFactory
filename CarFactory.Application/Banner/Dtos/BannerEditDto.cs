@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Web;
 using Abp.AutoMapper;
 
 
@@ -18,8 +19,6 @@ namespace CarFactory.Application.Banner.Dtos
         [DisplayName("主键Id")]
         public int? Id { get; set; }
 
-        [Required]
-        [MaxLength(50)]
         public string Img { get; set; }
 
         [Required]

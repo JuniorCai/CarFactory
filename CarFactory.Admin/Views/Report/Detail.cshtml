@@ -176,8 +176,12 @@
                     formData.append('reportName', $.trim($("#name").val().trim()));
                     formData.append('isShow', $.trim($("#IsShow").val().trim()));
 
-                    if (document.reportForm.img != null && document.reportForm.img.files != null && document.reportForm.img.files.length>0) {
-                        formData.append('image', document.reportForm.img.files[0]);
+                    if (document.reportForm.img != null && document.reportForm.img.files != null && document.reportForm.img.files.length > 0) {
+                        if (checkUploadImgValid(document.reportForm.img.files[0])) {
+                            formData.append('image', document.reportForm.img.files[0]);
+                        } else {
+                            return;
+                        }
                     } else {
                         if ($("#oldImg").length == 0 || $("#oldImg").attr("src").length == 0) {
                             UIBootstrapGrowl.show('body', '未选择上传的图片', 'danger');

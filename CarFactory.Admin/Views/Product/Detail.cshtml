@@ -65,7 +65,7 @@
                                 {
                                     <div class="fileinput fileinput-exists" data-provides="fileinput">
                                         <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 400px; height: 300px;">
-                                            <img src="@Model.Img">
+                                            <img id="oldImg" src="@Model.Img">
                                         </div>
                                         <div>
                                             <span class="btn red btn-outline btn-file">
@@ -223,16 +223,25 @@
                     formData.append('CategoryId', $("#categoryIdSelect").val()); //$('<div/>').text(value).html()
                     formData.append('Detail', $('<div/>').text($.trim($("#summernoteWithImage").summernote("code"))).html());
                     //formData.append('Detail', $.trim($("#summernoteWithImage").summernote("code")));
-                    if (document.productForm.img != null && document.productForm.img.files != null && document.productForm.img.files.length>0) {
-                        formData.append('image', document.productForm.img.files[0]);
-                        status = true;
+                    if (document.productForm.img != null && document.productForm.img.files != null && document.productForm.img.files.length > 0) {
+                        if (checkUploadImgValid(document.productForm.img.files[0])) {
+                            formData.append('image', document.productForm.img.files[0]);
+                            status = true;
+                        } else {
+                            return false;
+                        }
                     } else {
-                        status = false;
+                        if ($("#oldImg").length == 0 || $("#oldImg").attr("src").length == 0) {
+                            UIBootstrapGrowl.show('body', '未选择上传的图片', 'danger');
+                            return false;
+                        } else {
+                            formData.append('img', $("#oldImg").attr("src"));
+                        }
                     }
-                    if (!status) {
-                        UIBootstrapGrowl.show('body', '未上传产品图片', 'danger');
-                        return false;
-                    }
+//                    if (!status) {
+//                        UIBootstrapGrowl.show('body', '未上传产品图片', 'danger');
+//                        return false;
+//                    }
                         
 
                     
