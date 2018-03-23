@@ -6014,7 +6014,7 @@
 
       var body = '<div class="form-group note-group-select-from-files">' +
                    '<label>' + lang.image.selectFromFiles + '</label>' +
-                   '<input class="note-image-input form-control" type="file" name="files" accept="image/*" multiple="multiple" />' +
+          '<input class="note-image-input form-control" type="file" name="files" accept="image/*"  />' + //multiple="multiple"
                    imageLimitation +
                  '</div>' +
                  '<div class="form-group" style="overflow:auto;">' +
