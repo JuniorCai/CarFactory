@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Abp.Application.Navigation;
@@ -227,6 +228,18 @@ namespace CarFactory.Admin.Controllers
                 }
             }
             return Json(new { status = status, message = msg });
+        }
+
+        [HttpPost]
+        [Route("products/upload")]
+        public JsonResult UploadImg()
+        {
+            ImgUploadHelpers uploadHelper = new ImgUploadHelpers(Request.Files,Server.MapPath("/"));
+            var result = uploadHelper.UploadImg();
+
+            string path = result.Item1 == ImageUploadStatus.Success ? (uploadHelper.FileServer + result.Item2) : "";
+
+            return Json(new {success = result.Item1 == ImageUploadStatus.Success, path = path });
         }
     }
 }

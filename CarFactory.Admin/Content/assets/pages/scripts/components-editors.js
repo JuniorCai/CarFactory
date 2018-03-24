@@ -11,21 +11,20 @@ var ComponentsEditors = function () {
                     onImageUpload:function(files){
                         var formdata = new FormData();
                         formdata.append("image", files[0]);
-                        formdata.append('_token',$('input[name="_token"]').val());
                         $.ajax({
                             data : formdata,
                             type : "POST",
-                            url : "/admin/upload", //图片上传出来的url，返回的是图片上传后的路径，http格式
+                            url: "/admin/products/upload", //图片上传出来的url，返回的是图片上传后的路径，http格式
                             cache : false,
                             contentType : false,
                             processData : false,
                             dataType : "json",
                             success: function(data) {//data是返回的hash,key之类的值，key是定义的文件名
-                                if(data.state==1)
+                                if(data.result.success==true)
                                 {
                                     var img = $('<img>');
-                                    img.attr('src',data.path);
-                                    $('#summernoteWithImage').summernote('insertImage',data.path);
+                                    img.attr('src', data.result.path);
+                                    $('#' + editorContainer).summernote('insertImage', data.result.path);
                                 }
                                 else
                                 {

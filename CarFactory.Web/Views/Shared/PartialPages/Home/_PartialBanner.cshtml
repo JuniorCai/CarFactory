@@ -13,13 +13,9 @@
             {
                 foreach (var banner in bannerList.Items)
                 {
-                    <li >
-                        <img style="width: 1600px; height: 466px; " src="@(fileServer + banner.Img)"/>
-                    </li>
+                    <li style="background: url('@(fileServer + banner.Img)') no-repeat center top;background-size: 1600px 466px"></li>
                 }
             }
-            @*            <li style="background: url('/Content/images/public/02.jpg') no-repeat center top"></li>*@
-            @*            <li style="background: url('/Content/images/public/03.jpg') no-repeat center top"></li>*@
         </ul>
     </div>
 </div>

@@ -109,7 +109,7 @@ namespace CarFactory.Admin
                 "~/Content/assets/global/plugins/dropzone/dropzone.js"));
 
             bundles.Add(new ScriptBundle("~/assets/global/bootstrapSummernote/scripts").Include(
-                "~/Content/assets/global/plugins/bootstrap-summernote/summernote.min.js"));
+                "~/Content/assets/global/plugins/bootstrap-summernote/summernote.js"));
 
             bundles.Add(new ScriptBundle("~/assets/global/datatables/scripts").Include(
                 "~/Content/assets/global/scripts/datatable.js",
