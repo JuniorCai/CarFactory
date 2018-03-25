@@ -10,7 +10,8 @@
                     var nav = document.getElementById("navij" + i);
                     var con = document.getElementById("subij" + i);
                     nav.className = i == num ? "hover" : "";
-                    con.style.display = i == num ? "" : "none";
+                    if(con!=null)
+                        con.style.display = i == num ? "" : "none";
                 }
             }
         </script>
