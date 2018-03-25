@@ -23,7 +23,6 @@ namespace CarFactory.Admin.Controllers
 
 
         // GET: Admin
-        [Route("admin")]
         public ActionResult Index()
         {
             var userMenu = GetUserMenu("").Result;

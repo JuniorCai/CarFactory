@@ -11,7 +11,6 @@ namespace CarFactory.Admin
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.MapMvcAttributeRoutes();
 
-
             //ASP.NET Web API Route Config
             routes.MapHttpRoute(
                 name: "DefaultApi",
@@ -22,10 +21,16 @@ namespace CarFactory.Admin
             routes.MapRoute(
                 name: "DefaultAdmin",
                 url: "admin/{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
             );
 
-            
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Admin", action = "Index", id = UrlParameter.Optional }
+            );
+
+
         }
     }
 }

@@ -18,7 +18,7 @@ namespace CarFactory.Admin
                 "Home",
                 L("HomePage"),
                 "icon-layers",
-                "/admin",
+                "/",
                 requiresAuthentication:true,
                 order:0
                 );
