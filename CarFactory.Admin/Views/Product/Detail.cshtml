@@ -2,10 +2,11 @@
 @using CarFactory.Application.Category.Dtos
 @model CarFactory.Application.Products.Dtos.ProductListDto
 @{
-    ViewBag.Title = Model.Id == 0 ? "添加产品" : "编辑产品"; ;
-    ViewBag.PageName = Model.Id == 0 ? "添加产品" : "编辑产品"; ;
+    ViewBag.Title = (Model==null||Model.Id == 0) ? "添加产品" : "编辑产品"; 
+    ViewBag.PageName = (Model == null || Model.Id == 0) ? "添加产品" : "编辑产品"; 
     Layout = "~/Views/Shared/_Layout.cshtml";
     var categoryList = ViewBag.CategoryList as List<CategoryListDto>;
+    string detail = Model != null && !string.IsNullOrEmpty(Model.Detail.Trim()) ? Model.Detail : "";
 }
 
 
@@ -121,7 +122,7 @@
                                 <span class="required" aria-required="true"> * </span>
                             </label>
                             <div class="col-md-10">
-                                <input type="hidden" id="editorDefaultValue" value='@Html.Raw(Model.Detail)'>
+                                <input type="hidden" id="editorDefaultValue" value='@Html.Raw(detail)'>
                                 <div name="summernote" class="summernote" useMedia="1" id="summernoteWithImage"> </div>
                             </div>
                         </div>
@@ -175,7 +176,7 @@
         })
 
         function initEditorValue() {
-            $("#summernoteWithImage").summernote("code", $("#editorDefaultValue").val());
+            $("#summernoteWithImage").summernote("code", $("#editorDefaultValue").val().trim());
         }
 
 
