@@ -1,4 +1,9 @@
-﻿@model List<CarFactory.Application.Category.Dtos.CategoryListDto>
+﻿@using System.Configuration
+@model List<CarFactory.Application.Category.Dtos.CategoryListDto>
+    @{
+        string fileServer = ConfigurationManager.AppSettings["FileServer"];
+
+    }
 <div class="main1">
     <div class="main1t">
         <div class="main1_tt" style="text-align: center">
@@ -35,22 +40,22 @@
                     var categoryInfo = Model[i];
                     string hiddenStr = i != 0 ? "display:none" : "";
         
-                    foreach (var item in categoryInfo.Products)
+                    <div class="product_body" id="@idStr" style="@hiddenStr">
+                    @foreach (var item in categoryInfo.Products)
                     {
-                        <div class="product_body" id="@idStr" style="@hiddenStr">
                             <div class="td">
                                 <div class="td1">
-                                    <a href="/product/dpsgfa/20151221517.html" alt="@item.Title" target="_blank">
-                                        <img src="@item.Img" alt="@item.Title"/>
+                                    <a href="@Url.Action("Detail","Product",new{id=item.Id})" alt="@item.Title" target="_blank">
+                                        <img src="@(fileServer+item.Img)" alt="@item.Title"/>
                                     </a>
                                 </div>
                                 <div class="td2">
-                                    <a href="/product/dpsgfa/20151221517.html" alt="@item.Title" target="_blank">@(item.Title.Length > 14 ? (item.Title.Substring(0, 14) + "...") : item.Title)</a>
+                                    <a href="@Url.Action("Detail","Product",new{id=item.Id})" alt="@item.Title" target="_blank">@(item.Title.Length > 14 ? (item.Title.Substring(0, 14) + "...") : item.Title)</a>
                                 </div>
                             </div>
-                        </div>
                     }
-        
+                    </div>
+
                 }
         
 

@@ -1,4 +1,5 @@
-﻿@using System.Web.Optimization
+﻿@using System.Configuration
+@using System.Web.Optimization
 @using CarFactory.Application.Category.Dtos
 @using X.PagedList
 @using X.PagedList.Mvc
@@ -11,6 +12,7 @@
     ViewBag.Title = activeCategory.CategoryName;
     ViewBag.PageName = "产品展示";
     Layout = "~/Views/Shared/_LayoutList.cshtml";
+    string fileServer = ConfigurationManager.AppSettings["FileServer"];
 
 }
 @section styles
@@ -32,7 +34,7 @@
             <div class="cp">
                 <div class="chanpin1">
                     <a href="@Url.Action("Detail",new{id=@dto.Id})" title="@dto.Title" target="_blank">
-                        <img src="@dto.Img" alt="@dto.Title">
+                        <img src="@(fileServer+dto.Img)" alt="@dto.Title">
                     </a>
                 </div>
                 <div class="chanpin2">
