@@ -48,9 +48,9 @@ strong{font-size:13px}
      width:156px; 
      height:39px; 
 /*     background:url(/Content/images/public/cpfllibg.png) no-repeat;*/
-    border: solid 1px #BFBFBF;
+    border: solid 2px #BFBFBF;
      text-align:center; 
-     margin:0px 4px; 
+     margin:0px 3px; 
      color:#444; 
      font-family:"微软雅黑", "宋体";
      font-size:14px; 
@@ -59,7 +59,7 @@ strong{font-size:13px}
 }
 
     .product ul li:hover {
-        border: solid 1px #65b541;
+        border: solid 2px #65b541;
     }
     .product ul li a {
     }
