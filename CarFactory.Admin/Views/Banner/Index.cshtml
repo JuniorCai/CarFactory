@@ -303,7 +303,7 @@
                     if (document.bannerForm.img != null &&
                         document.bannerForm.img.files != null &&
                         document.bannerForm.img.files.length > 0) {
-                        if (checkUploadImgValid(document.bannerForm.img.files[0])) {
+                        if (checkUploadImgValid("#responsive",document.bannerForm.img.files[0])) {
                             formData.append('image', document.bannerForm.img.files[0]);
                             status = true;
                         } else {

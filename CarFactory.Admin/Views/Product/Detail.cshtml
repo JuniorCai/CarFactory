@@ -225,7 +225,7 @@
                     formData.append('Detail', $('<div/>').text($.trim($("#summernoteWithImage").summernote("code"))).html());
                     //formData.append('Detail', $.trim($("#summernoteWithImage").summernote("code")));
                     if (document.productForm.img != null && document.productForm.img.files != null && document.productForm.img.files.length > 0) {
-                        if (checkUploadImgValid(document.productForm.img.files[0])) {
+                        if (checkUploadImgValid("body",document.productForm.img.files[0])) {
                             formData.append('image', document.productForm.img.files[0]);
                             status = true;
                         } else {

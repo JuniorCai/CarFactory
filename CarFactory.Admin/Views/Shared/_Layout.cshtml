@@ -94,7 +94,7 @@
 <!-- END THEME LAYOUT SCRIPTS -->
 @RenderSection("PageCustomScripts",false)
 <script type="text/javascript">
-    function checkUploadImgValid(fileObj)
+    function checkUploadImgValid(showContrainer,fileObj)
     {
         var fileVal = fileObj.name;
         var result = true;
@@ -102,14 +102,14 @@
         var fileSize = fileObj.size;
         if(fileSize>1024*1024)
         {
-            UIBootstrapGrowl.show('body', '图片大小要求在1M以内', 'warning');
+            UIBootstrapGrowl.show(showContrainer, '图片大小要求在1M以内', 'warning');
             return false;
         }
 
         if (!/\.(gif|jpg|jpeg|png|bmp|GIF|JPG|PNG)$/.test(fileVal))
         {
             result = false;
-            UIBootstrapGrowl.show('body', '图片类型必须是.gif,jpeg,jpg,png,bmp中的一种', 'warning');
+            UIBootstrapGrowl.show(showContrainer, '图片类型必须是.gif,jpeg,jpg,png,bmp中的一种', 'warning');
             return false;
         }
         return true;
