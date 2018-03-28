@@ -896,6 +896,7 @@
     <Content Include="Content\assets\layouts\layout\css\themes\darkblue.min.css" />
     <Content Include="Content\assets\layouts\layout\img\avatar.png" />
     <Content Include="Content\assets\layouts\layout\img\logo.png" />
+    <Content Include="Content\assets\layouts\layout\img\taiyu.png" />
     <Content Include="Content\assets\layouts\layout\scripts\demo.js" />
     <Content Include="Content\assets\layouts\layout\scripts\demo.min.js" />
     <Content Include="Content\assets\layouts\layout\scripts\layout.js" />
