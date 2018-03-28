@@ -81,9 +81,11 @@ strong{font-size:13px}
     background: #fff;
 }
 
-.td1{padding:3px 3px;}
+.td1{padding:3px 3px;
+     text-align: center
+}
     .td1 a img {
-        width: 219px;
+/*        width: 219px;*/
         height: 219px;
     }
 .td2{ width:225px; text-align:center; color:#666666; height:50px;border-top: solid 1px #dadada
