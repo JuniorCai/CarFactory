@@ -6,7 +6,7 @@
     ViewBag.PageName = (Model == null || Model.Id == 0) ? "添加产品" : "编辑产品"; 
     Layout = "~/Views/Shared/_Layout.cshtml";
     var categoryList = ViewBag.CategoryList as List<CategoryListDto>;
-    string detail = Model != null && !string.IsNullOrEmpty(Model.Detail.Trim()) ? Model.Detail : "";
+    string detail = Model != null && !string.IsNullOrEmpty(Model.Detail) ? Model.Detail : "";
 }
 
 
